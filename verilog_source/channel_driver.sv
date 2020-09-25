@@ -1,5 +1,5 @@
 
-
+import rfsoc_config::*;
 
 module channel_driver
 (

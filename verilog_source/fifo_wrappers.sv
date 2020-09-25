@@ -1,4 +1,4 @@
-
+import rfsoc_config::*;
 
 module axis_sync_fifo
 (
@@ -17,6 +17,7 @@ module axis_sync_fifo
 
 wire full, empty;
 assign m_axis_tvalid = !empty;
+assign s_axis_tready = !full;
 
 FIFO_memory #(256, 16) sync_fifo
 (
@@ -55,6 +56,7 @@ wire full, empty;
 wire clear_in = !rst;
 
 assign m_axis_tvalid = !empty;
+assign s_axis_tready = !full;
 
 aFifo #(256, 4) async_fifo
 (
@@ -79,10 +81,32 @@ endmodule
 //Moves GPIO signals from PS to PL
 module gpio_fifo
 (
-
+	input wire rst,
+	
+	input wire ps_clk, pl_clk,
+	
+	input wire [15:0] gpio_in,
+	
+	output wire [15:0] gpio_out
 );
 
-
+wire clear_in = !rst;
+wire full, empty;
+aFifo #(16, 4) async_fifo
+(
+	gpio_out,
+	empty,
+	1'b1,
+	pl_clk,
+	
+	gpio_in,
+	full, 
+	1'b1,
+	ps_clk,
+	
+	clear_in
+	
+);
 
 
 endmodule
