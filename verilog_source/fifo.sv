@@ -1,7 +1,5 @@
 
 
-endmodule
-
 module FIFO_memory
 #(
 	parameter data_width = 16,

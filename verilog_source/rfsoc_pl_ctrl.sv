@@ -7,7 +7,7 @@ module rfsoc_pl_ctrl
 	input wire ps_clk, pl_clk,
 	input wire rst,
 	
-	input wire gpio_ctrl,
+	input wire [15:0] gpio_ctrl,
 	
 	//AXIS input from PS
 	input wire [ps_axis_width-1:0] s_axis_tdata,
@@ -121,12 +121,12 @@ axis_ps_to_pl #(32) axis_ps_pl_crossing
 	ps_clk,
 	pl_clk,
 	
-	input wire rst_int,
+	rst_int,
 	
 	//AXIS input from PS
 	s_axis_tdata,
     s_axis_tvalid,
-    s_axis_tready
+    s_axis_tready,
 	
 	
 	//AXIS output to PL
@@ -156,7 +156,7 @@ axis_selector axis_sel
 
 );
 
-//Wide output from channel ctrl modules to be routed to RFSoC IP
+//Wide output from channel ctrl modules to be routed to RFSoC IP DACs
 wire [((256*16)-1):0] channel_data;
 wire [15:0] channel_tvalid, channel_tready;
 
@@ -175,13 +175,15 @@ for(i = 0; i < 16; i = i + 1) begin
 			
 			gpio_ctrl_int,
 			
-			channel_data[(i*256):+256],
+			//out
+			channel_data[(i*256)+:256],
 			channel_tvalid[i],
 			channel_tready[i],
-			
-			m_axis_tdata[(i*256):+256],
+
+			//in
+			m_axis_tdata[(i*256)+:256],
 			m_axis_tvalid[i],
-			m0_axis_tready[i],
+			m_axis_tready[i],
 			
 			trigger_int,
 			
@@ -196,13 +198,15 @@ for(i = 0; i < 16; i = i + 1) begin
 			
 			gpio_ctrl_int,
 			
-			channel_data[(i*256):+256],
+			//out
+			channel_data[(i*256)+:256],
 			channel_tvalid[i],
 			channel_tready[i],
 			
-			m_axis_tdata[(i*256):+256],
+			//in
+			m_axis_tdata[(i*256)+:256],
 			m_axis_tvalid[i],
-			m0_axis_tready[i],
+			m_axis_tready[i],
 			
 			trigger_int,
 			
@@ -213,7 +217,69 @@ end
 
 //Connections between DAC driver outputs and DACs
 
-assign
+assign m0_axis_tdata = channel_data[(0*256)+:256];
+assign m0_axis_tvalid = channel_tvalid[0];
+assign m0_axis_tready = channel_tready[0];
+
+assign m1_axis_tdata = channel_data[(1*256)+:256];
+assign m1_axis_tvalid = channel_tvalid[1];
+assign m1_axis_tready = channel_tready[1];
+
+assign m2_axis_tdata = channel_data[(2*256)+:256];
+assign m2_axis_tvalid = channel_tvalid[2];
+assign m2_axis_tready = channel_tready[2];
+
+assign m3_axis_tdata = channel_data[(3*256)+:256];
+assign m3_axis_tvalid = channel_tvalid[3];
+assign m3_axis_tready = channel_tready[3];
+
+assign m4_axis_tdata = channel_data[(4*256)+:256];
+assign m4_axis_tvalid = channel_tvalid[4];
+assign m4_axis_tready = channel_tready[4];
+
+assign m5_axis_tdata = channel_data[(5*256)+:256];
+assign m5_axis_tvalid = channel_tvalid[5];
+assign m5_axis_tready = channel_tready[5];
+
+assign m6_axis_tdata = channel_data[(6*256)+:256];
+assign m6_axis_tvalid = channel_tvalid[6];
+assign m6_axis_tready = channel_tready[6];
+
+assign m7_axis_tdata = channel_data[(7*256)+:256];
+assign m7_axis_tvalid = channel_tvalid[7];
+assign m7_axis_tready = channel_tready[7];
+
+assign m8_axis_tdata = channel_data[(8*256)+:256];
+assign m8_axis_tvalid = channel_tvalid[8];
+assign m8_axis_tready = channel_tready[8];
+
+assign m9_axis_tdata = channel_data[(9*256)+:256];
+assign m9_axis_tvalid = channel_tvalid[9];
+assign m9_axis_tready = channel_tready[9];
+
+assign m10_axis_tdata = channel_data[(10*256)+:256];
+assign m10_axis_tvalid = channel_tvalid[10];
+assign m10_axis_tready = channel_tready[10];
+
+assign m11_axis_tdata = channel_data[(11*256)+:256];
+assign m11_axis_tvalid = channel_tvalid[11];
+assign m11_axis_tready = channel_tready[11];
+
+assign m12_axis_tdata = channel_data[(12*256)+:256];
+assign m12_axis_tvalid = channel_tvalid[12];
+assign m12_axis_tready = channel_tready[12];
+
+assign m13_axis_tdata = channel_data[(13*256)+:256];
+assign m13_axis_tvalid = channel_tvalid[13];
+assign m13_axis_tready = channel_tready[13];
+
+assign m14_axis_tdata = channel_data[(14*256)+:256];
+assign m14_axis_tvalid = channel_tvalid[14];
+assign m14_axis_tready = channel_tready[14];
+
+assign m15_axis_tdata = channel_data[(15*256)+:256];
+assign m15_axis_tvalid = channel_tvalid[15];
+assign m15_axis_tready = channel_tready[15];
 
 
 endmodule

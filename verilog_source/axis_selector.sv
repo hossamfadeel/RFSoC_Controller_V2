@@ -10,11 +10,11 @@ module axis_selector
 	//From ps_to_pl module
 	input wire [255:0] s_axis_tdata,
     input wire s_axis_tvalid,
-    output wire s_axis_tready,
+    output reg s_axis_tready,
 	
 	//Wide output to all channels
-	output wire [((256*16)-1):0] m_axis_tdata,
-    output wire [15:0] m_axis_tvalid,
+	output reg [((256*16)-1):0] m_axis_tdata,
+    output reg [15:0] m_axis_tvalid,
     input wire [15:0] m_axis_tready
 
 );

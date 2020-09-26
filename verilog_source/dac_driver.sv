@@ -16,9 +16,9 @@ module dac_driver
     input wire m_axis_tready,
 	
 	//Input 1-16 selector
-    input wire [255:0] s_axis_tdata,
+    input wire [255:0] s_axis_tdata,;
     input wire s_axis_tvalid,
-    output reg s_axis_tready
+    output reg s_axis_tready,
 	
 	input wire trigger_in,
 	

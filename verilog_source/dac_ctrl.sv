@@ -22,7 +22,7 @@ module dac_ctrl
 	//Input from waveform fifo
     input wire [255:0] s_axis_tdata,
     input wire s_axis_tvalid,
-    output reg s_axis_tready
+    output reg s_axis_tready,
 	
 	
 	//Input from gpio_ctrl bus
@@ -40,8 +40,6 @@ module dac_ctrl
 
 //Data going to RFSoC IP is always valid
 assign m_axis_tvalid = 1'b1;
-assign m_axis_tdata = mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata;
-
 
 //mask register
 wire [255:0] mask_out;
@@ -56,7 +54,7 @@ shift_register #(256) mask_reg
 
 //cycle count register
 wire [255:0] cycle_count_out;
-shift_register #(256) mask_reg
+shift_register #(256) cycle_count_reg
 (
     clk & select_in,
     gpio_ctrl[cycle_count_clk],
@@ -83,6 +81,10 @@ reg [3:0] state;
 reg mask_on, mask_inv;
 
 localparam [3:0] state_idle = 0, state_run = 1, state_cleanup = 2;
+
+//Mask mux for output
+assign m_axis_tdata = mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata;
+
 
 task reset_task();
 begin
@@ -113,7 +115,7 @@ always @ (posedge clk or negedge rst) begin
 			
 				if(trigger_in) begin
 					cycle_count <= cycle_count_out;
-					waveform_data_read <= 1'b1;
+					s_axis_tready <= 1'b1;//Start reading out data
 					
 					//turn the mask on
 					mask_on <= 1;
@@ -126,8 +128,7 @@ always @ (posedge clk or negedge rst) begin
 				
 				//turn the mask off
 				mask_on <= 0;
-			
-			
+
 				if(cycle_count) begin
 					cycle_count <= cycle_count - 1;
 				end
@@ -136,8 +137,7 @@ always @ (posedge clk or negedge rst) begin
 					//Invert mask for last cycle
 					mask_inv <= 1;
 				
-					waveform_data_read <= 0;
-					waveform_data_write <= 0
+					s_axis_tready <= 1'b0;//Stop reading out the waveform
 					state <= state_cleanup;
 				end
 			

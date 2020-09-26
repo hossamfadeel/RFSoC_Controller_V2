@@ -12,22 +12,17 @@ module axis_ps_to_pl
 	//AXIS input from PS
 	input wire [ps_axis_width-1:0] s_axis_tdata,
     input wire s_axis_tvalid,
-    output wire s_axis_tready
+    output wire s_axis_tready,
 	
 	
 	//AXIS output to PL
 	output wire [255:0] m_axis_tdata,
     output wire m_axis_tvalid,
-    input wire m_axis_tready,
+    input wire m_axis_tready
 );
 
 
-parameter ps_per_pl = ps_axis_width / 256
-
-
-
-//ready to receive data when the async fifo is not full
-assign s_axis_tready = async_fifo_ready;
+parameter ps_per_pl = ps_axis_width / 256;
 
 reg [15:0] word_cnt;
 reg [255:0] word_buff;
@@ -36,6 +31,9 @@ reg [255:0] word_buff;
 reg [255:0] async_fifo_data;
 reg async_fifo_valid;
 wire async_fifo_ready;
+
+//ready to receive data when the async fifo is not full
+assign s_axis_tready = async_fifo_ready;
 
 //Async fifo instantiation
 axis_async_fifo async_fifo
@@ -60,10 +58,14 @@ begin
 	async_fifo_data <= 0;
 	async_fifo_valid <= 0;
 	word_cnt <= 0;
-	word_buff <= 0
+	word_buff <= 0;
 
 end
 endtask
+
+initial begin
+	reset_regs();
+end
 
 always @ (posedge ps_clk or negedge rst) begin
 

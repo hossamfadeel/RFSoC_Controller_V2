@@ -1,0 +1,57 @@
+# Compile of async_fifo.sv was successful.
+# Compile of axis_mux.sv failed with 1 errors.
+# Compile of axis_ps_to_pl.sv failed with 1 errors.
+# Compile of axis_selector.sv failed with 5 errors.
+# Compile of channel_selector.sv failed with 1 errors.
+# Compile of dac_ctrl.sv failed with 2 errors.
+# Compile of dac_driver.sv failed with 2 errors.
+# Compile of fifo.sv failed with 1 errors.
+# Compile of fifo_wrappers.sv failed with 1 errors.
+# Compile of rfsoc_config.sv failed with 1 errors.
+# Compile of rfsoc_pl_ctrl.sv failed with 5 errors.
+# Compile of shift_register.sv was successful.
+# 12 compiles, 10 failed with 20 errors.
+# Compile of axis_mux.sv failed with 1 errors.
+# Compile of axis_ps_to_pl.sv failed with 1 errors.
+# Compile of axis_selector.sv failed with 5 errors.
+# Compile of channel_selector.sv failed with 1 errors.
+# Compile of dac_ctrl.sv failed with 2 errors.
+# Compile of dac_driver.sv failed with 2 errors.
+# Compile of fifo.sv failed with 1 errors.
+# Compile of fifo_wrappers.sv failed with 1 errors.
+# Compile of rfsoc_config.sv failed with 1 errors.
+# Compile of rfsoc_pl_ctrl.sv failed with 5 errors.
+# 10 compiles, 10 failed with 20 errors.
+# Compile of rfsoc_config.sv was successful.
+# Compile of axis_mux.sv was successful.
+# Compile of axis_ps_to_pl.sv failed with 1 errors.
+# Compile of axis_selector.sv failed with 5 errors.
+# Compile of channel_selector.sv was successful.
+# Compile of dac_ctrl.sv failed with 1 errors.
+# Compile of dac_driver.sv failed with 1 errors.
+# Compile of fifo.sv failed with 1 errors.
+# Compile of fifo_wrappers.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv failed with 1 errors.
+# 9 compiles, 6 failed with 10 errors.
+# Compile of axis_ps_to_pl.sv failed with 1 errors.
+# Compile of axis_ps_to_pl.sv failed with 3 errors.
+# Compile of axis_ps_to_pl.sv failed with 5 errors.
+# Compile of axis_ps_to_pl.sv failed with 2 errors.
+# Compile of axis_ps_to_pl.sv was successful.
+# Compile of axis_ps_to_pl.sv was successful.
+# Compile of dac_ctrl.sv failed with 1 errors.
+# Compile of dac_ctrl.sv failed with 11 errors.
+# Compile of dac_ctrl.sv failed with 5 errors.
+# Compile of dac_ctrl.sv failed with 4 errors.
+# Compile of dac_ctrl.sv was successful.
+# Compile of axis_selector.sv failed with 5 errors.
+# Compile of axis_selector.sv was successful.
+# Compile of fifo.sv failed with 1 errors.
+# Compile of fifo.sv was successful.
+# Compile of dac_driver.sv failed with 1 errors.
+# Compile of dac_driver.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv failed with 1 errors.
+# Compile of rfsoc_pl_ctrl.sv failed with 1 errors.
+# Compile of rfsoc_pl_ctrl.sv failed with 4 errors.
+# Compile of rfsoc_pl_ctrl.sv failed with 1 errors.
+# Compile of rfsoc_pl_ctrl.sv was successful.
