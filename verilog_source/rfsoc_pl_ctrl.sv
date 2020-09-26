@@ -1,5 +1,5 @@
 
-
+import rfsoc_config::*;
 
 module rfsoc_pl_ctrl
 #(parameter ps_axis_width = 32)
@@ -136,6 +136,7 @@ axis_ps_to_pl #(32) axis_ps_pl_crossing
 );
 
 //AXIS selector
+//Output bus
 wire [((256*16)-1):0] m_axis_tdata;
 wire [15:0] m_axis_tvalid;
 wire [15:0] m_axis_tready;
@@ -156,31 +157,63 @@ axis_selector axis_sel
 );
 
 //Wide output from channel ctrl modules to be routed to RFSoC IP
-wire [((256*16)-1):0] channel_ctrl_data;
-wire [15:0] channel_ctrl_tvalid, channel_ctrl_tready;
+wire [((256*16)-1):0] channel_data;
+wire [15:0] channel_tvalid, channel_tready;
 
+
+wire trigger_int = gpio_ctrl_int[trigger_line];
 
 //genloop for creating channels
-parameter stop_channel = 17;//Any channels higher than this number will receive reduced FIFO memory
-parameter channel_fifo_mem_width = 16;
-
-
-
 genvar i;
 for(i = 0; i < 16; i = i + 1) begin
-
 	//If we're not giving this module any memory
-	if(i >= stop_channel)begin
-	
-	
+	if(i >= dac_stop_channel)begin
+		dac_driver #(2) dummy_channel_ctrl
+		(
+			pl_clk,
+			rst,
+			
+			gpio_ctrl_int,
+			
+			channel_data[(i*256):+256],
+			channel_tvalid[i],
+			channel_tready[i],
+			
+			m_axis_tdata[(i*256):+256],
+			m_axis_tvalid[i],
+			m0_axis_tready[i],
+			
+			trigger_int,
+			
+			channel_select[i]
+		);
 	end
 	else begin
-	
-	
-	
+		dac_driver #(dac_fifo_mem_width) dummy_channel_ctrl
+		(
+			pl_clk,
+			rst,
+			
+			gpio_ctrl_int,
+			
+			channel_data[(i*256):+256],
+			channel_tvalid[i],
+			channel_tready[i],
+			
+			m_axis_tdata[(i*256):+256],
+			m_axis_tvalid[i],
+			m0_axis_tready[i],
+			
+			trigger_int,
+			
+			channel_select[i]
+		);
 	end
-
 end
+
+//Connections between DAC driver outputs and DACs
+
+assign
 
 
 endmodule

@@ -1,7 +1,8 @@
 
 import rfsoc_config::*;
 
-module channel_driver
+module dac_driver
+#(parameter mem_width = 16)
 (
 
 	input wire clk,
@@ -55,7 +56,7 @@ channel_ctrl chan_ctrl
 //Waveform fifo
 wire [255:0] s0_axis_tdata;
 wire s0_axis_tready, s0_axis_tvalid;
-axis_sync_fifo waveform_fifo
+axis_sync_fifo #(mem_width) waveform_fifo
 (
 
 	rst,

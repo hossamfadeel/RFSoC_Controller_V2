@@ -1,6 +1,7 @@
 import rfsoc_config::*;
 
 module axis_sync_fifo
+#(parameter mem_width = 16)
 (
 
 	input wire rst,
@@ -19,7 +20,7 @@ wire full, empty;
 assign m_axis_tvalid = !empty;
 assign s_axis_tready = !full;
 
-FIFO_memory #(256, 16) sync_fifo
+FIFO_memory #(256, mem_width) sync_fifo
 (
 	axis_clk,
 	rst,

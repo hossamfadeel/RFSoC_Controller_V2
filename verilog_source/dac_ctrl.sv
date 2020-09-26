@@ -1,14 +1,14 @@
 
 
 
-//Sits between the waveform fifo and the RFSoC Data Converter
+//Sits between the waveform fifo and the RFSoC Data Converter DAC
 //Controlls triggering for waveform playback
 //Mask buffer is used in its origional form to mask out the first cycle
 //Used in its inverted form at end of playback
 
 import rfsoc_config::*;
 
-module channel_ctrl
+module dac_ctrl
 (
 
 	input wire clk,//250MHz clock from RFSoC IP
