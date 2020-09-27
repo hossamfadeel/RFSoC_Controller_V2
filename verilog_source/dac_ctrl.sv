@@ -33,7 +33,9 @@ module dac_ctrl
 	
 	input wire select_in, //If 1, then PS is writing to this channel
 	
-	output wire mux_sel
+	output wire mux_sel,
+	
+	output reg loopback_valid//If 1, fifo is reading back in data
 	
 
 );
@@ -84,10 +86,14 @@ reg [3:0] state;
 //Used to control when mask is used
 reg mask_on, mask_inv;
 
-localparam [3:0] state_idle = 0, state_run = 1, state_cleanup = 2;
+localparam [3:0] state_idle = 0, 
+				 state_pre_run = 1,
+			     state_run = 2, 
+				 state_cleanup = 3;
 
 //Mask mux for output
-assign m_axis_tdata = mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata;
+reg output_on;
+assign m_axis_tdata = output_on ? (mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata) : 0;
 
 
 task reset_task();
@@ -98,7 +104,8 @@ begin
 	s_axis_tready <= 0;
 	mask_on <= 0;
 	mask_inv <= 0;
-
+	loopback_valid <= 0;
+	output_on <= 0;
 end
 endtask
 
@@ -124,8 +131,16 @@ always @ (posedge clk or negedge rst) begin
 					//turn the mask on
 					mask_on <= 1;
 					
-					state <= state_run;
+					state <= state_pre_run;
 				end
+			end
+			
+			state_pre_run: begin
+				
+				output_on <= 1;
+				loopback_valid <= 1;
+				state <= state_run;
+			
 			end
 			
 			state_run: begin
@@ -135,13 +150,16 @@ always @ (posedge clk or negedge rst) begin
 
 				if(cycle_count) begin
 					cycle_count <= cycle_count - 1;
+					if(cycle_count == 2) begin
+						mask_inv <= 1;//Invert mask for second to last cycle
+						s_axis_tready <= 1'b0;//Stop reading out the waveform
+					end
+					else if(cycle_count == 1) begin//If we're on the last cycle
+						loopback_valid <= 0;//Stop writing back into fifo
+						output_on <= 0;//Stop outputting things to RFSoC
+					end
 				end
 				else begin
-				
-					//Invert mask for last cycle
-					mask_inv <= 1;
-				
-					s_axis_tready <= 1'b0;//Stop reading out the waveform
 					state <= state_cleanup;
 				end
 			
@@ -150,6 +168,7 @@ always @ (posedge clk or negedge rst) begin
 			
 			state_cleanup: begin
 			
+				
 				mask_inv <= 0;
 				state <= state_idle;
 			

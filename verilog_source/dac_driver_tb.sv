@@ -73,7 +73,7 @@ initial begin
 	set_mux_sel(0);
 	
 	//Set repeat cycles to 20
-	set_cycle_count(20);
+	set_cycle_count(5);
 	
 	//Set the mask to half off half on
 	set_mask(test_mask);

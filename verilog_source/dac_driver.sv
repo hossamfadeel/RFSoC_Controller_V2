@@ -32,16 +32,19 @@ wire [255:0] waveform_fifo_tdata;
 wire waveform_fifo_tvalid, waveform_fifo_tready;
 wire mux_sel;
 //Channel controller instantiation
+wire loopback_valid;
 dac_ctrl dac_ctrl_inst
 (
 
 	clk,
 	rst,
 	
+	//Output to RFSoC
 	m_axis_tdata,
 	m_axis_tvalid,
 	m_axis_tready,
 	
+	//Input from fifo
 	waveform_fifo_tdata,
 	waveform_fifo_tvalid,
 	waveform_fifo_tready,
@@ -50,7 +53,9 @@ dac_ctrl dac_ctrl_inst
 	trigger_in,
 	select_in,
 	
-	mux_sel
+	mux_sel,
+	
+	loopback_valid
 );
 
 //Waveform fifo
@@ -88,7 +93,8 @@ axis_mux loopback_mux
     s_axis_tdata,
     
     //input from self
-    waveform_fifo_tvalid,
+    //waveform_fifo_tvalid,
+	loopback_valid,//Only valid when dac_ctrl is outputting a waveform
     waveform_fifo_tready_dummy,//Can't have 2 nets driving ready line, assume always ready
     waveform_fifo_tdata,
     

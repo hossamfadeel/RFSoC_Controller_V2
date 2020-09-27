@@ -341,3 +341,152 @@ restart -f
 # Loading work.dac_driver
 run -all
 # Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 94
+# Compile of dac_driver.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_driver_sv_unit
+# Loading work.dac_driver
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 94
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 94
+add wave -position insertpoint  \
+sim:/dac_driver_tb/dut/clk \
+sim:/dac_driver_tb/dut/rst \
+sim:/dac_driver_tb/dut/gpio_ctrl \
+sim:/dac_driver_tb/dut/m_axis_tdata \
+sim:/dac_driver_tb/dut/m_axis_tvalid \
+sim:/dac_driver_tb/dut/m_axis_tready \
+sim:/dac_driver_tb/dut/s_axis_tdata \
+sim:/dac_driver_tb/dut/s_axis_tvalid \
+sim:/dac_driver_tb/dut/s_axis_tready \
+sim:/dac_driver_tb/dut/trigger_in \
+sim:/dac_driver_tb/dut/select_in
+restart -f
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 94
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dac_ctrl_inst'.  Expected 13, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /dac_driver_tb/dut/dac_ctrl_inst File: D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv Line: 35
+# ** Warning: (vsim-3722) D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv(35): [TFMPC] - Missing connection for port 'loopback_valid'.
+# Compile of dac_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_driver_tb_sv_unit
+# Loading work.dac_driver_tb
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dac_ctrl_inst'.  Expected 13, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /dac_driver_tb/dut/dac_ctrl_inst File: D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv Line: 35
+# ** Warning: (vsim-3722) D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv(35): [TFMPC] - Missing connection for port 'loopback_valid'.
+# Compile of dac_driver.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_driver_sv_unit
+# Loading work.dac_driver
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+add wave -position insertpoint  \
+sim:/dac_driver_tb/dut/waveform_fifo/s_axis_tvalid \
+sim:/dac_driver_tb/dut/waveform_fifo/s_axis_tready \
+sim:/dac_driver_tb/dut/waveform_fifo/s_axis_tdata \
+sim:/dac_driver_tb/dut/waveform_fifo/m_axis_tdata \
+sim:/dac_driver_tb/dut/waveform_fifo/m_axis_tvalid \
+sim:/dac_driver_tb/dut/waveform_fifo/m_axis_tready
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 96
