@@ -1,3 +1,6 @@
+
+`timescale 1ns/1ps
+
 import rfsoc_config::*;
 
 
@@ -18,7 +21,7 @@ reg trigger_in;
 
 reg select_in;
 
-integer i;
+integer i, j;
 
 dac_driver #(16) dut
 (
@@ -40,16 +43,67 @@ dac_driver #(16) dut
 	select_in
 );
 
-
-
+//Half off half on
+wire [255:0] test_mask = {{8{16'h0000}}, {8{16'hFFFF}}};
+reg [255:0] axis_word_reg;
 initial begin
 
-
-
+	//Initialize values and reset the system
+	clk <= 0;
+	rst <= 1;
+	
+	gpio_ctrl <= 0;
+	m_axis_tready <= 1;
+	s_axis_tdata <= 0;
+	s_axis_tvalid <= 0;
+	
+	trigger_in <= 0;
+	select_in <= 0;
+	axis_word_reg <= 0;
+	
+	
+	repeat(10) clk_cycle();
+	rst <= 0;
+	repeat(10) clk_cycle();
+	rst <= 1;
+	repeat(10) clk_cycle();
+	
+	
+	//Set the mux state to 0 so we can load values
+	set_mux_sel(0);
+	
+	//Set repeat cycles to 20
+	set_cycle_count(20);
+	
+	//Set the mask to half off half on
+	set_mask(test_mask);
+	
+	//Load in 5 words (5*16 samples total)
+	
+	for(axis_word_reg = {16{16'hAAAA}}; axis_word_reg < {16{16'hFFFF}};  axis_word_reg = axis_word_reg + {16{16'h1111}}) begin
+	
+		load_axis_word(axis_word_reg);
+	
+	end
+	
+	//turn on the loop-back mux
+	set_mux_sel(1);
+	
+	repeat(10) clk_cycle();
+	
+	for(i = 0; i < 20; i = i + 1) begin
+	
+		trigger_in <= 1;
+		clk_cycle();
+		trigger_in <= 0;
+		
+		repeat(50) clk_cycle();
+	
+	end
 
 end
 
-task clk_cycle();
+task clk_cycle;
 begin
 
 	#1
@@ -60,7 +114,21 @@ begin
 end
 endtask
 
-task set_cycle_count();
+
+task load_axis_word;
+input [255:0] value;
+begin
+
+	//Set the data line
+	s_axis_tdata <= value;
+	s_axis_tvalid <= 1;
+	clk_cycle();
+	s_axis_tvalid <= 0;
+
+end
+endtask
+
+task set_cycle_count;
 input [255:0] value;
 begin
 	
@@ -85,7 +153,7 @@ begin
 end
 endtask
 
-task set_mask();
+task set_mask;
 input [255:0] value;
 begin
 	
@@ -110,6 +178,23 @@ begin
 end
 endtask
 
+task set_mux_sel;
+input value;
+begin
+
+	select_in <= 1;
+	gpio_ctrl[sdata] <= value;
+	for(i = 0; i < 8; i = i + 1) begin
+		repeat(2) clk_cycle();
+		gpio_ctrl[mux_set_clk] <= 1;
+		repeat(2) clk_cycle();
+		gpio_ctrl[mux_set_clk] <= 0;
+		repeat(2) clk_cycle();
+	end
+	select_in <= 0;
+
+end
+endtask
 
 
 endmodule

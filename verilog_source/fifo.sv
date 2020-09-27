@@ -44,7 +44,7 @@ module FIFO_memory
  
 	always @(posedge clk) 
 		begin 
-			if(reset==1) 
+			if(reset==0) 
 			//reset is pressed															 
 				sr_read_write_empty <= 0; 
 			else if(read==1 && empty==1 && write==1)	 
@@ -58,7 +58,7 @@ module FIFO_memory
 		 
 	always @(posedge clk) 
 		begin 
-			if(reset==1) 
+			if(reset==0) 
 //when reset, the fifo is made empty thus count is set to zero 
 				count <= 0;		 
 			else 
@@ -113,7 +113,7 @@ module FIFO_memory
 	// Write operation memory pointer 
 	always @(posedge clk) 
 		begin 
-			if(reset==1) 
+			if(reset==0) 
 			//head moved to zero location (fifo is made empty) 
 				head <= 0;	 
 			else 
@@ -127,7 +127,7 @@ module FIFO_memory
 	// Read operation memory pointer 
 		always @(posedge clk) 
 			begin 
-				if(reset==1) 
+				if(reset==0) 
 				//tail moved to zero location (fifo is made empty) 
 					tail <= 0;	 
 				else 
@@ -155,7 +155,7 @@ module FIFO_memory
 	// Read operation 
 	always @(posedge clk) 
 		begin 
-			if(reset==1)						 
+			if(reset==0)						 
 			//reset implies output is zero 
 				dout <= 0; 
 			else if(read==1 && empty==0)	 

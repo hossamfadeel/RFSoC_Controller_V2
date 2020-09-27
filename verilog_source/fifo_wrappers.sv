@@ -30,8 +30,8 @@ FIFO_memory #(256, mem_width) sync_fifo
 	s_axis_tvalid,//write
 	m_axis_tdata,
 	
-	full,
-	empty
+	empty,
+	full
 	
 );
 

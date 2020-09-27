@@ -64,14 +64,18 @@ shift_register #(256) cycle_count_reg
 );
 
 //mux select register
-shift_register #(1) mux_sel_reg
+//0 is load, 1 is loop-back
+wire [7:0] mux_sel_int;
+shift_register #(8) mux_sel_reg
 (
 	clk & select_in,
 	gpio_ctrl[mux_set_clk],
 	rst,
 	gpio_ctrl[sdata],
-	mux_sel
+	mux_sel_int
 );
+
+assign mux_sel = mux_sel_int[0];
 
 //Main counter
 reg [255:0] cycle_count;

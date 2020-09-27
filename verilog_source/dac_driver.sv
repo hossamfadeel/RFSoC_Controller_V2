@@ -16,7 +16,7 @@ module dac_driver
     input wire m_axis_tready,
 	
 	//Input 1-16 selector
-    input wire [255:0] s_axis_tdata,;
+    input wire [255:0] s_axis_tdata,
     input wire s_axis_tvalid,
     output reg s_axis_tready,
 	
@@ -32,7 +32,7 @@ wire [255:0] waveform_fifo_tdata;
 wire waveform_fifo_tvalid, waveform_fifo_tready;
 wire mux_sel;
 //Channel controller instantiation
-channel_ctrl chan_ctrl
+dac_ctrl dac_ctrl_inst
 (
 
 	clk,
@@ -76,6 +76,7 @@ axis_sync_fifo #(mem_width) waveform_fifo
 
 
 //axis loopback mux
+wire waveform_fifo_tready_dummy;
 axis_mux loopback_mux
 (
     clk,
@@ -88,7 +89,7 @@ axis_mux loopback_mux
     
     //input from self
     waveform_fifo_tvalid,
-    waveform_fifo_tready,
+    waveform_fifo_tready_dummy,//Can't have 2 nets driving ready line, assume always ready
     waveform_fifo_tdata,
     
     mux_sel,
