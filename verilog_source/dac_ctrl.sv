@@ -54,9 +54,9 @@ shift_register #(256) mask_reg
     mask_out
 );
 
-//cycle count register
-wire [255:0] cycle_count_out;
-shift_register #(256) cycle_count_reg
+//run cycle count register
+wire [config_reg_width-1:0] cycle_count_out;
+shift_register #(config_reg_width) cycle_count_reg
 (
     clk & select_in,
     gpio_ctrl[cycle_count_clk],
@@ -77,6 +77,30 @@ shift_register #(8) mux_sel_reg
 	mux_sel_int
 );
 
+//delay cycles register
+wire [config_reg_width-1:0] delay_cycles;
+reg [config_reg_width:0] delay_cycle_counter;
+shift_register #(config_reg_width) delay_cycles_reg
+(
+	clk & select_in,
+	gpio_ctrl[delay_cycle_clk],
+	rst,
+	gpio_ctrl[sdata],
+	delay_cycles
+);
+
+//Locking waveform register
+wire [255:0] locking_waveform;
+shift_register #(256) locking_waveform_reg
+(
+	clk & select_in,
+	gpio_ctrl[locking_waveform_clk],
+	rst,
+	gpio_ctrl[sdata],
+	locking_waveform
+);
+
+
 assign mux_sel = mux_sel_int[0];
 
 //Main counter
@@ -93,7 +117,7 @@ localparam [3:0] state_idle = 0,
 
 //Mask mux for output
 reg output_on;
-assign m_axis_tdata = output_on ? (mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata) : 0;
+assign m_axis_tdata = output_on ? (mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata) : locking_waveform;
 
 
 task reset_task();
@@ -131,16 +155,23 @@ always @ (posedge clk or negedge rst) begin
 					//turn the mask on
 					mask_on <= 1;
 					
+					//Set the delay counter
+					delay_cycle_counter <= delay_cycles;
+					
 					state <= state_pre_run;
 				end
 			end
 			
 			state_pre_run: begin
 				
-				output_on <= 1;
-				loopback_valid <= 1;
-				state <= state_run;
-			
+				if(delay_cycle_counter == 0) begin
+					output_on <= 1;
+					loopback_valid <= 1;
+					state <= state_run;
+				end
+				else begin
+					delay_cycle_counter <= delay_cycle_counter - 1;
+				end
 			end
 			
 			state_run: begin

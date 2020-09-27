@@ -78,6 +78,12 @@ initial begin
 	//Set the mask to half off half on
 	set_mask(test_mask);
 	
+	//Set the locking waveform
+	set_locking_waveform({16{16'h1111}});
+	
+	//Set the delay cycles
+	set_delay_cycles(0);
+	
 	//Load in 5 words (5*16 samples total)
 	
 	for(axis_word_reg = {16{16'hAAAA}}; axis_word_reg < {16{16'hFFFF}};  axis_word_reg = axis_word_reg + {16{16'h1111}}) begin
@@ -170,6 +176,56 @@ begin
 		gpio_ctrl[mask_clk] <= 1;
 		repeat(2) clk_cycle();
 		gpio_ctrl[mask_clk] <= 0;
+		repeat(2) clk_cycle();
+	end
+	
+	select_in <= 0;
+
+end
+endtask
+
+task set_delay_cycles;
+input [255:0] value;
+begin
+	
+	select_in <= 1;
+	
+	for(i = 0; i < 256; i = i + 1) begin
+
+		//Set the data line
+		gpio_ctrl[sdata] <= value[i];
+		
+		//Cycle the serial clock
+		
+		repeat(2) clk_cycle();
+		gpio_ctrl[delay_cycle_clk] <= 1;
+		repeat(2) clk_cycle();
+		gpio_ctrl[delay_cycle_clk] <= 0;
+		repeat(2) clk_cycle();
+	end
+	
+	select_in <= 0;
+
+end
+endtask
+
+task set_locking_waveform;
+input [255:0] value;
+begin
+	
+	select_in <= 1;
+	
+	for(i = 0; i < 256; i = i + 1) begin
+
+		//Set the data line
+		gpio_ctrl[sdata] <= value[i];
+		
+		//Cycle the serial clock
+		
+		repeat(2) clk_cycle();
+		gpio_ctrl[locking_waveform_clk] <= 1;
+		repeat(2) clk_cycle();
+		gpio_ctrl[locking_waveform_clk] <= 0;
 		repeat(2) clk_cycle();
 	end
 	
