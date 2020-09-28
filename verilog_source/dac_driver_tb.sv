@@ -81,8 +81,11 @@ initial begin
 	//Set the locking waveform
 	set_locking_waveform({16{16'h1111}});
 	
-	//Set the delay cycles
-	set_delay_cycles(0);
+	//Set the pre_delay cycles
+	set_pre_delay_cycles(2);
+	
+	//Set the post delay cycles
+	set_post_delay_cycles(2);
 	
 	//Load in 5 words (5*16 samples total)
 	
@@ -103,7 +106,7 @@ initial begin
 		clk_cycle();
 		trigger_in <= 0;
 		
-		repeat(50) clk_cycle();
+		repeat(200) clk_cycle();
 	
 	end
 
@@ -184,30 +187,42 @@ begin
 end
 endtask
 
-task set_delay_cycles;
+task set_pre_delay_cycles;
 input [255:0] value;
 begin
-	
 	select_in <= 1;
-	
 	for(i = 0; i < 256; i = i + 1) begin
-
 		//Set the data line
 		gpio_ctrl[sdata] <= value[i];
-		
 		//Cycle the serial clock
-		
 		repeat(2) clk_cycle();
-		gpio_ctrl[delay_cycle_clk] <= 1;
+		gpio_ctrl[pre_delay_cycle_clk] <= 1;
 		repeat(2) clk_cycle();
-		gpio_ctrl[delay_cycle_clk] <= 0;
+		gpio_ctrl[pre_delay_cycle_clk] <= 0;
 		repeat(2) clk_cycle();
 	end
-	
 	select_in <= 0;
-
 end
 endtask
+
+task set_post_delay_cycles;
+input [255:0] value;
+begin
+	select_in <= 1;
+	for(i = 0; i < 256; i = i + 1) begin
+		//Set the data line
+		gpio_ctrl[sdata] <= value[i];
+		//Cycle the serial clock
+		repeat(2) clk_cycle();
+		gpio_ctrl[post_delay_cycle_clk] <= 1;
+		repeat(2) clk_cycle();
+		gpio_ctrl[post_delay_cycle_clk] <= 0;
+		repeat(2) clk_cycle();
+	end
+	select_in <= 0;
+end
+endtask
+
 
 task set_locking_waveform;
 input [255:0] value;

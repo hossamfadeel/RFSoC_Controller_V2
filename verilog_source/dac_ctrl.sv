@@ -15,7 +15,7 @@ module dac_ctrl
 	input wire rst,
 
 	//Output to RFSoC IP
-	output wire [255:0] m_axis_tdata,
+	output reg [255:0] m_axis_tdata,
     output wire m_axis_tvalid,
     input wire m_axis_tready,
 	
@@ -36,8 +36,6 @@ module dac_ctrl
 	output wire mux_sel,
 	
 	output reg loopback_valid//If 1, fifo is reading back in data
-	
-
 );
 
 //Data going to RFSoC IP is always valid
@@ -77,16 +75,28 @@ shift_register #(8) mux_sel_reg
 	mux_sel_int
 );
 
-//delay cycles register
-wire [config_reg_width-1:0] delay_cycles;
-reg [config_reg_width:0] delay_cycle_counter;
-shift_register #(config_reg_width) delay_cycles_reg
+//pre_delay cycles register
+wire [config_reg_width-1:0] pre_delay_cycles;
+reg [config_reg_width:0] pre_delay_cycle_counter;
+shift_register #(config_reg_width) pre_delay_cycles_reg
 (
 	clk & select_in,
-	gpio_ctrl[delay_cycle_clk],
+	gpio_ctrl[pre_delay_cycle_clk],
 	rst,
 	gpio_ctrl[sdata],
-	delay_cycles
+	pre_delay_cycles
+);
+
+//pre_delay cycles register
+wire [config_reg_width-1:0] post_delay_cycles;
+reg [config_reg_width:0] post_delay_cycle_counter;
+shift_register #(config_reg_width) post_delay_cycles_reg
+(
+	clk & select_in,
+	gpio_ctrl[post_delay_cycle_clk],
+	rst,
+	gpio_ctrl[sdata],
+	post_delay_cycles
 );
 
 //Locking waveform register
@@ -109,6 +119,7 @@ reg [255:0] cycle_count;
 reg [3:0] state;
 //Used to control when mask is used
 reg mask_on, mask_inv;
+reg locking_cycle;//Used to control when locking waveform is being output
 
 localparam [3:0] state_idle = 0, 
 				 state_pre_run = 1,
@@ -117,8 +128,35 @@ localparam [3:0] state_idle = 0,
 
 //Mask mux for output
 reg output_on;
-assign m_axis_tdata = output_on ? (mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata) : locking_waveform;
+//assign m_axis_tdata = output_on ? (mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata) : (state == state_idle ? locking_waveform : 0);
 
+//Assignment for output to m_axis_tdata
+always @ * begin
+
+	if(output_on) begin
+		//If the mask is on
+		if(mask_on) begin
+			m_axis_tdata <= s_axis_tdata & mask_out;
+		end
+		else if(mask_inv) begin
+			m_axis_tdata <= s_axis_tdata & (~mask_out);
+		end
+		else begin
+			m_axis_tdata <= s_axis_tdata;
+		end
+	end
+	else begin
+		//If we're in the idle state
+		if(locking_cycle) begin
+			//output the locking waveform
+			m_axis_tdata <= locking_waveform;
+		end
+		else begin
+			//Otherwise just output 0
+			m_axis_tdata <= 0;
+		end
+	end
+end
 
 task reset_task();
 begin
@@ -130,47 +168,55 @@ begin
 	mask_inv <= 0;
 	loopback_valid <= 0;
 	output_on <= 0;
+	pre_delay_cycle_counter <= 0;
+	post_delay_cycle_counter <= 0;
+	locking_cycle <= 0;
 end
 endtask
 
 always @ (posedge clk or negedge rst) begin
-
 	if(!rst) begin
-	
 		reset_task();
-	
 	end
 	else begin
-	
-	
 		case(state)
-		
 		
 			state_idle: begin
 			
+				locking_cycle <= 1;
+				
 				if(trigger_in) begin
 					cycle_count <= cycle_count_out;
-					s_axis_tready <= 1'b1;//Start reading out data
 					
 					//turn the mask on
 					mask_on <= 1;
 					
-					//Set the delay counter
-					delay_cycle_counter <= delay_cycles;
+					//Set the pre_delay
+					pre_delay_cycle_counter <= pre_delay_cycles;
 					
+					if(pre_delay_cycles == 0) begin
+						s_axis_tready <= 1'b1;//Start reading out data
+					end
+
 					state <= state_pre_run;
 				end
 			end
 			
 			state_pre_run: begin
 				
-				if(delay_cycle_counter == 0) begin
-					output_on <= 1;
-					loopback_valid <= 1;
+				locking_cycle <= 0;
+				
+				if(pre_delay_cycle_counter == 0) begin
+					output_on <= 1;//Turn on the output to the RFSoC
+					loopback_valid <= 1;//Start writing back into waveform fifo
 					state <= state_run;
 				end
 				else begin
-					delay_cycle_counter <= delay_cycle_counter - 1;
+					//If we're about to start the experiment cycle
+					if(pre_delay_cycle_counter == 1) begin
+						s_axis_tready <= 1'b1;//Start reading out data
+					end
+					pre_delay_cycle_counter <= pre_delay_cycle_counter - 1;
 				end
 			end
 			
@@ -188,21 +234,38 @@ always @ (posedge clk or negedge rst) begin
 					else if(cycle_count == 1) begin//If we're on the last cycle
 						loopback_valid <= 0;//Stop writing back into fifo
 						output_on <= 0;//Stop outputting things to RFSoC
+						
+						//Set the post delay cycles
+						if(post_delay_cycles == 0) begin
+							locking_cycle <= 1;
+							post_delay_cycle_counter <= 0;
+						end
+						else begin
+							post_delay_cycle_counter <= post_delay_cycles - 1;
+						end
+						
+						state <= state_cleanup;
+						mask_inv <= 0;
+						
 					end
 				end
 				else begin
+					
 					state <= state_cleanup;
+					mask_inv <= 0;
 				end
-			
-			
 			end
 			
 			state_cleanup: begin
-			
+				//Count down post delay cycles
+				if(post_delay_cycle_counter) begin
+					post_delay_cycle_counter <= post_delay_cycle_counter - 1;
+				end
+				else begin
+					locking_cycle <= 1;
+					state <= state_idle;
+				end
 				
-				mask_inv <= 0;
-				state <= state_idle;
-			
 			end
 		
 		endcase

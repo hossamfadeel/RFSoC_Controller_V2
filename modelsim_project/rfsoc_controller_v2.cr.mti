@@ -23,15 +23,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Ap
 Top level modules:
 	shift_register
 
-} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
--- Compiling package dac_ctrl_sv_unit
--- Importing package rfsoc_config
--- Compiling module dac_ctrl
-
-Top level modules:
-	dac_ctrl
-
 } {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
 -- Compiling module axis_ps_to_pl

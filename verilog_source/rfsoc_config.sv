@@ -21,8 +21,9 @@ pl_rst = 5,//GPIO line used to hard-reset FPGA fabric
 trigger_line = 6,//Used to trigger DACs and ADCs from PS
 adc_num_avg_clk = 7, //Used to set how many averages the ADC will perform
 adc_num_cycle_count_clk = 8,//Used to set how many cycles the ADC will run for
-delay_cycle_clk = 9,//used to set how many clock cycles dac ctrl will wait after being triggered
-locking_waveform_clk = 10;//Used to set locking cycle waveform
+pre_delay_cycle_clk = 9,//used to set how many clock cycles dac ctrl will wait after being triggered
+post_delay_cycle_clk = 10,//used to set how many clock cycles dac ctrl will wait after being triggered
+locking_waveform_clk = 11;//Used to set locking cycle waveform
 
 
 
