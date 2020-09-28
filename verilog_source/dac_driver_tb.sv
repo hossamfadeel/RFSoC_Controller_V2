@@ -69,8 +69,66 @@ initial begin
 	repeat(10) clk_cycle();
 	
 	
+	//five_cycle_test();
+	one_cycle_test();
+
+end
+
+task one_cycle_test();
+begin
+
 	//Set the mux state to 0 so we can load values
 	set_mux_sel(0);
+	
+	set_mask_enable(0);
+	
+	//Set repeat cycles to 20
+	set_cycle_count(1);
+	
+	//Set the mask to half off half on
+	set_mask(test_mask);
+	
+	//Set the locking waveform
+	set_locking_waveform({16{16'h1111}});
+	
+	//Set the pre_delay cycles
+	set_pre_delay_cycles(1);
+	
+	//Set the post delay cycles
+	set_post_delay_cycles(1);
+	
+	//Load in 1 words (5*16 samples total)
+	
+	axis_word_reg = {16{16'hAAAA}}; 
+	
+	load_axis_word(axis_word_reg);
+
+	//turn on the loop-back mux
+	set_mux_sel(1);
+	
+	repeat(10) clk_cycle();
+	
+	for(i = 0; i < 20; i = i + 1) begin
+	
+		trigger_in <= 1;
+		clk_cycle();
+		trigger_in <= 0;
+		
+		repeat(50) clk_cycle();
+	
+	end
+
+end
+endtask
+
+
+task five_cycle_test();
+begin
+
+	//Set the mux state to 0 so we can load values
+	set_mux_sel(0);
+	
+	set_mask_enable(1);
 	
 	//Set repeat cycles to 20
 	set_cycle_count(5);
@@ -111,6 +169,7 @@ initial begin
 	end
 
 end
+endtask
 
 task clk_cycle;
 begin
@@ -260,6 +319,24 @@ begin
 		gpio_ctrl[mux_set_clk] <= 1;
 		repeat(2) clk_cycle();
 		gpio_ctrl[mux_set_clk] <= 0;
+		repeat(2) clk_cycle();
+	end
+	select_in <= 0;
+
+end
+endtask
+
+task set_mask_enable;
+input value;
+begin
+
+	select_in <= 1;
+	gpio_ctrl[sdata] <= value;
+	for(i = 0; i < 8; i = i + 1) begin
+		repeat(2) clk_cycle();
+		gpio_ctrl[mask_enable_clk] <= 1;
+		repeat(2) clk_cycle();
+		gpio_ctrl[mask_enable_clk] <= 0;
 		repeat(2) clk_cycle();
 	end
 	select_in <= 0;

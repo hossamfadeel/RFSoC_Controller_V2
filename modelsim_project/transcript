@@ -1,6 +1,21 @@
+# Load canceled
+# Compile of async_fifo.sv was successful.
+# Compile of axis_mux.sv was successful.
+# Compile of axis_ps_to_pl.sv was successful.
+# Compile of axis_selector.sv was successful.
+# Compile of channel_selector.sv was successful.
+# Compile of dac_ctrl.sv was successful.
+# Compile of dac_driver.sv was successful.
+# Compile of fifo.sv was successful.
+# Compile of fifo_wrappers.sv was successful.
+# Compile of rfsoc_config.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# Compile of shift_register.sv was successful.
+# Compile of dac_driver_tb.sv was successful.
+# 13 compiles, 0 failed with no errors.
 vsim -gui work.dac_driver_tb
 # vsim -gui work.dac_driver_tb 
-# Start time: 15:16:58 on Sep 28,2020
+# Start time: 16:02:52 on Sep 28,2020
 # Loading sv_std.std
 # Loading work.rfsoc_config
 # Loading work.dac_driver_tb_sv_unit
@@ -27,113 +42,65 @@ sim:/dac_driver_tb/dut/s_axis_tvalid \
 sim:/dac_driver_tb/dut/s_axis_tready \
 sim:/dac_driver_tb/dut/trigger_in \
 sim:/dac_driver_tb/dut/select_in
-run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-# Compile of dac_ctrl.sv was successful.
+# Compile of dac_driver_tb.sv was successful.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-# Compile of dac_ctrl.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Loading work.dac_driver_tb_sv_unit
+# Loading work.dac_driver_tb
 # Compile of dac_driver_tb.sv was successful.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.dac_driver_tb_sv_unit
 # Loading work.dac_driver_tb
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 73
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-# Compile of dac_ctrl.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 # Compile of dac_driver_tb.sv was successful.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.dac_driver_tb_sv_unit
 # Loading work.dac_driver_tb
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 73
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 # Compile of dac_driver_tb.sv was successful.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.dac_driver_tb_sv_unit
 # Loading work.dac_driver_tb
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 73
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-# Compile of dac_ctrl.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-# Compile of dac_driver_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_driver_tb_sv_unit
-# Loading work.dac_driver_tb
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
-run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 105
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113

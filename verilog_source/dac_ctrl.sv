@@ -75,6 +75,17 @@ shift_register #(8) mux_sel_reg
 	mux_sel_int
 );
 
+//Mask enable register
+wire [7:0] mask_enable;
+shift_register #(8) mask_enable_reg
+(
+	clk & select_in,
+	gpio_ctrl[mask_enable_clk],
+	rst,
+	gpio_ctrl[sdata],
+	mask_enable
+);
+
 //pre_delay cycles register
 wire [config_reg_width-1:0] pre_delay_cycles;
 reg [config_reg_width:0] pre_delay_cycle_counter;
@@ -135,10 +146,10 @@ always @ * begin
 
 	if(output_on) begin
 		//If the mask is on
-		if(mask_on) begin
+		if(mask_on && mask_enable[0]) begin
 			m_axis_tdata <= s_axis_tdata & mask_out;
 		end
-		else if(mask_inv) begin
+		else if(mask_inv && mask_enable[0]) begin
 			m_axis_tdata <= s_axis_tdata & (~mask_out);
 		end
 		else begin
