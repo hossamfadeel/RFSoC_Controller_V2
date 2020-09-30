@@ -42,21 +42,24 @@ module FIFO_memory
  
 ///////// WHEN BOTH READING AND WRITING BUT FIFO IS EMPTY //////// 
  
-	always @(posedge clk) 
+	//always @(posedge clk or negedge reset) 
+	always @ * 
 		begin 
 			if(reset==0) 
 			//reset is pressed															 
-				sr_read_write_empty <= 0; 
-			else if(read==1 && empty==1 && write==1)	 
-			//when fifo is empty and read & write both 1 
-				sr_read_write_empty <= 1; 
-			else 
-				sr_read_write_empty <= 0; 
+				sr_read_write_empty <= 0;
+			else begin
+				if(read==1 && empty==1 && write==1)	 
+				//when fifo is empty and read & write both 1 
+					sr_read_write_empty <= 1; 
+				else 
+					sr_read_write_empty <= 0;
+			end				
 		end 
  
 //////////////////////// COUNTER OPERATION /////////////////////// 
 		 
-	always @(posedge clk) 
+	always @(posedge clk or negedge reset) 
 		begin 
 			if(reset==0) 
 //when reset, the fifo is made empty thus count is set to zero 
@@ -111,7 +114,7 @@ module FIFO_memory
 ///////////// READ AND WRITE POINTER MEMORY LOCATION ///////////// 
  
 	// Write operation memory pointer 
-	always @(posedge clk) 
+	always @(posedge clk or negedge reset) 
 		begin 
 			if(reset==0) 
 			//head moved to zero location (fifo is made empty) 
@@ -125,7 +128,7 @@ module FIFO_memory
 		end 
 	 
 	// Read operation memory pointer 
-		always @(posedge clk) 
+		always @(posedge clk or negedge reset) 
 			begin 
 				if(reset==0) 
 				//tail moved to zero location (fifo is made empty) 
@@ -141,28 +144,35 @@ module FIFO_memory
 //////////////////// READ AND WRITE OPERATION //////////////////// 
  
 	// Write operation 
-	always @(posedge clk) 
+	always @(posedge clk or negedge reset) begin 
 		//IT CAN WRITE WHEN RESET IS USED AS FULL==0	 
-		begin 
+		if(reset == 0) begin
+
+		end
+		else begin		
 			if(write==1 && full==0) 
 			//writing when memory is NOT FULL 
 				fifo_mem[head] <= din; 
 			else									 
 			//when NOT WRITING 
 				fifo_mem[head] <= fifo_mem[head]; 
-		end 
+		end
+	end 
  
 	// Read operation 
-	always @(posedge clk) 
+	always @(posedge clk or negedge reset) 
 		begin 
-			if(reset==0)						 
+			if(reset==0) begin					 
 			//reset implies output is zero 
-				dout <= 0; 
-			else if(read==1 && empty==0)	 
-			//reading data when memory is NOT EMPTY 
-				dout <= fifo_mem[tail]; 
-			else 
-			//no change 
-				dout <= dout;  
+				dout <= 0;
+			end
+			else begin
+				if(read==1 && empty==0)	 
+				//reading data when memory is NOT EMPTY 
+					dout <= fifo_mem[tail]; 
+				else 
+				//no change 
+					dout <= dout; 
+			end
 		end 
 endmodule 

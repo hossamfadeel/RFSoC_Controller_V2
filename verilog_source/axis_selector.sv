@@ -27,6 +27,7 @@ always @ * begin
 			m_axis_tdata[(i << 4)+:256] = s_axis_tdata;
 			m_axis_tvalid[i] = s_axis_tvalid;
 			s_axis_tready = m_axis_tready[i];
+			break;
 		end
 		else begin
 			m_axis_tdata[(i << 4)+:256] = 0;

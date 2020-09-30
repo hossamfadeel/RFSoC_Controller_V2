@@ -12,12 +12,12 @@ module axis_sync_fifo
     input wire [255:0] s_axis_tdata,
     
     output wire [255:0] m_axis_tdata,
-    output wire m_axis_tvalid,
+    output reg m_axis_tvalid,
     input wire m_axis_tready 
 );
 
 wire full, empty;
-assign m_axis_tvalid = !empty;
+wire m_axis_tvalid_int = !empty;
 assign s_axis_tready = !full;
 
 FIFO_memory #(256, mem_width) sync_fifo
@@ -35,6 +35,16 @@ FIFO_memory #(256, mem_width) sync_fifo
 	
 );
 
+//One cycle delay for write clock
+always @ (posedge axis_clk or negedge rst) begin
+	if(!rst) begin
+		m_axis_tvalid <= 0;
+	end
+	else begin
+		m_axis_tvalid <= m_axis_tvalid_int;
+	end
+end
+
 endmodule
 
 
@@ -49,14 +59,14 @@ module axis_async_fifo
     
 	input wire m_axis_clk,
     output wire [255:0] m_axis_tdata,
-    output wire m_axis_tvalid,
+    output reg m_axis_tvalid,
     input wire m_axis_tready 
 );
 
 wire full, empty;
 wire clear_in = !rst;
 
-assign m_axis_tvalid = !empty;
+wire m_axis_tvalid_int = !empty;
 assign s_axis_tready = !full;
 
 aFifo #(256, 4) async_fifo
@@ -74,6 +84,16 @@ aFifo #(256, 4) async_fifo
 	clear_in
 	
 );
+
+//One cycle delay for write clock
+always @ (posedge m_axis_clk or negedge rst) begin
+	if(!rst) begin
+		m_axis_tvalid <= 0;
+	end
+	else begin
+		m_axis_tvalid <= m_axis_tvalid_int;
+	end
+end
 
 
 endmodule

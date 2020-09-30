@@ -1,5 +1,7 @@
 
 
+import rfsoc_config::*;
+
 
 module axis_ps_to_pl
 #(parameter ps_axis_width = 32)
@@ -22,7 +24,7 @@ module axis_ps_to_pl
 );
 
 
-parameter ps_per_pl = ps_axis_width / 256;
+parameter ps_per_pl = 256 / ps_axis_width;
 
 reg [15:0] word_cnt;
 reg [255:0] word_buff;
@@ -83,9 +85,10 @@ always @ (posedge ps_clk or negedge rst) begin
 		if(s_axis_tvalid) begin
 		
 			//If this is the last word in the sequence
-			if(word_cnt == (ps_per_pl - 1)) begin
+			if(word_cnt == (ps_per_pl-1)) begin
 				//Push this word and the buffer out to the async fifo
-				async_fifo_data <= {word_buff[255:ps_axis_width], s_axis_tdata};
+				async_fifo_data <= {word_buff[255-ps_axis_width:0], s_axis_tdata};
+				word_buff <= {word_buff[255-ps_axis_width:0], s_axis_tdata};
 				async_fifo_valid <= 1;
 				word_cnt <= 0;
 			end

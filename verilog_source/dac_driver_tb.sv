@@ -69,8 +69,8 @@ initial begin
 	repeat(10) clk_cycle();
 	
 	
-	//five_cycle_test();
-	one_cycle_test();
+	five_cycle_test();
+	//one_cycle_test();
 
 end
 
@@ -131,7 +131,7 @@ begin
 	set_mask_enable(1);
 	
 	//Set repeat cycles to 20
-	set_cycle_count(5);
+	set_cycle_count(10);
 	
 	//Set the mask to half off half on
 	set_mask(test_mask);

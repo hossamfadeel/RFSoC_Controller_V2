@@ -245,7 +245,7 @@ always @ (posedge clk or negedge rst) begin
 					else if(cycle_count == 1) begin//If we're on the last cycle
 						loopback_valid <= 0;//Stop writing back into fifo
 						output_on <= 0;//Stop outputting things to RFSoC
-						
+						s_axis_tready <= 1'b0;//Stop reading out the waveform, mostly for lengths of cycle
 						//Set the post delay cycles
 						if(post_delay_cycles == 0) begin
 							locking_cycle <= 1;
