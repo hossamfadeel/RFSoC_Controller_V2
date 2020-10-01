@@ -1293,3 +1293,13 @@ run -all
 # Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
 run -all
 # Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+quit -sim
+# End time: 18:18:13 on Sep 30,2020, Elapsed time: 2:10:07
+# Errors: 0, Warnings: 1
+# Compile of rfsoc_config.sv was successful.
+# Compile of dac_driver_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of rfsoc_pl_ctrl_tb.sv failed with 8 errors.
+# Compile of rfsoc_pl_ctrl_tb.sv failed with 7 errors.
+# Compile of rfsoc_pl_ctrl_tb.sv failed with 1 errors.
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
