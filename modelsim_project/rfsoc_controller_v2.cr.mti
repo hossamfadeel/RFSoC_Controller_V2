@@ -7,15 +7,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Ap
 Top level modules:
 	dac_driver_tb
 
-} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
--- Compiling package axis_ps_to_pl_tb_sv_unit
--- Importing package rfsoc_config
--- Compiling module axis_ps_to_pl_tb
-
-Top level modules:
-	axis_ps_to_pl_tb
-
 } {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
 -- Compiling package channel_selector_sv_unit
@@ -24,6 +15,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Ap
 
 Top level modules:
 	channel_selector
+
+} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
+-- Compiling package axis_ps_to_pl_tb_sv_unit
+-- Importing package rfsoc_config
+-- Compiling module axis_ps_to_pl_tb
+
+Top level modules:
+	axis_ps_to_pl_tb
 
 } {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/shift_register.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/shift_register.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020

@@ -96,7 +96,7 @@ gpio_fifo gfifo
 );
 
 
-wire rst_int = rst & gpio_ctrl_int[pl_rst];
+wire rst_int = rst & !gpio_ctrl_int[pl_rst];
 
 
 //Channel selector for controlling which channel is being written to
@@ -219,67 +219,67 @@ end
 
 assign m0_axis_tdata = channel_data[(0*256)+:256];
 assign m0_axis_tvalid = channel_tvalid[0];
-assign m0_axis_tready = channel_tready[0];
+assign channel_tready[0] = m0_axis_tready;
 
 assign m1_axis_tdata = channel_data[(1*256)+:256];
 assign m1_axis_tvalid = channel_tvalid[1];
-assign m1_axis_tready = channel_tready[1];
+assign channel_tready[1] = m1_axis_tready;
 
 assign m2_axis_tdata = channel_data[(2*256)+:256];
 assign m2_axis_tvalid = channel_tvalid[2];
-assign m2_axis_tready = channel_tready[2];
+assign channel_tready[2] = m2_axis_tready;
 
 assign m3_axis_tdata = channel_data[(3*256)+:256];
 assign m3_axis_tvalid = channel_tvalid[3];
-assign m3_axis_tready = channel_tready[3];
+assign channel_tready[3] = m3_axis_tready;
 
 assign m4_axis_tdata = channel_data[(4*256)+:256];
 assign m4_axis_tvalid = channel_tvalid[4];
-assign m4_axis_tready = channel_tready[4];
+assign channel_tready[4] = m4_axis_tready;
 
 assign m5_axis_tdata = channel_data[(5*256)+:256];
 assign m5_axis_tvalid = channel_tvalid[5];
-assign m5_axis_tready = channel_tready[5];
+assign channel_tready[5] = m5_axis_tready;
 
 assign m6_axis_tdata = channel_data[(6*256)+:256];
 assign m6_axis_tvalid = channel_tvalid[6];
-assign m6_axis_tready = channel_tready[6];
+assign channel_tready[6] = m6_axis_tready;
 
 assign m7_axis_tdata = channel_data[(7*256)+:256];
 assign m7_axis_tvalid = channel_tvalid[7];
-assign m7_axis_tready = channel_tready[7];
+assign channel_tready[7] = m7_axis_tready;
 
 assign m8_axis_tdata = channel_data[(8*256)+:256];
 assign m8_axis_tvalid = channel_tvalid[8];
-assign m8_axis_tready = channel_tready[8];
+assign channel_tready[8] = m8_axis_tready;
 
 assign m9_axis_tdata = channel_data[(9*256)+:256];
 assign m9_axis_tvalid = channel_tvalid[9];
-assign m9_axis_tready = channel_tready[9];
+assign channel_tready[9] = m9_axis_tready;
 
 assign m10_axis_tdata = channel_data[(10*256)+:256];
 assign m10_axis_tvalid = channel_tvalid[10];
-assign m10_axis_tready = channel_tready[10];
+assign channel_tready[10] = m10_axis_tready;
 
 assign m11_axis_tdata = channel_data[(11*256)+:256];
 assign m11_axis_tvalid = channel_tvalid[11];
-assign m11_axis_tready = channel_tready[11];
+assign channel_tready[11] = m11_axis_tready;
 
 assign m12_axis_tdata = channel_data[(12*256)+:256];
 assign m12_axis_tvalid = channel_tvalid[12];
-assign m12_axis_tready = channel_tready[12];
+assign channel_tready[12] = m12_axis_tready;
 
 assign m13_axis_tdata = channel_data[(13*256)+:256];
 assign m13_axis_tvalid = channel_tvalid[13];
-assign m13_axis_tready = channel_tready[13];
+assign channel_tready[13] = m13_axis_tready;
 
 assign m14_axis_tdata = channel_data[(14*256)+:256];
 assign m14_axis_tvalid = channel_tvalid[14];
-assign m14_axis_tready = channel_tready[14];
+assign channel_tready[14] = m14_axis_tready;
 
 assign m15_axis_tdata = channel_data[(15*256)+:256];
 assign m15_axis_tvalid = channel_tvalid[15];
-assign m15_axis_tready = channel_tready[15];
+assign channel_tready[15] = m15_axis_tready;
 
 
 endmodule

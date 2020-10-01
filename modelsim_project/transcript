@@ -1554,3 +1554,93 @@ run -all
 # Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
 run -all
 # Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+add wave -position insertpoint  \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/clk} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/rst} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/gpio_ctrl} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/m_axis_tdata} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/m_axis_tvalid} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/m_axis_tready} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/s_axis_tdata} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/s_axis_tvalid} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/s_axis_tready} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/trigger_in} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/select_in}
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/channel_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/channel_tready
+restart -f
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+# Compile of rfsoc_pl_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/trigger_int
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/gpio_ctrl_int
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/chan_sel/clk \
+sim:/rfsoc_pl_ctrl_tb/dut/chan_sel/rst \
+sim:/rfsoc_pl_ctrl_tb/dut/chan_sel/gpio_ctrl \
+sim:/rfsoc_pl_ctrl_tb/dut/chan_sel/channel_select
+restart -f
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+# Compile of channel_selector.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.channel_selector_sv_unit
+# Loading work.channel_selector
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 215
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/gfifo/rst \
+sim:/rfsoc_pl_ctrl_tb/dut/gfifo/ps_clk \
+sim:/rfsoc_pl_ctrl_tb/dut/gfifo/pl_clk \
+sim:/rfsoc_pl_ctrl_tb/dut/gfifo/gpio_in \
+sim:/rfsoc_pl_ctrl_tb/dut/gfifo/gpio_out
+# Compile of fifo_wrappers.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.gpio_fifo
+# Loading work.axis_async_fifo
+# Loading work.axis_sync_fifo
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 215
+# Compile of fifo_wrappers.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.gpio_fifo
+# Loading work.axis_async_fifo
+# Loading work.axis_sync_fifo
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/chan_sel/clk \
+sim:/rfsoc_pl_ctrl_tb/dut/chan_sel/rst \
+sim:/rfsoc_pl_ctrl_tb/dut/chan_sel/gpio_ctrl \
+sim:/rfsoc_pl_ctrl_tb/dut/chan_sel/channel_select
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 214
+# Compile of rfsoc_pl_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 214

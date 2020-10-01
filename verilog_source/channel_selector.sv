@@ -25,7 +25,7 @@ shift_register
 channel_sr
 (
     clk,
-    gpio_ctrl[sel_clk],
+    gpio_ctrl[channel_sel_clk],
     rst,
     gpio_ctrl[sdata],
     channel_select

@@ -113,8 +113,6 @@ module gpio_fifo
 
 wire clear_in = !rst;
 wire full, empty;
-reg write_en;
-reg [15:0] gpio_old_state;
 aFifo #(16, 4) async_fifo
 (
 	gpio_out,
@@ -124,30 +122,12 @@ aFifo #(16, 4) async_fifo
 	
 	gpio_in,
 	full, 
-	write_en,
+	1'b1,
 	ps_clk,
 	
 	clear_in
 	
 );
-
-//Writing only when GPIO changes
-always @ (posedge ps_clk or negedge rst) begin
-	if(!rst) begin
-		gpio_old_state <= 0;
-		write_en <= 0;
-	end
-	else begin
-		if(gpio_in != gpio_old_state)begin
-			write_en <= 1;
-			gpio_old_state <= gpio_in;
-		end
-		else begin
-			write_en <= 0;
-			gpio_old_state <= gpio_in;
-		end
-	end
-end
 
 
 endmodule
