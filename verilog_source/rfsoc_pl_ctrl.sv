@@ -82,22 +82,22 @@ module rfsoc_pl_ctrl
 	
 );
 
-
-wire rst_int = rst & gpio_ctrl[pl_rst];
-
-
 //GPIO clock crossing fifo
 wire [15:0] gpio_ctrl_int;//GPIO ctrl bus in pl clock domain
 gpio_fifo gfifo
 (
-	rst_int,
+	rst,
 	
 	ps_clk, pl_clk,
 	
 	gpio_ctrl,
 	
-	gpio_ctrl_int,
+	gpio_ctrl_int
 );
+
+
+wire rst_int = rst & gpio_ctrl_int[pl_rst];
+
 
 //Channel selector for controlling which channel is being written to
 wire [15:0] channel_select;
@@ -132,7 +132,7 @@ axis_ps_to_pl #(32) axis_ps_pl_crossing
 	//AXIS output to PL
 	s_axis_tdata_int,
     s_axis_tvalid_int,
-    s_axis_tready_int,
+    s_axis_tready_int
 );
 
 //AXIS selector
@@ -160,7 +160,7 @@ axis_selector axis_sel
 wire [((256*16)-1):0] channel_data;
 wire [15:0] channel_tvalid, channel_tready;
 
-
+//Trigger definition
 wire trigger_int = gpio_ctrl_int[trigger_line];
 
 //genloop for creating channels
@@ -191,7 +191,7 @@ for(i = 0; i < 16; i = i + 1) begin
 		);
 	end
 	else begin
-		dac_driver #(dac_fifo_mem_width) dummy_channel_ctrl
+		dac_driver #(dac_fifo_mem_width) real_channel_ctrl
 		(
 			pl_clk,
 			rst,
