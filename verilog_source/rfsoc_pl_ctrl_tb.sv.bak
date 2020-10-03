@@ -228,9 +228,9 @@ initial begin
 		for(k = 0; k < 40; k = k + 1) begin
 			load_axis_word(axis_word_reg);
 			if(axis_word_reg == 32'hffffffff)
-				axis_word_reg = 0;
+				axis_word_reg <= 0;
 			else
-				axis_word_reg = axis_word_reg + 32'h11111111;
+				axis_word_reg <= axis_word_reg + 32'h11111111;
 		end
 		
 		//turn on the loop-back mux
@@ -245,7 +245,7 @@ initial begin
 	
 		gpio_ctrl[trigger_line] <= 1;
 		clk_cycle();
-		gpio_ctrl[trigger_line] <= 0;
+		gpio_ctrl[trigger_line] <= 1;
 		
 		repeat(50) clk_cycle();
 	

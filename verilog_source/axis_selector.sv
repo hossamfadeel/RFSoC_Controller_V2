@@ -24,13 +24,13 @@ always @ * begin
 	for(i = 0; i < 16; i = i + 1) begin
 		//If this is the bus of the target channel
 		if(channel_select[i])begin
-			m_axis_tdata[(i << 4)+:256] = s_axis_tdata;
+			m_axis_tdata[(i*256)+:256] = s_axis_tdata;
 			m_axis_tvalid[i] = s_axis_tvalid;
 			s_axis_tready = m_axis_tready[i];
 			break;
 		end
 		else begin
-			m_axis_tdata[(i << 4)+:256] = 0;
+			m_axis_tdata[(i*256)+:256] = 0;
 			m_axis_tvalid[i] = 0;
 		end
 	end
