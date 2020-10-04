@@ -170,9 +170,10 @@ module FIFO_memory
 				if(read==1 && empty==0)	 
 				//reading data when memory is NOT EMPTY 
 					dout <= fifo_mem[tail]; 
-				else 
+				else if(!empty) 
 				//no change 
-					dout <= dout; 
+					//dout <= dout; 
+					dout <= fifo_mem[tail];
 			end
 		end 
 endmodule 

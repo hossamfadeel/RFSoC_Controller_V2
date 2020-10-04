@@ -82,7 +82,7 @@ integer i, j, k;
 wire [255:0] test_mask = {{8{16'h0000}}, {8{16'hFFFF}}};
 reg [31:0] axis_word_reg;
 
-rfsoc_pl_ctrl #(32) dut
+rfsoc_pl_ctrl dut
 (
 	ps_clk, pl_clk,
 	rst,

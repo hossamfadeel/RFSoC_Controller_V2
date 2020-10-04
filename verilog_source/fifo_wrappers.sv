@@ -1,7 +1,7 @@
 import rfsoc_config::*;
 
 module axis_sync_fifo
-#(parameter mem_width = 16)
+#(parameter mem_width = 16, parameter bus_width = 256)
 (
 
 	input wire rst,
@@ -9,9 +9,9 @@ module axis_sync_fifo
 
     input wire s_axis_tvalid,
     output wire s_axis_tready,
-    input wire [255:0] s_axis_tdata,
+    input wire [bus_width-1:0] s_axis_tdata,
     
-    output wire [255:0] m_axis_tdata,
+    output wire [bus_width-1:0] m_axis_tdata,
     output reg m_axis_tvalid,
     input wire m_axis_tready 
 );
@@ -20,7 +20,7 @@ wire full, empty;
 wire m_axis_tvalid_int = !empty;
 assign s_axis_tready = !full;
 
-FIFO_memory #(256, mem_width) sync_fifo
+FIFO_memory #(bus_width, mem_width) sync_fifo
 (
 	axis_clk,
 	rst,
@@ -35,7 +35,6 @@ FIFO_memory #(256, mem_width) sync_fifo
 	
 );
 
-//One cycle delay for write clock
 always @ (posedge axis_clk or negedge rst) begin
 	if(!rst) begin
 		m_axis_tvalid <= 0;
@@ -48,7 +47,8 @@ end
 endmodule
 
 
-module axis_async_fifo#(parameter width = 256)
+module axis_async_fifo
+#(parameter width = 256)
 (
 	input wire rst,
 
@@ -94,6 +94,7 @@ always @ (posedge m_axis_clk or negedge rst) begin
 		m_axis_tvalid <= m_axis_tvalid_int;
 	end
 end
+
 
 
 endmodule

@@ -69,8 +69,8 @@ initial begin
 	repeat(10) clk_cycle();
 	
 	
-	five_cycle_test();
-	//one_cycle_test();
+	//five_cycle_test();
+	one_cycle_test();
 
 end
 

@@ -42,7 +42,8 @@ module aFifo
     //(Uses a dual-port RAM).
     //'Data_out' logic:
     always @ (posedge RClk)
-        if (ReadEn_in & !Empty_out)
+        //if (ReadEn_in & !Empty_out)
+		if(!Empty_out)
             Data_out <= Mem[pNextWordToRead];
             
     //'Data_in' logic:
