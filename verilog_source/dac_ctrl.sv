@@ -272,11 +272,15 @@ always @ (posedge clk or negedge rst) begin
 				if(post_delay_cycle_counter) begin
 					post_delay_cycle_counter <= post_delay_cycle_counter - 1;
 				end
-				else begin
+				else if(!trigger_in) begin//Only reset after trigger line goes low
 					locking_cycle <= 1;
 					state <= state_idle;
 				end
 				
+			end
+			
+			default begin
+				reset_task();
 			end
 		
 		endcase

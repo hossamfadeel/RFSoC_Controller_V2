@@ -2,7 +2,6 @@
 import rfsoc_config::*;
 
 module rfsoc_pl_ctrl
-#(parameter ps_axis_width = 32)
 (
 	input wire ps_clk, pl_clk,
 	input wire rst,

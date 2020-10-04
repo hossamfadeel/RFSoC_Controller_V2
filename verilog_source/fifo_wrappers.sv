@@ -48,17 +48,17 @@ end
 endmodule
 
 
-module axis_async_fifo
+module axis_async_fifo#(parameter width = 256)
 (
 	input wire rst,
 
 	input wire s_axis_clk,
 	input wire s_axis_tvalid,
     output wire s_axis_tready,
-    input wire [255:0] s_axis_tdata,
+    input wire [width-1:0] s_axis_tdata,
     
 	input wire m_axis_clk,
-    output wire [255:0] m_axis_tdata,
+    output wire [width-1:0] m_axis_tdata,
     output reg m_axis_tvalid,
     input wire m_axis_tready 
 );
@@ -69,7 +69,7 @@ wire clear_in = !rst;
 wire m_axis_tvalid_int = !empty;
 assign s_axis_tready = !full;
 
-aFifo #(256, 4) async_fifo
+aFifo #(width, 4) async_fifo
 (
 	m_axis_tdata,
 	empty,
