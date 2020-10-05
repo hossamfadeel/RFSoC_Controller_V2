@@ -442,3 +442,268 @@ run -all
 # Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
 # Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+quit -sim
+# End time: 16:23:43 on Oct 04,2020, Elapsed time: 0:03:49
+# Errors: 0, Warnings: 1
+# Compile of axis_pl_to_ps_tb.sv was successful.
+vsim -gui work.axis_pl_to_ps_tb
+# vsim -gui work.axis_pl_to_ps_tb 
+# Start time: 16:24:41 on Oct 04,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.axis_pl_to_ps_tb_sv_unit
+# Loading work.axis_pl_to_ps_tb
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# Loading work.FIFO_memory
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
+# Loading work.axis_async_fifo
+# Loading work.aFifo
+# Loading work.GrayCounter
+add wave -position insertpoint  \
+sim:/axis_pl_to_ps_tb/output_fifo/rst \
+sim:/axis_pl_to_ps_tb/output_fifo/axis_clk \
+sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tvalid \
+sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tready \
+sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tdata \
+sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tdata \
+sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tvalid \
+sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tready
+run -all
+# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
+# Compile of fifo.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.FIFO_memory
+run -all
+# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
+# Compile of fifo_wrappers.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# Loading work.axis_async_fifo
+run -all
+# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
+quit -sim
+# End time: 18:15:30 on Oct 04,2020, Elapsed time: 1:50:49
+# Errors: 0, Warnings: 1
+# Compile of fifo_tb.sv failed with 1 errors.
+# Compile of fifo_tb.sv was successful.
+vsim -gui work.fifo_tb
+# vsim -gui work.fifo_tb 
+# Start time: 18:16:11 on Oct 04,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.fifo_tb_sv_unit
+# Loading work.fifo_tb
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# Loading work.FIFO_memory
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position insertpoint  \
+sim:/fifo_tb/input_fifo/rst \
+sim:/fifo_tb/input_fifo/axis_clk \
+sim:/fifo_tb/input_fifo/s_axis_tvalid \
+sim:/fifo_tb/input_fifo/s_axis_tready \
+sim:/fifo_tb/input_fifo/s_axis_tdata \
+sim:/fifo_tb/input_fifo/m_axis_tdata \
+sim:/fifo_tb/input_fifo/m_axis_tvalid \
+sim:/fifo_tb/input_fifo/m_axis_tready
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+# Compile of fifo_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_tb_sv_unit
+# Loading work.fifo_tb
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+# Compile of fifo_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_tb_sv_unit
+# Loading work.fifo_tb
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 55
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 55
+# Compile of fifo_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_tb_sv_unit
+# Loading work.fifo_tb
+run -all
+restart -f
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 54
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+quit -sim
+# End time: 08:58:52 on Oct 05,2020, Elapsed time: 14:42:41
+# Errors: 0, Warnings: 1
+# Compile of fifo_wrappers.sv was successful.
+# Compile of fifo.sv was successful.
+# Compile of axis_fifos.sv was successful.
+vsim -gui work.fifo_tb
+# vsim -gui work.fifo_tb 
+# Start time: 08:59:56 on Oct 05,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.fifo_tb_sv_unit
+# Loading work.fifo_tb
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# Loading work.axis_fifo
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'fifo_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv
+# Error loading design
+# End time: 08:59:56 on Oct 05,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 5
+# Compile of axis_fifos.sv was successful.
+vsim -gui work.fifo_tb
+# vsim -gui work.fifo_tb 
+# Start time: 09:00:26 on Oct 05,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.fifo_tb_sv_unit
+# Loading work.fifo_tb
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# Loading work.axis_fifo
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tid'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv(84).
+#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tdest'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv(85).
+#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 's_axis_tuser'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv(86).
+#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv Line: 69
+# Compile of fifo_wrappers.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (8) for port 's_axis_tuser'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv(86).
+#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv Line: 69
+# Compile of fifo_wrappers.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+add wave -position insertpoint  \
+sim:/fifo_tb/input_fifo/rst \
+sim:/fifo_tb/input_fifo/axis_clk \
+sim:/fifo_tb/input_fifo/s_axis_tvalid \
+sim:/fifo_tb/input_fifo/s_axis_tready \
+sim:/fifo_tb/input_fifo/s_axis_tdata \
+sim:/fifo_tb/input_fifo/m_axis_tdata \
+sim:/fifo_tb/input_fifo/m_axis_tvalid \
+sim:/fifo_tb/input_fifo/m_axis_tready
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+# Compile of fifo_wrappers.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+add wave -position insertpoint  \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tvalid
+add wave -position insertpoint  \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tdata \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tkeep \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tvalid \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tready \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tlast \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tid \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tdest \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tuser
+restart -f
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+add wave -position insertpoint  \
+sim:/fifo_tb/input_fifo/sync_fifo/DEPTH \
+sim:/fifo_tb/input_fifo/sync_fifo/DATA_WIDTH \
+sim:/fifo_tb/input_fifo/sync_fifo/KEEP_ENABLE \
+sim:/fifo_tb/input_fifo/sync_fifo/KEEP_WIDTH \
+sim:/fifo_tb/input_fifo/sync_fifo/LAST_ENABLE \
+sim:/fifo_tb/input_fifo/sync_fifo/ID_ENABLE \
+sim:/fifo_tb/input_fifo/sync_fifo/ID_WIDTH \
+sim:/fifo_tb/input_fifo/sync_fifo/DEST_ENABLE \
+sim:/fifo_tb/input_fifo/sync_fifo/DEST_WIDTH \
+sim:/fifo_tb/input_fifo/sync_fifo/USER_ENABLE \
+sim:/fifo_tb/input_fifo/sync_fifo/USER_WIDTH \
+sim:/fifo_tb/input_fifo/sync_fifo/PIPELINE_OUTPUT \
+sim:/fifo_tb/input_fifo/sync_fifo/FRAME_FIFO \
+sim:/fifo_tb/input_fifo/sync_fifo/USER_BAD_FRAME_VALUE \
+sim:/fifo_tb/input_fifo/sync_fifo/USER_BAD_FRAME_MASK \
+sim:/fifo_tb/input_fifo/sync_fifo/DROP_BAD_FRAME \
+sim:/fifo_tb/input_fifo/sync_fifo/DROP_WHEN_FULL \
+sim:/fifo_tb/input_fifo/sync_fifo/ADDR_WIDTH \
+sim:/fifo_tb/input_fifo/sync_fifo/KEEP_OFFSET \
+sim:/fifo_tb/input_fifo/sync_fifo/LAST_OFFSET \
+sim:/fifo_tb/input_fifo/sync_fifo/ID_OFFSET \
+sim:/fifo_tb/input_fifo/sync_fifo/DEST_OFFSET \
+sim:/fifo_tb/input_fifo/sync_fifo/USER_OFFSET \
+sim:/fifo_tb/input_fifo/sync_fifo/WIDTH
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+add wave -position insertpoint  \
+sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tvalid_pipe_reg
+restart -f
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+add wave -position insertpoint  \
+sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tdata \
+sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tkeep \
+sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tvalid \
+sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tready \
+sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tlast \
+sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tid \
+sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tdest \
+sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tuser
+restart -f
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+# Compile of fifo_wrappers.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+# Compile of fifo_tb.sv was successful.
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_tb_sv_unit
+# Loading work.fifo_tb
+run -all
+# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 52
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95

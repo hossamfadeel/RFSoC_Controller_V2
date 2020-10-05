@@ -76,7 +76,7 @@ axis_sync_fifo #(4, 32) output_fifo
     
     dummy_data_out,
     dummy_valid,
-    1'b0
+    start_readout
 );
 
 integer i;
