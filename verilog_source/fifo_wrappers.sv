@@ -121,41 +121,99 @@ module axis_async_fifo
     output reg m_axis_tvalid,
     input wire m_axis_tready 
 );
-
-wire full, empty;
-wire clear_in = !rst;
-
-wire m_axis_tvalid_int = !empty;
-assign s_axis_tready = !full;
-
-aFifo #(width, 4) async_fifo
+wire [(width/8)-1:0] m_axis_tkeep;
+wire m_axis_tlast;
+wire [7:0] m_axis_tid, m_axis_tdest;
+wire m_axis_tuser;
+wire s_status_overflow, s_status_bad_frame, s_status_good_frame;
+wire m_status_overflow, m_status_bad_frame, m_status_good_frame;
+axis_async_fifo_def #
 (
-	m_axis_tdata,
-	empty,
-	m_axis_tready,
-	m_axis_clk,
-	
-	s_axis_tdata,
-	full, 
-	s_axis_tvalid,
-	s_axis_clk,
-	
-	clear_in
-	
+    // FIFO depth in words
+    // KEEP_WIDTH words per cycle if KEEP_ENABLE set
+    // Rounded up to nearest power of 2 cycles
+    16,//parameter DEPTH = 4096,
+    // Width of AXI stream interfaces in bits
+    width,//parameter DATA_WIDTH = 8,
+    // Propagate tkeep signal
+    // If disabled, tkeep assumed to be 1'b1
+    0,//parameter KEEP_ENABLE = (DATA_WIDTH>8),
+    // tkeep signal width (words per cycle)
+    (width/8),//parameter KEEP_WIDTH = (DATA_WIDTH/8),
+    // Propagate tlast signal
+    0,//parameter LAST_ENABLE = 1,
+    // Propagate tid signal
+    0,//parameter ID_ENABLE = 0,
+    // tid signal width
+    8,//parameter ID_WIDTH = 8,
+    // Propagate tdest signal
+    0,//parameter DEST_ENABLE = 0,
+    // tdest signal width
+    8,//parameter DEST_WIDTH = 8,
+    // Propagate tuser signal
+    0,//parameter USER_ENABLE = 1,
+    // tuser signal width
+    1,//parameter USER_WIDTH = 1,
+    // number of output pipeline registers
+    2,//parameter PIPELINE_OUTPUT = 2,
+    // Frame FIFO mode - operate on frames instead of cycles
+    // When set, m_axis_tvalid will not be deasserted within a frame
+    // Requires LAST_ENABLE set
+    0,//parameter FRAME_FIFO = 0,
+    // tuser value for bad frame marker
+    1,//parameter USER_BAD_FRAME_VALUE = 1'b1,
+    // tuser mask for bad frame marker
+    1,//parameter USER_BAD_FRAME_MASK = 1'b1,
+    // Drop frames marked bad
+    // Requires FRAME_FIFO set
+    0,//parameter DROP_BAD_FRAME = 0,
+    // Drop incoming frames when full
+    // When set, s_axis_tready is always asserted
+    // Requires FRAME_FIFO set
+    0//parameter DROP_WHEN_FULL = 0
+) async_fifo
+(
+    /*
+     * Common asynchronous reset
+     */
+    !rst,
+
+    /*
+     * AXI input
+     */
+    s_axis_clk,
+    s_axis_tdata,
+    {(width/8){1'b1}},
+    s_axis_tvalid,
+    s_axis_tready,
+    1'b0,//s_axis_tlast,
+    8'b0,//s_axis_tid,
+    8'b0,//s_axis_tdest,
+    1'b0,//s_axis_tuser,
+
+    /*
+     * AXI output
+     */
+    m_axis_clk,
+    m_axis_tdata,
+    m_axis_tkeep,
+    m_axis_tvalid,
+    m_axis_tready,
+    m_axis_tlast,
+    m_axis_tid,
+    m_axis_tdest,
+    m_axis_tuser,
+
+    /*
+     * Status
+     */
+    s_status_overflow,
+    s_status_bad_frame,
+    s_status_good_frame,
+    m_status_overflow,
+    m_status_bad_frame,
+    m_status_good_frame
 );
-
-//One cycle delay for write clock
-always @ (posedge m_axis_clk or negedge rst) begin
-	if(!rst) begin
-		m_axis_tvalid <= 0;
-	end
-	else begin
-		m_axis_tvalid <= m_axis_tvalid_int;
-	end
-end
-
-
-
 endmodule
 
 
@@ -166,27 +224,25 @@ module gpio_fifo
 	
 	input wire ps_clk, pl_clk,
 	
-	input wire [15:0] gpio_in,
+	input wire [gpio_bus_width-1:0] gpio_in,
 	
-	output wire [15:0] gpio_out
+	output wire [gpio_bus_width-1:0] gpio_out
 );
 
-wire clear_in = !rst;
-wire full, empty;
-aFifo #(16, 4) async_fifo
+wire s_axis_tready, m_axis_tvalid;
+axis_async_fifo #(gpio_bus_width) gpio_fifo_inst
 (
-	gpio_out,
-	empty,
-	1'b1,
-	pl_clk,
-	
-	gpio_in,
-	full, 
-	1'b1,
+	rst,
+
 	ps_clk,
-	
-	clear_in
-	
+	1'b1,
+    s_axis_tready,
+    gpio_in,
+    
+	pl_clk,
+    gpio_out,
+    m_axis_tvalid,
+    1'b1 
 );
 
 

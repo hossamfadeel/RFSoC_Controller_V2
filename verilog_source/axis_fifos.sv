@@ -313,7 +313,7 @@ THE SOFTWARE.
 /*
  * AXI4-Stream asynchronous FIFO
  */
-module axis_async_fifo #
+module axis_async_fifo_def #
 (
     // FIFO depth in words
     // KEEP_WIDTH words per cycle if KEEP_ENABLE set

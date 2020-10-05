@@ -220,12 +220,13 @@ always @ (posedge clk or negedge rst) begin
 				if(pre_delay_cycle_counter == 0) begin
 					output_on <= 1;//Turn on the output to the RFSoC
 					loopback_valid <= 1;//Start writing back into waveform fifo
+					s_axis_tready <= 1'b1;//Start reading out data
 					state <= state_run;
 				end
 				else begin
 					//If we're about to start the experiment cycle
 					if(pre_delay_cycle_counter == 1) begin
-						s_axis_tready <= 1'b1;//Start reading out data
+						//s_axis_tready <= 1'b1;//Start reading out data
 					end
 					pre_delay_cycle_counter <= pre_delay_cycle_counter - 1;
 				end
@@ -240,7 +241,7 @@ always @ (posedge clk or negedge rst) begin
 					cycle_count <= cycle_count - 1;
 					if(cycle_count == 2) begin
 						mask_inv <= 1;//Invert mask for second to last cycle
-						s_axis_tready <= 1'b0;//Stop reading out the waveform
+						//s_axis_tready <= 1'b0;//Stop reading out the waveform
 					end
 					else if(cycle_count == 1) begin//If we're on the last cycle
 						loopback_valid <= 0;//Stop writing back into fifo

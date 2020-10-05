@@ -707,3 +707,193 @@ run -all
 # Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
 run -all
 # Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
+quit -sim
+# End time: 09:58:39 on Oct 05,2020, Elapsed time: 0:58:13
+# Errors: 0, Warnings: 1
+# Compile of fifo_wrappers.sv failed with 11 errors.
+# Compile of fifo_tb.sv failed with 2 errors.
+# 2 compiles, 2 failed with 13 errors.
+# Compile of fifo_wrappers.sv was successful.
+# Compile of fifo_tb.sv failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of fifo_tb.sv was successful.
+vsim -gui work.async_fifo_tb
+# vsim -gui work.async_fifo_tb 
+# Start time: 10:00:04 on Oct 05,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.fifo_tb_sv_unit
+# Loading work.async_fifo_tb
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_async_fifo
+# ** Warning: (vsim-3035) Instantiation depth of '/async_fifo_tb/dut/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo' is 51. This might indicate a recursive instantiation. Increasing limit to 75.
+# ** Error: (vsim-3036) Instantiation depth of '/async_fifo_tb/dut/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo' is 75. Assuming recursive instantiation.
+#    Time: 0 ps  Iteration: 0  Instance: /async_fifo_tb/dut/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv
+# Error loading design
+# End time: 10:00:04 on Oct 05,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 7
+# Compile of fifo_wrappers.sv was successful.
+# Compile of axis_fifos.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.async_fifo_tb
+# vsim -gui work.async_fifo_tb 
+# Start time: 10:01:00 on Oct 05,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.fifo_tb_sv_unit
+# Loading work.async_fifo_tb
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_async_fifo
+# Loading work.axis_async_fifo_def
+add wave -position insertpoint  \
+sim:/async_fifo_tb/dut/rst \
+sim:/async_fifo_tb/dut/s_axis_clk \
+sim:/async_fifo_tb/dut/s_axis_tvalid \
+sim:/async_fifo_tb/dut/s_axis_tready \
+sim:/async_fifo_tb/dut/s_axis_tdata \
+sim:/async_fifo_tb/dut/m_axis_clk \
+sim:/async_fifo_tb/dut/m_axis_tdata \
+sim:/async_fifo_tb/dut/m_axis_tvalid \
+sim:/async_fifo_tb/dut/m_axis_tready
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 191
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 191
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 191
+run -all
+# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 191
+quit -sim
+# End time: 10:04:29 on Oct 05,2020, Elapsed time: 0:03:29
+# Errors: 0, Warnings: 2
+# Compile of fifo_tb.sv was successful.
+vsim -gui work.async_fifo_tb
+# vsim -gui work.async_fifo_tb 
+# Start time: 10:05:16 on Oct 05,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.fifo_tb_sv_unit
+# Loading work.async_fifo_tb
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_async_fifo
+# Loading work.axis_async_fifo_def
+# Compile of fifo_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.fifo_tb_sv_unit
+# Loading work.async_fifo_tb
+add wave -position insertpoint  \
+sim:/async_fifo_tb/dut/rst \
+sim:/async_fifo_tb/dut/s_axis_clk \
+sim:/async_fifo_tb/dut/s_axis_tvalid \
+sim:/async_fifo_tb/dut/s_axis_tready \
+sim:/async_fifo_tb/dut/s_axis_tdata \
+sim:/async_fifo_tb/dut/m_axis_clk \
+sim:/async_fifo_tb/dut/m_axis_tdata \
+sim:/async_fifo_tb/dut/m_axis_tvalid \
+sim:/async_fifo_tb/dut/m_axis_tready
+run -all
+# Break in Module async_fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 181
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 215
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 215
+run -all
+# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 215
+quit -sim
+# End time: 10:07:40 on Oct 05,2020, Elapsed time: 0:02:24
+# Errors: 0, Warnings: 1
+# Load canceled
+# Compile of dac_driver_tb.sv was successful.
+vsim -gui work.dac_driver_tb
+# vsim -gui work.dac_driver_tb 
+# Start time: 10:09:04 on Oct 05,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.dac_driver_tb_sv_unit
+# Loading work.dac_driver_tb
+# Loading work.dac_driver_sv_unit
+# Loading work.dac_driver
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+# Loading work.shift_register
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# Loading work.axis_fifo
+# Loading work.axis_mux_sv_unit
+# Loading work.axis_mux
+add wave -position insertpoint  \
+sim:/dac_driver_tb/dut/clk \
+sim:/dac_driver_tb/dut/rst \
+sim:/dac_driver_tb/dut/gpio_ctrl \
+sim:/dac_driver_tb/dut/m_axis_tdata \
+sim:/dac_driver_tb/dut/m_axis_tvalid \
+sim:/dac_driver_tb/dut/m_axis_tready \
+sim:/dac_driver_tb/dut/s_axis_tdata \
+sim:/dac_driver_tb/dut/s_axis_tvalid \
+sim:/dac_driver_tb/dut/s_axis_tready \
+sim:/dac_driver_tb/dut/trigger_in \
+sim:/dac_driver_tb/dut/select_in
+run -all
+run -all
+run -all
+run -all
+run -all
+run -all
+run -all
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+restart -f
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+run -all
+# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
+# Compile of dac_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_driver_tb_sv_unit
+# Loading work.dac_driver_tb
+run -all
+# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 73
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+run -all
+# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
