@@ -99,32 +99,37 @@ initial begin
 	rst <= 1;
 	repeat(10) clk_cycle();
 	
-	fifo_in_data <= 127'h00001111222233334444555566667777;
-	//Load the input fifo with 16 samples
-	fifo_in_valid <= 1;
-	#1
-	pl_clk <= 1;
-	#1
-	pl_clk <= 0;
-	ps_clk <= 1;
-	fifo_in_data <= fifo_in_data + {8{16'h8888}};
-	#1
-	pl_clk <= 1;
-	#1
-	pl_clk <= 0;
-	ps_clk <= 0;
+	while(1) begin
 	
-	fifo_in_valid <= 0;
+		fifo_in_data <= 127'h00001111222233334444555566667777;
+		//Load the input fifo with 16 samples
+		fifo_in_valid <= 1;
+		#1
+		pl_clk <= 1;
+		#1
+		pl_clk <= 0;
+		ps_clk <= 1;
+		fifo_in_data <= fifo_in_data + {8{16'h8888}};
+		#1
+		pl_clk <= 1;
+		#1
+		pl_clk <= 0;
+		ps_clk <= 0;
+		
+		fifo_in_valid <= 0;
 
 
-	//Wait a bunch of clock cycles
-	repeat(100) clk_cycle();
+		//Wait a bunch of clock cycles
+		repeat(100) clk_cycle();
+		
+		//Start reading out data
+		start_readout <= 1;
+		repeat(100) clk_cycle();
+		
+		start_readout <= 0;
+		repeat(100) clk_cycle();
 	
-	//Start reading out data
-	start_readout <= 1;
-	repeat(100) clk_cycle();
-	
-	start_readout <= 0;
+	end
 	
 
 end

@@ -897,3 +897,94 @@ run -all
 # Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
 run -all
 # Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
+quit -sim
+# End time: 10:19:32 on Oct 05,2020, Elapsed time: 0:10:28
+# Errors: 0, Warnings: 1
+vsim -gui work.axis_ps_to_pl_tb
+# vsim -gui work.axis_ps_to_pl_tb 
+# Start time: 10:19:45 on Oct 05,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.axis_ps_to_pl_tb_sv_unit
+# Loading work.axis_ps_to_pl_tb
+# Loading work.axis_ps_to_pl_sv_unit
+# Loading work.axis_ps_to_pl
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_async_fifo
+# Loading work.axis_async_fifo_def
+# Loading work.axis_sync_fifo
+# Loading work.axis_fifo
+add wave -position insertpoint  \
+sim:/axis_ps_to_pl_tb/dut/ps_clk \
+sim:/axis_ps_to_pl_tb/dut/pl_clk \
+sim:/axis_ps_to_pl_tb/dut/rst \
+sim:/axis_ps_to_pl_tb/dut/s_axis_tdata \
+sim:/axis_ps_to_pl_tb/dut/s_axis_tvalid \
+sim:/axis_ps_to_pl_tb/dut/s_axis_tready \
+sim:/axis_ps_to_pl_tb/dut/m_axis_tdata \
+sim:/axis_ps_to_pl_tb/dut/m_axis_tvalid \
+sim:/axis_ps_to_pl_tb/dut/m_axis_tready
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+run -all
+# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
+quit -sim
+# End time: 10:29:25 on Oct 05,2020, Elapsed time: 0:09:40
+# Errors: 0, Warnings: 1
+# Load canceled
+vsim -gui work.axis_pl_to_ps_tb
+# vsim -gui work.axis_pl_to_ps_tb 
+# Start time: 10:30:51 on Oct 05,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.axis_pl_to_ps_tb_sv_unit
+# Loading work.axis_pl_to_ps_tb
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# Loading work.axis_fifo
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
+# Loading work.axis_async_fifo
+# Loading work.axis_async_fifo_def
+add wave -position insertpoint  \
+sim:/axis_pl_to_ps_tb/output_fifo/rst \
+sim:/axis_pl_to_ps_tb/output_fifo/axis_clk \
+sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tvalid \
+sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tready \
+sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tdata \
+sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tdata \
+sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tvalid \
+sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tready
+run -all
+# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
+# Compile of axis_pl_to_ps_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.axis_pl_to_ps_tb_sv_unit
+# Loading work.axis_pl_to_ps_tb
+run -all
+# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 104
+run -all
+# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
+run -all
+# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 104
+run -all
+# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 104
