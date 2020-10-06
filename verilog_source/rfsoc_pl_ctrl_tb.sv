@@ -225,13 +225,15 @@ initial begin
 		set_post_delay_cycles(2);
 		
 		//Load in 5 words (40 ps words) (5*16 samples total)
-		for(k = 0; k < 40; k = k + 1) begin
-			load_axis_word(axis_word_reg);
-			if(axis_word_reg == 32'hffffffff)
-				axis_word_reg = 0;
-			else
-				axis_word_reg = axis_word_reg + 32'h11111111;
+		axis_word_reg <= 32'haaaaaaaa;
+		clk_cycle();
+		for(k = 0; k < 5; k = k + 1) begin
+			repeat(8) load_axis_word(axis_word_reg);
+			clk_cycle();
+			axis_word_reg = axis_word_reg + 32'h11111111;
 		end
+		axis_word_reg <= 32'haaaaaaaa;
+		clk_cycle();
 		
 		//turn on the loop-back mux
 		set_mux_sel(1);
