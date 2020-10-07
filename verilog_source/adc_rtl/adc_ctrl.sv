@@ -33,7 +33,7 @@ module adc_ctrl
     output wire m_axis_tvalid_1,
     input wire m_axis_tready_1,
 	
-	
+	//Same selector lines as for DACs
 	input wire select_in
 
     
@@ -52,7 +52,7 @@ wire [31:0] count_val;
 shift_register #(32) sr_cycles
 (
 	.clk(rf_clk), 
-	.sclk(gpio_ctrl[adc_shift_val_clk]), 
+	.sclk(gpio_ctrl[adc_shift_val_clk] & select_in), 
 	.reset(rf_reset), 
 	.data_in(gpio_ctrl[sdata]), 
 	.data_out(count_val)
@@ -62,7 +62,7 @@ wire [31:0] shift_val;
 shift_register #(32) sr_shift
 (
 	.clk(rf_clk), 
-	.sclk(gpio_ctrl[adc_num_cycle_count_clk]), 
+	.sclk(gpio_ctrl[adc_num_cycle_count_clk] & select_in), 
 	.reset(rf_reset), 
 	.data_in(gpio_ctrl[sdata]), 
 	.data_out(shift_val)

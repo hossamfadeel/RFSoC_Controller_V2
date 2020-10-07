@@ -17,8 +17,9 @@ module axis_pl_to_ps
 	//Output to PS
 	output reg [ps_axis_width-1:0] m_axis_tdata,
     output wire m_axis_tvalid,
-    input wire m_axis_tready
+    input wire m_axis_tready,
 	
+	input wire [15:0] gpio_ctrl
 
 );
 
@@ -70,19 +71,26 @@ end
 always @ (posedge pl_clk or negedge rst) begin
 
 	if(!rst) begin
-	
-	
+		reset_regs();
 	end
 	else begin
 	
 		case(state) 
 	
 			state_idle: begin
+			
 				//Default to not valid
 				fifo_tvalid <= 0;
+			
+				//If we're flushing the buffer
+				if(gpio_ctrl[adc_buffer_flush]) begin
+					reset_regs();
+				end
+			
+				
 				//If there is an incomming word from pl side
 				//and the crossing fifo is ready to receive it
-				if(s_axis_tvalid && fifo_tready)begin
+				else if(s_axis_tvalid && fifo_tready)begin
 				
 					//Store it in the word buffer and write the first word into the fifo
 					word_buff <= s_axis_tdata;
@@ -104,9 +112,14 @@ always @ (posedge pl_clk or negedge rst) begin
 				
 				//Stop reading from input fifo
 				s_axis_tready <= 0;
+				
+				//If we're flushing the buffer
+				if(gpio_ctrl[adc_buffer_flush]) begin
+					reset_regs();
+				end
 			
 				//If we're writing the last word and the fifo is ready
-				if(ps_word_counter == fifo_words_to_write - 1 && fifo_tready) begin
+				else if(ps_word_counter == fifo_words_to_write - 1 && fifo_tready) begin
 					fifo_tvalid <= 1;
 					fifo_tdata <= word_buff[(ps_word_counter * ps_axis_width)+:ps_axis_width];
 					ps_word_counter <= 0;

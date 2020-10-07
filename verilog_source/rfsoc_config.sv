@@ -27,8 +27,8 @@ adc_num_cycle_count_clk = 8,//Used to set how many cycles the ADC will run for
 pre_delay_cycle_clk = 9,//used to set how many clock cycles dac ctrl will wait after being triggered
 post_delay_cycle_clk = 10,//used to set how many clock cycles dac ctrl will wait after being triggered
 locking_waveform_clk = 11,//Used to set locking cycle waveform
-mask_enable_clk = 12;//Enables or disables mask
-
+mask_enable_clk = 12,//Enables or disables mask
+adc_buffer_flush = 13;//Forces flush on all ADC buffers
 
 
 endpackage
