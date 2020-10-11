@@ -260,3 +260,50 @@ run -all
 # Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
 # Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
 # Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+restart -f
+quit -sim
+# End time: 11:10:00 on Oct 11,2020, Elapsed time: 0:20:02
+# Errors: 0, Warnings: 1
+# Compile of adc_driver_tb.sv was successful.
+vsim -gui work.adc_driver_tb
+# vsim -gui work.adc_driver_tb 
+# Start time: 11:10:12 on Oct 11,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.adc_driver_tb_sv_unit
+# Loading work.adc_driver_tb
+# Loading work.adc_driver_sv_unit
+# Loading work.adc_driver
+# Loading work.adc_ctrl_sv_unit
+# Loading work.adc_ctrl
+# Loading work.shift_register
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.axis_sync_fifo
+# Loading work.axis_fifo
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
+# Loading work.axis_async_fifo
+# Loading work.axis_async_fifo_def
+run -all
+# ADC driver readot test complete for shift val = 4, number of errors: 00000000
+# 
+# Compile of adc_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.adc_driver_tb_sv_unit
+# Loading work.adc_driver_tb
+run -all
+# ADC driver readot test complete for shift val = 4, number of errors: adc_driver_tb
+#           0
+# Compile of adc_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.adc_driver_tb_sv_unit
+# Loading work.adc_driver_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ADC driver readot test complete for shift val = 4, number of errors:           0
+# 
+# Compile of adc_driver_tb.sv was successful.

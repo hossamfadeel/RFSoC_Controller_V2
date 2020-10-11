@@ -45,8 +45,11 @@ adc_driver
 
 );
 
+integer num_errors;
 
 initial begin
+
+	num_errors = 0;
 
 	i = 0;
 	j = 0;
@@ -88,10 +91,20 @@ initial begin
 	
 	//Now readout the result
 	m_axis_tready <= 1;
+	
+	for(j = 0; j < 16; j = j + 1) begin
+	
+		if(m_axis_tdata != s_axis_tdata[(j*32)+:32])begin
+			num_errors = num_errors + 1;
+		end
+		clk_cycle();
+	end
+	
 	repeat(100) clk_cycle();
 	m_axis_tready <= 0;
 	repeat(100) clk_cycle();
 
+	$display("ADC driver readout test complete for shift val = 4, number of errors: %d\n", num_errors);
 
 end
 
