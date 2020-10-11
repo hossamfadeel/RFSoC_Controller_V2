@@ -48,21 +48,21 @@ localparam [1:0] state_wait_trigger = 2'b00,
                  state_trigger = 2'b01,
                  state_cleanup = 2'b10;
 	
-wire [31:0] count_val;
-shift_register #(32) sr_cycles
+wire [config_reg_width-1:0] count_val;
+shift_register #(config_reg_width) sr_cycles
 (
 	.clk(rf_clk), 
-	.sclk(gpio_ctrl[adc_shift_val_clk] & select_in), 
+	.sclk(gpio_ctrl[adc_num_cycle_count_clk] & select_in), 
 	.reset(rf_reset), 
 	.data_in(gpio_ctrl[sdata]), 
 	.data_out(count_val)
 );
 
-wire [31:0] shift_val;
-shift_register #(32) sr_shift
+wire [config_reg_width-1:0] shift_val;
+shift_register #(config_reg_width) sr_shift
 (
 	.clk(rf_clk), 
-	.sclk(gpio_ctrl[adc_num_cycle_count_clk] & select_in), 
+	.sclk(gpio_ctrl[adc_shift_val_clk] & select_in), 
 	.reset(rf_reset), 
 	.data_in(gpio_ctrl[sdata]), 
 	.data_out(shift_val)
@@ -140,7 +140,7 @@ assign m_axis_tdata_1 = s_axis_tdata_1;
 
 
 //If we're not shifting, then data is valid when data from the data fifo is ready, otherwise data is not valud
-assign m_axis_tvalid_1 = shift_val == 0 ? s_axis_tvalid_1 & cpu_ready : 0;
+assign m_axis_tvalid_1 = shift_val == 0 ? s_axis_tvalid_1 : 0;
 
 
 task reset_regs();

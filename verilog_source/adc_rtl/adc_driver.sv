@@ -1,8 +1,9 @@
 
 
-
+import rfsoc_config::*;
 
 module adc_driver
+#(parameter mem_width = 16)
 (
 
 	input wire ps_clk, pl_clk,
@@ -32,7 +33,7 @@ assign s_axis_tready = 1;
 
 //Register slice for ADC data to break critial path
 reg [127:0] adc_data;
-always @ (posedge clk) begin
+always @ (posedge pl_clk) begin
 	adc_data <= s_axis_tdata;
 end
 
@@ -56,7 +57,7 @@ wire [127:0] m_axis_tdata_1;
 wire m_axis_tvalid_1;
 wire m_axis_tready_1;
 
-module adc_ctrl
+adc_ctrl adc_ctrl_inst
 (
     pl_clk,
     rst,
@@ -86,8 +87,45 @@ module adc_ctrl
 	
 	//Same selector lines as for DACs
 	select_in
-
-    
 );
+
+
+axis_sync_fifo
+#(mem_width,128)
+adc_storage_fifo
+(
+	rst,
+	pl_clk,
+
+    m_axis_tvalid_0,
+    m_axis_tready_0,
+    m_axis_tdata_0,
+    
+    s_axis_tdata_1,
+    s_axis_tvalid_1,
+    s_axis_tready_1 | gpio_ctrl[adc_buffer_flush] 
+);
+
+
+axis_pl_to_ps axis_pl_to_ps_inst
+(
+	pl_clk, ps_clk,
+	
+	rst,
+	
+	//Input from adc_ctrl
+    m_axis_tdata_1,
+    m_axis_tvalid_1,
+    m_axis_tready_1,
+	
+	//Output to PS
+	m_axis_tdata,
+    m_axis_tvalid,
+    m_axis_tready | gpio_ctrl[adc_buffer_flush],
+	
+	gpio_ctrl
+
+);
+
 
 endmodule

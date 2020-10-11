@@ -1,123 +1,9 @@
-vsim -gui work.rfsoc_pl_ctrl_tb
-# vsim -gui work.rfsoc_pl_ctrl_tb 
-# Start time: 14:45:45 on Oct 03,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.rfsoc_pl_ctrl_tb_sv_unit
-# Loading work.rfsoc_pl_ctrl_tb
-# Loading work.rfsoc_pl_ctrl_sv_unit
-# Loading work.rfsoc_pl_ctrl
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.gpio_fifo
-# Loading work.aFifo
-# Loading work.GrayCounter
-# Loading work.channel_selector_sv_unit
-# Loading work.channel_selector
-# Loading work.shift_register
-# Loading work.axis_ps_to_pl_sv_unit
-# Loading work.axis_ps_to_pl
-# Loading work.axis_async_fifo
-# Loading work.axis_selector
-# Loading work.dac_driver_sv_unit
-# Loading work.dac_driver
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-# Loading work.axis_sync_fifo
-# Loading work.FIFO_memory
-# Loading work.axis_mux_sv_unit
-# Loading work.axis_mux
-add wave -position insertpoint  \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/clk} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/rst} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/gpio_ctrl} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/m_axis_tdata} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/m_axis_tvalid} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/m_axis_tready} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/s_axis_tdata} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/s_axis_tvalid} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/s_axis_tready} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/trigger_in} \
-{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[1]/genblk1/real_channel_ctrl/select_in}
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
-# Compile of axis_selector.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_selector
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 212
-add wave -position insertpoint  \
-sim:/rfsoc_pl_ctrl_tb/dut/m0_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m1_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m2_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m3_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m4_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m5_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m6_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m7_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m8_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m9_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m10_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m11_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m12_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m13_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m14_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m15_axis_tdata
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 246
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 246
-# Compile of rfsoc_pl_ctrl_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.rfsoc_pl_ctrl_tb_sv_unit
-# Loading work.rfsoc_pl_ctrl_tb
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 246
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 246
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 246
-quit -sim
-# End time: 15:20:48 on Oct 04,2020, Elapsed time: 24:35:03
-# Errors: 0, Warnings: 1
-# Compile of dac_ctrl.sv was successful.
-# Compile of fifo_wrappers.sv was successful.
-# Compile of rfsoc_config.sv was successful.
-# Compile of rfsoc_pl_ctrl.sv was successful.
-# Compile of rfsoc_pl_ctrl_tb.sv was successful.
-# 5 compiles, 0 failed with no errors.
-# Compile of adc_ctrl.sv was successful.
-# Compile of axis_pl_to_ps.sv failed with 2 errors.
-# Compile of axis_pl_to_ps_tb.sv was successful.
-# 3 compiles, 1 failed with 2 errors.
-# Compile of axis_pl_to_ps.sv failed with 1 errors.
-# Compile of axis_pl_to_ps.sv was successful.
-vsim -gui work.axis_pl_to_ps_tb
-# vsim -gui work.axis_pl_to_ps_tb 
-# Start time: 15:23:25 on Oct 04,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# ** Error: (vsim-13) Recompile work.fifo_wrappers_sv_unit because work.rfsoc_config has changed.
-# ** Error (suppressible): (vsim-12) Recompile work.axis_sync_fifo after work.fifo_wrappers_sv_unit is recompiled.
-# ** Error: (vsim-13) Recompile work.axis_sync_fifo because work.rfsoc_config has changed.
-# Error loading design
-# End time: 15:23:25 on Oct 04,2020, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 8
-# Compile of async_fifo.sv was successful.
 # Compile of axis_mux.sv was successful.
 # Compile of axis_ps_to_pl.sv was successful.
 # Compile of axis_selector.sv was successful.
 # Compile of channel_selector.sv was successful.
 # Compile of dac_ctrl.sv was successful.
 # Compile of dac_driver.sv was successful.
-# Compile of fifo.sv was successful.
 # Compile of fifo_wrappers.sv was successful.
 # Compile of rfsoc_config.sv was successful.
 # Compile of rfsoc_pl_ctrl.sv was successful.
@@ -128,1044 +14,201 @@ vsim -gui work.axis_pl_to_ps_tb
 # Compile of adc_ctrl.sv was successful.
 # Compile of axis_pl_to_ps.sv was successful.
 # Compile of axis_pl_to_ps_tb.sv was successful.
-# 18 compiles, 0 failed with no errors.
-vsim -gui work.axis_pl_to_ps_tb
-# vsim -gui work.axis_pl_to_ps_tb 
-# Start time: 15:23:42 on Oct 04,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.FIFO_memory
-# Loading work.axis_pl_to_ps_sv_unit
-# Loading work.axis_pl_to_ps
-# Loading work.axis_async_fifo
-# Loading work.aFifo
-# Loading work.GrayCounter
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (128) for port 's_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(12).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/input_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv Line: 25
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (128) for port 'm_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(14).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/input_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv Line: 25
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 's_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(58).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/dut/pl_to_ps_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv Line: 31
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'm_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(61).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/dut/pl_to_ps_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv Line: 31
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (128) for port 's_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(12).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/input_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv Line: 25
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (128) for port 'm_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(14).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/input_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv Line: 25
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 's_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(58).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/dut/pl_to_ps_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv Line: 31
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'm_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(61).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/dut/pl_to_ps_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv Line: 31
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 's_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(58).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/dut/pl_to_ps_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv Line: 31
-# ** Warning: (vsim-3015) [PCDPC] - Port size (256) does not match connection size (32) for port 'm_axis_tdata'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv(61).
-#    Time: 0 ps  Iteration: 0  Instance: /axis_pl_to_ps_tb/dut/pl_to_ps_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv Line: 31
-# Compile of axis_pl_to_ps.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_sv_unit
-# Loading work.axis_pl_to_ps
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/dut/pl_clk \
-sim:/axis_pl_to_ps_tb/dut/ps_clk \
-sim:/axis_pl_to_ps_tb/dut/rst \
-sim:/axis_pl_to_ps_tb/dut/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/dut/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/dut/s_axis_tready \
-sim:/axis_pl_to_ps_tb/dut/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/dut/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/dut/m_axis_tready
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/s_axis_clk \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/s_axis_tready \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/m_axis_clk \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/m_axis_tready
-# Can't move the Now cursor.
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 110
-# Compile of axis_pl_to_ps.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_sv_unit
-# Loading work.axis_pl_to_ps
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 110
-# Compile of fifo_wrappers.sv was successful.
-# Compile of axis_pl_to_ps_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-run -all
-# Compile of axis_pl_to_ps.sv was successful.
-# Compile of axis_pl_to_ps_tb.sv failed with 1 errors.
-# 2 compiles, 1 failed with 1 error.
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# Loading work.axis_pl_to_ps_sv_unit
-# Loading work.axis_pl_to_ps
-run -all
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-run -all
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-run -all
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-run -all
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/input_fifo/rst \
-sim:/axis_pl_to_ps_tb/input_fifo/axis_clk \
-sim:/axis_pl_to_ps_tb/input_fifo/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/input_fifo/s_axis_tready \
-sim:/axis_pl_to_ps_tb/input_fifo/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/input_fifo/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/input_fifo/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/input_fifo/m_axis_tready
-restart -f
-run -all
-# Compile of fifo_wrappers.sv failed with 2 errors.
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-run -all
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-run -all
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-run -all
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/input_fifo/mem_width \
-sim:/axis_pl_to_ps_tb/input_fifo/bus_width \
-sim:/axis_pl_to_ps_tb/input_fifo/rst \
-sim:/axis_pl_to_ps_tb/input_fifo/axis_clk \
-sim:/axis_pl_to_ps_tb/input_fifo/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/input_fifo/s_axis_tready \
-sim:/axis_pl_to_ps_tb/input_fifo/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/input_fifo/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/input_fifo/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/input_fifo/m_axis_tready \
-sim:/axis_pl_to_ps_tb/input_fifo/full \
-sim:/axis_pl_to_ps_tb/input_fifo/empty \
-sim:/axis_pl_to_ps_tb/input_fifo/m_axis_tvalid_int \
-sim:/axis_pl_to_ps_tb/input_fifo/del_1 \
-sim:/axis_pl_to_ps_tb/input_fifo/del_2
-restart -f
-run -all
-# Compile of fifo_wrappers.sv was successful.
-# Compile of axis_pl_to_ps_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-run -all
-# Compile of fifo.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.FIFO_memory
-run -all
-# Compile of fifo.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.FIFO_memory
-run -all
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-run -all
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-# Warning in wave window restart: (vish-4014) No objects found matching '/axis_pl_to_ps_tb/input_fifo/del_1'. 
-# Warning in wave window restart: (vish-4014) No objects found matching '/axis_pl_to_ps_tb/input_fifo/del_2'. 
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-run -all
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/dut/pl_clk \
-sim:/axis_pl_to_ps_tb/dut/ps_clk \
-sim:/axis_pl_to_ps_tb/dut/rst \
-sim:/axis_pl_to_ps_tb/dut/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/dut/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/dut/s_axis_tready \
-sim:/axis_pl_to_ps_tb/dut/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/dut/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/dut/m_axis_tready
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/s_axis_tready \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/dut/pl_to_ps_fifo/m_axis_tready
-# Compile of async_fifo.sv was successful.
-# Compile of axis_pl_to_ps_tb.sv was successful.
-# 2 compiles, 0 failed with no errors.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# Loading work.aFifo
-# Loading work.GrayCounter
-run -all
-# Compile of axis_pl_to_ps_tb.sv failed with 1 errors.
-# Compile of axis_pl_to_ps_tb.sv failed with 1 errors.
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/output_fifo/rst \
-sim:/axis_pl_to_ps_tb/output_fifo/axis_clk \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tready \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tready
-run -all
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-run -all
-quit -sim
-# End time: 16:19:45 on Oct 04,2020, Elapsed time: 0:56:03
-# Errors: 0, Warnings: 1
-vsim -gui work.dac_driver_tb
-# vsim -gui work.dac_driver_tb 
-# Start time: 16:19:54 on Oct 04,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.dac_driver_tb_sv_unit
-# Loading work.dac_driver_tb
-# Loading work.dac_driver_sv_unit
-# Loading work.dac_driver
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-# Loading work.shift_register
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.FIFO_memory
-# Loading work.axis_mux_sv_unit
-# Loading work.axis_mux
-add wave -position insertpoint  \
-sim:/dac_driver_tb/dut/clk \
-sim:/dac_driver_tb/dut/rst \
-sim:/dac_driver_tb/dut/gpio_ctrl \
-sim:/dac_driver_tb/dut/m_axis_tdata \
-sim:/dac_driver_tb/dut/m_axis_tvalid \
-sim:/dac_driver_tb/dut/m_axis_tready \
-sim:/dac_driver_tb/dut/s_axis_tdata \
-sim:/dac_driver_tb/dut/s_axis_tvalid \
-sim:/dac_driver_tb/dut/s_axis_tready \
-sim:/dac_driver_tb/dut/trigger_in \
-sim:/dac_driver_tb/dut/select_in
-run -all
-run -all
-run -all
-run -all
-restart -f
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-# Compile of dac_driver_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_driver_tb_sv_unit
-# Loading work.dac_driver_tb
-run -all
-# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
-run -all
-# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
-quit -sim
-# End time: 16:23:43 on Oct 04,2020, Elapsed time: 0:03:49
-# Errors: 0, Warnings: 1
-# Compile of axis_pl_to_ps_tb.sv was successful.
-vsim -gui work.axis_pl_to_ps_tb
-# vsim -gui work.axis_pl_to_ps_tb 
-# Start time: 16:24:41 on Oct 04,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.FIFO_memory
-# Loading work.axis_pl_to_ps_sv_unit
-# Loading work.axis_pl_to_ps
-# Loading work.axis_async_fifo
-# Loading work.aFifo
-# Loading work.GrayCounter
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/output_fifo/rst \
-sim:/axis_pl_to_ps_tb/output_fifo/axis_clk \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tready \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tready
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
-# Compile of fifo.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.FIFO_memory
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_async_fifo
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
-quit -sim
-# End time: 18:15:30 on Oct 04,2020, Elapsed time: 1:50:49
-# Errors: 0, Warnings: 1
-# Compile of fifo_tb.sv failed with 1 errors.
 # Compile of fifo_tb.sv was successful.
-vsim -gui work.fifo_tb
-# vsim -gui work.fifo_tb 
-# Start time: 18:16:11 on Oct 04,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.fifo_tb_sv_unit
-# Loading work.fifo_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.FIFO_memory
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-add wave -position insertpoint  \
-sim:/fifo_tb/input_fifo/rst \
-sim:/fifo_tb/input_fifo/axis_clk \
-sim:/fifo_tb/input_fifo/s_axis_tvalid \
-sim:/fifo_tb/input_fifo/s_axis_tready \
-sim:/fifo_tb/input_fifo/s_axis_tdata \
-sim:/fifo_tb/input_fifo/m_axis_tdata \
-sim:/fifo_tb/input_fifo/m_axis_tvalid \
-sim:/fifo_tb/input_fifo/m_axis_tready
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-# Compile of fifo_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_tb_sv_unit
-# Loading work.fifo_tb
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-# Compile of fifo_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_tb_sv_unit
-# Loading work.fifo_tb
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 55
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 55
-# Compile of fifo_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_tb_sv_unit
-# Loading work.fifo_tb
-run -all
-restart -f
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 54
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-quit -sim
-# End time: 08:58:52 on Oct 05,2020, Elapsed time: 14:42:41
-# Errors: 0, Warnings: 1
-# Compile of fifo_wrappers.sv was successful.
-# Compile of fifo.sv was successful.
 # Compile of axis_fifos.sv was successful.
-vsim -gui work.fifo_tb
-# vsim -gui work.fifo_tb 
-# Start time: 08:59:56 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.fifo_tb_sv_unit
-# Loading work.fifo_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_fifo
-# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'fifo_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
-#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv
-# Error loading design
-# End time: 08:59:56 on Oct 05,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 5
-# Compile of axis_fifos.sv was successful.
-vsim -gui work.fifo_tb
-# vsim -gui work.fifo_tb 
-# Start time: 09:00:26 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.fifo_tb_sv_unit
-# Loading work.fifo_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_fifo
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tid'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv(84).
-#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv Line: 69
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (32) for port 's_axis_tdest'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv(85).
-#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv Line: 69
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 's_axis_tuser'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv(86).
-#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv Line: 69
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (8) for port 's_axis_tuser'. The port definition is at: D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv(86).
-#    Time: 0 ps  Iteration: 0  Instance: /fifo_tb/input_fifo/sync_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv Line: 69
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-add wave -position insertpoint  \
-sim:/fifo_tb/input_fifo/rst \
-sim:/fifo_tb/input_fifo/axis_clk \
-sim:/fifo_tb/input_fifo/s_axis_tvalid \
-sim:/fifo_tb/input_fifo/s_axis_tready \
-sim:/fifo_tb/input_fifo/s_axis_tdata \
-sim:/fifo_tb/input_fifo/m_axis_tdata \
-sim:/fifo_tb/input_fifo/m_axis_tvalid \
-sim:/fifo_tb/input_fifo/m_axis_tready
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-add wave -position insertpoint  \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tvalid
-add wave -position insertpoint  \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tdata \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tkeep \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tvalid \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tready \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tlast \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tid \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tdest \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tuser
-restart -f
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-add wave -position insertpoint  \
-sim:/fifo_tb/input_fifo/sync_fifo/DEPTH \
-sim:/fifo_tb/input_fifo/sync_fifo/DATA_WIDTH \
-sim:/fifo_tb/input_fifo/sync_fifo/KEEP_ENABLE \
-sim:/fifo_tb/input_fifo/sync_fifo/KEEP_WIDTH \
-sim:/fifo_tb/input_fifo/sync_fifo/LAST_ENABLE \
-sim:/fifo_tb/input_fifo/sync_fifo/ID_ENABLE \
-sim:/fifo_tb/input_fifo/sync_fifo/ID_WIDTH \
-sim:/fifo_tb/input_fifo/sync_fifo/DEST_ENABLE \
-sim:/fifo_tb/input_fifo/sync_fifo/DEST_WIDTH \
-sim:/fifo_tb/input_fifo/sync_fifo/USER_ENABLE \
-sim:/fifo_tb/input_fifo/sync_fifo/USER_WIDTH \
-sim:/fifo_tb/input_fifo/sync_fifo/PIPELINE_OUTPUT \
-sim:/fifo_tb/input_fifo/sync_fifo/FRAME_FIFO \
-sim:/fifo_tb/input_fifo/sync_fifo/USER_BAD_FRAME_VALUE \
-sim:/fifo_tb/input_fifo/sync_fifo/USER_BAD_FRAME_MASK \
-sim:/fifo_tb/input_fifo/sync_fifo/DROP_BAD_FRAME \
-sim:/fifo_tb/input_fifo/sync_fifo/DROP_WHEN_FULL \
-sim:/fifo_tb/input_fifo/sync_fifo/ADDR_WIDTH \
-sim:/fifo_tb/input_fifo/sync_fifo/KEEP_OFFSET \
-sim:/fifo_tb/input_fifo/sync_fifo/LAST_OFFSET \
-sim:/fifo_tb/input_fifo/sync_fifo/ID_OFFSET \
-sim:/fifo_tb/input_fifo/sync_fifo/DEST_OFFSET \
-sim:/fifo_tb/input_fifo/sync_fifo/USER_OFFSET \
-sim:/fifo_tb/input_fifo/sync_fifo/WIDTH
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-add wave -position insertpoint  \
-sim:/fifo_tb/input_fifo/sync_fifo/m_axis_tvalid_pipe_reg
-restart -f
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-add wave -position insertpoint  \
-sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tdata \
-sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tkeep \
-sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tvalid \
-sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tready \
-sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tlast \
-sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tid \
-sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tdest \
-sim:/fifo_tb/input_fifo/sync_fifo/s_axis_tuser
-restart -f
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-# Compile of fifo_wrappers.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-# Compile of fifo_tb.sv was successful.
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 68
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_tb_sv_unit
-# Loading work.fifo_tb
-run -all
-# Break in Module fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 52
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 95
-quit -sim
-# End time: 09:58:39 on Oct 05,2020, Elapsed time: 0:58:13
-# Errors: 0, Warnings: 1
-# Compile of fifo_wrappers.sv failed with 11 errors.
-# Compile of fifo_tb.sv failed with 2 errors.
-# 2 compiles, 2 failed with 13 errors.
-# Compile of fifo_wrappers.sv was successful.
-# Compile of fifo_tb.sv failed with 2 errors.
-# 2 compiles, 1 failed with 2 errors.
-# Compile of fifo_tb.sv was successful.
-vsim -gui work.async_fifo_tb
-# vsim -gui work.async_fifo_tb 
-# Start time: 10:00:04 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.fifo_tb_sv_unit
-# Loading work.async_fifo_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_async_fifo
-# ** Warning: (vsim-3035) Instantiation depth of '/async_fifo_tb/dut/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo' is 51. This might indicate a recursive instantiation. Increasing limit to 75.
-# ** Error: (vsim-3036) Instantiation depth of '/async_fifo_tb/dut/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo' is 75. Assuming recursive instantiation.
-#    Time: 0 ps  Iteration: 0  Instance: /async_fifo_tb/dut/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo/async_fifo File: D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv
-# Error loading design
-# End time: 10:00:04 on Oct 05,2020, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 7
-# Compile of fifo_wrappers.sv was successful.
-# Compile of axis_fifos.sv was successful.
-# 2 compiles, 0 failed with no errors.
-vsim -gui work.async_fifo_tb
-# vsim -gui work.async_fifo_tb 
-# Start time: 10:01:00 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.fifo_tb_sv_unit
-# Loading work.async_fifo_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_async_fifo
-# Loading work.axis_async_fifo_def
-add wave -position insertpoint  \
-sim:/async_fifo_tb/dut/rst \
-sim:/async_fifo_tb/dut/s_axis_clk \
-sim:/async_fifo_tb/dut/s_axis_tvalid \
-sim:/async_fifo_tb/dut/s_axis_tready \
-sim:/async_fifo_tb/dut/s_axis_tdata \
-sim:/async_fifo_tb/dut/m_axis_clk \
-sim:/async_fifo_tb/dut/m_axis_tdata \
-sim:/async_fifo_tb/dut/m_axis_tvalid \
-sim:/async_fifo_tb/dut/m_axis_tready
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 191
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 191
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 191
-run -all
-# Break in Task delayed_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 191
-quit -sim
-# End time: 10:04:29 on Oct 05,2020, Elapsed time: 0:03:29
-# Errors: 0, Warnings: 2
-# Compile of fifo_tb.sv was successful.
-vsim -gui work.async_fifo_tb
-# vsim -gui work.async_fifo_tb 
-# Start time: 10:05:16 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.fifo_tb_sv_unit
-# Loading work.async_fifo_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_async_fifo
-# Loading work.axis_async_fifo_def
-# Compile of fifo_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.fifo_tb_sv_unit
-# Loading work.async_fifo_tb
-add wave -position insertpoint  \
-sim:/async_fifo_tb/dut/rst \
-sim:/async_fifo_tb/dut/s_axis_clk \
-sim:/async_fifo_tb/dut/s_axis_tvalid \
-sim:/async_fifo_tb/dut/s_axis_tready \
-sim:/async_fifo_tb/dut/s_axis_tdata \
-sim:/async_fifo_tb/dut/m_axis_clk \
-sim:/async_fifo_tb/dut/m_axis_tdata \
-sim:/async_fifo_tb/dut/m_axis_tvalid \
-sim:/async_fifo_tb/dut/m_axis_tready
-run -all
-# Break in Module async_fifo_tb at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 181
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 215
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 215
-run -all
-# Break in Task continuous_read_test at D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv line 215
-quit -sim
-# End time: 10:07:40 on Oct 05,2020, Elapsed time: 0:02:24
-# Errors: 0, Warnings: 1
-# Load canceled
-# Compile of dac_driver_tb.sv was successful.
-vsim -gui work.dac_driver_tb
-# vsim -gui work.dac_driver_tb 
-# Start time: 10:09:04 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.dac_driver_tb_sv_unit
-# Loading work.dac_driver_tb
-# Loading work.dac_driver_sv_unit
-# Loading work.dac_driver
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-# Loading work.shift_register
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_fifo
-# Loading work.axis_mux_sv_unit
-# Loading work.axis_mux
-add wave -position insertpoint  \
-sim:/dac_driver_tb/dut/clk \
-sim:/dac_driver_tb/dut/rst \
-sim:/dac_driver_tb/dut/gpio_ctrl \
-sim:/dac_driver_tb/dut/m_axis_tdata \
-sim:/dac_driver_tb/dut/m_axis_tvalid \
-sim:/dac_driver_tb/dut/m_axis_tready \
-sim:/dac_driver_tb/dut/s_axis_tdata \
-sim:/dac_driver_tb/dut/s_axis_tvalid \
-sim:/dac_driver_tb/dut/s_axis_tready \
-sim:/dac_driver_tb/dut/trigger_in \
-sim:/dac_driver_tb/dut/select_in
-run -all
-run -all
-run -all
-run -all
-run -all
-run -all
-run -all
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-# Compile of dac_ctrl.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-restart -f
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-# Compile of dac_ctrl.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-run -all
-# Break in Task five_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 163
-# Compile of dac_driver_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.dac_driver_tb_sv_unit
-# Loading work.dac_driver_tb
-run -all
-# Break in Module dac_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 73
-run -all
-# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
-run -all
-# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
-run -all
-# Break in Task one_cycle_test at D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv line 113
-quit -sim
-# End time: 10:19:32 on Oct 05,2020, Elapsed time: 0:10:28
-# Errors: 0, Warnings: 1
-vsim -gui work.axis_ps_to_pl_tb
-# vsim -gui work.axis_ps_to_pl_tb 
-# Start time: 10:19:45 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.axis_ps_to_pl_tb_sv_unit
-# Loading work.axis_ps_to_pl_tb
-# Loading work.axis_ps_to_pl_sv_unit
-# Loading work.axis_ps_to_pl
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_async_fifo
-# Loading work.axis_async_fifo_def
-# Loading work.axis_sync_fifo
-# Loading work.axis_fifo
-add wave -position insertpoint  \
-sim:/axis_ps_to_pl_tb/dut/ps_clk \
-sim:/axis_ps_to_pl_tb/dut/pl_clk \
-sim:/axis_ps_to_pl_tb/dut/rst \
-sim:/axis_ps_to_pl_tb/dut/s_axis_tdata \
-sim:/axis_ps_to_pl_tb/dut/s_axis_tvalid \
-sim:/axis_ps_to_pl_tb/dut/s_axis_tready \
-sim:/axis_ps_to_pl_tb/dut/m_axis_tdata \
-sim:/axis_ps_to_pl_tb/dut/m_axis_tvalid \
-sim:/axis_ps_to_pl_tb/dut/m_axis_tready
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-run -all
-# Break in Module axis_ps_to_pl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv line 79
-quit -sim
-# End time: 10:29:25 on Oct 05,2020, Elapsed time: 0:09:40
-# Errors: 0, Warnings: 1
-# Load canceled
-vsim -gui work.axis_pl_to_ps_tb
-# vsim -gui work.axis_pl_to_ps_tb 
-# Start time: 10:30:51 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.axis_sync_fifo
-# Loading work.axis_fifo
-# Loading work.axis_pl_to_ps_sv_unit
-# Loading work.axis_pl_to_ps
-# Loading work.axis_async_fifo
-# Loading work.axis_async_fifo_def
-add wave -position insertpoint  \
-sim:/axis_pl_to_ps_tb/output_fifo/rst \
-sim:/axis_pl_to_ps_tb/output_fifo/axis_clk \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tvalid \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tready \
-sim:/axis_pl_to_ps_tb/output_fifo/s_axis_tdata \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tdata \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tvalid \
-sim:/axis_pl_to_ps_tb/output_fifo/m_axis_tready
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
-# Compile of axis_pl_to_ps_tb.sv was successful.
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.axis_pl_to_ps_tb_sv_unit
-# Loading work.axis_pl_to_ps_tb
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 104
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 127
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 104
-run -all
-# Break in Module axis_pl_to_ps_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv line 104
-quit -sim
-# End time: 16:11:26 on Oct 05,2020, Elapsed time: 5:40:35
-# Errors: 0, Warnings: 1
-# Compile of axis_cpu_readback_tester.sv failed with 1 errors.
 # Compile of axis_cpu_readback_tester.sv was successful.
-vsim -gui work.axis_cpu_readback_tester_tb
-# vsim -gui work.axis_cpu_readback_tester_tb 
-# Start time: 16:12:10 on Oct 05,2020
+# 19 compiles, 0 failed with no errors.
+# Compile of adc_driver.sv failed with 5 errors.
+# Compile of adc_driver_tb.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+# Compile of adc_driver.sv failed with 2 errors.
+# Compile of adc_driver.sv failed with 1 errors.
+# Compile of adc_driver.sv was successful.
+vsim -gui work.adc_driver_tb
+# vsim -gui work.adc_driver_tb 
+# Start time: 10:49:46 on Oct 11,2020
 # Loading sv_std.std
 # Loading work.rfsoc_config
-# Loading work.axis_cpu_readback_tester_sv_unit
-# Loading work.axis_cpu_readback_tester_tb
-# Loading work.axis_cpu_readback_tester
+# Loading work.adc_driver_tb_sv_unit
+# Loading work.adc_driver_tb
+# Loading work.adc_driver_sv_unit
+# Loading work.adc_driver
+# Loading work.adc_ctrl_sv_unit
+# Loading work.adc_ctrl
+# Loading work.shift_register
+# ** Error: (vsim-13) Recompile work.fifo_wrappers_sv_unit because work.rfsoc_config has changed.
+# ** Error (suppressible): (vsim-12) Recompile work.axis_sync_fifo after work.fifo_wrappers_sv_unit is recompiled.
+# ** Error: (vsim-13) Recompile work.axis_sync_fifo because work.rfsoc_config has changed.
+# Error loading design
+# End time: 10:49:46 on Oct 11,2020, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 8
+# Compile of axis_mux.sv was successful.
+# Compile of axis_ps_to_pl.sv was successful.
+# Compile of axis_selector.sv was successful.
+# Compile of channel_selector.sv was successful.
+# Compile of dac_ctrl.sv was successful.
+# Compile of dac_driver.sv was successful.
+# Compile of fifo_wrappers.sv was successful.
+# Compile of rfsoc_config.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# Compile of shift_register.sv was successful.
+# Compile of dac_driver_tb.sv was successful.
+# Compile of axis_ps_to_pl_tb.sv was successful.
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# Compile of adc_ctrl.sv was successful.
+# Compile of axis_pl_to_ps.sv was successful.
+# Compile of axis_pl_to_ps_tb.sv was successful.
+# Compile of fifo_tb.sv was successful.
+# Compile of axis_fifos.sv was successful.
+# Compile of axis_cpu_readback_tester.sv was successful.
+# Compile of adc_driver.sv was successful.
+# Compile of adc_driver_tb.sv was successful.
+# 21 compiles, 0 failed with no errors.
+vsim -gui work.adc_driver_tb
+# vsim -gui work.adc_driver_tb 
+# Start time: 10:49:58 on Oct 11,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.adc_driver_tb_sv_unit
+# Loading work.adc_driver_tb
+# Loading work.adc_driver_sv_unit
+# Loading work.adc_driver
+# Loading work.adc_ctrl_sv_unit
+# Loading work.adc_ctrl
+# Loading work.shift_register
 # Loading work.fifo_wrappers_sv_unit
 # Loading work.axis_sync_fifo
 # Loading work.axis_fifo
-add wave -position insertpoint  \
-sim:/axis_cpu_readback_tester_tb/dut/ps_clk \
-sim:/axis_cpu_readback_tester_tb/dut/rst \
-sim:/axis_cpu_readback_tester_tb/dut/gpio_in \
-sim:/axis_cpu_readback_tester_tb/dut/m_axis_tdata \
-sim:/axis_cpu_readback_tester_tb/dut/m_axis_tvalid \
-sim:/axis_cpu_readback_tester_tb/dut/m_axis_tready
-run -all
-# Break in Module axis_cpu_readback_tester_tb at D:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv line 140
-run -all
-quit -sim
-# End time: 16:17:25 on Oct 05,2020, Elapsed time: 0:05:15
-# Errors: 0, Warnings: 4
-vsim -gui work.rfsoc_pl_ctrl_tb
-# vsim -gui work.rfsoc_pl_ctrl_tb 
-# Start time: 16:23:09 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.rfsoc_pl_ctrl_tb_sv_unit
-# Loading work.rfsoc_pl_ctrl_tb
-# Loading work.rfsoc_pl_ctrl_sv_unit
-# Loading work.rfsoc_pl_ctrl
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.gpio_fifo
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
 # Loading work.axis_async_fifo
 # Loading work.axis_async_fifo_def
-# Loading work.channel_selector_sv_unit
-# Loading work.channel_selector
-# Loading work.shift_register
-# Loading work.axis_ps_to_pl_sv_unit
-# Loading work.axis_ps_to_pl
-# Loading work.axis_selector
-# Loading work.dac_driver_sv_unit
-# Loading work.dac_driver
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-# Loading work.axis_sync_fifo
-# Loading work.axis_fifo
-# Loading work.axis_mux_sv_unit
-# Loading work.axis_mux
 add wave -position insertpoint  \
-sim:/rfsoc_pl_ctrl_tb/dut/ps_clk \
-sim:/rfsoc_pl_ctrl_tb/dut/pl_clk \
-sim:/rfsoc_pl_ctrl_tb/dut/rst \
-sim:/rfsoc_pl_ctrl_tb/dut/gpio_ctrl \
-sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tvalid \
-sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tready \
-sim:/rfsoc_pl_ctrl_tb/dut/m0_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m1_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m2_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m3_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m4_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m5_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m6_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m7_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m8_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m9_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m10_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m11_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m12_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m13_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m14_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m15_axis_tdata
-# Can't move the Now cursor.
-# Can't move the Now cursor.
+sim:/adc_driver_tb/dut/adc_ctrl_inst/count_val \
+sim:/adc_driver_tb/dut/adc_ctrl_inst/shift_val
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: James Williams  Hostname: JAMES-LENOVO  ProcessID: 26672
+#           Attempting to use alternate WLF file "./wlftnczhhn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnczhhn
+add wave -position insertpoint  \
+sim:/adc_driver_tb/dut/ps_clk \
+sim:/adc_driver_tb/dut/pl_clk \
+sim:/adc_driver_tb/dut/rst \
+sim:/adc_driver_tb/dut/gpio_ctrl \
+sim:/adc_driver_tb/dut/s_axis_tdata \
+sim:/adc_driver_tb/dut/s_axis_tvalid \
+sim:/adc_driver_tb/dut/s_axis_tready \
+sim:/adc_driver_tb/dut/m_axis_tdata \
+sim:/adc_driver_tb/dut/m_axis_tvalid \
+sim:/adc_driver_tb/dut/m_axis_tready \
+sim:/adc_driver_tb/dut/select_in
 run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 246
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 72
 run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 246
-# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 75
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 78
+# Compile of adc_ctrl.sv was successful.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.rfsoc_pl_ctrl_tb_sv_unit
-# Loading work.rfsoc_pl_ctrl_tb
+# Loading work.adc_ctrl_sv_unit
+# Loading work.adc_ctrl
 run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 72
 run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 75
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 78
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 85
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 88
+add wave -position insertpoint  \
+sim:/adc_driver_tb/dut/adc_storage_fifo/axis_clk \
+sim:/adc_driver_tb/dut/adc_storage_fifo/s_axis_tvalid \
+sim:/adc_driver_tb/dut/adc_storage_fifo/s_axis_tready \
+sim:/adc_driver_tb/dut/adc_storage_fifo/s_axis_tdata
 restart -f
 run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 72
 run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
-# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 75
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 78
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 85
+add wave -position insertpoint  \
+sim:/adc_driver_tb/dut/adc_storage_fifo/m_axis_tdata \
+sim:/adc_driver_tb/dut/adc_storage_fifo/m_axis_tvalid \
+sim:/adc_driver_tb/dut/adc_storage_fifo/m_axis_tready
+add wave -position insertpoint  \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/rst \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/s_axis_clk \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/s_axis_tvalid \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/s_axis_tready \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/s_axis_tdata \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/m_axis_clk \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/m_axis_tdata \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/m_axis_tvalid \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_to_ps_fifo/m_axis_tready
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 72
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 75
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 78
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 85
+add wave -position insertpoint  \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/pl_clk \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/ps_clk \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/rst \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/s_axis_tdata \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/s_axis_tvalid \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/s_axis_tready \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/m_axis_tdata \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/m_axis_tvalid \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/m_axis_tready \
+sim:/adc_driver_tb/dut/axis_pl_to_ps_inst/gpio_ctrl
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 72
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 75
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 78
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 85
+# Compile of adc_ctrl.sv was successful.
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.rfsoc_pl_ctrl_tb_sv_unit
-# Loading work.rfsoc_pl_ctrl_tb
+# Loading work.adc_ctrl_sv_unit
+# Loading work.adc_ctrl
 run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
-step -over
-# Next activity is in 1 ns.
-step -over
-step -over
-step -over
-step -over
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 244
-quit -sim
-# End time: 17:22:11 on Oct 05,2020, Elapsed time: 0:59:02
-# Errors: 0, Warnings: 1
-vsim -gui work.rfsoc_pl_ctrl_tb
-# vsim -gui work.rfsoc_pl_ctrl_tb 
-# Start time: 17:22:24 on Oct 05,2020
-# Loading sv_std.std
-# Loading work.rfsoc_config
-# Loading work.rfsoc_pl_ctrl_tb_sv_unit
-# Loading work.rfsoc_pl_ctrl_tb
-# Loading work.rfsoc_pl_ctrl_sv_unit
-# Loading work.rfsoc_pl_ctrl
-# Loading work.fifo_wrappers_sv_unit
-# Loading work.gpio_fifo
-# Loading work.axis_async_fifo
-# Loading work.axis_async_fifo_def
-# Loading work.channel_selector_sv_unit
-# Loading work.channel_selector
-# Loading work.shift_register
-# Loading work.axis_ps_to_pl_sv_unit
-# Loading work.axis_ps_to_pl
-# Loading work.axis_selector
-# Loading work.dac_driver_sv_unit
-# Loading work.dac_driver
-# Loading work.dac_ctrl_sv_unit
-# Loading work.dac_ctrl
-# Loading work.axis_sync_fifo
-# Loading work.axis_fifo
-# Loading work.axis_mux_sv_unit
-# Loading work.axis_mux
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 85
 add wave -position insertpoint  \
-sim:/rfsoc_pl_ctrl_tb/dut/ps_clk \
-sim:/rfsoc_pl_ctrl_tb/dut/pl_clk \
-sim:/rfsoc_pl_ctrl_tb/dut/rst \
-sim:/rfsoc_pl_ctrl_tb/dut/gpio_ctrl \
-sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tvalid \
-sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tready \
-sim:/rfsoc_pl_ctrl_tb/dut/m0_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m1_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m2_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m3_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m4_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m5_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m6_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m7_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m8_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m9_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m10_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m11_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m12_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m13_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m14_axis_tdata \
-sim:/rfsoc_pl_ctrl_tb/dut/m15_axis_tdata
+sim:/adc_driver_tb/dut/ps_clk \
+sim:/adc_driver_tb/dut/pl_clk \
+sim:/adc_driver_tb/dut/rst \
+sim:/adc_driver_tb/dut/m_axis_tdata \
+sim:/adc_driver_tb/dut/m_axis_tvalid \
+sim:/adc_driver_tb/dut/m_axis_tready
 run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 248
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 248
-run -all
-# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 248
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 88
