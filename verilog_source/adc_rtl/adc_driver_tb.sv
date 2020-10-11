@@ -55,7 +55,7 @@ initial begin
 	rst <= 1;
 	
 	gpio_ctrl <= 0;
-	s_axis_tdata <= {16'h0001, 16'h0002, 16'h0003, 16'h0004, 16'h0005, 16'h0006, 16'h0007, 16'h0008};
+	s_axis_tdata <= {16'h1000, 16'h2000, 16'h3000, 16'h4000, 16'h5000, 16'h6000, 16'h7000, 16'h8000};
 	
 	m_axis_tready <= 0;
 	
@@ -71,15 +71,20 @@ initial begin
 	//Set the capture cycles to 4
 	set_adc_run_cycles(4);
 	
-	//Set the shift val to 0
+	//Set the shift val to 2
+	set_adc_shift_val(2);
+	
+	//trigger the adc 4 times (2 ^ 2)
+	for(j = 0; j < 4; j = j + 1) begin
+		gpio_ctrl[trigger_line] <= 1;
+		clk_cycle();
+		gpio_ctrl[trigger_line] <= 0;
+		
+		repeat(50) clk_cycle();
+	end
+	
+	//Set the shift val to 0 to permit readout
 	set_adc_shift_val(0);
-	
-	//trigger the adc
-	gpio_ctrl[trigger_line] <= 1;
-	clk_cycle();
-	gpio_ctrl[trigger_line] <= 0;
-	
-	repeat(50) clk_cycle();
 	
 	//Now readout the result
 	m_axis_tready <= 1;

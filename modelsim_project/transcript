@@ -212,3 +212,51 @@ sim:/adc_driver_tb/dut/m_axis_tvalid \
 sim:/adc_driver_tb/dut/m_axis_tready
 run -all
 # Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 88
+# Compile of adc_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.adc_driver_tb_sv_unit
+# Loading work.adc_driver_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 72
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 75
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 87
+run -all
+# Compile of adc_driver_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.adc_driver_tb_sv_unit
+# Loading work.adc_driver_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 72
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 75
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 90
+run -all
+# Break in Module adc_driver_tb at D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv line 93
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
