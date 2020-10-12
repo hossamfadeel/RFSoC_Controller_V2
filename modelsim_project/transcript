@@ -307,3 +307,414 @@ run -all
 # ADC driver readot test complete for shift val = 4, number of errors:           0
 # 
 # Compile of adc_driver_tb.sv was successful.
+quit -sim
+# End time: 18:32:29 on Oct 11,2020, Elapsed time: 7:22:17
+# Errors: 0, Warnings: 6
+# Compile of rfsoc_config.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv failed with 24 errors.
+# Compile of rfsoc_pl_ctrl_tb.sv failed with 1 errors.
+# Compile of adc_ctrl.sv failed with 1 errors.
+# Compile of adc_driver_tb.sv was successful.
+# 5 compiles, 3 failed with 26 errors.
+# Compile of rfsoc_pl_ctrl.sv failed with 24 errors.
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# Compile of adc_ctrl.sv failed with 8 errors.
+# 3 compiles, 2 failed with 32 errors.
+# Compile of rfsoc_pl_ctrl.sv failed with 24 errors.
+# Compile of adc_ctrl.sv was successful.
+# 2 compiles, 1 failed with 24 errors.
+# Compile of rfsoc_pl_ctrl.sv failed with 24 errors.
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# Load canceled
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# Load canceled
+# Compile of axis_mux.sv was successful.
+# Compile of axis_ps_to_pl.sv was successful.
+# Compile of axis_selector.sv was successful.
+# Compile of channel_selector.sv was successful.
+# Compile of dac_ctrl.sv was successful.
+# Compile of dac_driver.sv was successful.
+# Compile of fifo_wrappers.sv was successful.
+# Compile of rfsoc_config.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# Compile of shift_register.sv was successful.
+# Compile of dac_driver_tb.sv was successful.
+# Compile of axis_ps_to_pl_tb.sv was successful.
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# Compile of adc_ctrl.sv was successful.
+# Compile of axis_pl_to_ps.sv was successful.
+# Compile of axis_pl_to_ps_tb.sv was successful.
+# Compile of fifo_tb.sv was successful.
+# Compile of axis_fifos.sv was successful.
+# Compile of axis_cpu_readback_tester.sv was successful.
+# Compile of adc_driver.sv was successful.
+# Compile of adc_driver_tb.sv was successful.
+# 21 compiles, 0 failed with no errors.
+vsim -gui work.rfsoc_pl_ctrl_tb
+# vsim -gui work.rfsoc_pl_ctrl_tb 
+# Start time: 18:37:12 on Oct 11,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.gpio_fifo
+# Loading work.axis_async_fifo
+# Loading work.axis_async_fifo_def
+# Loading work.channel_selector_sv_unit
+# Loading work.channel_selector
+# Loading work.shift_register
+# Loading work.axis_ps_to_pl_sv_unit
+# Loading work.axis_ps_to_pl
+# Loading work.axis_selector
+# ** Error: (vsim-3033) Instantiation of 'axis_n_mux' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /rfsoc_pl_ctrl_tb/dut File: D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv Line: 245
+#         Searched libraries:
+#             D:/repos/RFSoC_Controller_V2/modelsim_project/work
+# Error loading design
+# End time: 18:37:13 on Oct 11,2020, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 8
+# Compile of axis_n_mux.sv failed with 4 errors.
+# Compile of axis_n_mux.sv failed with 1 errors.
+# Compile of axis_n_mux.sv was successful.
+vsim -gui work.rfsoc_pl_ctrl_tb
+# vsim -gui work.rfsoc_pl_ctrl_tb 
+# Start time: 18:38:29 on Oct 11,2020
+# Loading sv_std.std
+# Loading work.rfsoc_config
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+# Loading work.fifo_wrappers_sv_unit
+# Loading work.gpio_fifo
+# Loading work.axis_async_fifo
+# Loading work.axis_async_fifo_def
+# Loading work.channel_selector_sv_unit
+# Loading work.channel_selector
+# Loading work.shift_register
+# Loading work.axis_ps_to_pl_sv_unit
+# Loading work.axis_ps_to_pl
+# Loading work.axis_selector
+# Loading work.axis_n_mux_sv_unit
+# Loading work.axis_n_mux
+# Loading work.dac_driver_sv_unit
+# Loading work.dac_driver
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+# Loading work.axis_sync_fifo
+# Loading work.axis_fifo
+# Loading work.axis_mux_sv_unit
+# Loading work.axis_mux
+# Loading work.adc_driver_sv_unit
+# Loading work.adc_driver
+# Loading work.adc_ctrl_sv_unit
+# Loading work.adc_ctrl
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/ps_clk \
+sim:/rfsoc_pl_ctrl_tb/dut/pl_clk \
+sim:/rfsoc_pl_ctrl_tb/dut/rst \
+sim:/rfsoc_pl_ctrl_tb/dut/gpio_ctrl \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m16_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m16_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m16_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m0_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m0_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m0_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m1_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m1_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m1_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m2_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m2_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m2_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m3_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m3_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m3_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m4_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m4_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m4_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m5_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m5_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m5_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m6_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m6_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m6_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m7_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m7_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m7_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m8_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m8_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m8_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m9_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m9_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m9_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m10_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m10_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m10_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m11_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m11_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m11_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m12_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m12_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m12_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m13_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m13_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m13_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m14_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m14_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m14_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m15_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m15_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m15_axis_tready
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: James Williams  Hostname: JAMES-LENOVO  ProcessID: 26672
+#           Attempting to use alternate WLF file "./wlftwisnvz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftwisnvz
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/ps_clk \
+sim:/rfsoc_pl_ctrl_tb/dut/pl_clk \
+sim:/rfsoc_pl_ctrl_tb/dut/rst \
+sim:/rfsoc_pl_ctrl_tb/dut/gpio_ctrl \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/m0_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m1_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m2_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m3_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m4_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m5_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m6_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m7_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m8_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m9_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m10_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m11_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m12_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m13_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m14_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m15_axis_tdata
+run -all
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 133 ns ###############
+#   Active process: /rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/#ALWAYS#21 @ sub-iteration 0
+#     Source: D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv:245
+#   Active process: /rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/#ALWAYS#21 @ sub-iteration 1
+#     Source: D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv:245
+#   Active process: /rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/#ALWAYS#21 @ sub-iteration 2
+#     Source: D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv:245
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 133 ns.
+######## Additional Loop Analysis Started ##########
+##############  Autofindloop Step ##################
+#   Active process: /rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/#ALWAYS#21
+#     Source: D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv:245
+###################################################
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 360
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 133 ns.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 360
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 442
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 444
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 445
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 447
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 133 ns.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 360
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 442
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 444
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 445
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 447
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 448
+step -over
+step -over
+# Next activity is in 1 ns.
+step -over
+run -all
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 133 ns.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 360
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 442
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 444
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 445
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 447
+# Compile of axis_n_mux.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.axis_n_mux_sv_unit
+# Loading work.axis_n_mux
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 360
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 442
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 444
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 445
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 447
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 448
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 448
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 448
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 448
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 442
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 444
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 445
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 447
+run -all
+# Break in Task select_channel at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 448
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 362
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 363
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 365
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 367
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 369
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 371
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 373
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 360
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 362
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+restart -f
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+# Compile of dac_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 360
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 365
+add wave -position insertpoint  \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/dac_ctrl_inst/cycle_count_reg/clk} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/dac_ctrl_inst/cycle_count_reg/sclk} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/dac_ctrl_inst/cycle_count_reg/reset} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/dac_ctrl_inst/cycle_count_reg/data_in} \
+{sim:/rfsoc_pl_ctrl_tb/dut/genblk1[0]/genblk1/real_channel_ctrl/dac_ctrl_inst/cycle_count_reg/data_out}
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 367
+# Compile of dac_ctrl.sv was successful.
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+# Compile of dac_ctrl.sv was successful.
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+# Loading work.dac_ctrl_sv_unit
+# Loading work.dac_ctrl
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/m1_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/m2_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/m3_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/m4_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/m5_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/m6_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/m7_axis_tdata
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406

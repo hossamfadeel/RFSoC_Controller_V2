@@ -44,6 +44,9 @@ reg [1:0] state;
 reg [31:0] count;
 
 
+wire [127:0] s_axis_tdata_0_int = gpio_ctrl[adc_use_dummy_data] ? {16'h1000, 16'h2000, 16'h3000, 16'h4000, 16'h5000, 16'h6000, 16'h7000, 16'h8000} : s_axis_tdata_0;
+
+
 localparam [1:0] state_wait_trigger = 2'b00,
                  state_trigger = 2'b01,
                  state_cleanup = 2'b10;
@@ -78,14 +81,14 @@ wire [127:0] s_axis_tdata_1_i = data_valid ? s_axis_tdata_1 : 0;
 //Averaging function
 
 //Each value
-wire signed [15:0] val_0 = s_axis_tdata_0[15:0];
-wire signed [15:0] val_1 = s_axis_tdata_0[31:16];
-wire signed [15:0] val_2 = s_axis_tdata_0[47:32];
-wire signed [15:0] val_3 = s_axis_tdata_0[63:48];
-wire signed [15:0] val_4 = s_axis_tdata_0[79:64];
-wire signed [15:0] val_5 = s_axis_tdata_0[95:80];
-wire signed [15:0] val_6 = s_axis_tdata_0[111:96];
-wire signed [15:0] val_7 = s_axis_tdata_0[127:112];
+wire signed [15:0] val_0 = s_axis_tdata_0_int[15:0];
+wire signed [15:0] val_1 = s_axis_tdata_0_int[31:16];
+wire signed [15:0] val_2 = s_axis_tdata_0_int[47:32];
+wire signed [15:0] val_3 = s_axis_tdata_0_int[63:48];
+wire signed [15:0] val_4 = s_axis_tdata_0_int[79:64];
+wire signed [15:0] val_5 = s_axis_tdata_0_int[95:80];
+wire signed [15:0] val_6 = s_axis_tdata_0_int[111:96];
+wire signed [15:0] val_7 = s_axis_tdata_0_int[127:112];
 
 //Each divide
 wire signed [15:0] val_0_div = (val_0 >>> shift_val);
@@ -128,7 +131,7 @@ assign cpu_ready = m_axis_tready_1;
 
 //Assignment for output to data fifo
 //If we're not shifting, then just pass data through, otherwise add it to whats comming out of the data fifo
-assign m_axis_tdata_0 = shift_val == 0 ? s_axis_tdata_0 : avg_function;
+assign m_axis_tdata_0 = shift_val == 0 ? s_axis_tdata_0_int : avg_function;
 //Data can only enter the data fifo when we're capturing
 assign m_axis_tvalid_0 = data_valid | state == state_trigger;
 

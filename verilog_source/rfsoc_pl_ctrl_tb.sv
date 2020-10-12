@@ -77,10 +77,83 @@ wire m15_axis_tvalid;
 reg m15_axis_tready;
 
 
+wire [127:0] adc_dummy_data = {16'h1000, 16'h2000, 16'h3000, 16'h4000, 16'h5000, 16'h6000, 16'h7000, 16'h8000};
+//AXIS inputs from ADC
+
+wire [127:0] s0_axis_tdata = adc_dummy_data;
+wire s0_axis_tvalid = 1;
+wire s0_axis_tready;
+
+wire [127:0] s1_axis_tdata = adc_dummy_data;
+wire s1_axis_tvalid = 1;
+wire s1_axis_tready;
+
+wire [127:0] s2_axis_tdata = adc_dummy_data;
+wire s2_axis_tvalid = 1;
+wire s2_axis_tready;
+
+wire [127:0] s3_axis_tdata = adc_dummy_data;
+wire s3_axis_tvalid = 1;
+wire s3_axis_tready;
+
+wire [127:0] s4_axis_tdata = adc_dummy_data;
+wire s4_axis_tvalid = 1;
+wire s4_axis_tready;
+
+wire [127:0] s5_axis_tdata = adc_dummy_data;
+wire s5_axis_tvalid = 1;
+wire s5_axis_tready;
+
+wire [127:0] s6_axis_tdata = adc_dummy_data;
+wire s6_axis_tvalid = 1;
+wire s6_axis_tready;
+
+wire [127:0] s7_axis_tdata = adc_dummy_data;
+wire s7_axis_tvalid = 1;
+wire s7_axis_tready;
+
+wire [127:0] s8_axis_tdata = adc_dummy_data;
+wire s8_axis_tvalid = 1;
+wire s8_axis_tready;
+
+wire [127:0] s9_axis_tdata = adc_dummy_data;
+wire s9_axis_tvalid = 1;
+wire s9_axis_tready;
+
+wire [127:0] s10_axis_tdata = adc_dummy_data;
+wire s10_axis_tvalid = 1;
+wire s10_axis_tready;
+
+wire [127:0] s11_axis_tdata = adc_dummy_data;
+wire s11_axis_tvalid = 1;
+wire s11_axis_tready;
+
+wire [127:0] s12_axis_tdata = adc_dummy_data;
+wire s12_axis_tvalid = 1;
+wire s12_axis_tready;
+
+wire [127:0] s13_axis_tdata = adc_dummy_data;
+wire s13_axis_tvalid = 1;
+wire s13_axis_tready;
+
+wire [127:0] s14_axis_tdata = adc_dummy_data;
+wire s14_axis_tvalid = 1;
+wire s14_axis_tready;
+
+wire [127:0] s15_axis_tdata = adc_dummy_data;
+wire s15_axis_tvalid = 1;
+wire s15_axis_tready;
+
+
 integer i, j, k;
 
 wire [255:0] test_mask = {{8{16'h0000}}, {8{16'hFFFF}}};
 reg [31:0] axis_word_reg;
+
+
+wire [31:0] adc_axis_tdata;
+wire adc_axis_tvalid;
+reg adc_axis_tready;
 
 rfsoc_pl_ctrl dut
 (
@@ -93,6 +166,11 @@ rfsoc_pl_ctrl dut
 	s_axis_tdata,
     s_axis_tvalid,
     s_axis_tready,
+	
+	//AXIS output to ps
+	adc_axis_tdata,
+	adc_axis_tvalid,
+	adc_axis_tready,
 	
 	
 	//AXIS outputs to RFSoC IP
@@ -158,12 +236,82 @@ rfsoc_pl_ctrl dut
 	
 	m15_axis_tdata,
     m15_axis_tvalid,
-    m15_axis_tready
+    m15_axis_tready,
+	
+	//AXIS inputs from ADC
+	s0_axis_tdata,
+    s0_axis_tvalid,
+    s0_axis_tready,
+	
+	s1_axis_tdata,
+    s1_axis_tvalid,
+    s1_axis_tready,
+	
+	s2_axis_tdata,
+    s2_axis_tvalid,
+    s2_axis_tready,
+	
+	s3_axis_tdata,
+    s3_axis_tvalid,
+    s3_axis_tready,
+	
+	s4_axis_tdata,
+    s4_axis_tvalid,
+    s4_axis_tready,
+	
+	s5_axis_tdata,
+    s5_axis_tvalid,
+    s5_axis_tready,
+	
+	s6_axis_tdata,
+    s6_axis_tvalid,
+    s6_axis_tready,
+	
+	s7_axis_tdata,
+    s7_axis_tvalid,
+    s7_axis_tready,
+	
+	s8_axis_tdata,
+    s8_axis_tvalid,
+    s8_axis_tready,
+	
+	s9_axis_tdata,
+    s9_axis_tvalid,
+    s9_axis_tready,
+	
+	s10_axis_tdata,
+    s10_axis_tvalid,
+    s10_axis_tready,
+	
+	s11_axis_tdata,
+    s11_axis_tvalid,
+    s11_axis_tready,
+	
+	s12_axis_tdata,
+    s12_axis_tvalid,
+    s12_axis_tready,
+	
+	s13_axis_tdata,
+    s13_axis_tvalid,
+    s13_axis_tready,
+	
+	s14_axis_tdata,
+    s14_axis_tvalid,
+    s14_axis_tready,
+	
+	s15_axis_tdata,
+    s15_axis_tvalid,
+    s15_axis_tready
 	
 );
 
+integer num_adc_errors, num_dac_errors;
 
 initial begin
+
+
+	num_adc_errors <= 0;
+	num_dac_errors <= 0;
 
 	pl_clk <= 0;
 	ps_clk <= 0;
@@ -224,6 +372,14 @@ initial begin
 		//Set the post delay cycles
 		set_post_delay_cycles(2);
 		
+		
+		//ADC Stuff///////////////////
+		//Set the capture cycles to 4
+		set_adc_run_cycles(4);
+		//Set the shift val to 2
+		set_adc_shift_val(2);
+		//////////////////////////////
+		
 		//Load in 5 words (40 ps words) (5*16 samples total)
 		axis_word_reg <= 32'haaaaaaaa;
 		clk_cycle();
@@ -243,7 +399,9 @@ initial begin
 	
 	repeat(10) clk_cycle();
 	
-	for(i = 0; i < 20; i = i + 1) begin
+	
+	//Trigger exactly 4 times
+	for(i = 0; i < 4; i = i + 1) begin
 	
 		gpio_ctrl[trigger_line] <= 1;
 		clk_cycle();
@@ -252,6 +410,26 @@ initial begin
 		repeat(50) clk_cycle();
 	
 	end
+	
+	//Try reading out each ADC one at a time
+	for(k = 0; k < 16; k = k + 1) begin
+	
+		select_channel(k);
+		
+		adc_axis_tready <= 1;
+		for(j = 0; j < 16; j = j + 1) begin
+
+			if(adc_axis_tdata != adc_dummy_data[(j*32)+:32])begin
+				num_adc_errors = num_adc_errors + 1;
+			end
+			clk_cycle();
+		
+		end
+	
+	end
+	
+	
+	$display("rfsoc_pl_ctrl test complete, %d errors total, %d DAC errors, $d ADC errors", num_adc_errors+num_dac_errors, num_dac_errors, num_adc_errors);
 
 end
 
@@ -289,9 +467,9 @@ end
 endtask
 
 task set_cycle_count;
-input [255:0] value;
+input [config_reg_width-1:0] value;
 begin
-	for(i = 0; i < 256; i = i + 1) begin
+	for(i = 0; i < config_reg_width; i = i + 1) begin
 
 		//Set the data line
 		gpio_ctrl[sdata] <= value[i];
@@ -333,10 +511,10 @@ end
 endtask
 
 task set_pre_delay_cycles;
-input [255:0] value;
+input [config_reg_width-1:0] value;
 begin
 
-	for(i = 0; i < 256; i = i + 1) begin
+	for(i = 0; i < config_reg_width; i = i + 1) begin
 		//Set the data line
 		gpio_ctrl[sdata] <= value[i];
 		//Cycle the serial clock
@@ -351,10 +529,10 @@ end
 endtask
 
 task set_post_delay_cycles;
-input [255:0] value;
+input [config_reg_width-1:0] value;
 begin
 
-	for(i = 0; i < 256; i = i + 1) begin
+	for(i = 0; i < config_reg_width; i = i + 1) begin
 		//Set the data line
 		gpio_ctrl[sdata] <= value[i];
 		//Cycle the serial clock
@@ -373,8 +551,6 @@ task set_locking_waveform;
 input [255:0] value;
 begin
 	
-
-	
 	for(i = 0; i < 256; i = i + 1) begin
 
 		//Set the data line
@@ -388,8 +564,6 @@ begin
 		gpio_ctrl[locking_waveform_clk] <= 0;
 		repeat(2) clk_cycle();
 	end
-	
-
 
 end
 endtask
@@ -426,6 +600,58 @@ begin
 		repeat(2) clk_cycle();
 	end
 
+end
+endtask
+
+
+task set_adc_run_cycles;
+input [config_reg_width-1:0] cycle_count;
+begin
+
+	clk_cycle();
+	
+	for(i = 0; i < config_reg_width; i = i + 1) begin
+	
+		//set the data line
+		gpio_ctrl[sdata] <= cycle_count[i];
+		clk_cycle();
+		clk_cycle();
+		gpio_ctrl[adc_num_cycle_count_clk] <= 1;
+		clk_cycle();
+		clk_cycle();
+		gpio_ctrl[adc_num_cycle_count_clk] <= 0;
+		clk_cycle();
+		clk_cycle();
+
+	end
+	
+	clk_cycle();
+	
+end
+endtask
+
+task set_adc_shift_val;
+input [config_reg_width-1:0] shift_val;
+begin
+
+	clk_cycle();
+	
+	for(i = 0; i < config_reg_width; i = i + 1) begin
+	
+		//set the data line
+		gpio_ctrl[sdata] <= shift_val[i];
+		clk_cycle();
+		clk_cycle();
+		gpio_ctrl[adc_shift_val_clk] <= 1;
+		clk_cycle();
+		clk_cycle();
+		gpio_ctrl[adc_shift_val_clk] <= 0;
+		clk_cycle();
+		clk_cycle();
+
+	end
+	
+	clk_cycle();
 end
 endtask
 

@@ -125,7 +125,7 @@ shift_register #(256) locking_waveform_reg
 assign mux_sel = mux_sel_int[0];
 
 //Main counter
-reg [255:0] cycle_count;
+reg [config_reg_width-1:0] cycle_count;
 //state reg
 reg [3:0] state;
 //Used to control when mask is used
@@ -196,7 +196,7 @@ always @ (posedge clk or negedge rst) begin
 			
 				locking_cycle <= 1;
 				
-				if(trigger_in) begin
+				if(trigger_in && cycle_count_out != 0) begin
 					cycle_count <= cycle_count_out;
 					
 					//turn the mask on
@@ -206,10 +206,15 @@ always @ (posedge clk or negedge rst) begin
 					pre_delay_cycle_counter <= pre_delay_cycles;
 					
 					if(pre_delay_cycles == 0) begin
+						output_on <= 1;//Turn on the output to the RFSoC
+						loopback_valid <= 1;//Start writing back into waveform fifo
 						s_axis_tready <= 1'b1;//Start reading out data
+						locking_cycle <= 0;
+						state <= state_run;
 					end
-
-					state <= state_pre_run;
+					else begin
+						state <= state_pre_run;
+					end
 				end
 			end
 			
@@ -224,10 +229,6 @@ always @ (posedge clk or negedge rst) begin
 					state <= state_run;
 				end
 				else begin
-					//If we're about to start the experiment cycle
-					if(pre_delay_cycle_counter == 1) begin
-						//s_axis_tready <= 1'b1;//Start reading out data
-					end
 					pre_delay_cycle_counter <= pre_delay_cycle_counter - 1;
 				end
 			end

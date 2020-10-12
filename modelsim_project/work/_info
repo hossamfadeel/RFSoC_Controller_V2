@@ -11,26 +11,26 @@ cModel Technology
 dC:/intelFPGA_pro/20.2/modelsim_ase/win32aloem
 vadc_ctrl
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 DXx4 work 12 rfsoc_config 0 22 <VH0lF@:6aZ3M`QJd`Q__3
-DXx4 work 16 adc_ctrl_sv_unit 0 22 jFRV_UTY[nEiWcVNMg:5[1
-Z2 !s110 1602439089
+Z1 DXx4 work 12 rfsoc_config 0 22 5_7KT[z4JQJ4IMoZaKLMm1
+DXx4 work 16 adc_ctrl_sv_unit 0 22 @jn:jWI74aT>kQ7oVBjTF3
+Z2 !s110 1602466621
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 [hF^ibZQOJQfbnIo8S;AO0
-IGBhh:A7DZj9RDGkf^[`?]3
+!s100 ^[?N``F=OcV77d5hk<iP=3
+Iaho=`HMeJT]SH3D;JDf]?2
 !s105 adc_ctrl_sv_unit
 S1
 Z4 dD:/repos/RFSoC_Controller_V2/modelsim_project
-Z5 w1602439080
+Z5 w1602466458
 Z6 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_ctrl.sv
 Z7 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_ctrl.sv
-!i122 301
-L0 8 218
+!i122 332
+L0 8 221
 Z8 OV;L;2020.1_3;71
 31
-Z9 !s108 1602439089.000000
+Z9 !s108 1602466621.000000
 Z10 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_ctrl.sv|
 Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_ctrl.sv|
 !i113 1
@@ -40,19 +40,19 @@ Xadc_ctrl_sv_unit
 R0
 R1
 R2
-VjFRV_UTY[nEiWcVNMg:5[1
+V@jn:jWI74aT>kQ7oVBjTF3
 r1
 !s85 0
 !i10b 1
-!s100 ELRFmoniaPJoEDM;jj_Zc3
-IjFRV_UTY[nEiWcVNMg:5[1
+!s100 84i9`QmVTiE^7d<U96[:c3
+I@jn:jWI74aT>kQ7oVBjTF3
 !i103 1
 S1
 R4
 R5
 R6
 R7
-!i122 301
+!i122 332
 Z14 L0 3 0
 R8
 31
@@ -66,7 +66,7 @@ vadc_driver
 R0
 R1
 DXx4 work 18 adc_driver_sv_unit 0 22 0jQ5C@D:o>c=9=2ZQW76X2
-Z15 !s110 1602438593
+Z15 !s110 1602466622
 R3
 r1
 !s85 0
@@ -79,13 +79,13 @@ R4
 Z16 w1602438551
 Z17 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver.sv
 Z18 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver.sv
-!i122 298
+!i122 338
 L0 5 127
 R8
 31
-Z19 !s108 1602438592.000000
-Z20 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver.sv|
-Z21 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver.sv|
+R9
+Z19 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver.sv|
+Z20 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver.sv|
 !i113 1
 R12
 R13
@@ -105,13 +105,13 @@ R4
 R16
 R17
 R18
-!i122 298
+!i122 338
 R14
 R8
 31
+R9
 R19
 R20
-R21
 !i113 1
 R12
 R13
@@ -119,7 +119,7 @@ vadc_driver_tb
 R0
 R1
 DXx4 work 21 adc_driver_tb_sv_unit 0 22 f^?hnUIJljD41@=fCIbXo3
-Z22 !s110 1602439896
+R15
 R3
 r1
 !s85 0
@@ -129,23 +129,23 @@ IjjK_Ig9o<oaHGXLm]XG4]1
 !s105 adc_driver_tb_sv_unit
 S1
 R4
-Z23 w1602439891
-Z24 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv
-Z25 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv
-!i122 307
+Z21 w1602439936
+Z22 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv
+Z23 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv
+!i122 339
 L0 5 188
 R8
 31
-Z26 !s108 1602439896.000000
-!s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv|
-Z27 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv|
+Z24 !s108 1602466622.000000
+Z25 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv|
+Z26 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv|
 !i113 1
 R12
 R13
 Xadc_driver_tb_sv_unit
 R0
 R1
-R22
+R15
 Vf^?hnUIJljD41@=fCIbXo3
 r1
 !s85 0
@@ -155,41 +155,41 @@ If^?hnUIJljD41@=fCIbXo3
 !i103 1
 S1
 R4
+R21
+R22
 R23
-R24
-R25
-!i122 307
+!i122 339
 R14
 R8
 31
+R24
+R25
 R26
-Z28 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv|
-R27
 !i113 1
 R12
 R13
 vaFifo
 R0
-Z29 !s110 1601852948
+Z27 !s110 1601852948
 !i10b 1
 !s100 BPF^Q3cZG_a^`?8EJQS=00
-Z30 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z28 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IYlL_;C7FjaljP_R:d^OQ]0
 R3
 S1
 R4
-Z31 w1601852943
-Z32 8D:/repos/RFSoC_Controller_V2/verilog_source/async_fifo.sv
-Z33 FD:/repos/RFSoC_Controller_V2/verilog_source/async_fifo.sv
+Z29 w1601852943
+Z30 8D:/repos/RFSoC_Controller_V2/verilog_source/async_fifo.sv
+Z31 FD:/repos/RFSoC_Controller_V2/verilog_source/async_fifo.sv
 !i122 219
 L0 14 99
 R8
 r1
 !s85 0
 31
-Z34 !s108 1601852948.000000
-Z35 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/async_fifo.sv|
-Z36 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/async_fifo.sv|
+Z32 !s108 1601852948.000000
+Z33 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/async_fifo.sv|
+Z34 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/async_fifo.sv|
 !i113 1
 R12
 R13
@@ -197,113 +197,113 @@ na@fifo
 vasync_fifo_tb
 R0
 R1
-Z37 DXx4 work 15 fifo_tb_sv_unit 0 22 MKoAd@ImU4U2E:QE_VC6^2
-Z38 !s110 1602438592
+Z35 DXx4 work 15 fifo_tb_sv_unit 0 22 MKoAd@ImU4U2E:QE_VC6^2
+R2
 R3
 r1
 !s85 0
 !i10b 1
 !s100 F;9d=l0kfz678^k<Nh@6A0
 IBE:MzzO]maVEUj`o@HKU52
-Z39 !s105 fifo_tb_sv_unit
+Z36 !s105 fifo_tb_sv_unit
 S1
 R4
-Z40 w1601917560
-Z41 8D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv
-Z42 FD:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv
-!i122 295
+Z37 w1601917560
+Z38 8D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv
+Z39 FD:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv
+!i122 335
 L0 134 120
 R8
 31
-R19
-Z43 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv|
-Z44 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv|
+R9
+Z40 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv|
+Z41 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/fifo_tb.sv|
 !i113 1
 R12
 R13
 vaxis_async_fifo
 R0
 R1
-Z45 DXx4 work 21 fifo_wrappers_sv_unit 0 22 ajVCF17m@o_@eU`aR<Gkg2
-Z46 !s110 1602438591
+Z42 DXx4 work 21 fifo_wrappers_sv_unit 0 22 ajVCF17m@o_@eU`aR<Gkg2
+Z43 !s110 1602466620
 R3
 r1
 !s85 0
 !i10b 1
 !s100 PS]SJIcJo;66UT;]?ke1K1
 IO;0aOBMUli`HkK[1dXk3O2
-Z47 !s105 fifo_wrappers_sv_unit
+Z44 !s105 fifo_wrappers_sv_unit
 S1
 R4
-Z48 w1601917235
-Z49 8D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv
-Z50 FD:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv
-!i122 285
+Z45 w1601917235
+Z46 8D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv
+Z47 FD:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv
+!i122 325
 L0 109 109
 R8
 31
-Z51 !s108 1602438591.000000
-Z52 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv|
-Z53 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv|
+Z48 !s108 1602466620.000000
+Z49 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv|
+Z50 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/fifo_wrappers.sv|
 !i113 1
 R12
 R13
 vaxis_async_fifo_def
 R0
-R38
+R2
 !i10b 1
 !s100 L17TioB<?X3ABf`n`CfPk1
-R30
+R28
 I9eVUBMQd;XFnzWeAe50Hj2
 R3
 S1
 R4
-Z54 w1601917251
-Z55 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv
-Z56 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv
-!i122 296
+Z51 w1601917251
+Z52 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv
+Z53 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv
+!i122 336
 L0 316 466
 R8
 r1
 !s85 0
 31
-R19
-Z57 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv|
-Z58 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv|
+R9
+Z54 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv|
+Z55 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_fifos.sv|
 !i113 1
 R12
 R13
 vaxis_cpu_readback_tester
 R0
 R1
-Z59 DXx4 work 32 axis_cpu_readback_tester_sv_unit 0 22 nh:JUkPgHTQTM[KzeN_Ri3
-R38
+Z56 DXx4 work 32 axis_cpu_readback_tester_sv_unit 0 22 nh:JUkPgHTQTM[KzeN_Ri3
+R2
 R3
 r1
 !s85 0
 !i10b 1
 !s100 aPSD5MV6k_<]]7T5F=akX1
 I:2UeL;gLOgibD6]oVeblD1
-Z60 !s105 axis_cpu_readback_tester_sv_unit
+Z57 !s105 axis_cpu_readback_tester_sv_unit
 S1
 R4
-Z61 w1601939516
-Z62 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv
-Z63 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv
-!i122 297
+Z58 w1601939516
+Z59 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv
+Z60 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv
+!i122 337
 L0 10 87
 R8
 31
-R19
-Z64 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv|
-Z65 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv|
+R9
+Z61 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv|
+Z62 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_cpu_readback_tester.sv|
 !i113 1
 R12
 R13
 Xaxis_cpu_readback_tester_sv_unit
 R0
 R1
-R38
+R2
 Vnh:JUkPgHTQTM[KzeN_Ri3
 r1
 !s85 0
@@ -313,68 +313,68 @@ Inh:JUkPgHTQTM[KzeN_Ri3
 !i103 1
 S1
 R4
-R61
-R62
-R63
-!i122 297
+R58
+R59
+R60
+!i122 337
 L0 7 0
 R8
 31
-R19
-R64
-R65
+R9
+R61
+R62
 !i113 1
 R12
 R13
 vaxis_cpu_readback_tester_tb
 R0
 R1
-R59
-R38
+R56
+R2
 R3
 r1
 !s85 0
 !i10b 1
 !s100 ]@M2fNbC0?2D23bdQMTPX3
 IUa7YQCcn[nh`=Sa`iSkd63
-R60
+R57
 S1
 R4
-R61
-R62
-R63
-!i122 297
+R58
+R59
+R60
+!i122 337
 L0 99 69
 R8
 31
-R19
-R64
-R65
+R9
+R61
+R62
 !i113 1
 R12
 R13
 vaxis_fifo
 R0
-R38
+R2
 !i10b 1
 !s100 ZmDHOOnTSGZX8o8]jU0Q82
-R30
+R28
 I4O8:ZV22CZzWUIC@Dah7;3
 R3
 S1
 R4
-R54
-R55
-R56
-!i122 296
+R51
+R52
+R53
+!i122 336
 L0 27 255
 R8
 r1
 !s85 0
 31
-R19
-R57
-R58
+R9
+R54
+R55
 !i113 1
 R12
 R13
@@ -382,7 +382,7 @@ vaxis_mux
 R0
 R1
 DXx4 work 16 axis_mux_sv_unit 0 22 _C?i13i3>FVeLAM]@nhAM1
-Z66 !s110 1602438590
+Z63 !s110 1602466619
 R3
 r1
 !s85 0
@@ -392,23 +392,23 @@ I0EOzj1mS>cc>WoNE0;0oJ0
 !s105 axis_mux_sv_unit
 S1
 R4
-Z67 w1600969616
-Z68 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_mux.sv
-Z69 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_mux.sv
-!i122 279
+Z64 w1600969616
+Z65 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_mux.sv
+Z66 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_mux.sv
+!i122 319
 L0 24 48
 R8
 31
-Z70 !s108 1602438590.000000
-Z71 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_mux.sv|
-Z72 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_mux.sv|
+Z67 !s108 1602466619.000000
+Z68 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_mux.sv|
+Z69 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_mux.sv|
 !i113 1
 R12
 R13
 Xaxis_mux_sv_unit
 R0
 R1
-R66
+R63
 V_C?i13i3>FVeLAM]@nhAM1
 r1
 !s85 0
@@ -418,16 +418,69 @@ I_C?i13i3>FVeLAM]@nhAM1
 !i103 1
 S1
 R4
-R67
-R68
-R69
-!i122 279
+R64
+R65
+R66
+!i122 319
 L0 22 0
 R8
 31
+R67
+R68
+R69
+!i113 1
+R12
+R13
+vaxis_n_mux
+R0
+R1
+DXx4 work 18 axis_n_mux_sv_unit 0 22 0Qmm=56ngDzRkTKY:bgO]2
+Z70 !s110 1602467104
+R3
+r1
+!s85 0
+!i10b 1
+!s100 O?HM3Qja>2ODzG@E]KghZ3
+IK:PL@8KneMII<T00RakI`0
+!s105 axis_n_mux_sv_unit
+S1
+R4
+Z71 w1602467102
+Z72 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_n_mux.sv
+Z73 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_n_mux.sv
+!i122 341
+L0 4 46
+R8
+31
+Z74 !s108 1602467104.000000
+Z75 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_n_mux.sv|
+Z76 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_n_mux.sv|
+!i113 1
+R12
+R13
+Xaxis_n_mux_sv_unit
+R0
+R1
 R70
+V0Qmm=56ngDzRkTKY:bgO]2
+r1
+!s85 0
+!i10b 1
+!s100 :5[;b]kbf`7cKPn1c;Z;g3
+I0Qmm=56ngDzRkTKY:bgO]2
+!i103 1
+S1
+R4
 R71
 R72
+R73
+!i122 341
+R14
+R8
+31
+R74
+R75
+R76
 !i113 1
 R12
 R13
@@ -435,7 +488,7 @@ vaxis_pl_to_ps
 R0
 R1
 DXx4 work 21 axis_pl_to_ps_sv_unit 0 22 e2AHH=fz75e:;R[m_eVBN1
-R38
+R2
 R3
 r1
 !s85 0
@@ -445,23 +498,23 @@ IN4MKi86^^@>kNbUj8GS<E0
 !s105 axis_pl_to_ps_sv_unit
 S1
 R4
-Z73 w1602110315
-Z74 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv
-Z75 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv
-!i122 293
+Z77 w1602110315
+Z78 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv
+Z79 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv
+!i122 333
 L0 6 145
 R8
 31
-R19
-Z76 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv|
-Z77 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv|
+R9
+Z80 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv|
+Z81 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps.sv|
 !i113 1
 R12
 R13
 Xaxis_pl_to_ps_sv_unit
 R0
 R1
-R38
+R2
 Ve2AHH=fz75e:;R[m_eVBN1
 r1
 !s85 0
@@ -471,16 +524,16 @@ Ie2AHH=fz75e:;R[m_eVBN1
 !i103 1
 S1
 R4
-R73
-R74
-R75
-!i122 293
+R77
+R78
+R79
+!i122 333
 R14
 R8
 31
-R19
-R76
-R77
+R9
+R80
+R81
 !i113 1
 R12
 R13
@@ -488,7 +541,7 @@ vaxis_pl_to_ps_tb
 R0
 R1
 DXx4 work 24 axis_pl_to_ps_tb_sv_unit 0 22 eHkVN1X<;:i6>EV?2SFNK3
-R38
+R2
 R3
 r1
 !s85 0
@@ -498,23 +551,23 @@ IZk[e?Jb`e6YIlE6M?dzQ_1
 !s105 axis_pl_to_ps_tb_sv_unit
 S1
 R4
-Z78 w1601919363
-Z79 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv
-Z80 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv
-!i122 294
+Z82 w1601919363
+Z83 8D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv
+Z84 FD:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv
+!i122 334
 L0 8 151
 R8
 31
-R19
-Z81 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv|
-Z82 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv|
+R9
+Z85 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv|
+Z86 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/axis_pl_to_ps_tb.sv|
 !i113 1
 R12
 R13
 Xaxis_pl_to_ps_tb_sv_unit
 R0
 R1
-R38
+R2
 VeHkVN1X<;:i6>EV?2SFNK3
 r1
 !s85 0
@@ -524,16 +577,16 @@ IeHkVN1X<;:i6>EV?2SFNK3
 !i103 1
 S1
 R4
-R78
-R79
-R80
-!i122 294
+R82
+R83
+R84
+!i122 334
 R14
 R8
 31
-R19
-R81
-R82
+R9
+R85
+R86
 !i113 1
 R12
 R13
@@ -541,7 +594,7 @@ vaxis_ps_to_pl
 R0
 R1
 DXx4 work 21 axis_ps_to_pl_sv_unit 0 22 _Le=Ci0W1zQ]^]80LI<O=0
-R66
+R63
 R3
 r1
 !s85 0
@@ -551,23 +604,23 @@ I@SojV3;N72SaF;LogI=D^1
 !s105 axis_ps_to_pl_sv_unit
 S1
 R4
-Z83 w1601484631
-Z84 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv
-Z85 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv
-!i122 280
+Z87 w1601484631
+Z88 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv
+Z89 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv
+!i122 320
 L0 6 103
 R8
 31
-R70
-Z86 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv|
-Z87 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv|
+R67
+Z90 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv|
+Z91 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl.sv|
 !i113 1
 R12
 R13
 Xaxis_ps_to_pl_sv_unit
 R0
 R1
-R66
+R63
 V_Le=Ci0W1zQ]^]80LI<O=0
 r1
 !s85 0
@@ -577,16 +630,16 @@ I_Le=Ci0W1zQ]^]80LI<O=0
 !i103 1
 S1
 R4
-R83
-R84
-R85
-!i122 280
+R87
+R88
+R89
+!i122 320
 R14
 R8
 31
-R70
-R86
-R87
+R67
+R90
+R91
 !i113 1
 R12
 R13
@@ -594,7 +647,7 @@ vaxis_ps_to_pl_tb
 R0
 R1
 DXx4 work 24 axis_ps_to_pl_tb_sv_unit 0 22 TAj@dzX_E;QPOWE[NY:UD3
-R38
+R2
 R3
 r1
 !s85 0
@@ -604,23 +657,23 @@ IZOz<An8?BA`4m25g>8XST3
 !s105 axis_ps_to_pl_tb_sv_unit
 S1
 R4
-Z88 w1601485140
-Z89 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv
-Z90 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv
-!i122 290
+Z92 w1601485140
+Z93 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv
+Z94 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv
+!i122 330
 L0 6 106
 R8
 31
-R19
-Z91 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv|
-Z92 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv|
+R48
+Z95 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv|
+Z96 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_ps_to_pl_tb.sv|
 !i113 1
 R12
 R13
 Xaxis_ps_to_pl_tb_sv_unit
 R0
 R1
-R38
+R2
 VTAj@dzX_E;QPOWE[NY:UD3
 r1
 !s85 0
@@ -630,25 +683,25 @@ ITAj@dzX_E;QPOWE[NY:UD3
 !i103 1
 S1
 R4
-R88
-R89
-R90
-!i122 290
+R92
+R93
+R94
+!i122 330
 R14
 R8
 31
-R19
-R91
-R92
+R48
+R95
+R96
 !i113 1
 R12
 R13
 vaxis_selector
 R0
-R46
+R63
 !i10b 1
 !s100 PRY7FOLJ0GOMA<nhXFlmW2
-R30
+R28
 IDVZ8`ARZ^b3J1k>iH]baz0
 R3
 S1
@@ -656,13 +709,13 @@ R4
 w1601761724
 8D:/repos/RFSoC_Controller_V2/verilog_source/axis_selector.sv
 FD:/repos/RFSoC_Controller_V2/verilog_source/axis_selector.sv
-!i122 281
+!i122 321
 L0 6 36
 R8
 r1
 !s85 0
 31
-R70
+R67
 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/axis_selector.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/axis_selector.sv|
 !i113 1
@@ -671,27 +724,27 @@ R13
 vaxis_sync_fifo
 R0
 R1
-R45
-R46
+R42
+R43
 R3
 r1
 !s85 0
 !i10b 1
 !s100 RRZ^8GWESEK@_GeLdnz];0
 I=HHVTZWghZdYb:^7Rl6NA1
-R47
+R44
 S1
 R4
-R48
-R49
-R50
-!i122 285
+R45
+R46
+R47
+!i122 325
 L0 3 104
 R8
 31
-R51
-R52
-R53
+R48
+R49
+R50
 !i113 1
 R12
 R13
@@ -699,7 +752,7 @@ vchannel_selector
 R0
 R1
 DXx4 work 24 channel_selector_sv_unit 0 22 <BoYe>i_dRXKjg8KTW4T12
-R46
+R43
 R3
 r1
 !s85 0
@@ -709,23 +762,23 @@ Ig=6R[C;b;mXzbOGWi>gS00
 !s105 channel_selector_sv_unit
 S1
 R4
-Z93 w1601572227
-Z94 8D:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv
-Z95 FD:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv
-!i122 282
+Z97 w1601572227
+Z98 8D:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv
+Z99 FD:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv
+!i122 322
 L0 8 29
 R8
 31
-R51
-Z96 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv|
-Z97 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv|
+R67
+Z100 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv|
+Z101 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/channel_selector.sv|
 !i113 1
 R12
 R13
 Xchannel_selector_sv_unit
 R0
 R1
-R46
+R43
 V<BoYe>i_dRXKjg8KTW4T12
 r1
 !s85 0
@@ -735,69 +788,69 @@ I<BoYe>i_dRXKjg8KTW4T12
 !i103 1
 S1
 R4
-R93
-R94
-R95
-!i122 282
-Z98 L0 1 0
+R97
+R98
+R99
+!i122 322
+Z102 L0 1 0
 R8
 31
-R51
-R96
-R97
+R67
+R100
+R101
 !i113 1
 R12
 R13
 vdac_ctrl
 R0
 R1
-DXx4 work 16 dac_ctrl_sv_unit 0 22 iM]bgoPkbUHXCzjz0><Vh0
-R46
+DXx4 work 16 dac_ctrl_sv_unit 0 22 @QZX<N_glfQ17B[LO6<BE2
+Z103 !s110 1602528778
 R3
 r1
 !s85 0
 !i10b 1
-!s100 ?KkC5knO?dgQclg^[=YQ71
-IDMIfF4^IJdVh8R0b26BKP1
+!s100 K^Ri8WVEViSUSC]Kz_Soz0
+I]5DWkhm@ZjG[TEfKTGbBR1
 !s105 dac_ctrl_sv_unit
 S1
 R4
-Z99 w1601918026
-Z100 8D:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv
-Z101 FD:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv
-!i122 283
-L0 11 286
+Z104 w1602528754
+Z105 8D:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv
+Z106 FD:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv
+!i122 345
+L0 11 287
 R8
 31
-R51
-Z102 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv|
-Z103 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv|
+Z107 !s108 1602528778.000000
+Z108 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv|
+Z109 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/dac_ctrl.sv|
 !i113 1
 R12
 R13
 Xdac_ctrl_sv_unit
 R0
 R1
-R46
-ViM]bgoPkbUHXCzjz0><Vh0
+R103
+V@QZX<N_glfQ17B[LO6<BE2
 r1
 !s85 0
 !i10b 1
-!s100 lT=5c?KGf^iHW:AjS_8`J3
-IiM]bgoPkbUHXCzjz0><Vh0
+!s100 PJMc0^:S]X;Rd^86WT]?50
+I@QZX<N_glfQ17B[LO6<BE2
 !i103 1
 S1
 R4
-R99
-R100
-R101
-!i122 283
+R104
+R105
+R106
+!i122 345
 L0 9 0
 R8
 31
-R51
-R102
-R103
+R107
+R108
+R109
 !i113 1
 R12
 R13
@@ -805,7 +858,7 @@ vdac_driver
 R0
 R1
 DXx4 work 18 dac_driver_sv_unit 0 22 eJm2O4Qe1ifF_<O_i<UN:0
-R46
+R43
 R3
 r1
 !s85 0
@@ -815,23 +868,23 @@ IGa42O@eNf1LXjflTDNa]b1
 !s105 dac_driver_sv_unit
 S1
 R4
-Z104 w1601245568
-Z105 8D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv
-Z106 FD:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv
-!i122 284
+Z110 w1601245568
+Z111 8D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv
+Z112 FD:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv
+!i122 324
 L0 4 110
 R8
 31
-R51
-Z107 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv|
-Z108 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv|
+R48
+Z113 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv|
+Z114 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver.sv|
 !i113 1
 R12
 R13
 Xdac_driver_sv_unit
 R0
 R1
-R46
+R43
 VeJm2O4Qe1ifF_<O_i<UN:0
 r1
 !s85 0
@@ -841,16 +894,16 @@ IeJm2O4Qe1ifF_<O_i<UN:0
 !i103 1
 S1
 R4
-R104
-R105
-R106
-!i122 284
-Z109 L0 2 0
+R110
+R111
+R112
+!i122 324
+Z115 L0 2 0
 R8
 31
-R51
-R107
-R108
+R48
+R113
+R114
 !i113 1
 R12
 R13
@@ -858,7 +911,7 @@ vdac_driver_tb
 R0
 R1
 DXx4 work 21 dac_driver_tb_sv_unit 0 22 g>m1XZ8P?jgo3<lSPjYOX1
-R46
+R43
 R3
 r1
 !s85 0
@@ -868,23 +921,23 @@ IN`0lb0LZmPg7]LU0k;]XQ2
 !s105 dac_driver_tb_sv_unit
 S1
 R4
-Z110 w1601918102
-Z111 8D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv
-Z112 FD:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv
-!i122 289
+Z116 w1601918102
+Z117 8D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv
+Z118 FD:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv
+!i122 329
 L0 7 342
 R8
 31
-R51
-Z113 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv|
-Z114 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv|
+R48
+Z119 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv|
+Z120 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv|
 !i113 1
 R12
 R13
 Xdac_driver_tb_sv_unit
 R0
 R1
-R46
+R43
 Vg>m1XZ8P?jgo3<lSPjYOX1
 r1
 !s85 0
@@ -894,16 +947,16 @@ Ig>m1XZ8P?jgo3<lSPjYOX1
 !i103 1
 S1
 R4
-R110
-R111
-R112
-!i122 289
-Z115 L0 4 0
+R116
+R117
+R118
+!i122 329
+Z121 L0 4 0
 R8
 31
-R51
-R113
-R114
+R48
+R119
+R120
 !i113 1
 R12
 R13
@@ -912,7 +965,7 @@ R0
 !s110 1601913562
 !i10b 1
 !s100 MZ<=cn0EkXCdk1P1S_89@0
-R30
+R28
 I??a3oMKW1nLL=PbifAZ9l0
 R3
 S1
@@ -944,26 +997,26 @@ r1
 !i10b 1
 !s100 IH`n=C=7z^_eFT^>^>gOh3
 IllDgzUjRlT4n4dSh>jgXD3
-R39
+R36
 S1
 R4
 w1601915002
-R41
-R42
+R38
+R39
 !i122 239
-Z116 L0 7 123
+Z122 L0 7 123
 R8
 31
 !s108 1601915004.000000
-R43
-R44
+R40
+R41
 !i113 1
 R12
 R13
 Xfifo_tb_sv_unit
 R0
 R1
-R38
+R2
 VMKoAd@ImU4U2E:QE_VC6^2
 r1
 !s85 0
@@ -973,23 +1026,23 @@ IMKoAd@ImU4U2E:QE_VC6^2
 !i103 1
 S1
 R4
-R40
-R41
-R42
-!i122 295
-R115
+R37
+R38
+R39
+!i122 335
+R121
 R8
 31
-R19
-R43
-R44
+R9
+R40
+R41
 !i113 1
 R12
 R13
 Xfifo_wrappers_sv_unit
 R0
 R1
-R46
+R43
 VajVCF17m@o_@eU`aR<Gkg2
 r1
 !s85 0
@@ -999,92 +1052,92 @@ IajVCF17m@o_@eU`aR<Gkg2
 !i103 1
 S1
 R4
+R45
+R46
+R47
+!i122 325
+R102
+R8
+31
 R48
 R49
 R50
-!i122 285
-R98
-R8
-31
-R51
-R52
-R53
 !i113 1
 R12
 R13
 vgpio_fifo
 R0
 R1
-R45
-R46
+R42
+R43
 R3
 r1
 !s85 0
 !i10b 1
 !s100 bL[6dBfTdY8^B5^KIGi3L3
 I1`bm;>]4LV5]Ki`<JFMOd0
-R47
+R44
 S1
 R4
-R48
-R49
-R50
-!i122 285
+R45
+R46
+R47
+!i122 325
 L0 221 29
 R8
 31
-R51
-R52
-R53
+R48
+R49
+R50
 !i113 1
 R12
 R13
 vGrayCounter
 R0
-R29
+R27
 !i10b 1
 !s100 1mmJQBWI?jFCFgf<D0V=N1
-R30
+R28
 I[f>l38_mMOd5oV@hh<MI?0
 R3
 S1
 R4
+R29
+R30
 R31
-R32
-R33
 !i122 219
 L0 121 27
 R8
 r1
 !s85 0
 31
+R32
+R33
 R34
-R35
-R36
 !i113 1
 R12
 R13
 n@gray@counter
 Xrfsoc_config
 R0
-R46
+R43
 !i10b 1
-!s100 P5I0gRzV=Mb_WN3k7h`^31
-R30
-I<VH0lF@:6aZ3M`QJd`Q__3
-V<VH0lF@:6aZ3M`QJd`Q__3
+!s100 <<j>86Gm:ga4gJ21eR]Of3
+R28
+I5_7KT[z4JQJ4IMoZaKLMm1
+V5_7KT[z4JQJ4IMoZaKLMm1
 S1
 R4
-w1602437620
+w1602456024
 8D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_config.sv
 FD:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_config.sv
-!i122 286
+!i122 326
 L0 5 0
 R8
 r1
 !s85 0
 31
-R51
+R48
 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_config.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_config.sv|
 !i113 1
@@ -1093,115 +1146,115 @@ R13
 vrfsoc_pl_ctrl
 R0
 R1
-DXx4 work 21 rfsoc_pl_ctrl_sv_unit 0 22 QKO4KFWMdFhmJ_E3FadHh3
-R46
+DXx4 work 21 rfsoc_pl_ctrl_sv_unit 0 22 zAK=TMdaHQN9L]nKeVc<Y1
+R43
 R3
 r1
 !s85 0
 !i10b 1
-!s100 <>M<G0R^CgHBN3]c4WIm[1
-I2HU;Z>1`m>aQGAV42=c4K0
+!s100 >^^147JH=`[<;KWUT3DV?1
+INPDAI1HH[oQjeGVge4>4c3
 !s105 rfsoc_pl_ctrl_sv_unit
 S1
 R4
-Z117 w1601776847
-Z118 8D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv
-Z119 FD:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv
-!i122 287
-L0 4 281
+Z123 w1602466607
+Z124 8D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv
+Z125 FD:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv
+!i122 327
+L0 4 507
 R8
 31
-R51
-Z120 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv|
-Z121 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv|
+R48
+Z126 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv|
+Z127 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl.sv|
 !i113 1
 R12
 R13
 Xrfsoc_pl_ctrl_sv_unit
 R0
 R1
-R46
-VQKO4KFWMdFhmJ_E3FadHh3
+R43
+VzAK=TMdaHQN9L]nKeVc<Y1
 r1
 !s85 0
 !i10b 1
-!s100 l`iSbLcY0L4ieIa=JlKjL2
-IQKO4KFWMdFhmJ_E3FadHh3
+!s100 Zjz36LLhFIbhRRMUIRoA@2
+IzAK=TMdaHQN9L]nKeVc<Y1
 !i103 1
 S1
 R4
-R117
-R118
-R119
-!i122 287
-R109
+R123
+R124
+R125
+!i122 327
+R115
 R8
 31
-R51
-R120
-R121
+R48
+R126
+R127
 !i113 1
 R12
 R13
 vrfsoc_pl_ctrl_tb
 R0
 R1
-DXx4 work 24 rfsoc_pl_ctrl_tb_sv_unit 0 22 SeF@MPQ_GHkmOCBFzGmkk1
-R38
+DXx4 work 24 rfsoc_pl_ctrl_tb_sv_unit 0 22 [1a_GL`]<n[MXLM7]Z2RC1
+Z128 !s110 1602528963
 R3
 r1
 !s85 0
 !i10b 1
-!s100 lJ8I9>>Z=73=82AMkH9RK2
-I]0TlkGQ[cic@T:8FOH57n1
+!s100 ^Tn:TW?Nd2B[51Sd3X@8z1
+IC1zF;7C@B=;IFffV6aoaP3
 !s105 rfsoc_pl_ctrl_tb_sv_unit
 S1
 R4
-Z122 w1601943571
-Z123 8D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv
-Z124 FD:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv
-!i122 291
-L0 5 447
+Z129 w1602528955
+Z130 8D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv
+Z131 FD:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv
+!i122 348
+L0 5 673
 R8
 31
-R19
-Z125 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv|
-Z126 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv|
+Z132 !s108 1602528963.000000
+!s107 D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv|
+Z133 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv|
 !i113 1
 R12
 R13
 Xrfsoc_pl_ctrl_tb_sv_unit
 R0
 R1
-R38
-VSeF@MPQ_GHkmOCBFzGmkk1
+R128
+V[1a_GL`]<n[MXLM7]Z2RC1
 r1
 !s85 0
 !i10b 1
-!s100 LMgZ9AhUf51KzIKz_T@<[2
-ISeF@MPQ_GHkmOCBFzGmkk1
+!s100 eZ<z_fgkl>N?noQ`QEJdW3
+I[1a_GL`]<n[MXLM7]Z2RC1
 !i103 1
 S1
 R4
-R122
-R123
-R124
-!i122 291
-R109
+R129
+R130
+R131
+!i122 348
+R115
 R8
 31
-R19
-R125
-R126
+R132
+Z134 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv|
+R133
 !i113 1
 R12
 R13
 vshift_register
 R0
-R46
+R43
 !i10b 1
 !s100 =Q:>bgIH45A<HNSEHX5LF0
-R30
+R28
 IMIMEnf^Y[4]mHfQWd1W]m0
 R3
 S1
@@ -1209,13 +1262,13 @@ R4
 w1600836099
 8D:/repos/RFSoC_Controller_V2/verilog_source/shift_register.sv
 FD:/repos/RFSoC_Controller_V2/verilog_source/shift_register.sv
-!i122 288
+!i122 328
 L0 3 66
 R8
 r1
 !s85 0
 31
-R51
+R48
 !s107 D:/repos/RFSoC_Controller_V2/verilog_source/shift_register.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/repos/RFSoC_Controller_V2/verilog_source/shift_register.sv|
 !i113 1
@@ -1224,27 +1277,27 @@ R13
 vsync_fifo_tb
 R0
 R1
-R37
-R38
+R35
+R2
 R3
 r1
 !s85 0
 !i10b 1
 !s100 m;TN8PkVz]bQ<[T0ED?Jh1
 I7DfEVKB5UMgkzNB7l^A@G3
-R39
+R36
 S1
 R4
-R40
-R41
-R42
-!i122 295
-R116
+R37
+R38
+R39
+!i122 335
+R122
 R8
 31
-R19
-R43
-R44
+R9
+R40
+R41
 !i113 1
 R12
 R13

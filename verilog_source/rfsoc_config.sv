@@ -29,7 +29,7 @@ pre_delay_cycle_clk = 9,//used to set how many clock cycles dac ctrl will wait a
 post_delay_cycle_clk = 10,//used to set how many clock cycles dac ctrl will wait after being triggered
 locking_waveform_clk = 11,//Used to set locking cycle waveform
 mask_enable_clk = 12,//Enables or disables mask
-adc_buffer_flush = 13;//Forces flush on all ADC buffers
-
+adc_buffer_flush = 13,//Forces flush on all ADC buffers
+adc_use_dummy_data = 14;//Causes ADC to return known data pattern
 
 endpackage

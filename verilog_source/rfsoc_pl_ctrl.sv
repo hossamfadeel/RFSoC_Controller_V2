@@ -83,7 +83,7 @@ module rfsoc_pl_ctrl
 	
 	output wire [255:0] m15_axis_tdata,
     output wire m15_axis_tvalid,
-    input wire m15_axis_tready
+    input wire m15_axis_tready,
 	
 	
 	
@@ -258,7 +258,7 @@ axis_n_mux axis_n_mux_inst
 );
 
 //Wide bus for routing signals into the adc drivers from RFSOC
-wire [(ps_axis_width*16)-1:0] adc_in_axis_tdata;
+wire [(ps_axis_width*128)-1:0] adc_in_axis_tdata;
 wire [15:0] adc_in_axis_tvalid;
 wire [15:0] adc_in_axis_tready;
 
@@ -315,6 +315,29 @@ for(i = 0; i < 16; i = i + 1) begin
 	
 	if(i > adc_stop_channel) begin
 	
+		adc_driver #(2) adc_driver_inst
+		(
+
+			ps_clk, pl_clk,
+			
+			rst,
+			
+			//MUST COME FROM OUTPUT OF RFSOC_CTRL!!!
+			gpio_ctrl_int,
+			
+			//Input from ADC
+			adc_in_axis_tdata[(i*128)+:128],
+			adc_in_axis_tvalid[i],
+			adc_in_axis_tready[i],
+			
+			//Output to CPU
+			adc_axis_tdata[(i*ps_axis_width)+:ps_axis_width],
+			adc_axis_tvalid[i],
+			adc_axis_tready[i],
+			
+			channel_select[i]
+
+		);
 	
 	end
 	else begin
@@ -335,7 +358,7 @@ for(i = 0; i < 16; i = i + 1) begin
 			adc_in_axis_tready[i],
 			
 			//Output to CPU
-			adc_axis_tdata[(i*128)+:128],
+			adc_axis_tdata[(i*ps_axis_width)+:ps_axis_width],
 			adc_axis_tvalid[i],
 			adc_axis_tready[i],
 			
