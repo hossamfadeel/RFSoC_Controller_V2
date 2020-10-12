@@ -718,3 +718,200 @@ run -all
 # Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
 run -all
 # Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+step
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 411
+step
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/num_adc_errors \
+sim:/rfsoc_pl_ctrl_tb/num_dac_errors
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 416
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 421
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 424
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 427
+restart -f
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 411
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 416
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 418
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 421
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 411
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 416
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 419
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 423
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 426
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 429
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 411
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 416
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 419
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 423
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 426
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 429
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 432
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 435
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 411
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 416
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 419
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 423
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 426
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 429
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 432
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 435
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 411
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 406
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 473
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 473
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/m16_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/m16_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/m16_axis_tready
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/select_in \
+sim:/rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/s_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/m_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/m_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/axis_n_mux_inst/m_axis_tready
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/num_adc_errors \
+sim:/rfsoc_pl_ctrl_tb/num_dac_errors
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+restart -f
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 474
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 478
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 480
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 484
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 480
+run -all
+# rfsoc_pl_ctrl test complete,           0 errors total,           0 DAC errors, $d ADC errors          0
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# rfsoc_pl_ctrl test complete, 0 errors total,           0 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# Compile of adc_driver_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/rfsoc_pl_ctrl_tb.sv line 346
+run -all
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors

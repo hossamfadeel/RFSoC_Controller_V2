@@ -344,6 +344,7 @@ initial begin
 	k <= 0;
 	
 	axis_word_reg <= 0;
+	adc_axis_tready <= 0;
 	
 	
 	//System reset
@@ -407,14 +408,78 @@ initial begin
 		clk_cycle();
 		gpio_ctrl[trigger_line] <= 0;
 		
+		//Check locking waveform
+		check_channels({16{16'h1111}});
+		
+		clk_cycle();
+		clk_cycle();
+		//Check for the leading 0s of pre-delay
+		check_channels(0);
+		pl_clk_cycle();
+		ps_clk <= 1;
+		check_channels(0);
+		pl_clk_cycle();
+		ps_clk <= 0;
+		//Start of waveform playback
+		check_channels({{8{16'h0000}}, {8{16'haaaa}}});
+		pl_clk_cycle();
+		ps_clk <= 0;
+		check_channels({16{16'hbbbb}});
+		pl_clk_cycle();
+		ps_clk <= 1;
+		check_channels({16{16'hcccc}});
+		pl_clk_cycle();
+		ps_clk <= 0;
+		check_channels({16{16'hdddd}});
+		pl_clk_cycle();
+		ps_clk <= 1;
+		check_channels({16{16'heeee}});
+		pl_clk_cycle();
+		ps_clk <= 0;
+		check_channels({16{16'haaaa}});
+		pl_clk_cycle();
+		ps_clk <= 1;
+		check_channels({16{16'hbbbb}});
+		pl_clk_cycle();
+		ps_clk <= 0;
+		check_channels({16{16'hcccc}});
+		pl_clk_cycle();
+		ps_clk <= 1;
+		check_channels({16{16'hdddd}});
+		pl_clk_cycle();
+		ps_clk <= 0;
+		check_channels({{8{16'heeee}}, {8{16'h0000}}});
+		pl_clk_cycle();
+		ps_clk <= 1;
+		//post cycle delay
+		check_channels(0);
+		pl_clk_cycle();
+		ps_clk <= 0;
+		check_channels(0);
+		pl_clk_cycle();
+		ps_clk <= 1;
+		//Return to locking waveform
+		check_channels({16{16'h1111}});
+		pl_clk_cycle();
+		ps_clk <= 0;
+		
+		
 		repeat(50) clk_cycle();
 	
+	end
+	
+	//Set the shift value of all ADC drivers to 0 for readout
+	for(j = 0; j < 16; j = j + 1) begin
+		select_channel(j);
+		set_adc_shift_val(0);
 	end
 	
 	//Try reading out each ADC one at a time
 	for(k = 0; k < 16; k = k + 1) begin
 	
 		select_channel(k);
+		
+		repeat(10) clk_cycle();
 		
 		adc_axis_tready <= 1;
 		for(j = 0; j < 16; j = j + 1) begin
@@ -425,13 +490,72 @@ initial begin
 			clk_cycle();
 		
 		end
+		
+		repeat(10) clk_cycle();
+		adc_axis_tready <= 0;
+		repeat(10) clk_cycle();
 	
 	end
 	
 	
-	$display("rfsoc_pl_ctrl test complete, %d errors total, %d DAC errors, $d ADC errors", num_adc_errors+num_dac_errors, num_dac_errors, num_adc_errors);
+	$display("rfsoc_pl_ctrl test complete, %0d errors total, %0d DAC errors, %0d ADC errors", num_adc_errors+num_dac_errors, num_dac_errors, num_adc_errors);
 
 end
+
+
+task check_channels;
+input [255:0] val;
+begin
+	if(dac_stop_channel > 0 && m0_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 1 && m1_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 2 && m2_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 3 && m3_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 4 && m4_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 5 && m5_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 6 && m6_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 7 && m7_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 8 && m8_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 9 && m9_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 10 && m10_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 11 && m11_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 12 && m12_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 13 && m13_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 14 && m14_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+	if(dac_stop_channel > 15 && m15_axis_tdata != val) begin
+		num_dac_errors = num_dac_errors + 1;
+	end
+end
+endtask
 
 task select_channel;
 input integer channel_num;
@@ -670,6 +794,15 @@ begin
 	pl_clk <= 0;
 	ps_clk <= 0;
 
+end
+endtask
+
+task pl_clk_cycle();
+begin
+	#1
+	pl_clk <= 1;
+	#1
+	pl_clk <= 0;
 end
 endtask
 

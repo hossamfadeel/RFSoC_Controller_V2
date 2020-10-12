@@ -1,13 +1,4 @@
-D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/adc_rtl/adc_driver_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
--- Compiling package adc_driver_tb_sv_unit
--- Importing package rfsoc_config
--- Compiling module adc_driver_tb
-
-Top level modules:
-	adc_driver_tb
-
-} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv
+D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/dac_driver_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
 -- Compiling package dac_driver_tb_sv_unit
 -- Importing package rfsoc_config

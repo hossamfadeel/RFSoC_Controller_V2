@@ -104,7 +104,7 @@ initial begin
 	m_axis_tready <= 0;
 	repeat(100) clk_cycle();
 
-	$display("ADC driver readout test complete for shift val = 4, number of errors: %d\n", num_errors);
+	$display("ADC driver readout test complete for shift val = 4, number of errors: %0d\n", num_errors);
 
 end
 
