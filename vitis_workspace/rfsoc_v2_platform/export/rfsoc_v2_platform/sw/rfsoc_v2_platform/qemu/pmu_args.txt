@@ -1,0 +1,8 @@
+-M
+microblaze-fdt
+-device
+loader,file=<rfsoc_v2_platform/qemu/pmufw.elf>
+-machine-path
+.
+-display
+none

@@ -1,33 +1,169 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.11015",
-   "Default View_TopLeft":"31,-68",
+   "Default View_ScaleFactor":"1.45579",
+   "Default View_TopLeft":"273,1092",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1120 -y 90 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1980 -y 370 -defaultsOSRD
-preplace inst ps8_0_axi_periph -pg 1 -lvl 4 -x 1620 -y 300 -defaultsOSRD
-preplace inst rst_ps8_0_100M -pg 1 -lvl 1 -x 340 -y 450 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 2 -x 670 -y 260 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 3 -x 1120 -y 500 -defaultsOSRD
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 20 280 510 150 820 190 1460 420 1760
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 4 30 350 510J 360 NJ 360 1450
-preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 1 4 520 370 NJ 370 1470 430 N
-preplace netloc xlconcat_0_dout 1 2 2 830 200 1410
-preplace netloc axi_dma_0_mm2s_introut 1 2 4 810 420 1430J 520 NJ 520 2150
-preplace netloc axi_dma_0_s2mm_introut 1 2 4 830 430 1420J 530 NJ 530 2140
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 1 1470 70n
-preplace netloc ps8_0_axi_periph_M00_AXI 1 4 1 1760 300n
-preplace netloc axi_dma_0_M_AXI_SG 1 1 5 540 160 810J 180 NJ 180 NJ 180 2170
-preplace netloc axi_smc_M00_AXI 1 2 1 800 60n
-preplace netloc axi_dma_0_M_AXI_MM2S 1 1 5 530 400 NJ 400 1450J 500 NJ 500 2170
-preplace netloc axi_dma_0_M_AXI_S2MM 1 1 5 540 410 NJ 410 1440J 510 NJ 510 2160
-levelinfo -pg 1 0 340 670 1120 1620 1980 2190
-pagesize -pg 1 -db -bbox -sgen 0 -110 2190 1280
+preplace port sysref_in -pg 1 -lvl 0 -x 0 -y 1440 -defaultsOSRD
+preplace port adc0_clk -pg 1 -lvl 0 -x 0 -y 840 -defaultsOSRD
+preplace port vin00 -pg 1 -lvl 0 -x 0 -y 1250 -defaultsOSRD
+preplace port vin01 -pg 1 -lvl 0 -x 0 -y 1280 -defaultsOSRD
+preplace port vin02 -pg 1 -lvl 0 -x 0 -y 1310 -defaultsOSRD
+preplace port vin03 -pg 1 -lvl 0 -x 0 -y 1340 -defaultsOSRD
+preplace port adc1_clk -pg 1 -lvl 0 -x 0 -y 870 -defaultsOSRD
+preplace port vin10 -pg 1 -lvl 0 -x 0 -y 1410 -defaultsOSRD
+preplace port vin11 -pg 1 -lvl 0 -x 0 -y 1470 -defaultsOSRD
+preplace port vin12 -pg 1 -lvl 0 -x 0 -y 1500 -defaultsOSRD
+preplace port vin13 -pg 1 -lvl 0 -x 0 -y 1530 -defaultsOSRD
+preplace port adc2_clk -pg 1 -lvl 0 -x 0 -y 1190 -defaultsOSRD
+preplace port vin20 -pg 1 -lvl 0 -x 0 -y 1560 -defaultsOSRD
+preplace port vin21 -pg 1 -lvl 0 -x 0 -y 1590 -defaultsOSRD
+preplace port vin22 -pg 1 -lvl 0 -x 0 -y 1620 -defaultsOSRD
+preplace port vin23 -pg 1 -lvl 0 -x 0 -y 1650 -defaultsOSRD
+preplace port adc3_clk -pg 1 -lvl 0 -x 0 -y 900 -defaultsOSRD
+preplace port vin30 -pg 1 -lvl 0 -x 0 -y 1680 -defaultsOSRD
+preplace port vin31 -pg 1 -lvl 0 -x 0 -y 1710 -defaultsOSRD
+preplace port vin32 -pg 1 -lvl 0 -x 0 -y 1740 -defaultsOSRD
+preplace port vin33 -pg 1 -lvl 0 -x 0 -y 1770 -defaultsOSRD
+preplace port dac0_clk -pg 1 -lvl 0 -x 0 -y 930 -defaultsOSRD
+preplace port vout00 -pg 1 -lvl 10 -x 4270 -y 1360 -defaultsOSRD
+preplace port vout01 -pg 1 -lvl 10 -x 4270 -y 1390 -defaultsOSRD
+preplace port vout02 -pg 1 -lvl 10 -x 4270 -y 1420 -defaultsOSRD
+preplace port vout03 -pg 1 -lvl 10 -x 4270 -y 1450 -defaultsOSRD
+preplace port dac1_clk -pg 1 -lvl 0 -x 0 -y 810 -defaultsOSRD
+preplace port vout10 -pg 1 -lvl 10 -x 4270 -y 1480 -defaultsOSRD
+preplace port vout11 -pg 1 -lvl 10 -x 4270 -y 1510 -defaultsOSRD
+preplace port vout12 -pg 1 -lvl 10 -x 4270 -y 1540 -defaultsOSRD
+preplace port vout13 -pg 1 -lvl 10 -x 4270 -y 1570 -defaultsOSRD
+preplace port dac2_clk -pg 1 -lvl 0 -x 0 -y 780 -defaultsOSRD
+preplace port vout20 -pg 1 -lvl 10 -x 4270 -y 1600 -defaultsOSRD
+preplace port vout21 -pg 1 -lvl 10 -x 4270 -y 1630 -defaultsOSRD
+preplace port vout22 -pg 1 -lvl 10 -x 4270 -y 1660 -defaultsOSRD
+preplace port vout23 -pg 1 -lvl 10 -x 4270 -y 1690 -defaultsOSRD
+preplace port dac3_clk -pg 1 -lvl 0 -x 0 -y 1220 -defaultsOSRD
+preplace port vout30 -pg 1 -lvl 10 -x 4270 -y 1720 -defaultsOSRD
+preplace port vout31 -pg 1 -lvl 10 -x 4270 -y 1750 -defaultsOSRD
+preplace port vout32 -pg 1 -lvl 10 -x 4270 -y 1780 -defaultsOSRD
+preplace port vout33 -pg 1 -lvl 10 -x 4270 -y 1810 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 7 -x 2730 -y 620 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1960 -y 570 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 8 -x 3190 -y 410 -defaultsOSRD
+preplace inst rst_ps8_0_100M -pg 1 -lvl 1 -x 240 -y 970 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 6 -x 2300 -y 480 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2300 -y 650 -defaultsOSRD
+preplace inst usp_rf_data_converter_0 -pg 1 -lvl 9 -x 3890 -y 1520 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 9 -x 3890 -y 2250 -defaultsOSRD
+preplace inst rfsoc_pl_ctrl_verilo_0 -pg 1 -lvl 3 -x 1140 -y 260 -defaultsOSRD
+preplace inst rst_ps8_0_100M1 -pg 1 -lvl 2 -x 610 -y 700 -defaultsOSRD
+preplace inst axis_gpio_async_fifo -pg 1 -lvl 3 -x 1140 -y 1400 -defaultsOSRD
+preplace inst axis_data_ps_to_pl_fifo -pg 1 -lvl 2 -x 610 -y 530 -defaultsOSRD
+preplace inst axis_data_pl_to_ps_fifo -pg 1 -lvl 4 -x 1610 -y 680 -defaultsOSRD
+preplace inst gpio_buffer_0 -pg 1 -lvl 2 -x 610 -y 1380 -defaultsOSRD
+preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 1 8 410 1010 800 1010 NJ 1010 1750 430 2170 370 NJ 370 3020 580 3440
+preplace netloc xlconcat_0_dout 1 6 1 N 650
+preplace netloc axi_dma_0_mm2s_introut 1 5 1 2160 620n
+preplace netloc axi_dma_0_s2mm_introut 1 5 1 2130 640n
+preplace netloc usp_rf_data_converter_0_clk_dac0 1 1 9 440 440 810 690 1400 830 NJ 830 NJ 830 NJ 830 NJ 830 3560 780 4150
+preplace netloc axi_gpio_0_gpio_io_o 1 1 9 430 2330 NJ 2330 NJ 2330 NJ 2330 NJ 2330 NJ 2330 NJ 2330 NJ 2330 4030
+preplace netloc rst_ps8_0_100M1_peripheral_aresetn 1 2 7 800 670 1440 820 NJ 820 NJ 820 NJ 820 NJ 820 3420
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 9 50 830 420 830 840 710 1480 590 1790 440 2130 580 2440 530 3050 640 3430
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 8 50 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 3020
+preplace netloc gpio_buffer_0_gpio_out 1 2 1 790 450n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 7 1 3030 310n
+preplace netloc axi_smc_M00_AXI 1 6 1 2430 480n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 2160 480n
+preplace netloc ps8_0_axi_periph_M00_AXI 1 4 5 1800 150 NJ 150 NJ 150 NJ 150 3420
+preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 2150 460n
+preplace netloc axi_dma_0_M_AXI_SG 1 5 1 2140 440n
+preplace netloc usp_rf_data_converter_0_m13_axis 1 2 8 930 860 NJ 860 NJ 860 NJ 860 NJ 860 NJ 860 3610J 840 4050
+preplace netloc rfsoc_pl_ctrl_verilo_0_m5_axis 1 3 6 1360J 120 1760J 110 NJ 110 NJ 110 NJ 110 3710
+preplace netloc rfsoc_pl_ctrl_verilo_0_m6_axis 1 3 6 1380J 130 1770J 120 NJ 120 NJ 120 NJ 120 3690
+preplace netloc rfsoc_pl_ctrl_verilo_0_m0_axis 1 3 6 NJ 100 1740J 90 NJ 90 NJ 90 NJ 90 3750
+preplace netloc rfsoc_pl_ctrl_verilo_0_m2_axis 1 3 6 1430J 230 NJ 230 NJ 230 NJ 230 NJ 230 3680
+preplace netloc rfsoc_pl_ctrl_verilo_0_m1_axis 1 3 6 1400J 220 NJ 220 NJ 220 NJ 220 NJ 220 3700
+preplace netloc rfsoc_pl_ctrl_verilo_0_m3_axis 1 3 6 1280J 60 NJ 60 NJ 60 NJ 60 NJ 60 3740
+preplace netloc rfsoc_pl_ctrl_verilo_0_m4_axis 1 3 6 1290J 110 1750J 100 NJ 100 NJ 100 NJ 100 3730
+preplace netloc rfsoc_pl_ctrl_verilo_0_m9_axis 1 3 6 1280J 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 3570
+preplace netloc rfsoc_pl_ctrl_verilo_0_m8_axis 1 3 6 1320J 70 NJ 70 NJ 70 NJ 70 NJ 70 3720
+preplace netloc rfsoc_pl_ctrl_verilo_0_m7_axis 1 3 6 1390J 140 1780J 130 NJ 130 NJ 130 NJ 130 3660
+preplace netloc rfsoc_pl_ctrl_verilo_0_m10_axis 1 3 6 1350J 1110 NJ 1110 NJ 1110 NJ 1110 NJ 1110 3540
+preplace netloc rfsoc_pl_ctrl_verilo_0_m11_axis 1 3 6 1330J 1120 NJ 1120 NJ 1120 NJ 1120 NJ 1120 3530
+preplace netloc usp_rf_data_converter_0_m11_axis 1 2 8 990 540 1450J 190 NJ 190 NJ 190 NJ 190 NJ 190 NJ 190 4130
+preplace netloc usp_rf_data_converter_0_m12_axis 1 2 8 1000 550 1490J 380 NJ 380 NJ 380 NJ 380 3040J 570 NJ 570 4090
+preplace netloc rfsoc_pl_ctrl_verilo_0_m12_axis 1 3 6 1300J 1130 NJ 1130 NJ 1130 NJ 1130 NJ 1130 3520
+preplace netloc rfsoc_pl_ctrl_verilo_0_m13_axis 1 3 6 1310J 160 NJ 160 NJ 160 NJ 160 NJ 160 3650
+preplace netloc rfsoc_pl_ctrl_verilo_0_m14_axis 1 3 6 1370J 170 NJ 170 NJ 170 NJ 170 NJ 170 3640
+preplace netloc rfsoc_pl_ctrl_verilo_0_m15_axis 1 3 6 1370J 240 NJ 240 NJ 240 NJ 240 NJ 240 3630
+preplace netloc usp_rf_data_converter_0_m00_axis 1 2 8 870 840 NJ 840 NJ 840 NJ 840 NJ 840 NJ 840 3570J 830 4040
+preplace netloc usp_rf_data_converter_0_m01_axis 1 2 8 910 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 NJ 850 4030
+preplace netloc usp_rf_data_converter_0_m02_axis 1 2 8 960 510 1420J 150 1790J 140 NJ 140 NJ 140 NJ 140 NJ 140 4120
+preplace netloc usp_rf_data_converter_0_m03_axis 1 2 8 970 520 1440J 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 4110
+preplace netloc usp_rf_data_converter_0_m10_axis 1 2 8 980 530 1460J 250 NJ 250 NJ 250 NJ 250 NJ 250 NJ 250 4070
+preplace netloc usp_rf_data_converter_0_m20_axis 1 2 8 940 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 3600J 820 4060
+preplace netloc usp_rf_data_converter_0_m21_axis 1 2 8 950 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 NJ 790 4100
+preplace netloc usp_rf_data_converter_0_m22_axis 1 2 8 850 880 NJ 880 NJ 880 NJ 880 NJ 880 NJ 880 3590J 810 4080
+preplace netloc usp_rf_data_converter_0_m23_axis 1 2 8 890 580 1470J 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 4170
+preplace netloc usp_rf_data_converter_0_m30_axis 1 2 8 900 570 1480J 210 NJ 210 NJ 210 NJ 210 NJ 210 NJ 210 4160
+preplace netloc usp_rf_data_converter_0_m32_axis 1 2 8 860 2340 NJ 2340 NJ 2340 NJ 2340 NJ 2340 NJ 2340 NJ 2340 4040
+preplace netloc usp_rf_data_converter_0_m31_axis 1 2 8 920 560 1410J 90 1730J 80 NJ 80 NJ 80 NJ 80 NJ 80 4180
+preplace netloc usp_rf_data_converter_0_m33_axis 1 2 8 880 890 NJ 890 NJ 890 NJ 890 NJ 890 NJ 890 3580J 800 4140
+preplace netloc vin00_1 1 0 9 NJ 1250 420J 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 NJ 1270 3410J
+preplace netloc sysref_in_1 1 0 9 30J 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 NJ 1260 3370J
+preplace netloc adc0_clk_1 1 0 9 NJ 840 NJ 840 830J 780 NJ 780 1790J 770 NJ 770 NJ 770 NJ 770 3620J
+preplace netloc ps8_0_axi_periph_M02_AXI 1 8 1 3670 430n
+preplace netloc ps8_0_axi_periph_M01_AXI 1 8 1 3460 410n
+preplace netloc vin13_1 1 0 9 NJ 1530 NJ 1530 NJ 1530 NJ 1530 NJ 1530 NJ 1530 NJ 1530 NJ 1530 3330J
+preplace netloc vin02_1 1 0 9 20J 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 NJ 1290 3390J
+preplace netloc adc1_clk_1 1 0 9 NJ 870 NJ 870 820J 770 NJ 770 1730J 780 NJ 780 NJ 780 NJ 780 3550J
+preplace netloc vin01_1 1 0 9 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 NJ 1280 3400J
+preplace netloc vin10_1 1 0 9 50J 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 NJ 1310 3360J
+preplace netloc vin03_1 1 0 9 40J 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 3380J
+preplace netloc adc3_clk_1 1 0 9 30J 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 NJ 1080 3500J
+preplace netloc vin30_1 1 0 9 30J 1650 NJ 1650 NJ 1650 NJ 1650 NJ 1650 NJ 1650 NJ 1650 NJ 1650 NJ
+preplace netloc vin12_1 1 0 9 NJ 1500 NJ 1500 NJ 1500 NJ 1500 NJ 1500 NJ 1500 NJ 1500 NJ 1500 3340J
+preplace netloc vin11_1 1 0 9 NJ 1470 NJ 1470 780J 1490 NJ 1490 NJ 1490 NJ 1490 NJ 1490 NJ 1490 3350J
+preplace netloc vin20_1 1 0 9 NJ 1560 NJ 1560 NJ 1560 NJ 1560 NJ 1560 NJ 1560 NJ 1560 NJ 1560 3330J
+preplace netloc vin22_1 1 0 9 40J 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ 1610 NJ
+preplace netloc vin21_1 1 0 9 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ 1590 NJ
+preplace netloc adc2_clk_1 1 0 9 NJ 1190 NJ 1190 NJ 1190 NJ 1190 NJ 1190 NJ 1190 NJ 1190 NJ 1190 3470J
+preplace netloc vin23_1 1 0 9 20J 1630 NJ 1630 NJ 1630 NJ 1630 NJ 1630 NJ 1630 NJ 1630 NJ 1630 NJ
+preplace netloc usp_rf_data_converter_0_vout01 1 9 1 4200J 1390n
+preplace netloc usp_rf_data_converter_0_vout10 1 9 1 4230J 1480n
+preplace netloc dac1_clk_1 1 0 9 NJ 810 430J 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 3510J
+preplace netloc vin33_1 1 0 9 60J 1710 NJ 1710 NJ 1710 NJ 1710 NJ 1710 NJ 1710 NJ 1710 NJ 1710 NJ
+preplace netloc usp_rf_data_converter_0_vout02 1 9 1 4210J 1420n
+preplace netloc usp_rf_data_converter_0_vout03 1 9 1 4220J 1450n
+preplace netloc vin31_1 1 0 9 40J 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ 1670 NJ
+preplace netloc vin32_1 1 0 9 50J 1690 NJ 1690 NJ 1690 NJ 1690 NJ 1690 NJ 1690 NJ 1690 NJ 1690 NJ
+preplace netloc usp_rf_data_converter_0_vout00 1 9 1 4190J 1360n
+preplace netloc dac0_clk_1 1 0 9 20J 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 3480J
+preplace netloc dac3_clk_1 1 0 9 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 NJ 1220 3450J
+preplace netloc usp_rf_data_converter_0_vout12 1 9 1 4250J 1540n
+preplace netloc dac2_clk_1 1 0 9 NJ 780 440J 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 NJ 810 3490J
+preplace netloc usp_rf_data_converter_0_vout20 1 9 1 NJ 1600
+preplace netloc usp_rf_data_converter_0_vout11 1 9 1 4240J 1510n
+preplace netloc usp_rf_data_converter_0_vout13 1 9 1 4240J 1570n
+preplace netloc usp_rf_data_converter_0_vout21 1 9 1 4240J 1620n
+preplace netloc usp_rf_data_converter_0_vout22 1 9 1 4250J 1640n
+preplace netloc usp_rf_data_converter_0_vout23 1 9 1 4240J 1660n
+preplace netloc usp_rf_data_converter_0_vout32 1 9 1 4180J 1720n
+preplace netloc usp_rf_data_converter_0_vout30 1 9 1 4220J 1680n
+preplace netloc usp_rf_data_converter_0_vout33 1 9 1 4170J 1740n
+preplace netloc usp_rf_data_converter_0_vout31 1 9 1 4200J 1700n
+preplace netloc axis_data_fifo_0_M_AXIS 1 1 3 440 1250 NJ 1250 1390
+preplace netloc gpio_buffer_0_m_axis 1 2 1 N 1370
+preplace netloc axis_data_fifo_1_M_AXIS 1 2 1 780 390n
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 1 5 410 10 NJ 10 NJ 10 NJ 10 2120
+preplace netloc rfsoc_pl_ctrl_verilo_0_m16_axis 1 3 1 1340 240n
+preplace netloc axis_data_fifo_2_M_AXIS 1 4 1 1770 530n
+levelinfo -pg 1 0 240 610 1140 1610 1960 2300 2730 3190 3890 4270
+pagesize -pg 1 -db -bbox -sgen -110 0 4370 2350
 "
 }
 {
-   "da_axi4_cnt":"4",
+   "da_axi4_cnt":"6",
+   "da_board_cnt":"1",
+   "da_rf_converter_usp_cnt":"1",
    "da_zynq_ultra_ps_e_cnt":"1"
 }

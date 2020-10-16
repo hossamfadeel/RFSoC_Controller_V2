@@ -1,0 +1,17 @@
+13:44:29 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\repos\RFSoC_Controller_V2\vitis_workspace\temp_xsdb_launch_script.tcl
+13:44:30 INFO  : Registering command handlers for Vitis TCF services
+13:44:33 INFO  : XSCT server has started successfully.
+13:44:33 INFO  : Successfully done setting XSCT server connection channel  
+13:44:33 INFO  : plnx-install-location is set to ''
+13:44:33 INFO  : Successfully done setting workspace for the tool. 
+13:44:33 INFO  : Successfully done query RDI_DATADIR 
+13:44:33 INFO  : Platform repository initialization has completed.
+13:51:54 INFO  : Result from executing command 'getProjects': rfsoc_v2_platform
+13:51:54 INFO  : Result from executing command 'getPlatforms': 
+13:52:25 INFO  : Successfully done sdx_reload_mss "D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss"
+13:52:37 INFO  : (SwPlaform) Successfully done setParamInSpec 
+13:52:41 INFO  : (SwPlaform) Successfully done setParamInSpec 
+13:52:41 INFO  : (SwPlatform) Successfully done update_mss 
+13:52:42 INFO  : Successfully done sdx_reload_mss "D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss"
+13:55:32 INFO  : Result from executing command 'getProjects': rfsoc_v2_platform
+13:55:32 INFO  : Result from executing command 'getPlatforms': rfsoc_v2_platform|D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm

@@ -1,0 +1,36 @@
+The target system is: Generic -  - arm
+The host system is: Windows - 6.2 - AMD64
+Determining if files xintc.h exist passed with the following output:
+Change Dir: D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Xilinx/Vitis/2020.1/gnuwin/bin/make.exe" "cmTC_e08d8/fast"
+C:/Xilinx/Vitis/2020.1/gnuwin/bin/make.exe -f CMakeFiles/cmTC_e08d8.dir/build.make CMakeFiles/cmTC_e08d8.dir/build
+make.exe[1]: Entering directory 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e08d8.dir/CheckIncludeFiles.c.obj
+C:/Xilinx/Vitis/2020.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-gcc.exe   -O2 -c -g -Wall -Wextra -Os -flto -ffat-lto-objects -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/include    -o CMakeFiles/cmTC_e08d8.dir/CheckIncludeFiles.c.obj   -c D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:10: fatal error: xintc.h: No such file or directory
+    2 | #include <xintc.h>
+      |          ^~~~~~~~~
+compilation terminated.
+Linking C executable cmTC_e08d8
+C:/Xilinx/Vitis/2020.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-gcc.exe  -O2 -c -g -Wall -Wextra -Os -flto -ffat-lto-objects -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/include     "CMakeFiles/cmTC_e08d8.dir/CheckIncludeFiles.c.obj"   -o cmTC_e08d8  
+aarch64-xilinx-elf-gcc.exe: error: CMakeFiles/cmTC_e08d8.dir/CheckIncludeFiles.c.obj: No such file or directory
+aarch64-xilinx-elf-gcc.exe: fatal error: no input files
+compilation terminated.
+make.exe[1]: Leaving directory 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Xilinx/Vitis/2020.1/gnuwin/bin/make.exe" "cmTC_4adbd/fast"
+C:/Xilinx/Vitis/2020.1/gnuwin/bin/make.exe -f CMakeFiles/cmTC_4adbd.dir/build.make CMakeFiles/cmTC_4adbd.dir/build
+make.exe[1]: Entering directory 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4adbd.dir/CheckIncludeFiles.c.obj
+C:/Xilinx/Vitis/2020.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-gcc.exe   -O2 -c -g -Wall -Wextra -Os -flto -ffat-lto-objects -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/include -c   -o CMakeFiles/cmTC_4adbd.dir/CheckIncludeFiles.c.obj   -c D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_4adbd
+C:/Xilinx/Vitis/2020.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-gcc.exe  -O2 -c -g -Wall -Wextra -Os -flto -ffat-lto-objects -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/include -c    "CMakeFiles/cmTC_4adbd.dir/CheckIncludeFiles.c.obj"   -o cmTC_4adbd  
+aarch64-xilinx-elf-gcc.exe: warning: CMakeFiles/cmTC_4adbd.dir/CheckIncludeFiles.c.obj: linker input file unused because linking not done
+make.exe[1]: Leaving directory 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/libsrc/libmetal_v2_1/build_libmetal/CMakeFiles/CMakeTmp'
+
+
