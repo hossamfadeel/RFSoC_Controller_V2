@@ -125,7 +125,7 @@ axis_pl_to_ps axis_pl_to_ps_inst
 	//Output to PS
 	m_axis_tdata,
     m_axis_tvalid,
-    m_axis_tready | gpio_ctrl[adc_buffer_flush],
+    (m_axis_tready & gpio_ctrl[adc_readout_enable]) | gpio_ctrl[adc_buffer_flush],
 	
 	gpio_ctrl
 

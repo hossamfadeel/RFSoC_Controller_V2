@@ -347,6 +347,35 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps8_0_100M1, and set properties
   set rst_ps8_0_100M1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps8_0_100M1 ]
 
+  # Create instance: system_ila_pl, and set properties
+  set system_ila_pl [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_pl ]
+  set_property -dict [ list \
+   CONFIG.C_BRAM_CNT {4} \
+   CONFIG.C_DATA_DEPTH {4096} \
+   CONFIG.C_MON_TYPE {MIX} \
+   CONFIG.C_NUM_MONITOR_SLOTS {3} \
+   CONFIG.C_SLOT_0_APC_EN {0} \
+   CONFIG.C_SLOT_0_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_0_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_1_APC_EN {0} \
+   CONFIG.C_SLOT_1_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_1_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_1_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_2_APC_EN {0} \
+   CONFIG.C_SLOT_2_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_2_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_2_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+ ] $system_ila_pl
+
+  # Create instance: system_ila_ps, and set properties
+  set system_ila_ps [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_ps ]
+  set_property -dict [ list \
+   CONFIG.C_MON_TYPE {NATIVE} \
+   CONFIG.C_NUM_OF_PROBES {1} \
+   CONFIG.C_PROBE0_TYPE {0} \
+ ] $system_ila_ps
+
   # Create instance: usp_rf_data_converter_0, and set properties
   set usp_rf_data_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:usp_rf_data_converter:2.3 usp_rf_data_converter_0 ]
   set_property -dict [ list \
@@ -1019,6 +1048,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HPC0_FPD]
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_gpio_async_fifo/M_AXIS] [get_bd_intf_pins gpio_buffer_0/s_axis]
   connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS [get_bd_intf_pins axis_data_ps_to_pl_fifo/M_AXIS] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/s_axis]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axis_data_fifo_1_M_AXIS] [get_bd_intf_pins axis_data_ps_to_pl_fifo/M_AXIS] [get_bd_intf_pins system_ila_pl/SLOT_0_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets axis_data_fifo_1_M_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_2_M_AXIS [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins axis_data_pl_to_ps_fifo/M_AXIS]
   connect_bd_intf_net -intf_net dac0_clk_1 [get_bd_intf_ports dac0_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac0_clk]
   connect_bd_intf_net -intf_net dac1_clk_1 [get_bd_intf_ports dac1_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac1_clk]
@@ -1029,6 +1060,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps8_0_axi_periph/M01_AXI]
   connect_bd_intf_net -intf_net ps8_0_axi_periph_M02_AXI [get_bd_intf_pins ps8_0_axi_periph/M02_AXI] [get_bd_intf_pins usp_rf_data_converter_0/s_axi]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m0_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m0_axis] [get_bd_intf_pins usp_rf_data_converter_0/s00_axis]
+connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m0_axis] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m0_axis] [get_bd_intf_pins system_ila_pl/SLOT_1_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m0_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m10_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m10_axis] [get_bd_intf_pins usp_rf_data_converter_0/s22_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m11_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m11_axis] [get_bd_intf_pins usp_rf_data_converter_0/s23_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m12_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m12_axis] [get_bd_intf_pins usp_rf_data_converter_0/s30_axis]
@@ -1036,6 +1069,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m14_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m14_axis] [get_bd_intf_pins usp_rf_data_converter_0/s32_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m15_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m15_axis] [get_bd_intf_pins usp_rf_data_converter_0/s33_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m16_axis [get_bd_intf_pins axis_data_pl_to_ps_fifo/S_AXIS] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m16_axis]
+connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m16_axis] [get_bd_intf_pins axis_data_pl_to_ps_fifo/S_AXIS] [get_bd_intf_pins system_ila_pl/SLOT_2_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m16_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m1_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m1_axis] [get_bd_intf_pins usp_rf_data_converter_0/s01_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m2_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m2_axis] [get_bd_intf_pins usp_rf_data_converter_0/s02_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m3_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m3_axis] [get_bd_intf_pins usp_rf_data_converter_0/s03_axis]
@@ -1099,13 +1134,15 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net axi_dma_0_mm2s_introut [get_bd_pins axi_dma_0/mm2s_introut] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net axi_dma_0_s2mm_introut [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins gpio_buffer_0/gpio_in]
-  connect_bd_net -net gpio_buffer_0_gpio_out [get_bd_pins gpio_buffer_0/gpio_out] [get_bd_pins rfsoc_pl_ctrl_verilo_0/gpio_ctrl]
-  connect_bd_net -net rst_ps8_0_100M1_peripheral_aresetn [get_bd_pins axis_data_pl_to_ps_fifo/s_axis_aresetn] [get_bd_pins rfsoc_pl_ctrl_verilo_0/rst] [get_bd_pins rst_ps8_0_100M1/peripheral_aresetn] [get_bd_pins usp_rf_data_converter_0/m0_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/m1_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/m2_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/m3_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s0_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s1_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s2_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s3_axis_aresetn]
+  connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins gpio_buffer_0/gpio_in] [get_bd_pins system_ila_ps/probe0]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets axi_gpio_0_gpio_io_o]
+  connect_bd_net -net gpio_buffer_0_gpio_out [get_bd_pins gpio_buffer_0/gpio_out] [get_bd_pins rfsoc_pl_ctrl_verilo_0/gpio_ctrl] [get_bd_pins system_ila_pl/probe0]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets gpio_buffer_0_gpio_out]
+  connect_bd_net -net rst_ps8_0_100M1_peripheral_aresetn [get_bd_pins axis_data_pl_to_ps_fifo/s_axis_aresetn] [get_bd_pins rfsoc_pl_ctrl_verilo_0/rst] [get_bd_pins rst_ps8_0_100M1/peripheral_aresetn] [get_bd_pins system_ila_pl/resetn] [get_bd_pins usp_rf_data_converter_0/m0_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/m1_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/m2_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/m3_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s0_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s1_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s2_axis_aresetn] [get_bd_pins usp_rf_data_converter_0/s3_axis_aresetn]
   connect_bd_net -net rst_ps8_0_100M_peripheral_aresetn [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_smc/aresetn] [get_bd_pins axis_data_ps_to_pl_fifo/s_axis_aresetn] [get_bd_pins axis_gpio_async_fifo/s_axis_aresetn] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins ps8_0_axi_periph/M02_ARESETN] [get_bd_pins ps8_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps8_0_100M/peripheral_aresetn] [get_bd_pins rst_ps8_0_100M1/ext_reset_in] [get_bd_pins usp_rf_data_converter_0/s_axi_aresetn]
-  connect_bd_net -net usp_rf_data_converter_0_clk_dac0 [get_bd_pins axis_data_pl_to_ps_fifo/s_axis_aclk] [get_bd_pins axis_data_ps_to_pl_fifo/m_axis_aclk] [get_bd_pins axis_gpio_async_fifo/m_axis_aclk] [get_bd_pins rfsoc_pl_ctrl_verilo_0/clk] [get_bd_pins rst_ps8_0_100M1/slowest_sync_clk] [get_bd_pins usp_rf_data_converter_0/clk_dac0] [get_bd_pins usp_rf_data_converter_0/m0_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m1_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m2_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m3_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s0_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s1_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s2_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s3_axis_aclk]
+  connect_bd_net -net usp_rf_data_converter_0_clk_dac0 [get_bd_pins axis_data_pl_to_ps_fifo/s_axis_aclk] [get_bd_pins axis_data_ps_to_pl_fifo/m_axis_aclk] [get_bd_pins axis_gpio_async_fifo/m_axis_aclk] [get_bd_pins rfsoc_pl_ctrl_verilo_0/clk] [get_bd_pins rst_ps8_0_100M1/slowest_sync_clk] [get_bd_pins system_ila_pl/clk] [get_bd_pins usp_rf_data_converter_0/clk_dac0] [get_bd_pins usp_rf_data_converter_0/m0_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m1_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m2_axis_aclk] [get_bd_pins usp_rf_data_converter_0/m3_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s0_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s1_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s2_axis_aclk] [get_bd_pins usp_rf_data_converter_0/s3_axis_aclk]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins xlconcat_0/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
-  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/m_axi_sg_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axis_data_pl_to_ps_fifo/m_axis_aclk] [get_bd_pins axis_data_ps_to_pl_fifo/s_axis_aclk] [get_bd_pins axis_gpio_async_fifo/s_axis_aclk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/M01_ACLK] [get_bd_pins ps8_0_axi_periph/M02_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps8_0_100M/slowest_sync_clk] [get_bd_pins usp_rf_data_converter_0/s_axi_aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihpc0_fpd_aclk]
+  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/m_axi_sg_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axis_data_pl_to_ps_fifo/m_axis_aclk] [get_bd_pins axis_data_ps_to_pl_fifo/s_axis_aclk] [get_bd_pins axis_gpio_async_fifo/s_axis_aclk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/M01_ACLK] [get_bd_pins ps8_0_axi_periph/M02_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps8_0_100M/slowest_sync_clk] [get_bd_pins system_ila_ps/clk] [get_bd_pins usp_rf_data_converter_0/s_axi_aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihpc0_fpd_aclk]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins rst_ps8_0_100M/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]
 
   # Create address segments

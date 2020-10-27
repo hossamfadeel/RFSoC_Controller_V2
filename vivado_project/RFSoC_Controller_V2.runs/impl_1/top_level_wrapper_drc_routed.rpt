@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Wed Oct 14 09:23:36 2020
+| Date         : Fri Oct 23 07:58:42 2020
 | Host         : JAMES-LENOVO running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_level_wrapper_drc_routed.rpt -pb top_level_wrapper_drc_routed.pb -rpx top_level_wrapper_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -42,7 +42,7 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-145 net(s) have no routable loads. The problem bus(es) and/or net(s) are top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc00_status[1],
+176 net(s) have no routable loads. The problem bus(es) and/or net(s) are top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc00_status[1],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc00_status[4],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc00_status[5],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc00_status[6],
@@ -56,7 +56,7 @@ top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc01_status[7],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc01_status[12],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc01_status[13],
-top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc02_status[1] (the first 15 of 133 listed).
+top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc02_status[1] (the first 15 of 162 listed).
 Related violations: <none>
 
 REQP-1935#1 Advisory

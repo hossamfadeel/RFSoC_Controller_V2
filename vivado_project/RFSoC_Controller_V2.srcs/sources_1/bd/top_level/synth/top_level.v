@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-//Date        : Wed Oct 14 08:58:58 2020
+//Date        : Fri Oct 23 07:37:18 2020
 //Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -808,7 +808,7 @@ module s00_couplers_imp_1LSKJNT
         .s_axi_wvalid(auto_ds_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=1,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=23,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=1,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (adc0_clk_clk_n,
     adc0_clk_clk_p,
@@ -1048,7 +1048,7 @@ module top_level
   wire axi_dma_0_M_AXI_SG_WVALID;
   wire axi_dma_0_mm2s_introut;
   wire axi_dma_0_s2mm_introut;
-  wire [15:0]axi_gpio_0_gpio_io_o;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]axi_gpio_0_gpio_io_o;
   wire [48:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
   wire [3:0]axi_smc_M00_AXI_ARCACHE;
@@ -1085,9 +1085,11 @@ module top_level
   wire [15:0]axis_data_fifo_0_M_AXIS_TDATA;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
-  wire [31:0]axis_data_fifo_1_M_AXIS_TDATA;
-  wire axis_data_fifo_1_M_AXIS_TREADY;
-  wire axis_data_fifo_1_M_AXIS_TVALID;
+  (* CONN_BUS_INFO = "axis_data_fifo_1_M_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]axis_data_fifo_1_M_AXIS_TDATA;
+  (* CONN_BUS_INFO = "axis_data_fifo_1_M_AXIS xilinx.com:interface:axis:1.0 None TKEEP" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [3:0]axis_data_fifo_1_M_AXIS_TKEEP;
+  (* CONN_BUS_INFO = "axis_data_fifo_1_M_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axis_data_fifo_1_M_AXIS_TLAST;
+  (* CONN_BUS_INFO = "axis_data_fifo_1_M_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axis_data_fifo_1_M_AXIS_TREADY;
+  (* CONN_BUS_INFO = "axis_data_fifo_1_M_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axis_data_fifo_1_M_AXIS_TVALID;
   wire [31:0]axis_data_fifo_2_M_AXIS_TDATA;
   wire axis_data_fifo_2_M_AXIS_TREADY;
   wire axis_data_fifo_2_M_AXIS_TVALID;
@@ -1099,7 +1101,7 @@ module top_level
   wire dac2_clk_1_CLK_P;
   wire dac3_clk_1_CLK_N;
   wire dac3_clk_1_CLK_P;
-  wire [15:0]gpio_buffer_0_gpio_out;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]gpio_buffer_0_gpio_out;
   wire [15:0]gpio_buffer_0_m_axis_TDATA;
   wire gpio_buffer_0_m_axis_TREADY;
   wire gpio_buffer_0_m_axis_TVALID;
@@ -1153,9 +1155,9 @@ module top_level
   wire ps8_0_axi_periph_M02_AXI_WREADY;
   wire [3:0]ps8_0_axi_periph_M02_AXI_WSTRB;
   wire ps8_0_axi_periph_M02_AXI_WVALID;
-  wire [255:0]rfsoc_pl_ctrl_verilo_0_m0_axis_TDATA;
-  wire rfsoc_pl_ctrl_verilo_0_m0_axis_TREADY;
-  wire rfsoc_pl_ctrl_verilo_0_m0_axis_TVALID;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m0_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [255:0]rfsoc_pl_ctrl_verilo_0_m0_axis_TDATA;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m0_axis xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m0_axis_TREADY;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m0_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m0_axis_TVALID;
   wire [255:0]rfsoc_pl_ctrl_verilo_0_m10_axis_TDATA;
   wire rfsoc_pl_ctrl_verilo_0_m10_axis_TREADY;
   wire rfsoc_pl_ctrl_verilo_0_m10_axis_TVALID;
@@ -1174,9 +1176,9 @@ module top_level
   wire [255:0]rfsoc_pl_ctrl_verilo_0_m15_axis_TDATA;
   wire rfsoc_pl_ctrl_verilo_0_m15_axis_TREADY;
   wire rfsoc_pl_ctrl_verilo_0_m15_axis_TVALID;
-  wire [31:0]rfsoc_pl_ctrl_verilo_0_m16_axis_TDATA;
-  wire rfsoc_pl_ctrl_verilo_0_m16_axis_TREADY;
-  wire rfsoc_pl_ctrl_verilo_0_m16_axis_TVALID;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m16_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]rfsoc_pl_ctrl_verilo_0_m16_axis_TDATA;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m16_axis xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m16_axis_TREADY;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m16_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m16_axis_TVALID;
   wire [255:0]rfsoc_pl_ctrl_verilo_0_m1_axis_TDATA;
   wire rfsoc_pl_ctrl_verilo_0_m1_axis_TREADY;
   wire rfsoc_pl_ctrl_verilo_0_m1_axis_TVALID;
@@ -1672,6 +1674,8 @@ module top_level
   top_level_axis_data_fifo_1_0 axis_data_ps_to_pl_fifo
        (.m_axis_aclk(usp_rf_data_converter_0_clk_dac0),
         .m_axis_tdata(axis_data_fifo_1_M_AXIS_TDATA),
+        .m_axis_tkeep(axis_data_fifo_1_M_AXIS_TKEEP),
+        .m_axis_tlast(axis_data_fifo_1_M_AXIS_TLAST),
         .m_axis_tready(axis_data_fifo_1_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
         .s_axis_aclk(zynq_ultra_ps_e_0_pl_clk0),
@@ -1918,6 +1922,26 @@ module top_level
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps8_0_100M1_peripheral_aresetn),
         .slowest_sync_clk(usp_rf_data_converter_0_clk_dac0));
+  top_level_system_ila_0_0 system_ila_pl
+       (.SLOT_0_AXIS_tdata(axis_data_fifo_1_M_AXIS_TDATA),
+        .SLOT_0_AXIS_tkeep(axis_data_fifo_1_M_AXIS_TKEEP),
+        .SLOT_0_AXIS_tlast(axis_data_fifo_1_M_AXIS_TLAST),
+        .SLOT_0_AXIS_tready(axis_data_fifo_1_M_AXIS_TREADY),
+        .SLOT_0_AXIS_tvalid(axis_data_fifo_1_M_AXIS_TVALID),
+        .SLOT_1_AXIS_tdata(rfsoc_pl_ctrl_verilo_0_m0_axis_TDATA),
+        .SLOT_1_AXIS_tlast(1'b0),
+        .SLOT_1_AXIS_tready(rfsoc_pl_ctrl_verilo_0_m0_axis_TREADY),
+        .SLOT_1_AXIS_tvalid(rfsoc_pl_ctrl_verilo_0_m0_axis_TVALID),
+        .SLOT_2_AXIS_tdata(rfsoc_pl_ctrl_verilo_0_m16_axis_TDATA),
+        .SLOT_2_AXIS_tlast(1'b0),
+        .SLOT_2_AXIS_tready(rfsoc_pl_ctrl_verilo_0_m16_axis_TREADY),
+        .SLOT_2_AXIS_tvalid(rfsoc_pl_ctrl_verilo_0_m16_axis_TVALID),
+        .clk(usp_rf_data_converter_0_clk_dac0),
+        .probe0(gpio_buffer_0_gpio_out),
+        .resetn(rst_ps8_0_100M1_peripheral_aresetn));
+  top_level_system_ila_1_0 system_ila_ps
+       (.clk(zynq_ultra_ps_e_0_pl_clk0),
+        .probe0(axi_gpio_0_gpio_io_o));
   top_level_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.adc0_clk_n(adc0_clk_1_CLK_N),
         .adc0_clk_p(adc0_clk_1_CLK_P),

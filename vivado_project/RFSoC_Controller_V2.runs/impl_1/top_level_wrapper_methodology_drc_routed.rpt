@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Wed Oct 14 09:24:21 2020
+| Date         : Fri Oct 23 07:59:17 2020
 | Host         : JAMES-LENOVO running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_wrapper_methodology_drc_routed.rpt -pb top_level_wrapper_methodology_drc_routed.pb -rpx top_level_wrapper_methodology_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 45
+             Violations found: 50
 +-----------+----------+----------------------------------+------------+
 | Rule      | Severity | Description                      | Violations |
 +-----------+----------+----------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert     | 5          |
+| LUTAR-1   | Warning  | LUT drives async reset alert     | 10         |
 | TIMING-9  | Warning  | Unknown CDC Logic                | 1          |
 | TIMING-10 | Warning  | Missing property on synchronizer | 1          |
 | TIMING-20 | Warning  | Non-clocked latch                | 38         |
@@ -36,6 +36,48 @@ Table of Contents
 2. REPORT DETAILS
 -----------------
 LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_sel[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[10]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[11]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[12]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[13]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[14]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[15]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[6]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[7]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[8]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
 LUT drives async reset alert  
 LUT cell top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gc0.count_d1[4]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg/CLR,
 top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg/CLR,
@@ -54,7 +96,7 @@ top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_
 top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#2 Warning
+LUTAR-1#7 Warning
 LUT drives async reset alert  
 LUT cell top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gc0.count_d1[4]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg/CLR,
 top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg/CLR,
@@ -73,7 +115,7 @@ top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_
 top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#3 Warning
+LUTAR-1#8 Warning
 LUT drives async reset alert  
 LUT cell top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gc0.count_d1[4]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg/CLR,
 top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg/CLR,
@@ -92,7 +134,7 @@ top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_
 top_level_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#4 Warning
+LUTAR-1#9 Warning
 LUT drives async reset alert  
 LUT cell top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[31]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[0]/CLR,
 top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[10]/CLR,
@@ -111,7 +153,7 @@ top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axi
 top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[22]/CLR (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#5 Warning
+LUTAR-1#10 Warning
 LUT drives async reset alert  
 LUT cell top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>

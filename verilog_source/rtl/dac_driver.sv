@@ -80,7 +80,7 @@ axis_sync_fifo #(mem_width) waveform_fifo
 	//Output to channel_ctrl and loopback mux
     waveform_fifo_tdata,
     waveform_fifo_tvalid,
-    waveform_fifo_tready
+    waveform_fifo_tready | gpio_ctrl[adc_buffer_flush]
 	
 );
 

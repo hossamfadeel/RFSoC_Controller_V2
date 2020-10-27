@@ -50,12 +50,22 @@
 #include "xil_printf.h"
 
 
+
+void cmd_handler_handoff();
+
+
 int main()
 {
     init_platform();
 
     print("Hello World\n\r");
     print("Successfully ran Hello World application");
+
+    //Entry point into c firmware
+    cmd_handler_handoff();
+
+
+
     cleanup_platform();
     return 0;
 }

@@ -24,4 +24,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/c_source</name>
+			<type>2</type>
+			<location>D:/repos/RFSoC_Controller_V2/c_source</location>
+		</link>
+	</linkedResources>
 </projectDescription>

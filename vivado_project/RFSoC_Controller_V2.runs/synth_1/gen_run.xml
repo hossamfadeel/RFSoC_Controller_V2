@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1602691209">
+<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1603463859">
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="top_level_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="top_level_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_level_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top_level_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_level_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_level_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../verilog_source/rtl/rfsoc_config.sv">
@@ -170,11 +173,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_usp_rf_data_converter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_pl_ctrl_verilo_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_gpio_buffer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_pl_ctrl_verilo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_gpio_buffer_0_0"/>
 </GenRun>

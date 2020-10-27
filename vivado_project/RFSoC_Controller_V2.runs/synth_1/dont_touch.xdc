@@ -49,6 +49,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_
 # IP: bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_axis_data_fifo_1_1 || ORIG_REF_NAME==top_level_axis_data_fifo_1_1} -quiet] -quiet
 
+# IP: bd/top_level/ip/top_level_system_ila_0_0/top_level_system_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_system_ila_0_0 || ORIG_REF_NAME==top_level_system_ila_0_0} -quiet] -quiet
+
+# IP: bd/top_level/ip/top_level_system_ila_1_0/top_level_system_ila_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_system_ila_1_0 || ORIG_REF_NAME==top_level_system_ila_1_0} -quiet] -quiet
+
 # IP: bd/top_level/ip/top_level_auto_ds_0/top_level_auto_ds_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==top_level_auto_ds_0 || ORIG_REF_NAME==top_level_auto_ds_0} -quiet] -quiet
 

@@ -473,6 +473,9 @@ initial begin
 		set_adc_shift_val(0);
 	end
 	
+	//set the readout enable bit
+	gpio_ctrl[adc_readout_enable] <= 1;
+	
 	//Try reading out each ADC one at a time
 	for(k = 0; k < 16; k = k + 1) begin
 	

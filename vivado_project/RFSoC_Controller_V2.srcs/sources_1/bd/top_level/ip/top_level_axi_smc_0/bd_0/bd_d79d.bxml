@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="bd_d79d" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1602691199"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1602691199"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1602691199"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1602691199"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1603463845"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1603463845"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1603463845"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1603463845"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\bd_d79d.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -14,6 +14,11 @@
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="sim\bd_d79d.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="sim\bd_d79d.protoinst">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -320,11 +325,6 @@
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="sim\bd_d79d.protoinst">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
       </File>
     </FileCollection>
   </CompositeFile>
