@@ -23,6 +23,11 @@
 #define CMD_WRITE_AXIS 0x0B //Next 4 bytes are assembled into 32-bit word and written out to DACs
 #define CMD_READ_AXIS 0x0C //One 32-bit ADC word is read from selected ADC and retuned as 4 bytes
 #define CMD_CHECK_CLOCKS 0x0D //Returns 1 byte containing status of DAC clocks in first bit and status of ADC clocks in second bit
+#define CMD_SET_ADC_DUMMY_DATA 0x0E //Turns on dummy data mode for ADC
+#define CMD_SET_ADC_READOUT 0x0F
+#define CMD_PING_BOARD 0x10
+
+
 
 //cmd handler state definitions
 #define state_idle 0
@@ -44,9 +49,6 @@ void cmd_handler_handoff()
 		cmd_handle_command();
 	}
 }
-
-
-
 
 
 void cmd_handle_command()
@@ -91,6 +93,8 @@ void cmd_handle_command()
 					case CMD_SELECT_CHANNEL:
 					case CMD_SET_MASK_ENABLE:
 					case CMD_SET_MUX_SEL:
+					case CMD_SET_ADC_DUMMY_DATA:
+					case CMD_SET_ADC_READOUT:
 						bytes_to_receive = 1;
 						cmd_handler_state = state_wait_payload;
 					break;
@@ -147,6 +151,14 @@ void cmd_handle_command()
 						cmd_handler_state = state_idle;
 					break;
 					
+					case CMD_PING_BOARD:
+						uart_send_byte(CMD_ACK);
+						cmd_handler_state = state_idle;
+					break;
+					
+					default:
+						xil_printf("Unknown command byte: 0x%x\r\n", cmd_byte);
+						cmd_handler_state = state_idle;
 				}
 			}
 		
@@ -177,6 +189,12 @@ void cmd_handle_command()
 						break;
 						case CMD_SET_MUX_SEL:
 							gpio_set_mux_sel(payload_byte);
+						break;
+						case CMD_SET_ADC_DUMMY_DATA:
+							gpio_set_adc_dummy_data(payload_byte);
+						break;
+						case CMD_SET_ADC_READOUT:
+							gpio_set_adc_readout_enable(payload_byte);
 						break;
 					}
 				}

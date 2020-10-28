@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"2.36494",
-   "Default View_TopLeft":"4012,384",
+   "Default View_TopLeft":"1701,415",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -59,9 +59,9 @@ preplace inst axis_gpio_async_fifo -pg 1 -lvl 3 -x 1170 -y 1400 -defaultsOSRD
 preplace inst axis_data_ps_to_pl_fifo -pg 1 -lvl 2 -x 620 -y 530 -defaultsOSRD
 preplace inst axis_data_pl_to_ps_fifo -pg 1 -lvl 4 -x 1670 -y 680 -defaultsOSRD
 preplace inst gpio_buffer_0 -pg 1 -lvl 2 -x 620 -y 1380 -defaultsOSRD
-preplace inst rfsoc_pl_ctrl_verilo_0 -pg 1 -lvl 3 -x 1170 -y 260 -defaultsOSRD
 preplace inst system_ila_pl -pg 1 -lvl 10 -x 4390 -y 260 -defaultsOSRD
 preplace inst system_ila_ps -pg 1 -lvl 10 -x 4390 -y 650 -defaultsOSRD
+preplace inst rfsoc_pl_ctrl_verilo_0 -pg 1 -lvl 3 -x 1170 -y 260 -defaultsOSRD
 preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 1 8 430 1010 990 920 NJ 920 1830 700 2230 720 NJ 720 3120 720 3510
 preplace netloc xlconcat_0_dout 1 6 1 N 650
 preplace netloc axi_dma_0_mm2s_introut 1 5 1 2210 620n

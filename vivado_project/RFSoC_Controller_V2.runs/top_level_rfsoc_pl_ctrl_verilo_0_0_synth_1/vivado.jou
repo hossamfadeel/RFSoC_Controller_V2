@@ -2,8 +2,8 @@
 # Vivado v2020.1.1 (64-bit)
 # SW Build 2960000 on Wed Aug  5 22:57:20 MDT 2020
 # IP Build 2956692 on Thu Aug  6 01:41:30 MDT 2020
-# Start of session at: Thu Oct 22 18:51:07 2020
-# Process ID: 2496
+# Start of session at: Wed Oct 28 13:29:52 2020
+# Process ID: 23368
 # Current directory: D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1
 # Command line: vivado.exe -log top_level_rfsoc_pl_ctrl_verilo_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_rfsoc_pl_ctrl_verilo_0_0.tcl
 # Log file: D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1/top_level_rfsoc_pl_ctrl_verilo_0_0.vds

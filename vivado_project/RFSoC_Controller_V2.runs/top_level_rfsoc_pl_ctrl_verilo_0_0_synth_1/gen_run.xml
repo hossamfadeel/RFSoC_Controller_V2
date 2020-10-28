@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1603417861">
+<GenRun Id="top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1603916988">
   <File Type="PA-TCL" Name="top_level_rfsoc_pl_ctrl_verilo_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_rfsoc_pl_ctrl_verilo_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_rfsoc_pl_ctrl_verilo_0_0_reports.tcl"/>

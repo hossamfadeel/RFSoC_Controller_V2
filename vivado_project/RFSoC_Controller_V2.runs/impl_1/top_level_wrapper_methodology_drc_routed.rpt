@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Fri Oct 23 07:59:17 2020
+| Date         : Wed Oct 28 13:50:21 2020
 | Host         : JAMES-LENOVO running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_wrapper_methodology_drc_routed.rpt -pb top_level_wrapper_methodology_drc_routed.pb -rpx top_level_wrapper_methodology_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -23,14 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 50
+             Violations found: 49
 +-----------+----------+----------------------------------+------------+
 | Rule      | Severity | Description                      | Violations |
 +-----------+----------+----------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert     | 10         |
 | TIMING-9  | Warning  | Unknown CDC Logic                | 1          |
 | TIMING-10 | Warning  | Missing property on synchronizer | 1          |
-| TIMING-20 | Warning  | Non-clocked latch                | 38         |
+| TIMING-20 | Warning  | Non-clocked latch                | 37         |
 +-----------+----------+----------------------------------+------------+
 
 2. REPORT DETAILS
@@ -150,7 +150,7 @@ top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axi
 top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[1]/CLR,
 top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[20]/CLR,
 top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[21]/CLR,
-top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[22]/CLR (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[22]/CLR (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#10 Warning
@@ -330,30 +330,25 @@ Related violations: <none>
 
 TIMING-20#33 Warning
 Non-clocked latch  
-The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tvalid_reg cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tvalid_reg/G is not reached by a timing clock
+The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[0] cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#34 Warning
 Non-clocked latch  
-The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[0] cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[0]/G is not reached by a timing clock
+The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[1] cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#35 Warning
 Non-clocked latch  
-The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[1] cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[1]/G is not reached by a timing clock
+The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[2] cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#36 Warning
 Non-clocked latch  
-The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[2] cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#37 Warning
-Non-clocked latch  
 The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[3] cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#38 Warning
+TIMING-20#37 Warning
 Non-clocked latch  
 The latch top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tready_reg cannot be properly analyzed as its control pin top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tready_reg/G is not reached by a timing clock
 Related violations: <none>
