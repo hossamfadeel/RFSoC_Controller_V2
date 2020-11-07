@@ -298,43 +298,71 @@ class rfsoc_board:
     #list of channel objects used to configure the board
     channel_list = None
     
+    #Used for keeping track of how many times an ADC channel has been triggered
+    class adc_tracker:
     
-    #Returns 0 on success, channel should be an instance of rfsoc_channel
-    def configure_channel(self, channel):
+        shift_val = 0
+        num_triggers = 0
+    
+    #List of ADC tracker objects
+    adc_trackers = []
+    
+    def __init__(self):
+        
+        #Initialize the list of ADC channels being tracked
+        for i in range(0, 16):
+            at = adc_tracker.adc_tracker()
+            at.shift_val = 0
+            at.num_triggers = -1 #If we see this value we know the channel was never configured
+            adc_trackers.append(at)
+            
+    
+        return
+        
+    #Returns 0 on success
+    #If dummy data is set, ADCs will return dummy data
+    def configure_all_channels(self, dummy_adc = 0):
+
+        #Flush the buffers and disable adc readout
+        
+
+    
+    #Returns 0 on success, channel should be an instance of rfsoc_channel of type DAC
+    def configure_dac_channel(self, channel):
     
         #Select the channel number first
-        if(board_driver.select_channel(channel.channel_num)):
-            print("Error while trying to select channel, aborting channel configuration")
+        if(self.board_driver.select_channel(channel.channel_num)):
+            print("Error while trying to select channel, aborting DAC channel configuration")
             return 1
         #Set the mux select to 0 to permit uploaded
-        if(board_driver.set_mux_sel(0)):
-            print("Error while trying to clear DAC mux sel, aborting channel configuration")
+        if(self.board_driver.set_mux_sel(0)):
+            print("Error while trying to clear DAC mux sel, aborting DAC channel configuration")
             return 1
             
         #Set mask enable
-        if(board_driver.set_mask_enable(channel.mask_enable)):
-            print("Error while trying to set mask enable, aborting channel configuration")
+        if(self.board_driver.set_mask_enable(channel.mask_enable)):
+            print("Error while trying to set mask enable, aborting DAC channel configuration")
             return 1
             
         #If we need to, upload the mask
         if(channel.mask_enable):
-            if(board_driver.set_mask(channel.mask_samples)):
-                print("Error while trying to upload mask, aborting channel configuration")
+            if(self.board_driver.set_mask(channel.mask_samples)):
+                print("Error while trying to upload mask, aborting DAC channel configuration")
                 return 1
         
         #Set the locking waveform
-        if(board_driver.set_locking_waveform(channel.locking_waveform_samples)):
-            print("Error while trying to set locking waveform, aborting channel configuration")
+        if(self.board_driver.set_locking_waveform(channel.locking_waveform_samples)):
+            print("Error while trying to set locking waveform, aborting DAC channel configuration")
             return 1
             
         #Set the pre_delay cycles
-        if(board_driver.set_pre_delay(channel.pre_delay_cycles)):
-            print("Error while trying to set pre delay cycles, aborting channel configuration")
+        if(self.board_driver.set_pre_delay(channel.pre_delay_cycles)):
+            print("Error while trying to set pre delay cycles, aborting DAC channel configuration")
             return 1
             
         #Set the post delay cycles 
-        if(board_driver.set_post_delay()):
-            print("Error while trying to set post delay cycles, aborting channel, configuration")
+        if(self.board_driver.set_post_delay()):
+            print("Error while trying to set post delay cycles, aborting DAC channel, configuration")
             return 1
         
         #Now we load the waveform in by putting samples together
@@ -348,27 +376,67 @@ class rfsoc_board:
             i += 2;
         
         for a in axis_words:
-            if(board_driver.write_word(a)):
-                print("Error while trying to write DAC word to AXIS, aborting channel configuration")
+            if(self.board_driver.write_word(a)):
+                print("Error while trying to write DAC word to AXIS, aborting DAC channel configuration")
                 return 1
                 
         #Set the mux select to 1 to permit normal operation
-        if(board_driver.set_mux_sel(1)):
-            print("Error while trying to set DAC mux sel, aborting channel configuration")
+        if(self.board_driver.set_mux_sel(1)):
+            print("Error while trying to set DAC mux sel, aborting DAC channel configuration")
             return 1
             
         #success
         return 0
         
     
+    def configure_adc_channel(self, channel):
+        
+        #Set up the tracker object for this channel
+        self.adc_trackers[channel.channel_num].shift_val = channel.shift_val
+        self.adc_trackers[channel.channel_num].num_triggers = 0
+        
+        #Select the channel number first
+        if(self.board_driver.select_channel(channel.channel_num)):
+            print("Error while trying to select channel, aborting ADC channel configuration")
+            return 1
+        #Then set the run cycles
+        if(self.board_driver.set_adc_run_cycles(channel.adc_run_cycles)):
+            print("Error while trying to set adc run cycles, aborting ADC channel configuration")
+            return 1
+        #Finally set the shift val
+        if(self.board_driver.set_adc_shift(channel.adc_shift)):
+            print("Error while trying to set adc shift val, aborting ADC channel configuration")
+            return 1
+        
+        #success
+        return 0
             
+    #Triggers the FPGA once, returns 0 on success
+    def trigger(self):
+
+        #Trigger the board once
+        if(self.board_driver.trigger()):
+            print("Error while triggering board")
+            return 1
+        
+        #Update the counters
+        for at in self.adc_trackers
+            at.num_triggers += 1
+        return 0
     
+    def readout_adc(self, channel):
+    
+        
     
 class rfsoc_channel:
 
+    #type is either "DAC" or "ADC"
+    type = "DAC"
 
-    #Parameters to be set for this channel on the FPGA
+    #Parameters for DAC and ADC channels
     channel_num = 0 #between 0 and 15
+
+    #Parameters to be set for this DAC channel on the FPGA
     mask_samples = [] #List of samples to be uploaded as the mask
     locking_waveform_samples = [] #list of samples to be uploaded as locking waveform
     mask_enable = 0 #Either 1 or 0, decides if we need the mask in the first place
@@ -377,3 +445,8 @@ class rfsoc_channel:
     post_delay_cycles = 0
     waveform_samples = [] #16 bit entries
 
+    #Parameters for ADC type channels
+    shift_val = 0 #Used for doing 2 ^ shift_val averages when capturing
+    adc_run_cycles = 0 #Sets how many cycles the ADC will record for
+
+    
