@@ -26,6 +26,7 @@
 #define CMD_SET_ADC_DUMMY_DATA 0x0E //Turns on dummy data mode for ADC
 #define CMD_SET_ADC_READOUT 0x0F
 #define CMD_PING_BOARD 0x10
+#define CMD_TRIGGER 0x11
 
 
 
@@ -156,6 +157,12 @@ void cmd_handle_command()
 						cmd_handler_state = state_idle;
 					break;
 					
+					case CMD_TRIGGER:
+						uart_send_byte(CMD_ACK);
+						gpio_trigger();
+						cmd_handler_state = state_idle;
+					break;
+					
 					default:
 						xil_printf("Unknown command byte: 0x%x\r\n", cmd_byte);
 						cmd_handler_state = state_idle;
@@ -203,7 +210,7 @@ void cmd_handle_command()
 					u32 dac_word = 0;
 					for(int i = 0; i < 4; i = i + 1)
 					{
-						dac_word &= ((u32)uart_get_buffer_byte()) << (i*8);
+						dac_word |= ((u32)uart_get_buffer_byte()) << (i*8);
 					}
 					//If we encounter an error writing to DMA
 					if(dma_write_word(dac_word))
@@ -217,7 +224,7 @@ void cmd_handle_command()
 					u8 payload_64 = 0;
 					for(int i = 0; i < 8; i = i + 1)
 					{
-						payload_64 &= ((u64)uart_get_buffer_byte()) << (i * 8);
+						payload_64 |= ((u64)uart_get_buffer_byte()) << (i * 8);
 					}
 					
 					switch(cmd_byte)
@@ -247,7 +254,7 @@ void cmd_handle_command()
 					for(int i = 0; i < 16; i = i + 1)
 					{
 						payload_array[i] = uart_get_buffer_byte();
-						payload_array[i] &= (u16)uart_get_buffer_byte() << 8;
+						payload_array[i] |= (u16)uart_get_buffer_byte() << 8;
 					}
 					
 					switch(cmd_byte)

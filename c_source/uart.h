@@ -3,7 +3,7 @@
 #ifndef _UART_H_
 #define _UART_H_
 
-
+//Comment this line to stop debug printout from happening
 #define DEBUG_PRINT
 
 //Functions

@@ -30,8 +30,12 @@ CMD_CHECK_CLOCKS = 0x0D #Returns 1 byte containing status of DAC clocks in first
 CMD_SET_ADC_DUMMY_DATA = 0x0E #Turns on dummy data mode for ADC
 CMD_SET_ADC_READOUT = 0x0F
 CMD_PING_BOARD = 0x10
+CMD_TRIGGER = 0x11
 
-class rfsoc_board:
+#########################################
+#Low-level hardware driver for the board#
+#########################################
+class rfsoc_board_driver:
 
 
     port = None
@@ -263,7 +267,113 @@ class rfsoc_board:
             return 0
         return 1
     
+    #Returns 1 on success
+    def trigger(self):
+        self.port.write([CMD_PREAMBLE, CMD_TRIGGER])
+        res = self.wait_ack()
+        if(res == CMD_ACK):
+            return 0
+        return 1
+        
+    #Word is 32-bit dac word
+    #Returns 0 on success
+    def write_axis_word(self, word):
+        
+        bytes_list = list((word).to_bytes(4, byteorder='little', signed = False))
+        self.port.write([CMD_PREAMBLE, CMD_WRITE_AXIS, bytes_list])
+        res = self.wait_ack()
+        if(res == CMD_ACK):
+            return 0
+        return 1
+ 
+ 
+#####################################################################################
+#class for the high level driver which implements channel configuration and whatnot##
+#####################################################################################
+class rfsoc_board:
+
+    #instance of rfsoc_board_driver
+    board_driver = None
     
+    #list of channel objects used to configure the board
+    channel_list = None
+    
+    
+    #Returns 0 on success, channel should be an instance of rfsoc_channel
+    def configure_channel(self, channel):
+    
+        #Select the channel number first
+        if(board_driver.select_channel(channel.channel_num)):
+            print("Error while trying to select channel, aborting channel configuration")
+            return 1
+        #Set the mux select to 0 to permit uploaded
+        if(board_driver.set_mux_sel(0)):
+            print("Error while trying to clear DAC mux sel, aborting channel configuration")
+            return 1
+            
+        #Set mask enable
+        if(board_driver.set_mask_enable(channel.mask_enable)):
+            print("Error while trying to set mask enable, aborting channel configuration")
+            return 1
+            
+        #If we need to, upload the mask
+        if(channel.mask_enable):
+            if(board_driver.set_mask(channel.mask_samples)):
+                print("Error while trying to upload mask, aborting channel configuration")
+                return 1
+        
+        #Set the locking waveform
+        if(board_driver.set_locking_waveform(channel.locking_waveform_samples)):
+            print("Error while trying to set locking waveform, aborting channel configuration")
+            return 1
+            
+        #Set the pre_delay cycles
+        if(board_driver.set_pre_delay(channel.pre_delay_cycles)):
+            print("Error while trying to set pre delay cycles, aborting channel configuration")
+            return 1
+            
+        #Set the post delay cycles 
+        if(board_driver.set_post_delay()):
+            print("Error while trying to set post delay cycles, aborting channel, configuration")
+            return 1
+        
+        #Now we load the waveform in by putting samples together
+        i = 0
+        axis_words = [] #32-bit entries to be written to axis bus
+        while(i < len(channel.waveform_samples)-1):
+            
+            #Swap i and i+1 if this is backwards
+            new_sample = (channel.waveform_samples[i] << 16) | (channel.waveform_samples[i+1]
+            axis_words.append(new_sample)
+            i += 2;
+        
+        for a in axis_words:
+            if(board_driver.write_word(a)):
+                print("Error while trying to write DAC word to AXIS, aborting channel configuration")
+                return 1
+                
+        #Set the mux select to 1 to permit normal operation
+        if(board_driver.set_mux_sel(1)):
+            print("Error while trying to set DAC mux sel, aborting channel configuration")
+            return 1
+            
+        #success
+        return 0
+        
+    
+            
+    
+    
+class rfsoc_channel:
 
 
+    #Parameters to be set for this channel on the FPGA
+    channel_num = 0 #between 0 and 15
+    mask_samples = [] #List of samples to be uploaded as the mask
+    locking_waveform_samples = [] #list of samples to be uploaded as locking waveform
+    mask_enable = 0 #Either 1 or 0, decides if we need the mask in the first place
+    run_cycles = 0
+    pre_delay_cycles = 0
+    post_delay_cycles = 0
+    waveform_samples = [] #16 bit entries
 

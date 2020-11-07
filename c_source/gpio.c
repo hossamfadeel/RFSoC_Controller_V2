@@ -182,4 +182,8 @@ void gpio_set_adc_readout_enable(u8 val)
 	gpio_set_pin(adc_readout_enable, val ? 1 : 0);
 }
 
-
+void gpio_trigger()
+{
+	gpio_set_pin(trigger_line, 1);
+	gpio_set_pin(trigger_line, 0);
+}
