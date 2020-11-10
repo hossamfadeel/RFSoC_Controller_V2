@@ -4,7 +4,10 @@
 
 
 import serial
+import pickle #Used for object serialization
 
+#Configuration file this object is saved to between script calls
+config_filename = "rfsoc_config_file.dat"
 
 #Constants
 UART_TIMEOUT = 3 #in seconds
@@ -285,7 +288,24 @@ class rfsoc_board_driver:
         if(res == CMD_ACK):
             return 0
         return 1
+        
+    #returns status(0 for success), value
+    def read_axis_word(self):
+    
+        self.port.write([CMD_PREAMBLE, CMD_READ_AXIS])
+        axis_word_bytes = self.port.read(4)
+        axis_status = self.port.read(1)
+        return axis_status, int.from_bytes(axis_word_bytes, byteorder = 'little', signed = False)
+        
  
+#Static functions for loading instances of rfsoc_board from file
+
+def load_rfsoc_board():
+    with open(config_filename, 'rb') as infile:
+        return pickle.load(infile)
+def save_rfsoc_board(board_obj):
+    with open(config_filename, 'rb') as outfile:
+        pickle.dump(board_obj, outfile, pickle.HIGHEST_PROTOCOL)
  
 #####################################################################################
 #class for the high level driver which implements channel configuration and whatnot##
@@ -303,6 +323,23 @@ class rfsoc_board:
     
         shift_val = 0
         num_triggers = 0
+        run_cycles = 0
+        
+        def __init__(self, sv, nt):
+            self.shift_val = sv
+            self.num_triggers = nt
+            return
+        
+        #If we've triggered enough times for readout
+        def is_done(self)
+            if(self.num_triggers < 2 ** self.shift_val):
+                return 0
+            return 1
+        #If we triggered too many times
+        def has_overflown(self)
+            if(self.num_triggers > 2 ** self.shift_val):
+                return 1
+            return 0
     
     #List of ADC tracker objects
     adc_trackers = []
@@ -311,14 +348,15 @@ class rfsoc_board:
         
         #Initialize the list of ADC channels being tracked
         for i in range(0, 16):
-            at = adc_tracker.adc_tracker()
-            at.shift_val = 0
-            at.num_triggers = -1 #If we see this value we know the channel was never configured
+            #If we see this -1 value we know the channel was never configured
+            at = adc_tracker.adc_tracker(0, -1)
             adc_trackers.append(at)
             
-    
-        return
+            
         
+        return
+    
+    
     #Returns 0 on success
     #If dummy data is set, ADCs will return dummy data
     def configure_all_channels(self, dummy_adc = 0):
@@ -394,6 +432,7 @@ class rfsoc_board:
         #Set up the tracker object for this channel
         self.adc_trackers[channel.channel_num].shift_val = channel.shift_val
         self.adc_trackers[channel.channel_num].num_triggers = 0
+        self.adc_trackers[channel.channel_num].run_cycles = channel.adc_run_cycles
         
         #Select the channel number first
         if(self.board_driver.select_channel(channel.channel_num)):
@@ -421,13 +460,55 @@ class rfsoc_board:
         
         #Update the counters
         for at in self.adc_trackers
-            at.num_triggers += 1
+            if(at.num_triggers != -1):
+                at.num_triggers += 1
         return 0
     
-    def readout_adc(self, channel):
+    #Where channel_num is the integer 0-15
+    #Returns a list of sample read out (may be empty)
+    def readout_adc(self, channel_num):
     
+        #If the channel has not been initialized
+        if(self.channel_list[channel_num].num_triggers == -1):
+            print("Error, channel has not been initialized, cannot read out")
+            return 1
+    
+        if(not self.channel_list[channel_num].is_done()):
+            print("Error, ADC channel #" + str(channel) + " has not been triggered enough times, must be triggered " + str(2**self.channel_list[channel].shift_val) + " tomes, has only been triggered " + str(self.channel_list[channel_num].num_triggers) + " times, cannot readout")
+            return 1
+            
+        #Write the shift value for this channel as 0 so we can enable readout
+        self.board_driver.select_channel(channel)
+        self.board_driver.set_adc_shift(0)
+        self.board_driver.set_adc_readout(1)
         
-    
+        #Figure out how many times we need to read the axis bus
+        num_axis_reads=self.channel_list[channel_num].run_cycles
+        
+        sample_list = []
+        for i in range(0, num_axis_reads):
+            
+            #Read out an AXIS 32-bit word
+            status, word = self.board_driver.read_axis_word()
+            if(status):
+                print("Error while reading AXIS word during ADC readout, read " + str(i) + " out of " + str(num_axis_reads) + " expected reads")
+                return sample_list
+            #Otherwise break it into two samples and add it to the list
+            sample_0 = (word  >> 16) & 0xFFFF
+            sample_1 = word & 0xFFFF
+            
+            #Change this order if the samples are in the wrong order
+            sample_list.append(sample_0, sample_1)
+            
+        
+        return sample_list
+        
+   
+#Constants for this class
+NANOSECONDS_PER_DAC_WORD = 4
+DAC_MAX_VALUE = 32767#0x7FFF
+DAC_MIN_VALUE = -32768#0x8000
+            
 class rfsoc_channel:
 
     #type is either "DAC" or "ADC"
@@ -448,5 +529,155 @@ class rfsoc_channel:
     #Parameters for ADC type channels
     shift_val = 0 #Used for doing 2 ^ shift_val averages when capturing
     adc_run_cycles = 0 #Sets how many cycles the ADC will record for
+    
+    
+    #Config parameters for waveform generation
+    locking_shift = 0 #in ns
+    pre_delay = 0 # in ns
+    period = 0 # of one cycle in nano seconds
+    num_repeat_cycles = 0 #number of times to repeat this waveform
+    
+    #locking and waveform filenames
+    waveform_filename = ""
+    locking_filename = ""
+    
+    def __init__(self, ls):
+    
+        self.locking_shift = ls
 
     
+    #Filestuff for reading in the channel
+    #Waveform samplestream generation happening here
+    def stream_scale(stream, old_min, old_max, new_min, new_max):
+        
+         if(old_max == old_min):
+            return stream
+        
+         new_stream = []
+
+        #----------------------------------------------------
+        # Modified by Christian 7/5/20
+         slope = (new_max-new_min)/2
+         
+         for i in range(len(stream)):
+             new_stream.append(stream[i]*slope)
+             
+         return new_stream
+        #----------------------------------------------------
+
+    #Really more of a stream rotate
+    def stream_shift(stream, shift):
+        new_stream = []
+        index = shift*-1
+        
+        #if we're just shifting back to where we started
+        if(index >= len(stream)):
+            index = index % len(stream)
+        
+        #fix the index
+        if(index < 0):
+            index += len(stream)
+            
+        for i in range(0, len(stream)):
+            #append the current index to the new stream
+            new_stream.append(stream[index])
+            #find the next index value
+            
+            #Wrap around
+            if(index == len(stream)-1):
+                index = 0
+            else:
+                index += 1
+                
+        return new_stream
+        
+        
+     
+        
+    def read_waveform_file(self, filename, period):
+    
+    
+        #read out the file as a string
+        f = open(self.waveform_filename, "r")
+        fileString = f.read()
+        
+        #parse out all of the numbers in the file stream
+        prevals = re.findall(r'[-+]?[0-9]+\.?[0-9]*', fileString)
+        
+        vals = []
+        
+        #parse out the comma
+        for i in range (0, len(prevals)):
+            #get the string without the number
+            string_val = prevals[i]
+            vals.append(float(string_val))
+        
+        #first we need to figure out how many samples our final wordstream will have
+        num_samples = period * NANOSECONDS_PER_DAC_WORD
+        
+        if(num_samples % 16 != 
+        
+        #next we need to set up variables for interpolation
+        disc_time = list(range(0,len(vals)))
+        scaled_time = np.arange(0,len(vals), len(vals)/num_samples)
+        
+        #rescale the values into the word stream
+        prescale_wordstream = np.interp(scaled_time, disc_time, vals)
+        
+        #----------------------------------------------------------------------
+        #modified by Christian 7/5/20 to fix problem with scaling
+        final_wordstream = stream_scale(prescale_wordstream, min(prescale_wordstream), max(prescale_wordstream), DAC_MIN_VALUE, DAC_MAX_VALUE)
+        #----------------------------------------------------------------------
+        
+        return final_wordstream
+        
+    def generate_waveform_data(self):
+    
+        #Get the locking wordstream and waveform (final) wordstream
+        final_wordstream = self.read_waveform_file(self.waveform_filename)
+        locking_wordstream = self.read_waveform_file(self.locking_filename)
+        
+        #if we need to adjust our amplitudes
+        if(self.amp_factor != 1):
+            for i in range(0,len(final_wordstream)):
+                final_wordstream[i] = final_wordstream[i] * self.amp_factor
+                
+                
+        #if our period is too short
+        if(self.period%4 != 0):
+            print("Error, waveform period must be a multiple of 4ns.")
+            return
+        
+        
+        sample_delay = self.pre_delay * 4
+        if(sample_delay % 1 != 0):
+            print("Error, pre_delay must be a multiple of 0.25ns")
+            return 1
+        
+        fine_delay = sample_delay%16 
+        #If the pre_delay is a multiple of 16 samples
+        if(fine_delay == 0):
+            
+            #Then do nothing
+            self.waveform_samples = final_wordstream
+        
+        
+        #Otherwise append exactly one frame and shift
+        else:
+            #Append 1 DAC frame to the end of the wordstream
+            for i in range(0, 16):
+                final_wordstream.append(0)
+            #apply the shift
+            self.waveform_samples = self.stream_shift(final_wordstream, fine_delay)
+        
+        #If the locking waveform is the wrong size
+        if(len(locking_wordstream) != 16):
+            print("Error, locking wordstream must be 16 samples long");
+        
+        
+        #Set the locking waveform samples to be uploaded to board
+        self.locking_waveform_samples = stream_shift(locking_wordstream, self.locking_shift)
+        
+        #success
+        return 0
+        
