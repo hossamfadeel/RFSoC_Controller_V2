@@ -508,17 +508,14 @@ class rfsoc_board:
 NANOSECONDS_PER_DAC_WORD = 4
 DAC_MAX_VALUE = 32767#0x7FFF
 DAC_MIN_VALUE = -32768#0x8000
+DAC_FIFO_LEN = 4096 * 16 # in number of samples
             
 class rfsoc_channel:
 
-    #type is either "DAC" or "ADC"
-    type = "DAC"
-
-    #Parameters for DAC and ADC channels
-    channel_num = 0 #between 0 and 15
-
+    
     #Parameters to be set for this DAC channel on the FPGA
     mask_samples = [] #List of samples to be uploaded as the mask
+    mask_enable = 0 #If we need to use the mask
     locking_waveform_samples = [] #list of samples to be uploaded as locking waveform
     mask_enable = 0 #Either 1 or 0, decides if we need the mask in the first place
     run_cycles = 0
@@ -532,41 +529,55 @@ class rfsoc_channel:
     
     
     #Config parameters for waveform generation
+    #These parameters are set by the user
+    channel_num = 0 #between 0 and 15, set by user
     locking_shift = 0 #in ns
-    pre_delay = 0 # in ns
+    locking_amp_factor = 1 #by default, used to adjust amplitude of locking waveform
+    pre_delay = 0 # in ns before experiment
+    post_delay = 0 # in ns after experiment
     period = 0 # of one cycle in nano seconds
     num_repeat_cycles = 0 #number of times to repeat this waveform
+    waveform_amp_factor = 1
+    type = "DAC" #type is either "DAC" or "ADC"
     
     #locking and waveform filenames
     waveform_filename = ""
     locking_filename = ""
     
-    def __init__(self, ls):
+    def __init__(self, ls, wfn, lfn):
     
         self.locking_shift = ls
+        self.waveform_filename = wfn
+        self.locking_filename = lfn
+        
+        #Input checking
+        
+        #type must be DAC or ADC
+        
+        #Amp factors must be between 0 and 1
+        
+        
 
     
-    #Filestuff for reading in the channel
-    #Waveform samplestream generation happening here
-    def stream_scale(stream, old_min, old_max, new_min, new_max):
+    #Returns a scaled stream, all scaling happens about 0
+    def scale_stream(self, stream, new_min, new_max):
         
-         if(old_max == old_min):
-            return stream
+        pos_scale = new_max/max(stream)
+        neg_scale = new_min/min(stream)
         
-         new_stream = []
+        out_stream = []
+        for s in stream:
+            s_f = 0
+            if(s < 0):
+                s_f = s * neg_scale
+            else:
+                s_f = s * pos_scale
+            out_stream.append(s)
+            
+        return out_stream
 
-        #----------------------------------------------------
-        # Modified by Christian 7/5/20
-         slope = (new_max-new_min)/2
-         
-         for i in range(len(stream)):
-             new_stream.append(stream[i]*slope)
-             
-         return new_stream
-        #----------------------------------------------------
-
-    #Really more of a stream rotate
-    def stream_shift(stream, shift):
+    #Rotates the values within a stream by shift number of samples
+    def rotate_stream(self, stream, shift):
         new_stream = []
         index = shift*-1
         
@@ -593,8 +604,8 @@ class rfsoc_channel:
         
         
      
-        
-    def read_waveform_file(self, filename, period):
+    #Takes in a filename and returns a list of the waveform samples that were in the file
+    def read_waveform_file(self, filename):
     
     
         #read out the file as a string
@@ -611,73 +622,99 @@ class rfsoc_channel:
             #get the string without the number
             string_val = prevals[i]
             vals.append(float(string_val))
+            
+        return vals
+  
+    
+    #Takes in a list of samples and returns list of samples which is num_samples long
+    def interpolate_sample_list(self, samp_list, num_samples):
+    
+        disc_time = list(range(0,len(samp_list)))
+        scaled_time = np.arange(0,len(samp_list), len(samp_list)/num_samples)
         
-        #first we need to figure out how many samples our final wordstream will have
-        num_samples = period * NANOSECONDS_PER_DAC_WORD
-        
-        if(num_samples % 16 != 
-        
-        #next we need to set up variables for interpolation
-        disc_time = list(range(0,len(vals)))
-        scaled_time = np.arange(0,len(vals), len(vals)/num_samples)
-        
-        #rescale the values into the word stream
-        prescale_wordstream = np.interp(scaled_time, disc_time, vals)
-        
-        #----------------------------------------------------------------------
-        #modified by Christian 7/5/20 to fix problem with scaling
-        final_wordstream = stream_scale(prescale_wordstream, min(prescale_wordstream), max(prescale_wordstream), DAC_MIN_VALUE, DAC_MAX_VALUE)
-        #----------------------------------------------------------------------
-        
-        return final_wordstream
-        
+        return np.interp(scaled_time, disc_time, vals)
+    
+    #Writes out the waveform sample lists to be uploaded to the FPGA
+    #Returns 0 on success
     def generate_waveform_data(self):
     
-        #Get the locking wordstream and waveform (final) wordstream
-        final_wordstream = self.read_waveform_file(self.waveform_filename)
+        #Get the locking wordstream and waveform wordstream
+        waveform_wordstream = self.read_waveform_file(self.waveform_filename)
         locking_wordstream = self.read_waveform_file(self.locking_filename)
         
-        #if we need to adjust our amplitudes
-        if(self.amp_factor != 1):
-            for i in range(0,len(final_wordstream)):
-                final_wordstream[i] = final_wordstream[i] * self.amp_factor
-                
-                
-        #if our period is too short
-        if(self.period%4 != 0):
-            print("Error, waveform period must be a multiple of 4ns.")
-            return
+        
+        #We'll deal with the locking waveform first
+        #First we interpolate the locking waveform so it's exactly 4ns long
+        locking_wordstream = self.interpolate_sample_list(locking_wordstream, 16)
+        #Then scale the locking wordstream so that it is between DAC_MAX_VALUE and DAC_MIN_VALUE
+        locking_wordstream = self.scale_stream(locking_wordstream, DAC_MIN_VALUE, DAC_MAX_VALUE)
+        #Then scale the locking wordstream
+        if(self.locking_amp_factor):
+            for i in range(0, len(locking_wordstream)):
+                locking_wordstream[i] = locking_wordstream[i] * self.locking_amp_factor
+        #Then shift the stream if need be
+        if(self.locking_shift):
+            locking_wordstream = self.rotate_stream(locking_wordstream, self.locking_shift)
+        #Set up our outputs correctly so they can be sent to the board
+        self.locking_waveform_samples = locking_wordstream.copy()
         
         
-        sample_delay = self.pre_delay * 4
-        if(sample_delay % 1 != 0):
-            print("Error, pre_delay must be a multiple of 0.25ns")
+        #Now we turn our attention to the waveform
+        #First we're going to scale the waveform timing so it is a user-defined length
+        waveform_len_in_samples = self.period * 4
+        
+        if(waveform_len_in_samples % 16 != 0):
+            print("Error, the period of the waveform period of channel #"+str(self.channel_num)+" must be a multiple of 4ns, cannot upload waveform to FPGA")
             return 1
         
-        fine_delay = sample_delay%16 
-        #If the pre_delay is a multiple of 16 samples
-        if(fine_delay == 0):
+        waveform_wordstream = self.interpolate_sample_list(waveform_wordstream, waveform_len_in_samples)
+        #Then scale the amplitude of the wordstream and apply the amp factor
+        waveform_wordstream = self.scale_stream(waveform_wordstream, DAC_MIN_VALUE, DAC_MAX_VALUE)
+        if(self.waveform_amp_factor):
+            for i in range(0, len(waveform_wordstream)):
+                waveform_wordstream[i] = waveform_wordstream[i] * self.waveform_amp_factor
+        
+        #Send out a warning if the delay is not a multiple of 250ps
+        if(round(self.pre_delay * 4) != (self.pre_delay*4)):
+            print("Warning, pre delay for channel #"+str(self.channel_num)+" is not a multiple of 250ps, delay will be rounded to nearest multiple!")
+        
+        #Now we figure out how to set up the fine and coarse delays
+        coarse_delay = round(self.pre_delay / 4)
+        fine_delay = (self.pre_delay * 4) % 16
+        
+        #Set up a preliminary number of run cycles
+        self.run_cycles = waveform_len_in_samples * self.num_repeat_cycles
+        
+        #If the fine delay is not 0
+        if(fine_delay):
+            #Turn on the mask
+            self.mask_enable = 1
             
-            #Then do nothing
-            self.waveform_samples = final_wordstream
-        
-        
-        #Otherwise append exactly one frame and shift
-        else:
-            #Append 1 DAC frame to the end of the wordstream
+            #Write out the mask bytes
+            self.mask_samples = []
             for i in range(0, 16):
-                final_wordstream.append(0)
-            #apply the shift
-            self.waveform_samples = self.stream_shift(final_wordstream, fine_delay)
+                if(i < fine_delay):
+                    self.mask_samples.append(0x0000)
+                else:
+                    self.mask_samples.append(0xFFFF)
+            
+            
+            #Add one to the run cycles to account for the use of the mask
+            self.run_cycles += 1
+            
+            #Shift the waveform wordstream by fine_delay samples
+            waveform_wordstream = self.rotate_stream(fine_delay)
         
-        #If the locking waveform is the wrong size
-        if(len(locking_wordstream) != 16):
-            print("Error, locking wordstream must be 16 samples long");
+        #Write out the samples to waveform samples list
+        self.waveform_samples = waveform_wordstream.copy()
         
+        #Set the post delay and pre_delay
+        self.pre_delay_cycles = coarse_delay
+        self.post_delay_cycles = round(self.post_delay /4)
+        if(self.post_delay_cycles != self.post_delay * 4):
+            print("Warning, post delay for channel #"+str(self.channel_num)+" is not a multiple of 4ns, delay will be rounded!")
         
-        #Set the locking waveform samples to be uploaded to board
-        self.locking_waveform_samples = stream_shift(locking_wordstream, self.locking_shift)
-        
-        #success
+        #Success
         return 0
+        
         
