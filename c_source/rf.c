@@ -24,6 +24,32 @@ u8 rf_get_dac_clock_status()
 	return dac_available ? 0 : 1;
 }
 
+void rf_update_clock_status()
+{
+	Status = XRFdc_Reset(&RFdcInst, XRFDC_ADC_TILE, Tile);
+	if (Status != XRFDC_SUCCESS) {
+		//return XRFDC_FAILURE;
+		debug_print("Failed to reset ADC tile");
+		adc_available = 0;
+	}
+	else
+	{
+		debug_print("ADC input clock detected successfully!");
+		adc_available = 1;
+	}
+	Status = XRFdc_Reset(&RFdcInst, XRFDC_DAC_TILE, Tile);
+	if (Status != XRFDC_SUCCESS) {
+		//return XRFDC_FAILURE;
+		debug_print("Failed to reset DAC tile");
+		dac_available = 0;
+	}
+	else
+	{
+		debug_print("DAC input clock detected successfully!");
+		dac_available = 1;
+	}
+}
+
 
 int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);
 

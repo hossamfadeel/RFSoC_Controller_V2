@@ -36,5 +36,6 @@ u8 rf_init();
 u8 rf_get_adc_clock_status();
 u8 rf_get_dac_clock_status();
 int rf_self_test();
+void rf_update_clock_status();
 
 #endif /* SRC_DRIVERS_RF_H_ */

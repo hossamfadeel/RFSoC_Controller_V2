@@ -301,11 +301,19 @@ class rfsoc_board_driver:
 #Static functions for loading instances of rfsoc_board from file
 
 def load_rfsoc_board():
-    with open(config_filename, 'rb') as infile:
-        return pickle.load(infile)
+    f = open(config_filename, 'rb')
+    ob = pickle.load(infile)
+    f.close()
+    return ob 
 def save_rfsoc_board(board_obj):
-    with open(config_filename, 'rb') as outfile:
-        pickle.dump(board_obj, outfile, pickle.HIGHEST_PROTOCOL)
+    try:
+        f = open(config_filename, 'wb')
+        pickle.dump(board_obj, f, pickle.HIGHEST_PROTOCOL)
+        f.close()
+    except FileNotFoundError:
+        f = open(config_filename, 'wb+')
+        pickle.dump(board_obj, f, pickle.HIGHEST_PROTOCOL)
+        f.close()
  
 #####################################################################################
 #class for the high level driver which implements channel configuration and whatnot##
@@ -363,6 +371,7 @@ class rfsoc_board:
 
         #Flush the buffers and disable adc readout
         
+        #TODO
 
     
     #Returns 0 on success, channel should be an instance of rfsoc_channel of type DAC
@@ -544,18 +553,39 @@ class rfsoc_channel:
     waveform_filename = ""
     locking_filename = ""
     
-    def __init__(self, ls, wfn, lfn):
+    def __init__(self, tp, cn, ls, laf, pred, postd, per, num_rs, waf, wfn, lfn):
     
-        self.locking_shift = ls
-        self.waveform_filename = wfn
-        self.locking_filename = lfn
+        
         
         #Input checking
         
+        #Channel number check
+        if(cn < 0 or cn > 15):
+            raise ValueError('Error, channel number must be between 0 and 15')
+        
         #type must be DAC or ADC
+        if(tp != "DAC" and tp != "ADC"):
+            raise NameError('Error, type of rfsoc_channel object must be DAC or ADC')
         
         #Amp factors must be between 0 and 1
+        if(laf < 0 or laf > 1):
+            raise ValueError('Error, locking amplitude factor must be between 0 and 1')
+        if(waf < 0 or waf > 1):
+            raise ValueError('Error, waveform amplitude factor must be between 0 and 1')
         
+        
+        self.type = tp
+        self.channel_num = cn
+        self.locking_shift = ls
+        self.locking_amp_factor = laf
+        self.pre_delay = pred
+        self.post_delay = postd
+        self.period = per
+        self.num_repeat_cycles = num_rs
+        self.waveform_amp_factor = waf
+        self.waveform_filename = wfn
+        self.locking_filename = lfn
+        return
         
 
     
@@ -707,6 +737,9 @@ class rfsoc_channel:
         
         #Write out the samples to waveform samples list
         self.waveform_samples = waveform_wordstream.copy()
+        #Check if it's too long
+        if(len(self.waveform_samples) > DAC_FIFO_LEN):
+            raise ValueError("Error, waveform is larger than size of DAC fifo, waveform is " + str(len(self.waveform_samples)) + " samples long, DAC fifo can only hold " + str(DAC_FIFO_LEN) + " samples")
         
         #Set the post delay and pre_delay
         self.pre_delay_cycles = coarse_delay

@@ -128,6 +128,8 @@ void cmd_handle_command()
 					break;
 					
 					case CMD_CHECK_CLOCKS:
+						//Update the clock status
+						rf_update_clock_status();
 						//Build the response byte
 						ret_val = rf_get_dac_clock_status() & (rf_get_adc_clock_status() << 1);
 						//Return the response
