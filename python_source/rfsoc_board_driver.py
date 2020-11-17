@@ -60,14 +60,14 @@ class rfsoc_board_driver:
     
         self.port.close()
         
-    #Waits for a single byte to be received and returns it, returns -1 on error
+    #Waits for a single byte to be received and returns it, returns 1 on error
     def wait_ack(self):
         try:
             retval = self.port.read(1)
             return retval[0]
         except:
             print("Bad ACK received from FPGA board");
-            return -1
+            return 1
     
     #Returns 0 if board is up, 1 otherwise
     def ping_board(self):
@@ -308,10 +308,12 @@ def load_rfsoc_board():
 def save_rfsoc_board(board_obj):
     try:
         f = open(config_filename, 'wb')
+        f.truncate(0)
         pickle.dump(board_obj, f, pickle.HIGHEST_PROTOCOL)
         f.close()
     except FileNotFoundError:
         f = open(config_filename, 'wb+')
+        f.truncate(0)
         pickle.dump(board_obj, f, pickle.HIGHEST_PROTOCOL)
         f.close()
  
@@ -352,26 +354,44 @@ class rfsoc_board:
     #List of ADC tracker objects
     adc_trackers = []
     
-    def __init__(self):
+    #Port name is the name of the serial port
+    def __init__(self, portname):
         
         #Initialize the list of ADC channels being tracked
         for i in range(0, 16):
             #If we see this -1 value we know the channel was never configured
             at = adc_tracker.adc_tracker(0, -1)
             adc_trackers.append(at)
-            
-            
+        
+        #Initialize the board driver
+        self.board_driver = rfsoc_board_driver(portname)
+        
+        #Try to ping the board
+        if(self.board_driver.ping_board())
+            print("Could not communicate with FPGA board!")
+        else:
+            print("Connection to FPGA board is up!")
         
         return
     
     
     #Returns 0 on success
-    #If dummy data is set, ADCs will return dummy data
     def configure_all_channels(self, dummy_adc = 0):
 
         #Flush the buffers and disable adc readout
+        self.board_driver.set_adc_readout(0)
+        self.board_driver.flush_buffers()
         
-        #TODO
+        #Loop through the channels and configure then
+        for c in self. channel_list:
+            if(c.type == "ADC"):
+                if(self.configure_adc_channel(c)):
+                    return 1
+            else:
+                if(self.configure_adc_channel(c)):
+                    return 1
+        #Success
+        return 0
 
     
     #Returns 0 on success, channel should be an instance of rfsoc_channel of type DAC
@@ -480,11 +500,11 @@ class rfsoc_board:
         #If the channel has not been initialized
         if(self.channel_list[channel_num].num_triggers == -1):
             print("Error, channel has not been initialized, cannot read out")
-            return 1
+            return []
     
         if(not self.channel_list[channel_num].is_done()):
             print("Error, ADC channel #" + str(channel) + " has not been triggered enough times, must be triggered " + str(2**self.channel_list[channel].shift_val) + " tomes, has only been triggered " + str(self.channel_list[channel_num].num_triggers) + " times, cannot readout")
-            return 1
+            return []
             
         #Write the shift value for this channel as 0 so we can enable readout
         self.board_driver.select_channel(channel)
@@ -573,6 +593,13 @@ class rfsoc_channel:
         if(waf < 0 or waf > 1):
             raise ValueError('Error, waveform amplitude factor must be between 0 and 1')
         
+        #locking shift, period, num_repeat_cycles must all be positive
+        if(ls < 0):
+            raise ValueError("Error, locking shift must be greater than 0")
+        if(per < 0):
+            raise ValueError("Error, waveform period must be greater than 0")
+        if(num_rs < 0):
+            raise ValueError("Error, repeat cycles must be greater than 0")
         
         self.type = tp
         self.channel_num = cn
@@ -668,34 +695,44 @@ class rfsoc_channel:
     #Returns 0 on success
     def generate_waveform_data(self):
     
-        #Get the locking wordstream and waveform wordstream
-        waveform_wordstream = self.read_waveform_file(self.waveform_filename)
-        locking_wordstream = self.read_waveform_file(self.locking_filename)
-        
-        
-        #We'll deal with the locking waveform first
-        #First we interpolate the locking waveform so it's exactly 4ns long
-        locking_wordstream = self.interpolate_sample_list(locking_wordstream, 16)
-        #Then scale the locking wordstream so that it is between DAC_MAX_VALUE and DAC_MIN_VALUE
-        locking_wordstream = self.scale_stream(locking_wordstream, DAC_MIN_VALUE, DAC_MAX_VALUE)
-        #Then scale the locking wordstream
-        if(self.locking_amp_factor):
-            for i in range(0, len(locking_wordstream)):
-                locking_wordstream[i] = locking_wordstream[i] * self.locking_amp_factor
-        #Then shift the stream if need be
-        if(self.locking_shift):
-            locking_wordstream = self.rotate_stream(locking_wordstream, self.locking_shift)
-        #Set up our outputs correctly so they can be sent to the board
-        self.locking_waveform_samples = locking_wordstream.copy()
-        
+        #If the locking filename is blank then skip this step
+        if(self.locking_filename != ""):
+    
+            #Get the locking wordstream
+            locking_wordstream = self.read_waveform_file(self.locking_filename)
+            
+            #First we interpolate the locking waveform so it's exactly 4ns long
+            locking_wordstream = self.interpolate_sample_list(locking_wordstream, 16)
+            #Then scale the locking wordstream so that it is between DAC_MAX_VALUE and DAC_MIN_VALUE
+            locking_wordstream = self.scale_stream(locking_wordstream, DAC_MIN_VALUE, DAC_MAX_VALUE)
+            #Then scale the locking wordstream
+            if(self.locking_amp_factor):
+                for i in range(0, len(locking_wordstream)):
+                    locking_wordstream[i] = locking_wordstream[i] * self.locking_amp_factor
+            #Then shift the stream if need be
+            if(self.locking_shift):
+                locking_wordstream = self.rotate_stream(locking_wordstream, self.locking_shift)
+            #Set up our outputs correctly so they can be sent to the board
+            self.locking_waveform_samples = locking_wordstream.copy()
+        #Otherwise append 0s to locking waveform
+        else:
+            self.locking_waveform_samples = []
+            for i in range(0, 16):
+                self.locking_waveform_samples.append(0)
         
         #Now we turn our attention to the waveform
+        
+        #If our waveform filename is blank just return for now
+        if(self.waveform_filename == ""):
+            return 0
+        
         #First we're going to scale the waveform timing so it is a user-defined length
+        waveform_wordstream = self.read_waveform_file(self.waveform_filename)
         waveform_len_in_samples = self.period * 4
         
         if(waveform_len_in_samples % 16 != 0):
-            print("Error, the period of the waveform period of channel #"+str(self.channel_num)+" must be a multiple of 4ns, cannot upload waveform to FPGA")
-            return 1
+            raise ValueError("Error, the period of the waveform period of channel #"+str(self.channel_num)+" must be a multiple of 4ns, cannot upload waveform to FPGA")
+            
         
         waveform_wordstream = self.interpolate_sample_list(waveform_wordstream, waveform_len_in_samples)
         #Then scale the amplitude of the wordstream and apply the amp factor
@@ -751,3 +788,43 @@ class rfsoc_channel:
         return 0
         
         
+        
+        
+#Tools for looking for serial ports to use
+import serial
+import serial.tools.list_ports
+
+
+def get_port_list():
+    ports = list(serial.tools.list_ports.comports())
+    ps = []
+    for p in ports:
+        ps.append(p.device)
+    return ps
+
+def print_port_list():
+
+    print("Searching for COM port...")
+
+    ports = list(serial.tools.list_ports.comports())
+    
+    usable_ports = []
+    
+    for p in ports:
+       
+        ser = serial.Serial()
+        ser.baudrate = 19200
+        ser.port = p.device
+        try:
+            ser.open()
+            print(p.description + " is " + "writable" if ser.writable() else "UNWRITABLE")
+            if(ser.writable()):
+                usable_ports.append(p)
+            ser.close()
+        except:
+            print("Unable to open: " + p.description)
+            
+            
+    print("List of usable COM ports:")   
+    for p in ports:
+        print(p.device)
