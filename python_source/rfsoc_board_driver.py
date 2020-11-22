@@ -573,33 +573,7 @@ class rfsoc_channel:
     waveform_filename = ""
     locking_filename = ""
     
-    def __init__(self, tp, cn, ls, laf, pred, postd, per, num_rs, waf, wfn, lfn):
-    
-        
-        
-        #Input checking
-        
-        #Channel number check
-        if(cn < 0 or cn > 15):
-            raise ValueError('Error, channel number must be between 0 and 15')
-        
-        #type must be DAC or ADC
-        if(tp != "DAC" and tp != "ADC"):
-            raise NameError('Error, type of rfsoc_channel object must be DAC or ADC')
-        
-        #Amp factors must be between 0 and 1
-        if(laf < 0 or laf > 1):
-            raise ValueError('Error, locking amplitude factor must be between 0 and 1')
-        if(waf < 0 or waf > 1):
-            raise ValueError('Error, waveform amplitude factor must be between 0 and 1')
-        
-        #locking shift, period, num_repeat_cycles must all be positive
-        if(ls < 0):
-            raise ValueError("Error, locking shift must be greater than 0")
-        if(per < 0):
-            raise ValueError("Error, waveform period must be greater than 0")
-        if(num_rs < 0):
-            raise ValueError("Error, repeat cycles must be greater than 0")
+    def __init__(self, tp, cn, ls, laf, pred, postd, per, num_rs, waf, wfn, lfn, adc_sv, adc_rc):
         
         self.type = tp
         self.channel_num = cn
@@ -612,9 +586,41 @@ class rfsoc_channel:
         self.waveform_amp_factor = waf
         self.waveform_filename = wfn
         self.locking_filename = lfn
+        
+        self.shift_val = adc_sv
+        self.adc_run_cycles = adc_rc
+        
+        #Check our inputs
+        self.check_parameters()
+        #Set up the values passed to the board object
+        self.generate_channel_data()
+        
         return
         
-
+    #Raises an exception if any of the input parameters have issues
+    def check_parameters(self):
+    
+        #Channel number check
+        if(self.channel_num < 0 or self.channel_num > 15):
+            raise ValueError('Error, channel number must be between 0 and 15')
+        
+        #type must be DAC or ADC
+        if(self.type = tp != "DAC" and self.type = tp != "ADC"):
+            raise NameError('Error, type of rfsoc_channel object must be DAC or ADC')
+        
+        #Amp factors must be between 0 and 1
+        if(self.locking_amp_factor < 0 or self.locking_amp_factor > 1):
+            raise ValueError('Error, locking amplitude factor must be between 0 and 1')
+        if(self.waveform_amp_factor < 0 or self.waveform_amp_factor > 1):
+            raise ValueError('Error, waveform amplitude factor must be between 0 and 1')
+        
+        #locking shift, period, num_repeat_cycles must all be positive
+        if(self.locking_shift < 0):
+            raise ValueError("Error, locking shift must be greater than 0")
+        if(self.period < 0):
+            raise ValueError("Error, waveform period must be greater than 0")
+        if(self.num_repeat_cycles < 0):
+            raise ValueError("Error, repeat cycles must be greater than 0")
     
     #Returns a scaled stream, all scaling happens about 0
     def scale_stream(self, stream, new_min, new_max):
@@ -691,9 +697,9 @@ class rfsoc_channel:
         
         return np.interp(scaled_time, disc_time, vals)
     
-    #Writes out the waveform sample lists to be uploaded to the FPGA
+    #Writes out the waveform sample lists to be uploaded to the FPGA and sets other parameters to be uploaded
     #Returns 0 on success
-    def generate_waveform_data(self):
+    def generate_channel_data(self):
     
         #If the locking filename is blank then skip this step
         if(self.locking_filename != ""):
