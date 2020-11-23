@@ -621,6 +621,15 @@ class rfsoc_channel:
             raise ValueError("Error, waveform period must be greater than 0")
         if(self.num_repeat_cycles < 0):
             raise ValueError("Error, repeat cycles must be greater than 0")
+            
+        #ADC value checking
+        if(self.adc_run_cycles < 0):
+            raise ValueError("Error, ADC run cycles must be greater than 0")
+        if(self.adc_shift < 0):
+            raise ValueError("Error, ADC shift must be positive")
+        if(round(self.adc_shift) != self.adc_shift):
+            raise ValueError("Error, number of ADC averages must be a power of 2")
+        return
     
     #Returns a scaled stream, all scaling happens about 0
     def scale_stream(self, stream, new_min, new_max):

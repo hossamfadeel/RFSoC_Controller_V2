@@ -1,6 +1,7 @@
 
 
 import rfsoc_board_driver as rbd
+import sys
 
 #List of arguments
 #1 channel number between 1 and 16
@@ -21,8 +22,8 @@ import rfsoc_board_driver as rbd
 
 
 if(len(sys.argv) < 9):
-    print("Error, not enough arguments, please see top of script for list of arguments.")
-    sys.exit()
+    raise ValueError("Error, not enough arguments, please see top of script for list of arguments.")
+    
 
 #get all of our variables first
 channel_number = int(sys.argv[1])
