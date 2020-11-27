@@ -3,8 +3,10 @@
 #Low level driver used to communicate with RFSoC firmware over UART
 
 
-import serial
+import serial #Used to open serial ports for board communication
 import pickle #Used for object serialization
+import re #Used for waveform file readout
+import numpy as np #Used for waveform formatting
 
 #Configuration file this object is saved to between script calls
 config_filename = "rfsoc_config_file.dat"
@@ -52,9 +54,9 @@ class rfsoc_board_driver:
         self.port.port = portname
         self.port.timeout = UART_TIMEOUT
         self.dummy_mode = dm
-        #Open the port here if we're not in dummy mode
-        if(dm == 0):
-            self.port.open()
+
+        if(dm):
+            print("WARNING: Initializing board driver in dummy mode!")
     
     
     
@@ -62,6 +64,11 @@ class rfsoc_board_driver:
         #If we're not in dummy mode
         if(self.dummy_mode == 0):
             self.port.close()
+            
+    def open_board(self):
+        self.port.open()
+    def close_board(self):
+        self.port.close()
         
     #Waits for a single byte to be received and returns it, returns 1 on error
     def wait_ack(self):
@@ -188,7 +195,7 @@ class rfsoc_board_driver:
         bytes_list = []
         
         #Create the array of mask bytes to be sent to the FPGA
-        for m in mask_locking:
+        for m in locking_samples:
             high_byte = (m>>8)&0xFF
             low_byte = m&0xFF
             bytes_list.append(low_byte)
@@ -226,9 +233,9 @@ class rfsoc_board_driver:
     
         mask_en_byte = 0x00
         if(mask_en):
-            mux_sel_byte = 0xFF
+            mask_en_byte = 0xFF
             
-        self.port.write([CMD_PREAMBLE, CMD_SET_MASK_ENABLE, mux_sel_byte])
+        self.port.write([CMD_PREAMBLE, CMD_SET_MASK_ENABLE, mask_en_byte])
         res = self.wait_ack()
         if(res == CMD_ACK):
             return 0
@@ -360,7 +367,7 @@ class rfsoc_board_driver:
 
 def load_rfsoc_board():
     f = open(config_filename, 'rb')
-    ob = pickle.load(infile)
+    ob = pickle.load(f)
     f.close()
     return ob 
 def save_rfsoc_board(board_obj):
@@ -384,58 +391,34 @@ class rfsoc_board:
     board_driver = None
     
     #list of channel objects used to configure the board
-    channel_list = None
-    
-    #Used for keeping track of how many times an ADC channel has been triggered
-    class adc_tracker:
-    
-        shift_val = 0
-        num_triggers = 0
-        run_cycles = 0
-        
-        def __init__(self, sv, nt):
-            self.shift_val = sv
-            self.num_triggers = nt
-            return
-        
-        #If we've triggered enough times for readout
-        def is_done(self)
-            if(self.num_triggers < 2 ** self.shift_val):
-                return 0
-            return 1
-        #If we triggered too many times
-        def has_overflown(self)
-            if(self.num_triggers > 2 ** self.shift_val):
-                return 1
-            return 0
-    
-    #List of ADC tracker objects
-    adc_trackers = []
+    channel_list = []
     
     #Port name is the name of the serial port
-    def __init__(self, portname):
+    def __init__(self, portname, dm):
         
-        #Initialize the list of ADC channels being tracked
-        for i in range(0, 16):
-            #If we see this -1 value we know the channel was never configured
-            at = adc_tracker.adc_tracker(0, -1)
-            adc_trackers.append(at)
+        self.channel_list = []
         
         #Initialize the board driver
-        self.board_driver = rfsoc_board_driver(portname)
+        self.board_driver = rfsoc_board_driver(portname, dm)
         
         #Try to ping the board
-        if(self.board_driver.ping_board())
+        if(self.board_driver.ping_board()):
             print("Could not communicate with FPGA board!")
         else:
             print("Connection to FPGA board is up!")
         
         return
-    
+   
+        #Checks if this instance is equaled to a different instance
+    def __eq__(self, other) : 
+        return self.__dict__ == other.__dict__
     
     #Returns 0 on success
     def configure_all_channels(self, dummy_adc = 0):
 
+        #Open the serial port
+        self.board_driver.open_board()
+        
         #Flush the buffers and disable adc readout
         self.board_driver.set_adc_readout(0)
         self.board_driver.flush_buffers()
@@ -449,6 +432,7 @@ class rfsoc_board:
                 if(self.configure_adc_channel(c)):
                     return 1
         #Success
+        self.board_driver.close_board()
         return 0
 
     
@@ -496,9 +480,9 @@ class rfsoc_board:
         while(i < len(channel.waveform_samples)-1):
             
             #Swap i and i+1 if this is backwards
-            new_sample = (channel.waveform_samples[i] << 16) | (channel.waveform_samples[i+1]
+            new_sample = (channel.waveform_samples[i] << 16) | (channel.waveform_samples[i+1])
             axis_words.append(new_sample)
-            i += 2;
+            i += 2
         
         for a in axis_words:
             if(self.board_driver.write_word(a)):
@@ -517,9 +501,7 @@ class rfsoc_board:
     def configure_adc_channel(self, channel):
         
         #Set up the tracker object for this channel
-        self.adc_trackers[channel.channel_num].shift_val = channel.shift_val
-        self.adc_trackers[channel.channel_num].num_triggers = 0
-        self.adc_trackers[channel.channel_num].run_cycles = channel.adc_run_cycles
+        channel.num_triggers = 0
         
         #Select the channel number first
         if(self.board_driver.select_channel(channel.channel_num)):
@@ -540,37 +522,52 @@ class rfsoc_board:
     #Triggers the FPGA once, returns 0 on success
     def trigger(self):
 
+        #Open the serial port
+        self.board_driver.open_board()
+        
         #Trigger the board once
         if(self.board_driver.trigger()):
             print("Error while triggering board")
             return 1
         
         #Update the counters
-        for at in self.adc_trackers
-            if(at.num_triggers != -1):
-                at.num_triggers += 1
+        for c in self.channel_list:
+            c.num_triggers += 1
+
+        self.board_driver.close_board()
         return 0
     
     #Where channel_num is the integer 0-15
     #Returns a list of sample read out (may be empty)
     def readout_adc(self, channel_num):
+        
+        
+        #Find the matching ADC channel object in our channel list
+        adc_obj = None
+        for c in self.channel_list:
+            if(c.type == "ADC" and c.channel_num == channel_num):
+                adc_obj = c
+                break
     
-        #If the channel has not been initialized
-        if(self.channel_list[channel_num].num_triggers == -1):
-            print("Error, channel has not been initialized, cannot read out")
-            return []
+        if(adc_obj == None):
+            raise ValueError("Error, could not locate ADC channel #" + str(channel_num) + " in channel list, cannot perform readout!")
     
-        if(not self.channel_list[channel_num].is_done()):
-            print("Error, ADC channel #" + str(channel) + " has not been triggered enough times, must be triggered " + str(2**self.channel_list[channel].shift_val) + " tomes, has only been triggered " + str(self.channel_list[channel_num].num_triggers) + " times, cannot readout")
+    
+        if(not adc_obj.is_done()):
+            raise RuntimeError("Error, ADC channel #" + str(channel_num) + " has not been triggered enough times, must be triggered " + str(2**adc_obj.shift_val) + " times, has only been triggered " + str(adc_obj.num_triggers) + " times, cannot readout")
             return []
+        
+        #Open the serial port
+        self.board_driver.open_board()
+        
             
         #Write the shift value for this channel as 0 so we can enable readout
-        self.board_driver.select_channel(channel)
+        self.board_driver.select_channel(channel_num)
         self.board_driver.set_adc_shift(0)
         self.board_driver.set_adc_readout(1)
         
         #Figure out how many times we need to read the axis bus
-        num_axis_reads=self.channel_list[channel_num].adc_run_cycles
+        num_axis_reads = adc_obj.adc_run_cycles
         
         sample_list = []
         for i in range(0, num_axis_reads):
@@ -579,6 +576,7 @@ class rfsoc_board:
             status, word = self.board_driver.read_axis_word()
             if(status):
                 print("Error while reading AXIS word during ADC readout, read " + str(i) + " out of " + str(num_axis_reads) + " expected reads")
+                self.board_driver.close_board()
                 return sample_list
             #Otherwise break it into two samples and add it to the list
             sample_0 = (word  >> 16) & 0xFFFF
@@ -590,8 +588,9 @@ class rfsoc_board:
         
         #Reset the shift and readout values
         self.board_driver.set_adc_readout(0)
-        self.board_driver.set_adc_shift()
+        self.board_driver.set_adc_shift(adc_obj.shift_val)
         
+        self.board_driver.close_board()
         return sample_list
         
    
@@ -609,7 +608,7 @@ class rfsoc_channel:
     mask_enable = 0 #If we need to use the mask
     locking_waveform_samples = [] #list of samples to be uploaded as locking waveform
     mask_enable = 0 #Either 1 or 0, decides if we need the mask in the first place
-    run_cycles = 0
+    run_cycles = 0 #Number of cycles DAC verilog module will run for in playback state
     pre_delay_cycles = 0
     post_delay_cycles = 0
     waveform_samples = [] #16 bit entries
@@ -617,6 +616,7 @@ class rfsoc_channel:
     #Parameters for ADC type channels
     shift_val = 0 #Used for doing 2 ^ shift_val averages when capturing
     adc_run_cycles = 0 #Sets how many cycles the ADC will record for
+    num_triggers = 0 # Counts number of times this channel has been triggered
     
     
     #Config parameters for waveform generation
@@ -658,7 +658,19 @@ class rfsoc_channel:
         self.generate_channel_data()
         
         return
-        
+    
+    #ADC Checking functions
+    #If we've triggered enough times for readout
+    def is_done(self):
+        if(self.num_triggers < 2 ** self.shift_val):
+            return 0
+        return 1
+    #If we triggered too many times
+    def has_overflown(self):
+        if(self.num_triggers > 2 ** self.shift_val):
+            return 1
+        return 0
+
     #Raises an exception if any of the input parameters have issues
     def check_parameters(self):
     
@@ -667,7 +679,7 @@ class rfsoc_channel:
             raise ValueError('Error, channel number must be between 0 and 15')
         
         #type must be DAC or ADC
-        if(self.type = tp != "DAC" and self.type = tp != "ADC"):
+        if(self.type != "DAC" and self.type != "ADC"):
             raise NameError('Error, type of rfsoc_channel object must be DAC or ADC')
         
         #Amp factors must be between 0 and 1
@@ -675,6 +687,12 @@ class rfsoc_channel:
             raise ValueError('Error, locking amplitude factor must be between 0 and 1')
         if(self.waveform_amp_factor < 0 or self.waveform_amp_factor > 1):
             raise ValueError('Error, waveform amplitude factor must be between 0 and 1')
+            
+        #Pre and post delay cannot be negative
+        if(self.pre_delay < 0):
+            raise ValueError("Error, pre delay must be positive or 0")
+        if(self.post_delay < 0):
+            raise ValueError("Error, post delay must be positive or 0")
         
         #locking shift, period, num_repeat_cycles must all be positive
         if(self.locking_shift < 0):
@@ -687,26 +705,30 @@ class rfsoc_channel:
         #ADC value checking
         if(self.adc_run_cycles < 0):
             raise ValueError("Error, ADC run cycles must be greater than 0")
-        if(self.adc_shift < 0):
+        if(self.shift_val < 0):
             raise ValueError("Error, ADC shift must be positive")
-        if(round(self.adc_shift) != self.adc_shift):
+        if(round(self.shift_val) != self.shift_val):
             raise ValueError("Error, number of ADC averages must be a power of 2")
         return
     
     #Returns a scaled stream, all scaling happens about 0
     def scale_stream(self, stream, new_min, new_max):
         
-        pos_scale = new_max/max(stream)
-        neg_scale = new_min/min(stream)
+        pos_scale = 0
+        #Prevent divide by 0
+        if(max(stream)):
+            pos_scale = new_max/max(stream)
+        neg_scale = 0
+        if(min(stream)):
+            neg_scale = new_min/min(stream)
         
         out_stream = []
         for s in stream:
-            s_f = 0
+            s_f = s * pos_scale
             if(s < 0):
                 s_f = s * neg_scale
-            else:
-                s_f = s * pos_scale
-            out_stream.append(s)
+                
+            out_stream.append(s_f)
             
         return out_stream
 
@@ -766,7 +788,7 @@ class rfsoc_channel:
         disc_time = list(range(0,len(samp_list)))
         scaled_time = np.arange(0,len(samp_list), len(samp_list)/num_samples)
         
-        return np.interp(scaled_time, disc_time, vals)
+        return np.interp(scaled_time, disc_time, samp_list)
     
     #Writes out the waveform sample lists to be uploaded to the FPGA and sets other parameters to be uploaded
     #Returns 0 on success
@@ -814,7 +836,7 @@ class rfsoc_channel:
         waveform_wordstream = self.interpolate_sample_list(waveform_wordstream, waveform_len_in_samples)
         #Then scale the amplitude of the wordstream and apply the amp factor
         waveform_wordstream = self.scale_stream(waveform_wordstream, DAC_MIN_VALUE, DAC_MAX_VALUE)
-        if(self.waveform_amp_factor):
+        if(self.waveform_amp_factor != 1):
             for i in range(0, len(waveform_wordstream)):
                 waveform_wordstream[i] = waveform_wordstream[i] * self.waveform_amp_factor
         
@@ -823,11 +845,11 @@ class rfsoc_channel:
             print("Warning, pre delay for channel #"+str(self.channel_num)+" is not a multiple of 250ps, delay will be rounded to nearest multiple!")
         
         #Now we figure out how to set up the fine and coarse delays
-        coarse_delay = round(self.pre_delay / 4)
-        fine_delay = (self.pre_delay * 4) % 16
+        coarse_delay = int(self.pre_delay / 4)
+        fine_delay = int((self.pre_delay * 4) % 16)
         
         #Set up a preliminary number of run cycles
-        self.run_cycles = waveform_len_in_samples * self.num_repeat_cycles
+        self.run_cycles = (self.period/4) * self.num_repeat_cycles
         
         #If the fine delay is not 0
         if(fine_delay):
@@ -847,14 +869,16 @@ class rfsoc_channel:
             self.run_cycles += 1
             
             #Shift the waveform wordstream by fine_delay samples
-            waveform_wordstream = self.rotate_stream(fine_delay)
+            waveform_wordstream = self.rotate_stream(waveform_wordstream, fine_delay)
         else:
             self.mask_enable = 0
             for i in range(0, 16):
                 self.mask_samples.append(0xFFFF)#Set it to all Fs to make plot_waveform easier to implement
         
         #Write out the samples to waveform samples list
-        self.waveform_samples = waveform_wordstream.copy()
+        self.waveform_samples = []
+        for w in waveform_wordstream:
+            self.waveform_samples.append(int(w))
         #Check if it's too long
         if(len(self.waveform_samples) > DAC_FIFO_LEN):
             raise ValueError("Error, waveform is larger than size of DAC fifo, waveform is " + str(len(self.waveform_samples)) + " samples long, DAC fifo can only hold " + str(DAC_FIFO_LEN) + " samples")
@@ -862,7 +886,7 @@ class rfsoc_channel:
         #Set the post delay and pre_delay
         self.pre_delay_cycles = coarse_delay
         self.post_delay_cycles = round(self.post_delay /4)
-        if(self.post_delay_cycles != self.post_delay * 4):
+        if(self.post_delay_cycles != self.post_delay / 4):
             print("Warning, post delay for channel #"+str(self.channel_num)+" is not a multiple of 4ns, delay will be rounded!")
         
         #Success
@@ -872,7 +896,6 @@ class rfsoc_channel:
         
         
 #Tools for looking for serial ports to use
-import serial
 import serial.tools.list_ports
 
 

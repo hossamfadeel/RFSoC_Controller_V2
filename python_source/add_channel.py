@@ -15,8 +15,7 @@ import sys
 #9 locking waveform amplitude factor, must be between 0 and 1
 #10 locking phase in nanoseconds, can be a float but will be rounded to nearest quarter nanosecond
 #11 is the locking file name
-#12 is pre_waveform_fix
-#13 is use one long waveform?
+
 
 
 
@@ -35,12 +34,9 @@ post_delay = int(sys.argv[4]) #in nanoseconds, can be negative and a float
 amp_mul_factor = float(sys.argv[5]) #between 0 and 1
 
 num_repeat_cycles = int(sys.argv[6])
-if(num_repeat_cycles < 1):
-    raise ValueError("Error, number of cycles must be greater than 0")
 
 zero_delay = float(sys.argv[7]) #in nanoseconds, must be positive
-if(zero_delay < 0):
-    raise ValueError("Error, delay before experiment must be positive or 0")
+
     
 
 
@@ -79,7 +75,7 @@ for c in board.channel_list:
         #If we're about to overwrite something that is already configured
         if(is_locking and c.locking_filename != ""):
             print("Warning, overriding waveform configuration for channel " + str(channel_number))
-        if(!is_locking and c.waveform_filename != ""):
+        if(not is_locking and c.waveform_filename != ""):
             print("Warning, overriding locking cycle configuration for channel " + str(channel_number))
         
         if(is_locking):
@@ -111,7 +107,7 @@ if(found == 0):
         post_delay,
         waveform_period,
         num_repeat_cycles,
-        waveform_amp_factor,
+        amp_mul_factor,
         waveform_filename,
         locking_filename,
         0, 0)
@@ -121,19 +117,16 @@ if(found == 0):
 #Save the board object to disk
 rbd.save_rfsoc_board(board)
 
-#Make sure that last step worked
-if(rbd.load_rfsoc_board() != board):
-    raise ValueError("Error, unable to save board object state to disk")
-else:
-    print("Successfully added channel #" + str(channel_number+1))
-    print("Waveform file: " + waveform_filename + 
-          "\nPeriod: " + str(waveform_period) +  
-          " (ns)\nWaveform amplitude multiplier: " + str(amp_mul_factor) + 
-          "\nNumber of playback cycles: " + str(num_cycles) + 
-          "\nDelay before experiment: " + str(zero_delay) + 
-          " (ns)\nDelay after experiment: " + str(post_delay) +
-          " (ns)\nIs locking channel: " + ("YES" if is_locking == 1 else "NO") + 
-          "\nLocking file: " + locking_filename + 
-          "\nLocking amplitude factor: " + str(locking_amp_factor) + "\nLocking phase: " + str(locking_phase) + " (ns)" + 
-          "\nPre-waveform fix (subtract 4ns from total period): " + "IGNORED" + 
-          "\nOne long waveform: " + "IGNORED" + "\n")
+
+print("Successfully added channel #" + str(channel_number+1))
+print("Waveform file: " + waveform_filename + 
+      "\nPeriod: " + str(waveform_period) +  
+      " (ns)\nWaveform amplitude multiplier: " + str(amp_mul_factor) + 
+      "\nNumber of playback cycles: " + str(num_repeat_cycles) + 
+      "\nDelay before experiment: " + str(zero_delay) + 
+      " (ns)\nDelay after experiment: " + str(post_delay) +
+      " (ns)\nIs locking channel: " + ("YES" if is_locking == 1 else "NO") + 
+      "\nLocking file: " + locking_filename + 
+      "\nLocking amplitude factor: " + str(locking_amp_factor) + "\nLocking phase: " + str(locking_phase) + " (ns)" + 
+      "\nPre-waveform fix (subtract 4ns from total period): " + "IGNORED" + 
+      "\nOne long waveform: " + "IGNORED" + "\n")

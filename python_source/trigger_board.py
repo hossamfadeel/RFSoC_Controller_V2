@@ -2,6 +2,8 @@
 
 
 import rfsoc_board_driver as rbd
+import sys
+import numpy
 
 def save_waveform(data):
     timestr = time.strftime("%Y-%m-%d--%H-%M-%S")
