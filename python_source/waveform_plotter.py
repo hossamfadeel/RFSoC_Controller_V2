@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 #print ("Switched to:",matplotlib.get_backend())
 
 #For plotting adc waveforms
-def plot_waveform(data):
+def plot_adc_waveform(data):
     
     if(data == None):
         print("Error, unable to plot waveform, adc bytestream was empty.")
@@ -33,29 +33,58 @@ def plot_waveform(data):
 #IF YOU'RE HAVING PROBLEMS< REMEMBER TO ADD THE PATH LIBRARY/BIN and ANACONDA TO SYSTEM PATH
     
 #channels should be an array of channels    
-def plot_waveforms(channels):
+def plot_dac_waveforms(channels):
     
-    scale = 1800/32767
+    scale = 1800/0x7FFF
     
     try:
          fig, ax = plt.subplots()
          
          for c in channels:
-             #Get the channel parameters
-             pre_delay = c.
+         
+             #Skip this channel if it's an ADC channel
+             if(c.type == "ADC"):
+                continue
              
              #Figure out when the waveform is over
-             t_last = pre_delay + waveform_length + post_delay
+             t_last = c.pre_delay + (c.period*c.num_repeat_cycles) + c.post_delay
              #Set up our plot lists
-             t_now = 0
+             t_now = 0 #in ns
              t = []
              wave = []
+             
+             #Figure out the starting position of the waveform
+             wave_pos = 0
+             for m in c.mask_samples
+                #If we see something not masked out then this is where the waveform starts
+                if(m):
+                    break
+                wave_pos += 1
+             
              while(t < t_last):
+                
+                #Append the current time to our times list
+                t.append(t_now)
                 
                 #If we're in pre_delay
                 if(t_now < pre_delay):
-                    
+                    #append a 0
+                    wave.append(0)
+                #If we're in the waveform 
+                elif(t_now < pre_delay + waveform_length):
+                    #Append a waveform sample
+                    wave.append(c.waveform_samples[wave_pos] * scale)
+                    #Wrap around our index if need be
+                    if(wave_pos == len(c.waveform_samples)-1):
+                        wave_pos = 0
+                    else:
+                        wave_pos += 1
+                #Must be in post delay
+                else:
+                    wave.append(0)
                  
+                t_now += 0.25
+                
              ax.plot(t, wave, label="channel " + str(c.number+1))
          
          

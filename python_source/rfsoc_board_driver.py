@@ -42,23 +42,26 @@ class rfsoc_board_driver:
 
 
     port = None
+    dummy_mode = 0 #If set to 0, all function succeed regardless of board state
     
 
-    def __init__(self, portname):
+    def __init__(self, portname, dm = 0):
     
         self.port = serial.Serial()
         self.port.baudrate = BAUDRATE
         self.port.port = portname
         self.port.timeout = UART_TIMEOUT
-        
-        #Open the port here
-        self.port.open()
+        self.dummy_mode = dm
+        #Open the port here if we're not in dummy mode
+        if(dm == 0):
+            self.port.open()
     
     
     
     def __del__(self):
-    
-        self.port.close()
+        #If we're not in dummy mode
+        if(self.dummy_mode == 0):
+            self.port.close()
         
     #Waits for a single byte to be received and returns it, returns 1 on error
     def wait_ack(self):
@@ -71,6 +74,9 @@ class rfsoc_board_driver:
     
     #Returns 0 if board is up, 1 otherwise
     def ping_board(self):
+        
+        if(self.dummy_mode):
+            return 0
         
         self.port.write([CMD_PREAMBLE, CMD_PING_BOARD])
         res = self.wait_ack()
@@ -85,6 +91,9 @@ class rfsoc_board_driver:
             print("Error, channel number must be between 0 and 15")
             return 1
         
+        if(self.dummy_mode):
+            return 0
+        
         self.port.write([CMD_PREAMBLE, CMD_SELECT_CHANNEL, channel_num & 0xFF])
         res = self.wait_ack()
         if(res == CMD_ACK):
@@ -94,6 +103,9 @@ class rfsoc_board_driver:
     #Run cycles in clock cycles (1 cycle = 4ns)
     #Returns 0 on success
     def set_run_cycles(self, num_cycles):
+    
+        if(self.dummy_mode):
+            return 0
     
         bytes_list = list((num_cycles).to_bytes(8, byteorder='little', signed = False))
         self.port.write([CMD_PREAMBLE, CMD_SET_RUN_CYCLES])
@@ -106,6 +118,9 @@ class rfsoc_board_driver:
 
     #mask_sample is a 16 entry list of 16-bit samples
     def set_mask(self, mask_samples):
+    
+        if(self.dummy_mode):
+            return 0
     
         if(len(mask_samples) != 16):
             print("Error, mask samples array must be exactly 16 samples long");
@@ -131,6 +146,9 @@ class rfsoc_board_driver:
     #pre_delay is in clock cycles
     #Returns 0 on success
     def set_pre_delay(self, pre_delay):
+        
+        if(self.dummy_mode):
+            return 0
     
         bytes_list = list((pre_delay).to_bytes(8, byteorder='little', signed = False))
         self.port.write([CMD_PREAMBLE, CMD_SET_PRE_DELAY])
@@ -144,6 +162,9 @@ class rfsoc_board_driver:
     #post_delay is in clock cycles
     #returns 0 on success
     def set_post_delay(self, post_delay):
+    
+        if(self.dummy_mode):
+            return 0
     
         bytes_list = list((post_delay).to_bytes(8, byteorder='little', signed = False))
         self.port.write([CMD_PREAMBLE, CMD_SET_POST_DELAY])
@@ -160,6 +181,9 @@ class rfsoc_board_driver:
         if(len(locking_samples) != 16):
             print("Error, mask samples array must be exactly 16 samples long");
             return 1
+        
+        if(self.dummy_mode):
+            return 0
         
         bytes_list = []
         
@@ -181,6 +205,9 @@ class rfsoc_board_driver:
     #returns 0 on success
     def set_mux_sel(self, mux_sel):
     
+        if(self.dummy_mode):
+            return 0
+    
         mux_sel_byte = 0x00
         if(mux_sel):
             mux_sel_byte = 0xFF
@@ -193,6 +220,9 @@ class rfsoc_board_driver:
 
     #Returns 0 on success
     def set_mask_enable(self, mask_en):
+    
+        if(self.dummy_mode):
+            return 0
     
         mask_en_byte = 0x00
         if(mask_en):
@@ -207,6 +237,9 @@ class rfsoc_board_driver:
     #Returns 0 on success
     def set_adc_run_cycles(self, adc_run_cycles):
     
+        if(self.dummy_mode):
+            return 0
+    
         bytes_list = list((adc_run_cycles).to_bytes(8, byteorder='little', signed = False))
         self.port.write([CMD_PREAMBLE, CMD_SET_ADC_RUN_CYCLES])
         self.port.write(bytes_list)
@@ -219,6 +252,9 @@ class rfsoc_board_driver:
     #ADC samples are averaged over 2^adc_shift captures
     #Returns 0 on success
     def set_adc_shift(self, adc_shift):
+    
+        if(self.dummy_mode):
+            return 0
 
         bytes_list = list((adc_shift).to_bytes(8, byteorder='little', signed = False))
         self.port.write([CMD_PREAMBLE, CMD_SET_ADC_SHIFT])
@@ -232,6 +268,9 @@ class rfsoc_board_driver:
     #Flushes all ADC and DAC buffers
     def flush_buffers(self):
     
+        if(self.dummy_mode):
+            return 0
+    
         self.port.write([CMD_PREAMBLE, CMD_FLUSH_BUFFERS])
         res = self.wait_ack()
         if(res == CMD_ACK):
@@ -240,6 +279,9 @@ class rfsoc_board_driver:
 
     #Returns dac clock status (0 if ok) and then adc clock status (0 if ok)
     def check_clocks(self):
+    
+        if(self.dummy_mode):
+            return 0
         
         self.port.write([CMD_PREAMBLE, CMD_CHECK_CLOCKS])
         
@@ -254,6 +296,9 @@ class rfsoc_board_driver:
     #Returns 0 on success
     def set_adc_dummy_data(self, val):
     
+        if(self.dummy_mode):
+            return 0
+    
         self.port.write([CMD_PREAMBLE, CMD_SET_ADC_DUMMY_DATA, val & 0xFF])
         res = self.wait_ack()
         if(res == CMD_ACK):
@@ -264,6 +309,9 @@ class rfsoc_board_driver:
     #Returns 0 on success
     def set_adc_readout(self, val):
     
+        if(self.dummy_mode):
+            return 0
+    
         self.port.write([CMD_PREAMBLE, CMD_SET_ADC_READOUT, val & 0xFF])
         res = self.wait_ack()
         if(res == CMD_ACK):
@@ -272,6 +320,10 @@ class rfsoc_board_driver:
     
     #Returns 1 on success
     def trigger(self):
+    
+        if(self.dummy_mode):
+            return 0
+    
         self.port.write([CMD_PREAMBLE, CMD_TRIGGER])
         res = self.wait_ack()
         if(res == CMD_ACK):
@@ -281,6 +333,9 @@ class rfsoc_board_driver:
     #Word is 32-bit dac word
     #Returns 0 on success
     def write_axis_word(self, word):
+    
+        if(self.dummy_mode):
+            return 0
         
         bytes_list = list((word).to_bytes(4, byteorder='little', signed = False))
         self.port.write([CMD_PREAMBLE, CMD_WRITE_AXIS, bytes_list])
@@ -291,6 +346,9 @@ class rfsoc_board_driver:
         
     #returns status(0 for success), value
     def read_axis_word(self):
+    
+        if(self.dummy_mode):
+            return 0, 0
     
         self.port.write([CMD_PREAMBLE, CMD_READ_AXIS])
         axis_word_bytes = self.port.read(4)
@@ -512,7 +570,7 @@ class rfsoc_board:
         self.board_driver.set_adc_readout(1)
         
         #Figure out how many times we need to read the axis bus
-        num_axis_reads=self.channel_list[channel_num].run_cycles
+        num_axis_reads=self.channel_list[channel_num].adc_run_cycles
         
         sample_list = []
         for i in range(0, num_axis_reads):
@@ -529,6 +587,10 @@ class rfsoc_board:
             #Change this order if the samples are in the wrong order
             sample_list.append(sample_0, sample_1)
             
+        
+        #Reset the shift and readout values
+        self.board_driver.set_adc_readout(0)
+        self.board_driver.set_adc_shift()
         
         return sample_list
         
@@ -786,6 +848,10 @@ class rfsoc_channel:
             
             #Shift the waveform wordstream by fine_delay samples
             waveform_wordstream = self.rotate_stream(fine_delay)
+        else:
+            self.mask_enable = 0
+            for i in range(0, 16):
+                self.mask_samples.append(0xFFFF)#Set it to all Fs to make plot_waveform easier to implement
         
         #Write out the samples to waveform samples list
         self.waveform_samples = waveform_wordstream.copy()

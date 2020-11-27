@@ -69,4 +69,4 @@ print("Board is armed, trigger using trigger_board.py")
 
 #If we need to plot waveforms
 if(display_waveforms):
-    
+    wp.plot_dac_waveforms(board.channel_list)
