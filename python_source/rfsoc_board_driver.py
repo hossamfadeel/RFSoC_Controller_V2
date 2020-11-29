@@ -560,7 +560,7 @@ class rfsoc_board:
         self.board_driver.set_adc_readout(1)
         
         #Figure out how many times we need to read the axis bus
-        num_axis_reads = adc_obj.adc_run_cycles
+        num_axis_reads = int(adc_obj.adc_run_cycles)
         
         sample_list = []
         for i in range(0, num_axis_reads):
@@ -576,7 +576,8 @@ class rfsoc_board:
             sample_1 = word & 0xFFFF
             
             #Change this order if the samples are in the wrong order
-            sample_list.append(sample_0, sample_1)
+            sample_list.append(sample_0)
+            sample_list.append(sample_1)
             
         
         #Reset the shift and readout values

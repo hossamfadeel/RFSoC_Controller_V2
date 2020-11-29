@@ -4,8 +4,10 @@
 import rfsoc_board_driver as rbd
 import sys
 import numpy
+import time 
+import waveform_plotter as wp
 
-def save_waveform(data):
+def save_waveform_to_file(data):
     timestr = time.strftime("%Y-%m-%d--%H-%M-%S")
     numpy.savetxt(timestr + "_adc_data", data, delimiter=",")
     return
@@ -26,7 +28,7 @@ num_trigs = 1
 cap_cycles = 0
 for c in board.channel_list:
     if(c.type == "ADC" and c.channel_num == 0):
-        num_trigs = pow(2,c.shift_val)
+        num_trigs = int(pow(2,c.shift_val))
         cap_cycles = c.adc_run_cycles
 
 #Trigger the board
@@ -47,6 +49,6 @@ if(cap_cycles):
         raise RuntimeError("Error reading out ADC data")
         
     if(save_waveform):
-        save_waveform(adc_data)
+        save_waveform_to_file(adc_data)
     if(plot_waveform):
         wp.plot_adc_waveform(adc_data)

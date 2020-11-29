@@ -90,9 +90,9 @@ def plot_dac_waveforms(channels):
     
     ax = plt.gca()
     
-    ax.set(xlabel='Time (ns)', ylabel='Voltage (mV)', title='DAC Waveform')
+    ax.set(xlabel='Time (ns)', ylabel='Voltage (mV)', title='DAC Waveforms')
     #ax.grid()
-    #plt.legend(loc='upper left')
+    plt.legend(loc='upper left')
    
     #fig.savefig("test.png")
     plt.show()
