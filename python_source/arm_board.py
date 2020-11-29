@@ -13,9 +13,9 @@ import waveform_plotter as wp
 if(len(sys.argv) != 4):
     raise ValueError("Error, incorrect number of arguments, please see top of arm_board.py for list of arguments")
 
-adc_run_cycles = sys.argv[1] / 4 #Divide by 4 to go from ns to number of cycles
-display_waveforms = sys.argv[2]
-adc_shift = math.log2(sys.argv[3]
+adc_run_cycles = int(sys.argv[1]) / 4 #Divide by 4 to go from ns to number of cycles
+display_waveforms = int(sys.argv[2])
+adc_shift = math.log2(int(sys.argv[3]))
 
 
 #Load the board state
@@ -29,6 +29,7 @@ for c in board.channel_list:
         c.shift_val = adc_shift
         c.adc_run_cycles = adc_run_cycles
         c.check_parameters()
+        break
         
 #If we need to add an adc channel
 if(found == 0):
@@ -44,8 +45,9 @@ if(found == 0):
         0,
         "",
         "",
-        adc_shift, adc_run_cycles)
-        board.channel_list.append(c)
+        adc_shift, 
+        adc_run_cycles)
+    board.channel_list.append(c)
 
 #Check the status of the clocks
 dac_status, adc_status = board.board_driver.check_clocks()
@@ -69,4 +71,5 @@ print("Board is armed, trigger using trigger_board.py")
 
 #If we need to plot waveforms
 if(display_waveforms):
+    print("Plotting DAC waveforms...")
     wp.plot_dac_waveforms(board.channel_list)

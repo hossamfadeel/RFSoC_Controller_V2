@@ -57,18 +57,15 @@ class rfsoc_board_driver:
 
         if(dm):
             print("WARNING: Initializing board driver in dummy mode!")
-    
-    
-    
-    def __del__(self):
-        #If we're not in dummy mode
-        if(self.dummy_mode == 0):
-            self.port.close()
+
             
     def open_board(self):
-        self.port.open()
+        if(self.dummy_mode == 0):
+            self.port.open()
+            
     def close_board(self):
-        self.port.close()
+        if(self.dummy_mode == 0):
+            self.port.close()
         
     #Waits for a single byte to be received and returns it, returns 1 on error
     def wait_ack(self):
@@ -288,7 +285,7 @@ class rfsoc_board_driver:
     def check_clocks(self):
     
         if(self.dummy_mode):
-            return 0
+            return 0, 0
         
         self.port.write([CMD_PREAMBLE, CMD_CHECK_CLOCKS])
         
@@ -408,10 +405,6 @@ class rfsoc_board:
             print("Connection to FPGA board is up!")
         
         return
-   
-        #Checks if this instance is equaled to a different instance
-    def __eq__(self, other) : 
-        return self.__dict__ == other.__dict__
     
     #Returns 0 on success
     def configure_all_channels(self, dummy_adc = 0):
@@ -512,7 +505,7 @@ class rfsoc_board:
             print("Error while trying to set adc run cycles, aborting ADC channel configuration")
             return 1
         #Finally set the shift val
-        if(self.board_driver.set_adc_shift(channel.adc_shift)):
+        if(self.board_driver.set_adc_shift(channel.shift_val)):
             print("Error while trying to set adc shift val, aborting ADC channel configuration")
             return 1
         
@@ -765,7 +758,7 @@ class rfsoc_channel:
     
     
         #read out the file as a string
-        f = open(self.waveform_filename, "r")
+        f = open(filename, "r")
         fileString = f.read()
         
         #parse out all of the numbers in the file stream
@@ -805,14 +798,16 @@ class rfsoc_channel:
             #Then scale the locking wordstream so that it is between DAC_MAX_VALUE and DAC_MIN_VALUE
             locking_wordstream = self.scale_stream(locking_wordstream, DAC_MIN_VALUE, DAC_MAX_VALUE)
             #Then scale the locking wordstream
-            if(self.locking_amp_factor):
+            if(self.locking_amp_factor != 1):
                 for i in range(0, len(locking_wordstream)):
                     locking_wordstream[i] = locking_wordstream[i] * self.locking_amp_factor
             #Then shift the stream if need be
             if(self.locking_shift):
-                locking_wordstream = self.rotate_stream(locking_wordstream, self.locking_shift)
+                locking_wordstream = self.rotate_stream(locking_wordstream, int(self.locking_shift*4))
             #Set up our outputs correctly so they can be sent to the board
-            self.locking_waveform_samples = locking_wordstream.copy()
+            self.locking_waveform_samples = []
+            for l in locking_wordstream:
+                self.locking_waveform_samples.append(int(l))
         #Otherwise append 0s to locking waveform
         else:
             self.locking_waveform_samples = []
@@ -851,13 +846,13 @@ class rfsoc_channel:
         #Set up a preliminary number of run cycles
         self.run_cycles = (self.period/4) * self.num_repeat_cycles
         
+        self.mask_samples = []
         #If the fine delay is not 0
         if(fine_delay):
             #Turn on the mask
             self.mask_enable = 1
             
             #Write out the mask bytes
-            self.mask_samples = []
             for i in range(0, 16):
                 if(i < fine_delay):
                     self.mask_samples.append(0x0000)

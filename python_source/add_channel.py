@@ -60,9 +60,6 @@ if(is_locking):
     locking_filename = sys.argv[11]
 
 
-
-#TODO
-
 #Load the board object
 board = rbd.load_rfsoc_board()
 
@@ -71,12 +68,12 @@ found = 0
 for c in board.channel_list:
     if(c.channel_num == channel_number and c.type == "DAC"):
         found = 1
-        print("Appending configuration for channel " + str(channel_number))
+        print("Appending configuration for channel " + str(channel_number+1))
         #If we're about to overwrite something that is already configured
         if(is_locking and c.locking_filename != ""):
-            print("Warning, overriding waveform configuration for channel " + str(channel_number))
-        if(not is_locking and c.waveform_filename != ""):
             print("Warning, overriding locking cycle configuration for channel " + str(channel_number))
+        if(not is_locking and c.waveform_filename != ""):
+            print("Warning, overriding waveform configuration for channel " + str(channel_number))
         
         if(is_locking):
             c.locking_filename = locking_filename
@@ -94,10 +91,11 @@ for c in board.channel_list:
         c.check_parameters()
         #Re-generate the channel data with the new values
         c.generate_channel_data()
+        break
         
 #If we just need to add a new channel
 if(found == 0):
-    print("Creating new configuration for channel " + str(channel_number))
+    print("Creating new configuration for channel " + str(channel_number+1))
     c = rbd.rfsoc_channel(
         "DAC", 
         channel_number, 
@@ -118,7 +116,7 @@ if(found == 0):
 rbd.save_rfsoc_board(board)
 
 
-print("Successfully added channel #" + str(channel_number+1))
+print("\n===================================\nSuccessfully added channel #" + str(channel_number+1))
 print("Waveform file: " + waveform_filename + 
       "\nPeriod: " + str(waveform_period) +  
       " (ns)\nWaveform amplitude multiplier: " + str(amp_mul_factor) + 
