@@ -67,14 +67,12 @@ class rfsoc_board_driver:
         if(self.dummy_mode == 0):
             self.port.close()
         
-    #Waits for a single byte to be received and returns it, returns 1 on error
+    #Waits for a single byte to be received and returns it
     def wait_ack(self):
-        try:
-            retval = self.port.read(1)
-            return retval[0]
-        except:
-            print("Bad ACK received from FPGA board");
-            return 1
+    
+        retval = self.port.read(1)
+        return retval[0]
+
     
     #Returns 0 if board is up, 1 otherwise
     def ping_board(self):
@@ -391,7 +389,7 @@ class rfsoc_board:
     channel_list = []
     
     #Port name is the name of the serial port
-    def __init__(self, portname, dm):
+    def __init__(self, portname, dm = 0):
         
         self.channel_list = []
         
@@ -413,8 +411,14 @@ class rfsoc_board:
         self.board_driver.open_board()
         
         #Flush the buffers and disable adc readout
-        self.board_driver.set_adc_readout(0)
-        self.board_driver.flush_buffers()
+        if(self.board_driver.set_adc_readout(0)):
+            return 1
+        if(self.board_driver.flush_buffers()):
+            return 1
+        
+        #Turn off ADC dummy data in case it is on
+        if(self.board_driver.set_adc_dummy_data(dummy_adc)):
+            return 1
         
         #Loop through the channels and configure then
         for c in self. channel_list:
