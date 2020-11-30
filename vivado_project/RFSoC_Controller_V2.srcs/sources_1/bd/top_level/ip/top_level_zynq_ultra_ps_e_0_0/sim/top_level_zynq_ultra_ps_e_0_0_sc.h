@@ -74,12 +74,15 @@ public:
   top_level_zynq_ultra_ps_e_0_0_sc(const sc_core::sc_module_name& nm);
   virtual ~top_level_zynq_ultra_ps_e_0_0_sc();
 
-public: // module socket-to-socket TLM interface
+  // module socket-to-socket AXI TLM interfaces
 
   xtlm::xtlm_aximm_initiator_socket* M_AXI_HPM0_FPD_rd_socket;
   xtlm::xtlm_aximm_initiator_socket* M_AXI_HPM0_FPD_wr_socket;
   xtlm::xtlm_aximm_target_socket* S_AXI_HPC0_FPD_rd_socket;
   xtlm::xtlm_aximm_target_socket* S_AXI_HPC0_FPD_wr_socket;
+
+  // module socket-to-socket TLM interfaces
+
 
 protected:
 

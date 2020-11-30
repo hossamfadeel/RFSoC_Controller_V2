@@ -159,6 +159,9 @@ catch {
  }
 OPTRACE "Write IP Cache" END { }
 }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 rename_ref -prefix_all top_level_rfsoc_pl_ctrl_verilo_0_0_
 
@@ -174,7 +177,7 @@ OPTRACE "synth reports" END { }
 if { [catch {
   file copy -force D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1/top_level_rfsoc_pl_ctrl_verilo_0_0.dcp d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_pl_ctrl_verilo_0_0/top_level_rfsoc_pl_ctrl_verilo_0_0.dcp
 } _RESULT ] } { 
-  send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+  send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
@@ -209,7 +212,7 @@ if { [catch {
 if { [catch {
   file copy -force D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1/top_level_rfsoc_pl_ctrl_verilo_0_0.dcp d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_pl_ctrl_verilo_0_0/top_level_rfsoc_pl_ctrl_verilo_0_0.dcp
 } _RESULT ] } { 
-  send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+  send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 

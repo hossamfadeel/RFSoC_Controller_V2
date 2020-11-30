@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-| Date         : Wed Oct 28 13:31:36 2020
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun Nov 29 16:32:43 2020
 | Host         : JAMES-LENOVO running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_rfsoc_pl_ctrl_verilo_0_0_utilization_synth.rpt -pb top_level_rfsoc_pl_ctrl_verilo_0_0_utilization_synth.pb
 | Design       : top_level_rfsoc_pl_ctrl_verilo_0_0
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| CLB LUTs*               | 11869 |     0 |    425280 |  2.79 |
-|   LUT as Logic          | 11869 |     0 |    425280 |  2.79 |
+| CLB LUTs*               | 11814 |     0 |    425280 |  2.78 |
+|   LUT as Logic          | 11814 |     0 |    425280 |  2.78 |
 |   LUT as Memory         |     0 |     0 |    213600 |  0.00 |
-| CLB Registers           | 15787 |     0 |    850560 |  1.86 |
-|   Register as Flip Flop | 15750 |     0 |    850560 |  1.85 |
+| CLB Registers           | 15775 |     0 |    850560 |  1.85 |
+|   Register as Flip Flop | 15738 |     0 |    850560 |  1.85 |
 |   Register as Latch     |    37 |     0 |    850560 | <0.01 |
 | CARRY8                  |   248 |     0 |     53160 |  0.47 |
 | F7 Muxes                |     0 |     0 |    212640 |  0.00 |
@@ -57,8 +57,8 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 7586  |          Yes |           - |        Reset |
+| 4     |          Yes |           - |          Set |
+| 7570  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 8201  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -163,17 +163,18 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 8201 |            Register |
-| FDCE     | 7549 |            Register |
-| LUT6     | 3901 |                 CLB |
-| LUT5     | 3248 |                 CLB |
-| LUT2     | 2887 |                 CLB |
-| LUT4     | 1924 |                 CLB |
-| LUT3     | 1067 |                 CLB |
-| LUT1     | 1056 |                 CLB |
-| RAMB36E2 |  284 |           Block Ram |
+| FDCE     | 7533 |            Register |
+| LUT6     | 3888 |                 CLB |
+| LUT5     | 3169 |                 CLB |
+| LUT2     | 3008 |                 CLB |
+| LUT4     | 1940 |                 CLB |
+| LUT1     | 1048 |                 CLB |
+| LUT3     | 1039 |                 CLB |
+| RAMB36E2 |  284 |            BLOCKRAM |
 | CARRY8   |  248 |                 CLB |
 | LDCE     |   37 |            Register |
-| RAMB18E2 |   16 |           Block Ram |
+| RAMB18E2 |   16 |            BLOCKRAM |
+| FDPE     |    4 |            Register |
 +----------+------+---------------------+
 
 

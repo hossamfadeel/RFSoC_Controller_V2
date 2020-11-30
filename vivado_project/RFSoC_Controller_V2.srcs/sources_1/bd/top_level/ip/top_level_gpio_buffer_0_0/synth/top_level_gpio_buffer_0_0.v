@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:gpio_buffer:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "gpio_buffer,Vivado 2020.1.1" *)
+(* X_CORE_INFO = "gpio_buffer,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "top_level_gpio_buffer_0_0,gpio_buffer,{}" *)
-(* CORE_GENERATION_INFO = "top_level_gpio_buffer_0_0,gpio_buffer,{x_ipProduct=Vivado 2020.1.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=gpio_buffer,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "top_level_gpio_buffer_0_0,gpio_buffer,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=gpio_buffer,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_gpio_buffer_0_0 (

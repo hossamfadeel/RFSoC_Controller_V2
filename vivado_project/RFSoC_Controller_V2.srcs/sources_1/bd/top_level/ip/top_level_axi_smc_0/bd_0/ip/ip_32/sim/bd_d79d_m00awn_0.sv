@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:sc_node:1.0
-// IP Revision: 11
+// IP Revision: 12
 
 `timescale 1ns/1ps
 
@@ -113,7 +113,7 @@ input wire m_axis_arb_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_ARB TDATA" *)
 output wire [15 : 0] m_axis_arb_tdata;
 
-  sc_node_v1_0_11_top #(
+  sc_node_v1_0_12_top #(
     .C_FAMILY("zynquplus"),
     .C_FIFO_IP(0),
     .C_DISABLE_IP(0),
@@ -128,6 +128,7 @@ output wire [15 : 0] m_axis_arb_tdata;
     .C_PAYLD_WIDTH(140),
     .C_S_NUM_BYTES_ARRAY(96'H000000100000001000000010),
     .C_M_NUM_BYTES_ARRAY(32'H00000010),
+    .C_PRIORITY_ARB_ARRAY(3'B000),
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),
     .C_SC_ROUTE_WIDTH(1),

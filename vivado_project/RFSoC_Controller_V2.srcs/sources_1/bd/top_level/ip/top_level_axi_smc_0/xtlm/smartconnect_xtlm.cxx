@@ -724,16 +724,16 @@ void smartconnect_xtlm::create_burst_transaction(std::list<xtlm::aximm_payload*>
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-   trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "END Incoming Payload information\n\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-   payload_msg = "";
 
 //   int m_num_burst = decode_burst_size(m_burst_size);
    int m_burst_cnt = m_burst_length;
@@ -914,16 +914,16 @@ void smartconnect_xtlm::create_burst_transaction(std::list<xtlm::aximm_payload*>
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-      m_trans->get_log(payload_msg, 3);
 	  if (m_report_handler->get_verbosity_level()
 	  		== xsc::common_cpp::VERBOSITY::DEBUG) {
+		m_trans->get_log(payload_msg, 3);
 	  	m_ss.str("");
 	  	m_ss << this->name() << payload_msg  << std::endl;
          m_ss << "END Outgoing " << num_trans << " Payload information\n";
 	  	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	  			DEBUG);
+	  	payload_msg = "";
 	  }
-      payload_msg = "";
 
       if (!mi_cascaded) {
          if (trans_ptr->get_command() == xtlm::XTLM_WRITE_COMMAND) {
@@ -1039,16 +1039,16 @@ void smartconnect_xtlm::process_saxi_wr_req() {
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-         trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "END Incoming Write Payload information on num_si " << num_si<< "\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-         payload_msg = "";
 
          unsigned long long si_sep_route;
 
@@ -1157,16 +1157,16 @@ void smartconnect_xtlm::process_maxi_wr_req() {
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-         trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	 trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "END Sent out Write Payload information from num_mi " << slave_wr_req << "\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-         payload_msg = "";
 
          maxi_wr_req_vec[slave_wr_req].pop_front();
          if (maxi_wr_req_vec[slave_wr_req].empty()) {
@@ -1283,17 +1283,17 @@ void smartconnect_xtlm::process_saxi_wr_resp() {
 	  	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	  			DEBUG);
 	  }
-      trans_ptr->get_log(payload_msg, 3);
 	  if (m_report_handler->get_verbosity_level()
 	  		== xsc::common_cpp::VERBOSITY::DEBUG) {
+		trans_ptr->get_log(payload_msg, 3);
 	  	m_ss.str("");
 	  	m_ss << this->name() << payload_msg << std::endl;
          m_ss << "RESPONSE: " << trans_ptr->get_response_string() << "\n"
           << "END Response information\n\n";
 	  	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	  			DEBUG);
+	  	payload_msg = "";
 	  }
-      payload_msg = "";
    
       if (saxi_wr_util[num_si]->is_master_ready() == false) {
 	     if (m_report_handler->get_verbosity_level()
@@ -1392,17 +1392,17 @@ void smartconnect_xtlm::process_saxi_wr_resp() {
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-         trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "RESPONSE: " << trans_ptr->get_response_string() << "\n"
             << "END sending Write Response information on num_si " << num_si << "\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-         payload_msg = "";
    
          print_log("SI", num_si, "WRITE", "Response sent", trans_ptr);
    
@@ -1503,16 +1503,16 @@ void smartconnect_xtlm::process_saxi_rd_req() {
 
          print_log("SI", num_si, "READ", "Transaction received", trans_ptr);
 
-         trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg  << std::endl;
             m_ss << "END Incoming Read Payload information on num_si " << num_si << "\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-         payload_msg = "";
 
          unsigned long long si_sep_route;
 
@@ -1616,16 +1616,16 @@ void smartconnect_xtlm::process_maxi_rd_req() {
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-         trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "END process_maxi_rd_req() sending READ payload\n\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-         payload_msg = "";
 
          print_log("MI", slave_rd_req, "READ", "Transaction sent", trans_ptr);
 
@@ -1689,16 +1689,16 @@ void smartconnect_xtlm::process_maxi_rd_resp() {
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-         mi_trans->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	mi_trans->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "END Regslice receiving READ information\n\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-         payload_msg = "";
 
          //New code to notify based on map
          map_rd_si_to_nummi[si_trans]--;
@@ -1749,17 +1749,17 @@ void smartconnect_xtlm::process_saxi_rd_resp() {
 	  	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	  			DEBUG);
 	  }
-      trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "RESPONSE: " << trans_ptr->get_response_string()
             << "END Response information\n\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-      payload_msg = "";
       
       if (saxi_rd_util[num_si]->is_master_ready() == false) {
 	     if (m_report_handler->get_verbosity_level()
@@ -1845,16 +1845,16 @@ void smartconnect_xtlm::process_saxi_rd_resp() {
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-               m_resp_trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+            m_resp_trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "END Regslice vector pop out READ information\n\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+            payload_msg = "";
 	     }
-               payload_msg = "";
          
                if (m_resp_trans_ptr->is_response_error()) {
                   trans_ptr->set_response_status(m_resp_trans_ptr->get_response_status());
@@ -1924,16 +1924,16 @@ void smartconnect_xtlm::process_saxi_rd_resp() {
 	                 	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	                 			DEBUG);
 	                 }
-                     mi_trans_ptr->get_log(payload_msg, 3);
 	                if (m_report_handler->get_verbosity_level()
 	                		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	                	mi_trans_ptr->get_log(payload_msg, 3);
 	                	m_ss.str("");
 	                	m_ss << this->name() << payload_msg << std::endl;
                         m_ss << "END Regslice vector pop out READ information\n\n";
 	                	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	                			DEBUG);
+	                	payload_msg = "";
 	                }
-                     payload_msg = "";
    
                      for (int i = 0; i < m_burst_cnt; i++) {
                         for (int j = 0; j < m_num_burst; j++) {
@@ -2001,17 +2001,17 @@ void smartconnect_xtlm::process_saxi_rd_resp() {
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
 	     }
-         trans_ptr->get_log(payload_msg, 3);
 	     if (m_report_handler->get_verbosity_level()
 	     		== xsc::common_cpp::VERBOSITY::DEBUG) {
+	    	trans_ptr->get_log(payload_msg, 3);
 	     	m_ss.str("");
 	     	m_ss << this->name() << payload_msg << std::endl;
             m_ss << "RESPONSE: " << trans_ptr->get_response_string() << "\n"
             << "END sending Read Response information on num_si " << num_si << "\n\n";
 	     	XSC_REPORT_INFO_VERB((*m_report_handler), "1", m_ss.str().c_str(),
 	     			DEBUG);
+	     	payload_msg = "";
 	     }
-         payload_msg = "";
    
          print_log("SI", num_si, "READ", "Response sent", trans_ptr);
    

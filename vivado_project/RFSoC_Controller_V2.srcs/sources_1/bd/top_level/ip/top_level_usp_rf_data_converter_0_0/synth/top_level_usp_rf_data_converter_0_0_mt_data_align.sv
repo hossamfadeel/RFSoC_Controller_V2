@@ -106,10 +106,10 @@ module top_level_usp_rf_data_converter_0_0_mt_data_align
   genvar j;
   generate
     for (i = 0; i < MAX_WORDS; i=i+1)
-    begin
+    begin : word_loop
       if (ADC == 1) begin : adc_gen
         for (j = 0; j < 16; j=j+1)
-        begin
+        begin : adc_bit_loop
           // The input data is input to a SRL32 to delay it
           // by a certain number of clock cycles (the number of words delay from 
           // the configuration block divided by the number of words in a
@@ -162,7 +162,7 @@ module top_level_usp_rf_data_converter_0_0_mt_data_align
         end
       
         for (j = 0; j < 16; j=j+1)
-        begin
+        begin : dac_bit_loop
           // The input data is input to a SRL32 to delay it
           // by a certain number of clock cycles (the number of words delay from 
           // the configuration block divided by the number of words in a

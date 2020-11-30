@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:sc_transaction_regulator:1.0
-// IP Revision: 8
+// IP Revision: 9
 
 `timescale 1ns/1ps
 
@@ -201,14 +201,14 @@ EADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSER
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BREADY" *)
 output wire m_axi_bready;
 
-  sc_transaction_regulator_v1_0_8_top #(
+  sc_transaction_regulator_v1_0_9_top #(
     .C_FAMILY("zynquplus"),
     .C_IS_CASCADED(0),
-    .C_ENABLE_PIPELINING('H1),
+    .C_ENABLE_PIPELINING(1'H1),
     .C_NUM_READ_THREADS(1),
     .C_NUM_WRITE_THREADS(1),
     .C_MEP_IDENTIFIER_WIDTH(2),
-    .C_MEP_IDENTIFIER(2),
+    .C_MEP_IDENTIFIER(3),
     .C_SEP_ROUTE_WIDTH(1),
     .C_RDATA_WIDTH(32),
     .C_WDATA_WIDTH(32),
@@ -223,7 +223,7 @@ output wire m_axi_bready;
     .C_NUM_WRITE_OUTSTANDING(16),
     .C_SINGLE_ISSUING(0)
   ) inst (
-    .mep_identifier(2'H2),
+    .mep_identifier(2'H3),
     .aclk(aclk),
     .aclken(1'D1),
     .aresetn(aresetn),

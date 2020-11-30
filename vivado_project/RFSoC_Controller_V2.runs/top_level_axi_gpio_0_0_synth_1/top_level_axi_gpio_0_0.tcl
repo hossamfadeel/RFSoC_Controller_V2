@@ -70,11 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_level_axi_gpio_0_0_synth_1" START { ROLLUP_AUTO }
-set_param power.BramSDPPropagationFix 1
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableLutRouteBelPower 1
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -152,6 +147,9 @@ catch {
  }
 OPTRACE "Write IP Cache" END { }
 }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 rename_ref -prefix_all top_level_axi_gpio_0_0_
 
@@ -167,7 +165,7 @@ OPTRACE "synth reports" END { }
 if { [catch {
   file copy -force D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_axi_gpio_0_0_synth_1/top_level_axi_gpio_0_0.dcp d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0.dcp
 } _RESULT ] } { 
-  send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+  send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
@@ -202,7 +200,7 @@ if { [catch {
 if { [catch {
   file copy -force D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_axi_gpio_0_0_synth_1/top_level_axi_gpio_0_0.dcp d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_gpio_0_0/top_level_axi_gpio_0_0.dcp
 } _RESULT ] } { 
-  send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+  send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 

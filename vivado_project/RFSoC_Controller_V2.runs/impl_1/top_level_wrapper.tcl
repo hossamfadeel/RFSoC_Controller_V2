@@ -112,10 +112,11 @@ proc step_failed { step } {
   set endFile ".$step.error.rst"
   set ch [open $endFile w]
   close $ch
+OPTRACE "impl_1" END { }
 }
 
 
-OPTRACE "Implementation" START { ROLLUP_1 }
+OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
 start_step init_design
 set ACTIVE_STEP init_design
@@ -310,7 +311,7 @@ set rc [catch {
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  catch { write_mem_info -force top_level_wrapper.mmi }
+  catch { write_mem_info -force -no_partial_mmi top_level_wrapper.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
   write_bitstream -force top_level_wrapper.bit 
@@ -332,4 +333,4 @@ if {$rc} {
 
 OPTRACE "write_bitstream misc" END { }
 OPTRACE "Phase: Write Bitstream" END { }
-OPTRACE "Implementation" END { }
+OPTRACE "impl_1" END { }

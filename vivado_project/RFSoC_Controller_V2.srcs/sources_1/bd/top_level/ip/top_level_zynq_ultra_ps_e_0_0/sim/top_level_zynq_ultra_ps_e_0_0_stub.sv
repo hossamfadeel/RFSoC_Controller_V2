@@ -56,6 +56,8 @@
 //   Aldec Riviera-PRO Simulator
 //
 //------------------------------------------------------------------------------------
+`timescale 1ps/1ps
+
 `ifdef XILINX_SIMULATOR
 
 `ifndef XILINX_SIMULATOR_BITASBOOL

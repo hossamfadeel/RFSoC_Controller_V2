@@ -833,7 +833,7 @@ module top_level_usp_rf_data_converter_0_0_por_fsm
                   begin
                     // Timer setting carried in data
                     enable_clock_en     <= 1'b0;
-                    por_timer_start_val <= mem_data[23:0];
+                    por_timer_start_val[23:0] <= mem_data[23:0];
                   end
                   por_timer_start     <= 1'b1;
                   por_sm_state        <= wait_for_event;

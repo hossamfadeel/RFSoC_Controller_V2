@@ -164,6 +164,9 @@ public:
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
 
+  // Dummy Signals for IP Ports
+
+
 protected:
 
   virtual void before_end_of_elaboration();
@@ -279,6 +282,9 @@ public:
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
 
+  // Dummy Signals for IP Ports
+
+
 protected:
 
   virtual void before_end_of_elaboration();
@@ -393,6 +399,9 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > pl_ps_irq0;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
+
+  // Dummy Signals for IP Ports
+
 
 protected:
 
@@ -512,6 +521,9 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > pl_ps_irq0;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
+
+  // Dummy Signals for IP Ports
+
 
 protected:
 
@@ -639,6 +651,9 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > pl_ps_irq0;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
+
+  // Dummy Signals for IP Ports
+
 
 protected:
 

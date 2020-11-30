@@ -8,7 +8,7 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "scoped": "true",
       "synth_flow_mode": "None",
-      "tool_version": "2020.1.1",
+      "tool_version": "2020.2",
       "validated": "true"
     },
     "design_tree": {
@@ -20,6 +20,42 @@
         "mode": "Monitor",
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "top_level_usp_rf_data_converter_0_0_clk_dac0",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "250000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "1",
+            "value_src": "default_prop"
+          },
+          "HAS_TLAST": {
+            "value": "1",
+            "value_src": "default_prop"
+          },
+          "HAS_TREADY": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
           "TDATA_NUM_BYTES": {
             "value": "4",
             "value_src": "default_prop"
@@ -35,6 +71,28 @@
           "TUSER_WIDTH": {
             "value": "0",
             "value_src": "default"
+          }
+        }
+      },
+      "SLOT_1_AXIS": {
+        "mode": "Monitor",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "top_level_usp_rf_data_converter_0_0_clk_dac0",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "250000000",
+            "value_src": "default"
+          },
+          "HAS_TKEEP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "HAS_TLAST": {
+            "value": "0",
+            "value_src": "default"
           },
           "HAS_TREADY": {
             "value": "1",
@@ -44,40 +102,18 @@
             "value": "0",
             "value_src": "default"
           },
-          "HAS_TKEEP": {
-            "value": "1",
-            "value_src": "default_prop"
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
-          "HAS_TLAST": {
-            "value": "1",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "250000000",
+          "LAYERED_METADATA": {
+            "value": "undef",
             "value_src": "default"
           },
           "PHASE": {
             "value": "0.000",
             "value_src": "default"
           },
-          "CLK_DOMAIN": {
-            "value": "top_level_usp_rf_data_converter_0_0_clk_dac0",
-            "value_src": "default_prop"
-          },
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          }
-        }
-      },
-      "SLOT_1_AXIS": {
-        "mode": "Monitor",
-        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-        "parameters": {
           "TDATA_NUM_BYTES": {
             "value": "32",
             "value_src": "default"
@@ -93,13 +129,19 @@
           "TUSER_WIDTH": {
             "value": "0",
             "value_src": "default"
+          }
+        }
+      },
+      "SLOT_2_AXIS": {
+        "mode": "Monitor",
+        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "top_level_usp_rf_data_converter_0_0_clk_dac0",
+            "value_src": "default_prop"
           },
-          "HAS_TREADY": {
-            "value": "1",
-            "value_src": "default"
-          },
-          "HAS_TSTRB": {
-            "value": "0",
+          "FREQ_HZ": {
+            "value": "250000000",
             "value_src": "default"
           },
           "HAS_TKEEP": {
@@ -110,32 +152,26 @@
             "value": "0",
             "value_src": "default"
           },
-          "FREQ_HZ": {
-            "value": "250000000",
+          "HAS_TREADY": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "HAS_TSTRB": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "LAYERED_METADATA": {
+            "value": "undef",
             "value_src": "default"
           },
           "PHASE": {
             "value": "0.000",
             "value_src": "default"
           },
-          "CLK_DOMAIN": {
-            "value": "top_level_usp_rf_data_converter_0_0_clk_dac0",
-            "value_src": "default_prop"
-          },
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          }
-        }
-      },
-      "SLOT_2_AXIS": {
-        "mode": "Monitor",
-        "vlnv": "xilinx.com:interface:axis_rtl:1.0",
-        "parameters": {
           "TDATA_NUM_BYTES": {
             "value": "4",
             "value_src": "default"
@@ -149,42 +185,6 @@
             "value_src": "default"
           },
           "TUSER_WIDTH": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "HAS_TREADY": {
-            "value": "1",
-            "value_src": "default"
-          },
-          "HAS_TSTRB": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "HAS_TKEEP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "HAS_TLAST": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "250000000",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          },
-          "CLK_DOMAIN": {
-            "value": "top_level_usp_rf_data_converter_0_0_clk_dac0",
-            "value_src": "default_prop"
-          },
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
             "value": "0",
             "value_src": "default"
           }
@@ -478,16 +478,16 @@
       }
     },
     "interface_nets": {
-      "Conn2": {
-        "interface_ports": [
-          "SLOT_2_AXIS",
-          "g_inst/slot_2_axis"
-        ]
-      },
       "Conn": {
         "interface_ports": [
           "SLOT_0_AXIS",
           "g_inst/slot_0_axis"
+        ]
+      },
+      "Conn2": {
+        "interface_ports": [
+          "SLOT_2_AXIS",
+          "g_inst/slot_2_axis"
         ]
       },
       "Conn1": {

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
--- Date        : Wed Oct 14 09:01:19 2020
+-- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+-- Date        : Sun Nov 29 16:30:20 2020
 -- Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_gpio_buffer_0_0/top_level_gpio_buffer_0_0_stub.vhdl
@@ -32,6 +32,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "gpio_in[15:0],gpio_out[15:0],s_axis_tvalid,s_axis_tready,s_axis_tdata[15:0],m_axis_tdata[15:0],m_axis_tvalid,m_axis_tready";
 attribute X_CORE_INFO : string;
-attribute X_CORE_INFO of stub : architecture is "gpio_buffer,Vivado 2020.1.1";
+attribute X_CORE_INFO of stub : architecture is "gpio_buffer,Vivado 2020.2";
 begin
 end;

@@ -124,7 +124,6 @@ set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Control
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_33/bd_d79d_m00wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_34/bd_d79d_m00bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_xbar_0/top_level_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0_ooc.xdc]
@@ -149,6 +148,7 @@ set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Control
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_0/bd_0/ip/ip_0/bd_5bec_ila_lib_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_0/bd_0/bd_5bec_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_0/top_level_system_ila_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_xbar_0/top_level_xbar_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_auto_ds_0/top_level_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_auto_ds_0/top_level_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_auto_ds_0/top_level_auto_ds_0_ooc.xdc]
@@ -173,6 +173,9 @@ close [open __synthesis_is_running__ w]
 OPTRACE "synth_design" START { }
 synth_design -top top_level_wrapper -part xczu29dr-ffvf1760-2-e
 OPTRACE "synth_design" END { }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }

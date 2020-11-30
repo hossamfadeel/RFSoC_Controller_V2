@@ -93,7 +93,7 @@ top_level_xbar_0_sc::top_level_xbar_0_sc(const sc_core::sc_module_name& nm) : sc
 
   mp_impl = new axi_crossbar("inst", model_param_props);
 
-  // initialize sockets
+  // initialize AXI sockets
   target_0_rd_socket = mp_impl->target_0_rd_socket;
   target_0_wr_socket = mp_impl->target_0_wr_socket;
   initiator_0_rd_socket = mp_impl->initiator_0_rd_socket;

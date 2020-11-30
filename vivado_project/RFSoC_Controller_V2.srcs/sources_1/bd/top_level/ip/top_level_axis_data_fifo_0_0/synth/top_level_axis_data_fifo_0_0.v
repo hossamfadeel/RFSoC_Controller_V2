@@ -48,12 +48,12 @@
 
 
 // IP VLNV: xilinx.com:ip:axis_data_fifo:2.0
-// IP Revision: 3
+// IP Revision: 4
 
-(* X_CORE_INFO = "axis_data_fifo_v2_0_3_top,Vivado 2020.1.1" *)
-(* CHECK_LICENSE_TYPE = "top_level_axis_data_fifo_0_0,axis_data_fifo_v2_0_3_top,{}" *)
-(* CORE_GENERATION_INFO = "top_level_axis_data_fifo_0_0,axis_data_fifo_v2_0_3_top,{x_ipProduct=Vivado 2020.1.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_AXIS_TDATA_WIDTH=16,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000000011,C_FIFO_DEPTH=16,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=1,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYP\
-E=auto,C_USE_ADV_FEATURES=825241648,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}" *)
+(* X_CORE_INFO = "axis_data_fifo_v2_0_4_top,Vivado 2020.2" *)
+(* CHECK_LICENSE_TYPE = "top_level_axis_data_fifo_0_0,axis_data_fifo_v2_0_4_top,{}" *)
+(* CORE_GENERATION_INFO = "top_level_axis_data_fifo_0_0,axis_data_fifo_v2_0_4_top,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axis_data_fifo,x_ipVersion=2.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_AXIS_TDATA_WIDTH=16,C_AXIS_TID_WIDTH=1,C_AXIS_TDEST_WIDTH=1,C_AXIS_TUSER_WIDTH=1,C_AXIS_SIGNAL_SET=0b00000000000000000000000000000011,C_FIFO_DEPTH=16,C_FIFO_MODE=1,C_IS_ACLK_ASYNC=1,C_SYNCHRONIZER_STAGE=3,C_ACLKEN_CONV_MODE=0,C_ECC_MODE=0,C_FIFO_MEMORY_TYPE=\
+auto,C_USE_ADV_FEATURES=825241648,C_PROG_EMPTY_THRESH=5,C_PROG_FULL_THRESH=11}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_axis_data_fifo_0_0 (
   s_axis_aresetn,
@@ -91,13 +91,13 @@ input wire m_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *)
 output wire [15 : 0] m_axis_tdata;
 
-  axis_data_fifo_v2_0_3_top #(
+  axis_data_fifo_v2_0_4_top #(
     .C_FAMILY("zynquplus"),
     .C_AXIS_TDATA_WIDTH(16),
     .C_AXIS_TID_WIDTH(1),
     .C_AXIS_TDEST_WIDTH(1),
     .C_AXIS_TUSER_WIDTH(1),
-    .C_AXIS_SIGNAL_SET('B00000000000000000000000000000011),
+    .C_AXIS_SIGNAL_SET(32'B00000000000000000000000000000011),
     .C_FIFO_DEPTH(16),
     .C_FIFO_MODE(1),
     .C_IS_ACLK_ASYNC(1),

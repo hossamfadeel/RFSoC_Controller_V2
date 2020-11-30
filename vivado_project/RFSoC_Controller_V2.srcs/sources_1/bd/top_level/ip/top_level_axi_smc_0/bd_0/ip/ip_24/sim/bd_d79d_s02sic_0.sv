@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:sc_si_converter:1.0
-// IP Revision: 9
+// IP Revision: 10
 
 `timescale 1ns/1ps
 
@@ -198,7 +198,7 @@ EADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSER
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BREADY" *)
 output wire m_axi_bready;
 
-  sc_si_converter_v1_0_9_top #(
+  sc_si_converter_v1_0_10_top #(
     .C_AXILITE_CONV(0),
     .C_LIMIT_WRITE_LENGTH(0),
     .C_LIMIT_READ_LENGTH(0),

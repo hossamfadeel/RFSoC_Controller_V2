@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-//Date        : Wed Oct 28 13:29:18 2020
+//Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+//Date        : Sun Nov 29 16:27:34 2020
 //Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 //Command     : generate_target top_level_wrapper.bd
 //Design      : top_level_wrapper

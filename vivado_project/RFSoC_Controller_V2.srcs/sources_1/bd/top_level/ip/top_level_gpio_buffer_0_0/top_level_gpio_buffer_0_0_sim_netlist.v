@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-// Date        : Wed Oct 14 09:01:19 2020
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Sun Nov 29 16:30:20 2020
 // Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_gpio_buffer_0_0/top_level_gpio_buffer_0_0_sim_netlist.v
@@ -13,7 +13,7 @@
 `timescale 1 ps / 1 ps
 
 (* CHECK_LICENSE_TYPE = "top_level_gpio_buffer_0_0,gpio_buffer,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "gpio_buffer,Vivado 2020.1.1" *) 
+(* X_CORE_INFO = "gpio_buffer,Vivado 2020.2" *) 
 (* NotValidForBitStream *)
 module top_level_gpio_buffer_0_0
    (gpio_in,

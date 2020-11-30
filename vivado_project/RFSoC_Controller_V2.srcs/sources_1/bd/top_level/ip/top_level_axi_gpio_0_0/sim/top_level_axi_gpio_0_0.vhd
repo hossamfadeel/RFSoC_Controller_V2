@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_gpio:2.0
--- IP Revision: 23
+-- IP Revision: 24
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_gpio_v2_0_23;
-USE axi_gpio_v2_0_23.axi_gpio;
+LIBRARY axi_gpio_v2_0_24;
+USE axi_gpio_v2_0_24.axi_gpio;
 
 ENTITY top_level_axi_gpio_0_0 IS
   PORT (

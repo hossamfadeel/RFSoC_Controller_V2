@@ -48,12 +48,12 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_dwidth_converter:2.1
-// IP Revision: 21
+// IP Revision: 22
 
-(* X_CORE_INFO = "axi_dwidth_converter_v2_1_21_top,Vivado 2020.1.1" *)
-(* CHECK_LICENSE_TYPE = "top_level_auto_ds_0,axi_dwidth_converter_v2_1_21_top,{}" *)
-(* CORE_GENERATION_INFO = "top_level_auto_ds_0,axi_dwidth_converter_v2_1_21_top,{x_ipProduct=Vivado 2020.1.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_dwidth_converter,x_ipVersion=2.1,x_ipCoreRevision=21,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_AXI_PROTOCOL=0,C_S_AXI_ID_WIDTH=16,C_SUPPORTS_ID=1,C_AXI_ADDR_WIDTH=40,C_S_AXI_DATA_WIDTH=128,C_M_AXI_DATA_WIDTH=32,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=1,C_FIFO_MODE=0,C_S_AXI_ACLK_RATIO=1,C_M_AXI_ACLK_RATIO=2,C_AXI_IS_ACLK_ASYNC=0,C_MAX_SPLIT_\
-BEATS=256,C_PACKING_LEVEL=1,C_SYNCHRONIZER_STAGE=3}" *)
+(* X_CORE_INFO = "axi_dwidth_converter_v2_1_22_top,Vivado 2020.2" *)
+(* CHECK_LICENSE_TYPE = "top_level_auto_ds_0,axi_dwidth_converter_v2_1_22_top,{}" *)
+(* CORE_GENERATION_INFO = "top_level_auto_ds_0,axi_dwidth_converter_v2_1_22_top,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_dwidth_converter,x_ipVersion=2.1,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_AXI_PROTOCOL=0,C_S_AXI_ID_WIDTH=16,C_SUPPORTS_ID=1,C_AXI_ADDR_WIDTH=40,C_S_AXI_DATA_WIDTH=128,C_M_AXI_DATA_WIDTH=32,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=1,C_FIFO_MODE=0,C_S_AXI_ACLK_RATIO=1,C_M_AXI_ACLK_RATIO=2,C_AXI_IS_ACLK_ASYNC=0,C_MAX_SPLIT_BE\
+ATS=256,C_PACKING_LEVEL=1,C_SYNCHRONIZER_STAGE=3}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_auto_ds_0 (
   s_axi_aclk,
@@ -293,7 +293,7 @@ UM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" 
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire m_axi_rready;
 
-  axi_dwidth_converter_v2_1_21_top #(
+  axi_dwidth_converter_v2_1_22_top #(
     .C_FAMILY("zynquplus"),
     .C_AXI_PROTOCOL(0),
     .C_S_AXI_ID_WIDTH(16),

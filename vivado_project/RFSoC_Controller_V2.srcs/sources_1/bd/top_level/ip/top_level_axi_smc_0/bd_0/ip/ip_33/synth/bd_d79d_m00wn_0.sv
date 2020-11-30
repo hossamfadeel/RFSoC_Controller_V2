@@ -48,12 +48,12 @@
 
 
 // IP VLNV: xilinx.com:ip:sc_node:1.0
-// IP Revision: 11
+// IP Revision: 12
 
-(* X_CORE_INFO = "sc_node_v1_0_11_top,Vivado 2020.1.1" *)
-(* CHECK_LICENSE_TYPE = "bd_d79d_m00wn_0,sc_node_v1_0_11_top,{}" *)
-(* CORE_GENERATION_INFO = "bd_d79d_m00wn_0,sc_node_v1_0_11_top,{x_ipProduct=Vivado 2020.1.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=sc_node,x_ipVersion=1.0,x_ipCoreRevision=11,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_FIFO_IP=0,C_DISABLE_IP=0,C_FIFO_SIZE=5,C_FIFO_TYPE=0,C_FIFO_OUTPUT_REG=1,C_ENABLE_PIPELINING=0x01,C_SYNCHRONIZATION_STAGES=3,C_NUM_SI=3,C_NUM_MI=1,C_CHANNEL=1,C_PAYLD_WIDTH=160,C_S_NUM_BYTES_ARRAY=0x000000100000001000000010,C_M_NUM_BYTES_ARRAY=0x00000010,C_USER_BITS_PER_BYTE=0,C_A\
-RBITER_MODE=1,C_SC_ROUTE_WIDTH=1,C_ID_WIDTH=2,C_ADDR_WIDTH=32,C_USER_WIDTH=0,C_MAX_PAYLD_BYTES=16,C_S_PIPELINE=0,C_M_PIPELINE=0,C_M_SEND_PIPELINE=0,C_S_LATENCY=1,C_NUM_OUTSTANDING=16,C_ACLK_RELATIONSHIP=1,C_ACLKEN_CONVERSION=0}" *)
+(* X_CORE_INFO = "sc_node_v1_0_12_top,Vivado 2020.2" *)
+(* CHECK_LICENSE_TYPE = "bd_d79d_m00wn_0,sc_node_v1_0_12_top,{}" *)
+(* CORE_GENERATION_INFO = "bd_d79d_m00wn_0,sc_node_v1_0_12_top,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=sc_node,x_ipVersion=1.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynquplus,C_FIFO_IP=0,C_DISABLE_IP=0,C_FIFO_SIZE=5,C_FIFO_TYPE=0,C_FIFO_OUTPUT_REG=1,C_ENABLE_PIPELINING=0x01,C_SYNCHRONIZATION_STAGES=3,C_NUM_SI=3,C_NUM_MI=1,C_CHANNEL=1,C_PAYLD_WIDTH=160,C_S_NUM_BYTES_ARRAY=0x000000100000001000000010,C_M_NUM_BYTES_ARRAY=0x00000010,C_PRIORITY_ARB_ARRAY=0b000,C\
+_USER_BITS_PER_BYTE=0,C_ARBITER_MODE=1,C_SC_ROUTE_WIDTH=1,C_ID_WIDTH=2,C_ADDR_WIDTH=32,C_USER_WIDTH=0,C_MAX_PAYLD_BYTES=16,C_S_PIPELINE=0,C_M_PIPELINE=0,C_M_SEND_PIPELINE=0,C_S_LATENCY=1,C_NUM_OUTSTANDING=16,C_ACLK_RELATIONSHIP=1,C_ACLKEN_CONVERSION=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_d79d_m00wn_0 (
   s_sc_aclk,
@@ -115,7 +115,7 @@ output wire s_axis_arb_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_ARB TDATA" *)
 input wire [15 : 0] s_axis_arb_tdata;
 
-  sc_node_v1_0_11_top #(
+  sc_node_v1_0_12_top #(
     .C_FAMILY("zynquplus"),
     .C_FIFO_IP(0),
     .C_DISABLE_IP(0),
@@ -130,6 +130,7 @@ input wire [15 : 0] s_axis_arb_tdata;
     .C_PAYLD_WIDTH(160),
     .C_S_NUM_BYTES_ARRAY(96'H000000100000001000000010),
     .C_M_NUM_BYTES_ARRAY(32'H00000010),
+    .C_PRIORITY_ARB_ARRAY(3'B000),
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),
     .C_SC_ROUTE_WIDTH(1),

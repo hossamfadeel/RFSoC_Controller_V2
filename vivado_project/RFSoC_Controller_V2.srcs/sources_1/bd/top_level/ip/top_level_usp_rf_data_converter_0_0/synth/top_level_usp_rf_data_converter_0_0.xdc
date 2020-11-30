@@ -116,6 +116,11 @@ create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-4 \
   -description "Passing ADC outputs to the status registers" \
   -from [list [get_pins -filter {REF_PIN_NAME==INTERNAL_FBRC_DIV2_MUX} -of [get_cells -hier -filter {name =~ "*top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx0_u_adc"}]]] \
   -to   [list [get_pins -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]]]
+create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-1 \
+  -tags "1033132" \
+  -description "Passing ADC outputs to the status registers" \
+  -from [list [get_pins -filter {REF_PIN_NAME==INTERNAL_FBRC_DIV1_MUX} -of [get_cells -hier -filter {name =~ "*top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx0_u_adc"}]]] \
+  -to   [list [get_pins -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]]]
 set rfams_clock_adc1 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx1_u_adc]]
 set_false_path -through $rfams_clock_adc1 -to $ipif_read
 create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-1 \
@@ -137,6 +142,11 @@ create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-4 \
   -tags "1033132" \
   -description "Passing ADC outputs to the status registers" \
   -from [list [get_pins -filter {REF_PIN_NAME==INTERNAL_FBRC_DIV2_MUX} -of [get_cells -hier -filter {name =~ "*top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx1_u_adc"}]]] \
+  -to   [list [get_pins -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]]]
+create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-1 \
+  -tags "1033132" \
+  -description "Passing ADC outputs to the status registers" \
+  -from [list [get_pins -filter {REF_PIN_NAME==INTERNAL_FBRC_DIV1_MUX} -of [get_cells -hier -filter {name =~ "*top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx1_u_adc"}]]] \
   -to   [list [get_pins -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]]]
 set rfams_clock_adc2 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx2_u_adc]]
 set_false_path -through $rfams_clock_adc2 -to $ipif_read
@@ -160,6 +170,11 @@ create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-4 \
   -description "Passing ADC outputs to the status registers" \
   -from [list [get_pins -filter {REF_PIN_NAME==INTERNAL_FBRC_DIV2_MUX} -of [get_cells -hier -filter {name =~ "*top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx2_u_adc"}]]] \
   -to   [list [get_pins -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]]]
+create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-1 \
+  -tags "1033132" \
+  -description "Passing ADC outputs to the status registers" \
+  -from [list [get_pins -filter {REF_PIN_NAME==INTERNAL_FBRC_DIV1_MUX} -of [get_cells -hier -filter {name =~ "*top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx2_u_adc"}]]] \
+  -to   [list [get_pins -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]]]
 set rfams_clock_adc3 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx3_u_adc]]
 set_false_path -through $rfams_clock_adc3 -to $ipif_read
 create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-1 \
@@ -181,6 +196,11 @@ create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-4 \
   -tags "1033132" \
   -description "Passing ADC outputs to the status registers" \
   -from [list [get_pins -filter {REF_PIN_NAME==INTERNAL_FBRC_DIV2_MUX} -of [get_cells -hier -filter {name =~ "*top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx3_u_adc"}]]] \
+  -to   [list [get_pins -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]]]
+create_waiver -internal -scope -user USP_RF_DATA_CONVERTER -type CDC -id CDC-1 \
+  -tags "1033132" \
+  -description "Passing ADC outputs to the status registers" \
+  -from [list [get_pins -filter {REF_PIN_NAME==INTERNAL_FBRC_DIV1_MUX} -of [get_cells -hier -filter {name =~ "*top_level_usp_rf_data_converter_0_0_rf_wrapper_i/rx3_u_adc"}]]] \
   -to   [list [get_pins -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {name =~ *IP2Bus_Data_reg* && IS_SEQUENTIAL}]]]
 
 set rfams_clock_dac0 [get_pins -filter {REF_PIN_NAME==FABRIC_CLK} -of [get_cells top_level_usp_rf_data_converter_0_0_rf_wrapper_i/tx0_u_dac]]

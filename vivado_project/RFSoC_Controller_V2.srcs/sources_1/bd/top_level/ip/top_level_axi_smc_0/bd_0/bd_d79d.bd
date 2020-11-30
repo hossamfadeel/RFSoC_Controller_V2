@@ -8,7 +8,7 @@
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "scoped": "true",
       "synth_flow_mode": "None",
-      "tool_version": "2020.1.1",
+      "tool_version": "2020.2",
       "validated": "true"
     },
     "design_tree": {
@@ -76,66 +76,55 @@
         "address_space_ref": "S00_AXI",
         "base_address": {
           "minimum": "0x00000000",
-          "maximum": "0xFFFFFFFF"
+          "maximum": "0xFFFFFFFF",
+          "width": "32"
         },
         "parameters": {
-          "DATA_WIDTH": {
-            "value": "32",
-            "value_src": "auto_prop"
-          },
-          "PROTOCOL": {
-            "value": "AXI4",
-            "value_src": "auto_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "user_prop"
-          },
-          "ID_WIDTH": {
-            "value": "0",
-            "value_src": "const_prop"
-          },
           "ADDR_WIDTH": {
             "value": "32",
-            "value_src": "auto_prop"
-          },
-          "AWUSER_WIDTH": {
-            "value": "0",
             "value_src": "auto_prop"
           },
           "ARUSER_WIDTH": {
             "value": "0",
             "value_src": "auto_prop"
           },
-          "WUSER_WIDTH": {
+          "AWUSER_WIDTH": {
             "value": "0",
-            "value_src": "const_prop"
-          },
-          "RUSER_WIDTH": {
-            "value": "0",
-            "value_src": "const_prop"
+            "value_src": "auto_prop"
           },
           "BUSER_WIDTH": {
             "value": "0",
             "value_src": "const_prop"
           },
-          "READ_WRITE_MODE": {
-            "value": "READ_WRITE",
+          "CLK_DOMAIN": {
+            "value": "top_level_zynq_ultra_ps_e_0_0_pl_clk0",
+            "value_src": "default_prop"
+          },
+          "DATA_WIDTH": {
+            "value": "32",
+            "value_src": "auto_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "user_prop"
+          },
+          "HAS_BRESP": {
+            "value": "1",
             "value_src": "auto_prop"
           },
           "HAS_BURST": {
             "value": "0",
             "value_src": "const_prop"
           },
+          "HAS_CACHE": {
+            "value": "1",
+            "value_src": "auto_prop"
+          },
           "HAS_LOCK": {
             "value": "0",
             "value_src": "const_prop"
           },
           "HAS_PROT": {
-            "value": "1",
-            "value_src": "auto_prop"
-          },
-          "HAS_CACHE": {
             "value": "1",
             "value_src": "auto_prop"
           },
@@ -147,59 +136,71 @@
             "value": "0",
             "value_src": "constant"
           },
-          "HAS_WSTRB": {
-            "value": "1",
-            "value_src": "auto_prop"
-          },
-          "HAS_BRESP": {
-            "value": "1",
-            "value_src": "auto_prop"
-          },
           "HAS_RRESP": {
             "value": "1",
             "value_src": "auto_prop"
           },
-          "SUPPORTS_NARROW_BURST": {
+          "HAS_WSTRB": {
+            "value": "1",
+            "value_src": "auto_prop"
+          },
+          "ID_WIDTH": {
             "value": "0",
             "value_src": "const_prop"
           },
-          "NUM_READ_OUTSTANDING": {
-            "value": "2"
-          },
-          "NUM_WRITE_OUTSTANDING": {
-            "value": "2"
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "MAX_BURST_LENGTH": {
             "value": "16",
             "value_src": "const_prop"
           },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          },
-          "CLK_DOMAIN": {
-            "value": "top_level_zynq_ultra_ps_e_0_0_pl_clk0",
-            "value_src": "default_prop"
+          "NUM_READ_OUTSTANDING": {
+            "value": "2"
           },
           "NUM_READ_THREADS": {
             "value": "1",
             "value_src": "default"
           },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "2"
+          },
           "NUM_WRITE_THREADS": {
             "value": "1",
             "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "PROTOCOL": {
+            "value": "AXI4",
+            "value_src": "auto_prop"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE",
+            "value_src": "auto_prop"
           },
           "RUSER_BITS_PER_BYTE": {
             "value": "0",
             "value_src": "default"
           },
+          "RUSER_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
             "value_src": "default"
           },
-          "INSERT_VIP": {
+          "WUSER_WIDTH": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "const_prop"
           }
         }
       },
@@ -209,42 +210,19 @@
         "address_space_ref": "S01_AXI",
         "base_address": {
           "minimum": "0x00000000",
-          "maximum": "0xFFFFFFFF"
+          "maximum": "0xFFFFFFFF",
+          "width": "32"
         },
         "parameters": {
-          "DATA_WIDTH": {
-            "value": "32",
-            "value_src": "auto_prop"
-          },
-          "PROTOCOL": {
-            "value": "AXI4",
-            "value_src": "auto_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "user_prop"
-          },
-          "ID_WIDTH": {
-            "value": "0",
-            "value_src": "const_prop"
-          },
           "ADDR_WIDTH": {
             "value": "32",
             "value_src": "auto_prop"
-          },
-          "AWUSER_WIDTH": {
-            "value": "0",
-            "value_src": "const_prop"
           },
           "ARUSER_WIDTH": {
             "value": "0",
             "value_src": "auto_prop"
           },
-          "WUSER_WIDTH": {
-            "value": "0",
-            "value_src": "const_prop"
-          },
-          "RUSER_WIDTH": {
+          "AWUSER_WIDTH": {
             "value": "0",
             "value_src": "const_prop"
           },
@@ -252,23 +230,35 @@
             "value": "0",
             "value_src": "const_prop"
           },
-          "READ_WRITE_MODE": {
-            "value": "READ_ONLY",
+          "CLK_DOMAIN": {
+            "value": "top_level_zynq_ultra_ps_e_0_0_pl_clk0",
+            "value_src": "default_prop"
+          },
+          "DATA_WIDTH": {
+            "value": "32",
             "value_src": "auto_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "user_prop"
+          },
+          "HAS_BRESP": {
+            "value": "0",
+            "value_src": "const_prop"
           },
           "HAS_BURST": {
             "value": "0",
             "value_src": "const_prop"
+          },
+          "HAS_CACHE": {
+            "value": "1",
+            "value_src": "auto_prop"
           },
           "HAS_LOCK": {
             "value": "0",
             "value_src": "const_prop"
           },
           "HAS_PROT": {
-            "value": "1",
-            "value_src": "auto_prop"
-          },
-          "HAS_CACHE": {
             "value": "1",
             "value_src": "auto_prop"
           },
@@ -280,59 +270,71 @@
             "value": "0",
             "value_src": "constant"
           },
-          "HAS_WSTRB": {
-            "value": "0",
-            "value_src": "const_prop"
-          },
-          "HAS_BRESP": {
-            "value": "0",
-            "value_src": "const_prop"
-          },
           "HAS_RRESP": {
             "value": "1",
             "value_src": "auto_prop"
           },
-          "SUPPORTS_NARROW_BURST": {
+          "HAS_WSTRB": {
             "value": "0",
             "value_src": "const_prop"
           },
-          "NUM_READ_OUTSTANDING": {
-            "value": "16"
+          "ID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
           },
-          "NUM_WRITE_OUTSTANDING": {
-            "value": "2"
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "MAX_BURST_LENGTH": {
             "value": "16",
             "value_src": "user_prop"
           },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          },
-          "CLK_DOMAIN": {
-            "value": "top_level_zynq_ultra_ps_e_0_0_pl_clk0",
-            "value_src": "default_prop"
+          "NUM_READ_OUTSTANDING": {
+            "value": "16"
           },
           "NUM_READ_THREADS": {
             "value": "1",
             "value_src": "default"
           },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "2"
+          },
           "NUM_WRITE_THREADS": {
             "value": "1",
             "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "PROTOCOL": {
+            "value": "AXI4",
+            "value_src": "auto_prop"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_ONLY",
+            "value_src": "auto_prop"
           },
           "RUSER_BITS_PER_BYTE": {
             "value": "0",
             "value_src": "default"
           },
+          "RUSER_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
             "value_src": "default"
           },
-          "INSERT_VIP": {
+          "WUSER_WIDTH": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "const_prop"
           }
         }
       },
@@ -342,66 +344,55 @@
         "address_space_ref": "S02_AXI",
         "base_address": {
           "minimum": "0x00000000",
-          "maximum": "0xFFFFFFFF"
+          "maximum": "0xFFFFFFFF",
+          "width": "32"
         },
         "parameters": {
-          "DATA_WIDTH": {
-            "value": "32",
-            "value_src": "auto_prop"
-          },
-          "PROTOCOL": {
-            "value": "AXI4",
-            "value_src": "auto_prop"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "user_prop"
-          },
-          "ID_WIDTH": {
-            "value": "0",
-            "value_src": "const_prop"
-          },
           "ADDR_WIDTH": {
             "value": "32",
-            "value_src": "auto_prop"
-          },
-          "AWUSER_WIDTH": {
-            "value": "0",
             "value_src": "auto_prop"
           },
           "ARUSER_WIDTH": {
             "value": "0",
             "value_src": "const_prop"
           },
-          "WUSER_WIDTH": {
+          "AWUSER_WIDTH": {
             "value": "0",
-            "value_src": "const_prop"
-          },
-          "RUSER_WIDTH": {
-            "value": "0",
-            "value_src": "const_prop"
+            "value_src": "auto_prop"
           },
           "BUSER_WIDTH": {
             "value": "0",
             "value_src": "const_prop"
           },
-          "READ_WRITE_MODE": {
-            "value": "WRITE_ONLY",
+          "CLK_DOMAIN": {
+            "value": "top_level_zynq_ultra_ps_e_0_0_pl_clk0",
+            "value_src": "default_prop"
+          },
+          "DATA_WIDTH": {
+            "value": "32",
+            "value_src": "auto_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "user_prop"
+          },
+          "HAS_BRESP": {
+            "value": "1",
             "value_src": "auto_prop"
           },
           "HAS_BURST": {
             "value": "0",
             "value_src": "const_prop"
           },
+          "HAS_CACHE": {
+            "value": "1",
+            "value_src": "auto_prop"
+          },
           "HAS_LOCK": {
             "value": "0",
             "value_src": "const_prop"
           },
           "HAS_PROT": {
-            "value": "1",
-            "value_src": "auto_prop"
-          },
-          "HAS_CACHE": {
             "value": "1",
             "value_src": "auto_prop"
           },
@@ -413,15 +404,57 @@
             "value": "0",
             "value_src": "constant"
           },
+          "HAS_RRESP": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
           "HAS_WSTRB": {
             "value": "1",
             "value_src": "auto_prop"
           },
-          "HAS_BRESP": {
+          "ID_WIDTH": {
+            "value": "0",
+            "value_src": "const_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "MAX_BURST_LENGTH": {
+            "value": "16",
+            "value_src": "user_prop"
+          },
+          "NUM_READ_OUTSTANDING": {
+            "value": "2"
+          },
+          "NUM_READ_THREADS": {
             "value": "1",
+            "value_src": "default"
+          },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "16"
+          },
+          "NUM_WRITE_THREADS": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "PROTOCOL": {
+            "value": "AXI4",
             "value_src": "auto_prop"
           },
-          "HAS_RRESP": {
+          "READ_WRITE_MODE": {
+            "value": "WRITE_ONLY",
+            "value_src": "auto_prop"
+          },
+          "RUSER_BITS_PER_BYTE": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "RUSER_WIDTH": {
             "value": "0",
             "value_src": "const_prop"
           },
@@ -429,43 +462,13 @@
             "value": "0",
             "value_src": "const_prop"
           },
-          "NUM_READ_OUTSTANDING": {
-            "value": "2"
-          },
-          "NUM_WRITE_OUTSTANDING": {
-            "value": "16"
-          },
-          "MAX_BURST_LENGTH": {
-            "value": "16",
-            "value_src": "user_prop"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          },
-          "CLK_DOMAIN": {
-            "value": "top_level_zynq_ultra_ps_e_0_0_pl_clk0",
-            "value_src": "default_prop"
-          },
-          "NUM_READ_THREADS": {
-            "value": "1",
-            "value_src": "default"
-          },
-          "NUM_WRITE_THREADS": {
-            "value": "1",
-            "value_src": "default"
-          },
-          "RUSER_BITS_PER_BYTE": {
-            "value": "0",
-            "value_src": "default"
-          },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
             "value_src": "default"
           },
-          "INSERT_VIP": {
+          "WUSER_WIDTH": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "const_prop"
           }
         }
       },
@@ -474,39 +477,15 @@
         "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
         "memory_map_ref": "M00_AXI",
         "parameters": {
-          "DATA_WIDTH": {
-            "value": "128",
-            "value_src": "ip"
-          },
-          "PROTOCOL": {
-            "value": "AXI4",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "user_prop"
-          },
-          "ID_WIDTH": {
-            "value": "0",
-            "value_src": "default"
-          },
           "ADDR_WIDTH": {
             "value": "49",
             "value_src": "ip_prop"
-          },
-          "AWUSER_WIDTH": {
-            "value": "0",
-            "value_src": "default"
           },
           "ARUSER_WIDTH": {
             "value": "0",
             "value_src": "default"
           },
-          "WUSER_WIDTH": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "RUSER_WIDTH": {
+          "AWUSER_WIDTH": {
             "value": "0",
             "value_src": "default"
           },
@@ -514,11 +493,27 @@
             "value": "0",
             "value_src": "default"
           },
-          "READ_WRITE_MODE": {
-            "value": "READ_WRITE",
+          "CLK_DOMAIN": {
+            "value": "top_level_zynq_ultra_ps_e_0_0_pl_clk0",
+            "value_src": "default_prop"
+          },
+          "DATA_WIDTH": {
+            "value": "128",
+            "value_src": "ip"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "user_prop"
+          },
+          "HAS_BRESP": {
+            "value": "1",
             "value_src": "default"
           },
           "HAS_BURST": {
+            "value": "1",
+            "value_src": "default"
+          },
+          "HAS_CACHE": {
             "value": "1",
             "value_src": "default"
           },
@@ -530,10 +525,6 @@
             "value": "1",
             "value_src": "default"
           },
-          "HAS_CACHE": {
-            "value": "1",
-            "value_src": "default"
-          },
           "HAS_QOS": {
             "value": "1",
             "value_src": "default"
@@ -542,53 +533,65 @@
             "value": "0",
             "value_src": "constant"
           },
-          "HAS_WSTRB": {
-            "value": "1",
-            "value_src": "default"
-          },
-          "HAS_BRESP": {
-            "value": "1",
-            "value_src": "default"
-          },
           "HAS_RRESP": {
             "value": "1",
             "value_src": "default"
           },
-          "SUPPORTS_NARROW_BURST": {
-            "value": "0"
+          "HAS_WSTRB": {
+            "value": "1",
+            "value_src": "default"
           },
-          "NUM_READ_OUTSTANDING": {
-            "value": "16"
+          "ID_WIDTH": {
+            "value": "0",
+            "value_src": "default"
           },
-          "NUM_WRITE_OUTSTANDING": {
-            "value": "16"
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "MAX_BURST_LENGTH": {
             "value": "4"
           },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          },
-          "CLK_DOMAIN": {
-            "value": "top_level_zynq_ultra_ps_e_0_0_pl_clk0",
-            "value_src": "default_prop"
+          "NUM_READ_OUTSTANDING": {
+            "value": "16"
           },
           "NUM_READ_THREADS": {
             "value": "1",
             "value_src": "default"
           },
+          "NUM_WRITE_OUTSTANDING": {
+            "value": "16"
+          },
           "NUM_WRITE_THREADS": {
             "value": "1",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          },
+          "PROTOCOL": {
+            "value": "AXI4",
+            "value_src": "default"
+          },
+          "READ_WRITE_MODE": {
+            "value": "READ_WRITE",
             "value_src": "default"
           },
           "RUSER_BITS_PER_BYTE": {
             "value": "0"
           },
+          "RUSER_WIDTH": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "SUPPORTS_NARROW_BURST": {
+            "value": "0"
+          },
           "WUSER_BITS_PER_BYTE": {
             "value": "0"
           },
-          "INSERT_VIP": {
+          "WUSER_WIDTH": {
             "value": "0",
             "value_src": "default"
           }
@@ -889,26 +892,24 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S00_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                },
-                "S01_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                },
-                "S02_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S00_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
+              },
+              "S01_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
+              },
+              "S02_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
               }
             }
           },
@@ -944,16 +945,14 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S00_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC",
-                    "M01_SC",
-                    "M02_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S00_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC",
+                  "M01_SC",
+                  "M02_SC"
+                ]
               }
             }
           },
@@ -989,26 +988,24 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S00_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                },
-                "S01_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                },
-                "S02_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S00_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
+              },
+              "S01_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
+              },
+              "S02_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
               }
             }
           },
@@ -1044,26 +1041,24 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S00_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                },
-                "S01_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                },
-                "S02_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S00_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
+              },
+              "S01_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
+              },
+              "S02_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC"
+                ]
               }
             }
           },
@@ -1099,21 +1094,115 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S00_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M00_SC",
-                    "M01_SC",
-                    "M02_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S00_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M00_SC",
+                  "M01_SC",
+                  "M02_SC"
+                ]
               }
             }
           }
         },
         "interface_nets": {
+          "S02_SC_W_1": {
+            "interface_ports": [
+              "S02_SC_W",
+              "w_switchboard/S02_SC"
+            ]
+          },
+          "b_switchboard_M02_SC": {
+            "interface_ports": [
+              "M02_SC_B",
+              "b_switchboard/M02_SC"
+            ]
+          },
+          "S01_SC_W_1": {
+            "interface_ports": [
+              "S01_SC_W",
+              "w_switchboard/S01_SC"
+            ]
+          },
+          "S00_SC_W_1": {
+            "interface_ports": [
+              "S00_SC_W",
+              "w_switchboard/S00_SC"
+            ]
+          },
+          "b_switchboard_M01_SC": {
+            "interface_ports": [
+              "M01_SC_B",
+              "b_switchboard/M01_SC"
+            ]
+          },
+          "S00_SC_B_1": {
+            "interface_ports": [
+              "S00_SC_B",
+              "b_switchboard/S00_SC"
+            ]
+          },
+          "w_switchboard_M00_SC": {
+            "interface_ports": [
+              "M00_SC_W",
+              "w_switchboard/M00_SC"
+            ]
+          },
+          "b_switchboard_M00_SC": {
+            "interface_ports": [
+              "M00_SC_B",
+              "b_switchboard/M00_SC"
+            ]
+          },
+          "S00_SC_AR_1": {
+            "interface_ports": [
+              "S00_SC_AR",
+              "ar_switchboard/S00_SC"
+            ]
+          },
+          "S02_SC_AR_1": {
+            "interface_ports": [
+              "S02_SC_AR",
+              "ar_switchboard/S02_SC"
+            ]
+          },
+          "S00_SC_R_1": {
+            "interface_ports": [
+              "S00_SC_R",
+              "r_switchboard/S00_SC"
+            ]
+          },
+          "ar_switchboard_M00_SC": {
+            "interface_ports": [
+              "M00_SC_AR",
+              "ar_switchboard/M00_SC"
+            ]
+          },
+          "r_switchboard_M00_SC": {
+            "interface_ports": [
+              "M00_SC_R",
+              "r_switchboard/M00_SC"
+            ]
+          },
+          "r_switchboard_M01_SC": {
+            "interface_ports": [
+              "M01_SC_R",
+              "r_switchboard/M01_SC"
+            ]
+          },
+          "S01_SC_AR_1": {
+            "interface_ports": [
+              "S01_SC_AR",
+              "ar_switchboard/S01_SC"
+            ]
+          },
+          "r_switchboard_M02_SC": {
+            "interface_ports": [
+              "M02_SC_R",
+              "r_switchboard/M02_SC"
+            ]
+          },
           "S00_SC_AW_1": {
             "interface_ports": [
               "S00_SC_AW",
@@ -1136,102 +1225,6 @@
             "interface_ports": [
               "M00_SC_AW",
               "aw_switchboard/M00_SC"
-            ]
-          },
-          "S00_SC_W_1": {
-            "interface_ports": [
-              "S00_SC_W",
-              "w_switchboard/S00_SC"
-            ]
-          },
-          "S01_SC_W_1": {
-            "interface_ports": [
-              "S01_SC_W",
-              "w_switchboard/S01_SC"
-            ]
-          },
-          "S00_SC_B_1": {
-            "interface_ports": [
-              "S00_SC_B",
-              "b_switchboard/S00_SC"
-            ]
-          },
-          "w_switchboard_M00_SC": {
-            "interface_ports": [
-              "M00_SC_W",
-              "w_switchboard/M00_SC"
-            ]
-          },
-          "S02_SC_W_1": {
-            "interface_ports": [
-              "S02_SC_W",
-              "w_switchboard/S02_SC"
-            ]
-          },
-          "b_switchboard_M00_SC": {
-            "interface_ports": [
-              "M00_SC_B",
-              "b_switchboard/M00_SC"
-            ]
-          },
-          "b_switchboard_M02_SC": {
-            "interface_ports": [
-              "M02_SC_B",
-              "b_switchboard/M02_SC"
-            ]
-          },
-          "b_switchboard_M01_SC": {
-            "interface_ports": [
-              "M01_SC_B",
-              "b_switchboard/M01_SC"
-            ]
-          },
-          "S00_SC_AR_1": {
-            "interface_ports": [
-              "S00_SC_AR",
-              "ar_switchboard/S00_SC"
-            ]
-          },
-          "S00_SC_R_1": {
-            "interface_ports": [
-              "S00_SC_R",
-              "r_switchboard/S00_SC"
-            ]
-          },
-          "S01_SC_AR_1": {
-            "interface_ports": [
-              "S01_SC_AR",
-              "ar_switchboard/S01_SC"
-            ]
-          },
-          "S02_SC_AR_1": {
-            "interface_ports": [
-              "S02_SC_AR",
-              "ar_switchboard/S02_SC"
-            ]
-          },
-          "ar_switchboard_M00_SC": {
-            "interface_ports": [
-              "M00_SC_AR",
-              "ar_switchboard/M00_SC"
-            ]
-          },
-          "r_switchboard_M00_SC": {
-            "interface_ports": [
-              "M00_SC_R",
-              "r_switchboard/M00_SC"
-            ]
-          },
-          "r_switchboard_M02_SC": {
-            "interface_ports": [
-              "M02_SC_R",
-              "r_switchboard/M02_SC"
-            ]
-          },
-          "r_switchboard_M01_SC": {
-            "interface_ports": [
-              "M01_SC_R",
-              "r_switchboard/M01_SC"
             ]
           }
         },
@@ -1374,14 +1367,12 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           },
@@ -1396,7 +1387,7 @@
                 "value": "0"
               },
               "MEP_IDENTIFIER": {
-                "value": "0"
+                "value": "1"
               },
               "MEP_IDENTIFIER_WIDTH": {
                 "value": "2"
@@ -1429,14 +1420,12 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           },
@@ -1532,29 +1521,21 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           }
         },
         "interface_nets": {
-          "s00_mmu_M_AXI": {
+          "s00_si_converter_M_AXI": {
             "interface_ports": [
-              "s00_mmu/M_AXI",
-              "s00_transaction_regulator/S_AXI"
-            ]
-          },
-          "s_axi_1": {
-            "interface_ports": [
-              "s_axi",
-              "s00_mmu/S_AXI"
+              "m_axi",
+              "s00_si_converter/M_AXI"
             ]
           },
           "s00_transaction_regulator_M_AXI": {
@@ -1563,10 +1544,16 @@
               "s00_si_converter/S_AXI"
             ]
           },
-          "s00_si_converter_M_AXI": {
+          "s_axi_1": {
             "interface_ports": [
-              "m_axi",
-              "s00_si_converter/M_AXI"
+              "s_axi",
+              "s00_mmu/S_AXI"
+            ]
+          },
+          "s00_mmu_M_AXI": {
+            "interface_ports": [
+              "s00_mmu/M_AXI",
+              "s00_transaction_regulator/S_AXI"
             ]
           }
         },
@@ -1642,15 +1629,13 @@
             "value": "3"
           }
         },
-        "addressing": {
-          "interface_ports": {
-            "S_AXI": {
-              "mode": "Slave",
-              "bridges": [
-                "M_SC_AR",
-                "M_SC_AW"
-              ]
-            }
+        "interface_ports": {
+          "S_AXI": {
+            "mode": "Slave",
+            "bridges": [
+              "M_SC_AR",
+              "M_SC_AW"
+            ]
           }
         }
       },
@@ -1856,14 +1841,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -2010,14 +1993,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -2161,14 +2142,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -2312,14 +2291,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -2466,29 +2443,51 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           }
         },
         "interface_nets": {
-          "s00_aw_node_M_SC": {
+          "S_SC_B_1": {
             "interface_ports": [
-              "M_SC_AW",
-              "s00_aw_node/M_SC"
+              "S_SC_B",
+              "s00_b_node/S_SC"
+            ]
+          },
+          "s00_b_node_M_SC": {
+            "interface_ports": [
+              "M_SC_B",
+              "s00_b_node/M_SC"
+            ]
+          },
+          "S_SC_W_1": {
+            "interface_ports": [
+              "S_SC_W",
+              "s00_w_node/S_SC"
+            ]
+          },
+          "s00_w_node_M_SC": {
+            "interface_ports": [
+              "M_SC_W",
+              "s00_w_node/M_SC"
             ]
           },
           "s00_ar_node_M_SC": {
             "interface_ports": [
               "M_SC_AR",
               "s00_ar_node/M_SC"
+            ]
+          },
+          "S_SC_R_1": {
+            "interface_ports": [
+              "S_SC_R",
+              "s00_r_node/S_SC"
             ]
           },
           "s00_r_node_M_SC": {
@@ -2503,40 +2502,16 @@
               "s00_ar_node/S_SC"
             ]
           },
-          "S_SC_R_1": {
+          "s00_aw_node_M_SC": {
             "interface_ports": [
-              "S_SC_R",
-              "s00_r_node/S_SC"
-            ]
-          },
-          "s00_w_node_M_SC": {
-            "interface_ports": [
-              "M_SC_W",
-              "s00_w_node/M_SC"
-            ]
-          },
-          "S_SC_W_1": {
-            "interface_ports": [
-              "S_SC_W",
-              "s00_w_node/S_SC"
+              "M_SC_AW",
+              "s00_aw_node/M_SC"
             ]
           },
           "S_SC_AW_1": {
             "interface_ports": [
               "S_SC_AW",
               "s00_aw_node/S_SC"
-            ]
-          },
-          "s00_b_node_M_SC": {
-            "interface_ports": [
-              "M_SC_B",
-              "s00_b_node/M_SC"
-            ]
-          },
-          "S_SC_B_1": {
-            "interface_ports": [
-              "S_SC_B",
-              "s00_b_node/S_SC"
             ]
           }
         },
@@ -2703,14 +2678,12 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           },
@@ -2725,7 +2698,7 @@
                 "value": "0"
               },
               "MEP_IDENTIFIER": {
-                "value": "1"
+                "value": "2"
               },
               "MEP_IDENTIFIER_WIDTH": {
                 "value": "2"
@@ -2758,14 +2731,12 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           },
@@ -2861,29 +2832,27 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           }
         },
         "interface_nets": {
+          "s01_mmu_M_AXI": {
+            "interface_ports": [
+              "s01_mmu/M_AXI",
+              "s01_transaction_regulator/S_AXI"
+            ]
+          },
           "s01_transaction_regulator_M_AXI": {
             "interface_ports": [
               "s01_transaction_regulator/M_AXI",
               "s01_si_converter/S_AXI"
-            ]
-          },
-          "s01_si_converter_M_AXI": {
-            "interface_ports": [
-              "m_axi",
-              "s01_si_converter/M_AXI"
             ]
           },
           "s_axi_1": {
@@ -2892,10 +2861,10 @@
               "s01_mmu/S_AXI"
             ]
           },
-          "s01_mmu_M_AXI": {
+          "s01_si_converter_M_AXI": {
             "interface_ports": [
-              "s01_mmu/M_AXI",
-              "s01_transaction_regulator/S_AXI"
+              "m_axi",
+              "s01_si_converter/M_AXI"
             ]
           }
         },
@@ -2971,14 +2940,12 @@
             "value": "3"
           }
         },
-        "addressing": {
-          "interface_ports": {
-            "S_AXI": {
-              "mode": "Slave",
-              "bridges": [
-                "M_SC_AR"
-              ]
-            }
+        "interface_ports": {
+          "S_AXI": {
+            "mode": "Slave",
+            "bridges": [
+              "M_SC_AR"
+            ]
           }
         }
       },
@@ -3160,14 +3127,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -3314,31 +3279,17 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           }
         },
         "interface_nets": {
-          "s01_ar_node_M_SC": {
-            "interface_ports": [
-              "M_SC_AR",
-              "s01_ar_node/M_SC"
-            ]
-          },
-          "S_SC_AR_1": {
-            "interface_ports": [
-              "S_SC_AR",
-              "s01_ar_node/S_SC"
-            ]
-          },
           "S_SC_R_1": {
             "interface_ports": [
               "S_SC_R",
@@ -3349,6 +3300,18 @@
             "interface_ports": [
               "M_SC_R",
               "s01_r_node/M_SC"
+            ]
+          },
+          "s01_ar_node_M_SC": {
+            "interface_ports": [
+              "M_SC_AR",
+              "s01_ar_node/M_SC"
+            ]
+          },
+          "S_SC_AR_1": {
+            "interface_ports": [
+              "S_SC_AR",
+              "s01_ar_node/S_SC"
             ]
           }
         },
@@ -3506,14 +3469,12 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           },
@@ -3528,7 +3489,7 @@
                 "value": "0"
               },
               "MEP_IDENTIFIER": {
-                "value": "2"
+                "value": "3"
               },
               "MEP_IDENTIFIER_WIDTH": {
                 "value": "2"
@@ -3561,14 +3522,12 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           },
@@ -3664,14 +3623,12 @@
                 "value": "32"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           }
@@ -3681,6 +3638,12 @@
             "interface_ports": [
               "s02_mmu/M_AXI",
               "s02_transaction_regulator/S_AXI"
+            ]
+          },
+          "s02_si_converter_M_AXI": {
+            "interface_ports": [
+              "m_axi",
+              "s02_si_converter/M_AXI"
             ]
           },
           "s_axi_1": {
@@ -3693,12 +3656,6 @@
             "interface_ports": [
               "s02_transaction_regulator/M_AXI",
               "s02_si_converter/S_AXI"
-            ]
-          },
-          "s02_si_converter_M_AXI": {
-            "interface_ports": [
-              "m_axi",
-              "s02_si_converter/M_AXI"
             ]
           }
         },
@@ -3774,14 +3731,12 @@
             "value": "3"
           }
         },
-        "addressing": {
-          "interface_ports": {
-            "S_AXI": {
-              "mode": "Slave",
-              "bridges": [
-                "M_SC_AW"
-              ]
-            }
+        "interface_ports": {
+          "S_AXI": {
+            "mode": "Slave",
+            "bridges": [
+              "M_SC_AW"
+            ]
           }
         }
       },
@@ -3971,14 +3926,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -4122,14 +4075,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -4276,14 +4227,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           }
@@ -4293,6 +4242,24 @@
             "interface_ports": [
               "S_SC_AW",
               "s02_aw_node/S_SC"
+            ]
+          },
+          "s02_aw_node_M_SC": {
+            "interface_ports": [
+              "M_SC_AW",
+              "s02_aw_node/M_SC"
+            ]
+          },
+          "S_SC_B_1": {
+            "interface_ports": [
+              "S_SC_B",
+              "s02_b_node/S_SC"
+            ]
+          },
+          "s02_b_node_M_SC": {
+            "interface_ports": [
+              "M_SC_B",
+              "s02_b_node/M_SC"
             ]
           },
           "s02_w_node_M_SC": {
@@ -4305,24 +4272,6 @@
             "interface_ports": [
               "S_SC_W",
               "s02_w_node/S_SC"
-            ]
-          },
-          "s02_aw_node_M_SC": {
-            "interface_ports": [
-              "M_SC_AW",
-              "s02_aw_node/M_SC"
-            ]
-          },
-          "s02_b_node_M_SC": {
-            "interface_ports": [
-              "M_SC_B",
-              "s02_b_node/M_SC"
-            ]
-          },
-          "S_SC_B_1": {
-            "interface_ports": [
-              "S_SC_B",
-              "s02_b_node/S_SC"
             ]
           }
         },
@@ -4414,14 +4363,12 @@
             "value": "3"
           }
         },
-        "addressing": {
-          "interface_ports": {
-            "S_SC_AR": {
-              "mode": "Slave",
-              "bridges": [
-                "M_AXI"
-              ]
-            }
+        "interface_ports": {
+          "S_SC_AR": {
+            "mode": "Slave",
+            "bridges": [
+              "M_AXI"
+            ]
           }
         }
       },
@@ -4627,14 +4574,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -4778,14 +4723,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -4929,14 +4872,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -5083,14 +5024,12 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           },
@@ -5231,19 +5170,35 @@
                 "value": "0"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_SC": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_SC"
-                  ]
-                }
+            "interface_ports": {
+              "S_SC": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_SC"
+                ]
               }
             }
           }
         },
         "interface_nets": {
+          "m00_ar_node_M_SC": {
+            "interface_ports": [
+              "M_SC_AR",
+              "m00_ar_node/M_SC"
+            ]
+          },
+          "m00_r_node_M_SC": {
+            "interface_ports": [
+              "M_SC_R",
+              "m00_r_node/M_SC"
+            ]
+          },
+          "S_SC_AR_1": {
+            "interface_ports": [
+              "S_SC_AR",
+              "m00_ar_node/S_SC"
+            ]
+          },
           "S_SC_R_1": {
             "interface_ports": [
               "S_SC_R",
@@ -5256,28 +5211,22 @@
               "m00_aw_node/M_SC"
             ]
           },
-          "m00_r_node_M_SC": {
-            "interface_ports": [
-              "M_SC_R",
-              "m00_r_node/M_SC"
-            ]
-          },
           "S_SC_AW_1": {
             "interface_ports": [
               "S_SC_AW",
               "m00_aw_node/S_SC"
             ]
           },
-          "m00_w_node_M_SC": {
-            "interface_ports": [
-              "M_SC_W",
-              "m00_w_node/M_SC"
-            ]
-          },
           "S_SC_W_1": {
             "interface_ports": [
               "S_SC_W",
               "m00_w_node/S_SC"
+            ]
+          },
+          "m00_w_node_M_SC": {
+            "interface_ports": [
+              "M_SC_W",
+              "m00_w_node/M_SC"
             ]
           },
           "m00_b_node_M_SC": {
@@ -5296,18 +5245,6 @@
             "interface_ports": [
               "m00_aw_node/M_AXIS_ARB",
               "m00_w_node/S_AXIS_ARB"
-            ]
-          },
-          "m00_ar_node_M_SC": {
-            "interface_ports": [
-              "M_SC_AR",
-              "m00_ar_node/M_SC"
-            ]
-          },
-          "S_SC_AR_1": {
-            "interface_ports": [
-              "S_SC_AR",
-              "m00_ar_node/S_SC"
             ]
           }
         },
@@ -5447,16 +5384,16 @@
                 "value": "READ_WRITE"
               },
               "SSC000_ROUTE": {
-                "value": "0b001"
+                "value": "0b000"
               },
               "SSC001_ROUTE": {
-                "value": "0b010"
+                "value": "0b001"
               },
               "SSC002_ROUTE": {
-                "value": "0b100"
+                "value": "0b010"
               },
               "SSC003_ROUTE": {
-                "value": "0b000"
+                "value": "0b100"
               },
               "SSC_ROUTE_WIDTH": {
                 "value": "3"
@@ -5468,14 +5405,12 @@
                 "value": "128"
               }
             },
-            "addressing": {
-              "interface_ports": {
-                "S_AXI": {
-                  "mode": "Slave",
-                  "bridges": [
-                    "M_AXI"
-                  ]
-                }
+            "interface_ports": {
+              "S_AXI": {
+                "mode": "Slave",
+                "bridges": [
+                  "M_AXI"
+                ]
               }
             }
           }
@@ -5511,100 +5446,28 @@
       }
     },
     "interface_nets": {
-      "m00_nodes_M_SC_AW": {
+      "S00_AXI_1": {
         "interface_ports": [
-          "m00_nodes/M_SC_AW",
-          "m00_sc2axi/S_SC_AW"
+          "S00_AXI",
+          "s00_entry_pipeline/s_axi"
         ]
       },
-      "m00_exit_pipeline_m_axi": {
+      "S_SC_AR_1": {
         "interface_ports": [
-          "M00_AXI",
-          "m00_exit_pipeline/m_axi"
+          "s00_nodes/S_SC_AR",
+          "s00_axi2sc/M_SC_AR"
         ]
       },
-      "m00_sc2axi_M_AXI": {
+      "s00_nodes_M_SC_R": {
         "interface_ports": [
-          "m00_sc2axi/M_AXI",
-          "m00_exit_pipeline/s_axi"
+          "s00_nodes/M_SC_R",
+          "s00_axi2sc/S_SC_R"
         ]
       },
-      "m00_nodes_M_SC_AR": {
+      "s00_entry_pipeline_m_axi": {
         "interface_ports": [
-          "m00_nodes/M_SC_AR",
-          "m00_sc2axi/S_SC_AR"
-        ]
-      },
-      "S_SC_AR_3": {
-        "interface_ports": [
-          "m00_nodes/S_SC_AR",
-          "switchboards/M00_SC_AR"
-        ]
-      },
-      "m00_nodes_M_SC_W": {
-        "interface_ports": [
-          "m00_nodes/M_SC_W",
-          "m00_sc2axi/S_SC_W"
-        ]
-      },
-      "S_SC_W_3": {
-        "interface_ports": [
-          "m00_nodes/S_SC_W",
-          "switchboards/M00_SC_W"
-        ]
-      },
-      "m00_nodes_M_SC_R": {
-        "interface_ports": [
-          "m00_nodes/M_SC_R",
-          "switchboards/S00_SC_R"
-        ]
-      },
-      "m00_nodes_M_SC_B": {
-        "interface_ports": [
-          "m00_nodes/M_SC_B",
-          "switchboards/S00_SC_B"
-        ]
-      },
-      "S_SC_R_3": {
-        "interface_ports": [
-          "m00_nodes/S_SC_R",
-          "m00_sc2axi/M_SC_R"
-        ]
-      },
-      "S_SC_AW_3": {
-        "interface_ports": [
-          "m00_nodes/S_SC_AW",
-          "switchboards/M00_SC_AW"
-        ]
-      },
-      "S_SC_B_3": {
-        "interface_ports": [
-          "m00_nodes/S_SC_B",
-          "m00_sc2axi/M_SC_B"
-        ]
-      },
-      "s00_nodes_M_SC_AW": {
-        "interface_ports": [
-          "s00_nodes/M_SC_AW",
-          "switchboards/S00_SC_AW"
-        ]
-      },
-      "S_SC_R_1": {
-        "interface_ports": [
-          "s00_nodes/S_SC_R",
-          "switchboards/M00_SC_R"
-        ]
-      },
-      "S_SC_B_1": {
-        "interface_ports": [
-          "s00_nodes/S_SC_B",
-          "switchboards/M00_SC_B"
-        ]
-      },
-      "S_SC_AW_1": {
-        "interface_ports": [
-          "s00_nodes/S_SC_AW",
-          "s00_axi2sc/M_SC_AW"
+          "s00_entry_pipeline/m_axi",
+          "s00_axi2sc/S_AXI"
         ]
       },
       "S_SC_W_1": {
@@ -5613,10 +5476,52 @@
           "s00_axi2sc/M_SC_W"
         ]
       },
-      "s00_nodes_M_SC_R": {
+      "S_SC_AW_1": {
         "interface_ports": [
-          "s00_nodes/M_SC_R",
-          "s00_axi2sc/S_SC_R"
+          "s00_nodes/S_SC_AW",
+          "s00_axi2sc/M_SC_AW"
+        ]
+      },
+      "S_SC_R_2": {
+        "interface_ports": [
+          "s01_nodes/S_SC_R",
+          "switchboards/M01_SC_R"
+        ]
+      },
+      "S_SC_AR_2": {
+        "interface_ports": [
+          "s01_nodes/S_SC_AR",
+          "s01_axi2sc/M_SC_AR"
+        ]
+      },
+      "s01_entry_pipeline_m_axi": {
+        "interface_ports": [
+          "s01_entry_pipeline/m_axi",
+          "s01_axi2sc/S_AXI"
+        ]
+      },
+      "s01_nodes_M_SC_AR": {
+        "interface_ports": [
+          "s01_nodes/M_SC_AR",
+          "switchboards/S01_SC_AR"
+        ]
+      },
+      "s01_nodes_M_SC_R": {
+        "interface_ports": [
+          "s01_nodes/M_SC_R",
+          "s01_axi2sc/S_SC_R"
+        ]
+      },
+      "S01_AXI_1": {
+        "interface_ports": [
+          "S01_AXI",
+          "s01_entry_pipeline/s_axi"
+        ]
+      },
+      "s00_nodes_M_SC_AW": {
+        "interface_ports": [
+          "s00_nodes/M_SC_AW",
+          "switchboards/S00_SC_AW"
         ]
       },
       "s00_nodes_M_SC_B": {
@@ -5631,10 +5536,10 @@
           "switchboards/S00_SC_W"
         ]
       },
-      "S00_AXI_1": {
+      "S_SC_B_1": {
         "interface_ports": [
-          "S00_AXI",
-          "s00_entry_pipeline/s_axi"
+          "s00_nodes/S_SC_B",
+          "switchboards/M00_SC_B"
         ]
       },
       "s00_nodes_M_SC_AR": {
@@ -5643,64 +5548,10 @@
           "switchboards/S00_SC_AR"
         ]
       },
-      "s00_entry_pipeline_m_axi": {
+      "S_SC_R_1": {
         "interface_ports": [
-          "s00_entry_pipeline/m_axi",
-          "s00_axi2sc/S_AXI"
-        ]
-      },
-      "S_SC_AR_1": {
-        "interface_ports": [
-          "s00_nodes/S_SC_AR",
-          "s00_axi2sc/M_SC_AR"
-        ]
-      },
-      "S_SC_R_2": {
-        "interface_ports": [
-          "s01_nodes/S_SC_R",
-          "switchboards/M01_SC_R"
-        ]
-      },
-      "s01_entry_pipeline_m_axi": {
-        "interface_ports": [
-          "s01_entry_pipeline/m_axi",
-          "s01_axi2sc/S_AXI"
-        ]
-      },
-      "S_SC_AR_2": {
-        "interface_ports": [
-          "s01_nodes/S_SC_AR",
-          "s01_axi2sc/M_SC_AR"
-        ]
-      },
-      "s01_nodes_M_SC_R": {
-        "interface_ports": [
-          "s01_nodes/M_SC_R",
-          "s01_axi2sc/S_SC_R"
-        ]
-      },
-      "s01_nodes_M_SC_AR": {
-        "interface_ports": [
-          "s01_nodes/M_SC_AR",
-          "switchboards/S01_SC_AR"
-        ]
-      },
-      "S01_AXI_1": {
-        "interface_ports": [
-          "S01_AXI",
-          "s01_entry_pipeline/s_axi"
-        ]
-      },
-      "S_SC_W_2": {
-        "interface_ports": [
-          "s02_nodes/S_SC_W",
-          "s02_axi2sc/M_SC_W"
-        ]
-      },
-      "S_SC_B_2": {
-        "interface_ports": [
-          "s02_nodes/S_SC_B",
-          "switchboards/M02_SC_B"
+          "s00_nodes/S_SC_R",
+          "switchboards/M00_SC_R"
         ]
       },
       "s02_entry_pipeline_m_axi": {
@@ -5715,10 +5566,22 @@
           "s02_entry_pipeline/s_axi"
         ]
       },
+      "S_SC_W_2": {
+        "interface_ports": [
+          "s02_nodes/S_SC_W",
+          "s02_axi2sc/M_SC_W"
+        ]
+      },
       "S_SC_AW_2": {
         "interface_ports": [
           "s02_nodes/S_SC_AW",
           "s02_axi2sc/M_SC_AW"
+        ]
+      },
+      "s02_nodes_M_SC_B": {
+        "interface_ports": [
+          "s02_nodes/M_SC_B",
+          "s02_axi2sc/S_SC_B"
         ]
       },
       "s02_nodes_M_SC_AW": {
@@ -5733,10 +5596,82 @@
           "switchboards/S02_SC_W"
         ]
       },
-      "s02_nodes_M_SC_B": {
+      "S_SC_B_2": {
         "interface_ports": [
-          "s02_nodes/M_SC_B",
-          "s02_axi2sc/S_SC_B"
+          "s02_nodes/S_SC_B",
+          "switchboards/M02_SC_B"
+        ]
+      },
+      "S_SC_AR_3": {
+        "interface_ports": [
+          "m00_nodes/S_SC_AR",
+          "switchboards/M00_SC_AR"
+        ]
+      },
+      "S_SC_W_3": {
+        "interface_ports": [
+          "m00_nodes/S_SC_W",
+          "switchboards/M00_SC_W"
+        ]
+      },
+      "m00_nodes_M_SC_R": {
+        "interface_ports": [
+          "m00_nodes/M_SC_R",
+          "switchboards/S00_SC_R"
+        ]
+      },
+      "S_SC_B_3": {
+        "interface_ports": [
+          "m00_nodes/S_SC_B",
+          "m00_sc2axi/M_SC_B"
+        ]
+      },
+      "m00_sc2axi_M_AXI": {
+        "interface_ports": [
+          "m00_sc2axi/M_AXI",
+          "m00_exit_pipeline/s_axi"
+        ]
+      },
+      "m00_exit_pipeline_m_axi": {
+        "interface_ports": [
+          "M00_AXI",
+          "m00_exit_pipeline/m_axi"
+        ]
+      },
+      "m00_nodes_M_SC_B": {
+        "interface_ports": [
+          "m00_nodes/M_SC_B",
+          "switchboards/S00_SC_B"
+        ]
+      },
+      "m00_nodes_M_SC_W": {
+        "interface_ports": [
+          "m00_nodes/M_SC_W",
+          "m00_sc2axi/S_SC_W"
+        ]
+      },
+      "S_SC_AW_3": {
+        "interface_ports": [
+          "m00_nodes/S_SC_AW",
+          "switchboards/M00_SC_AW"
+        ]
+      },
+      "m00_nodes_M_SC_AR": {
+        "interface_ports": [
+          "m00_nodes/M_SC_AR",
+          "m00_sc2axi/S_SC_AR"
+        ]
+      },
+      "m00_nodes_M_SC_AW": {
+        "interface_ports": [
+          "m00_nodes/M_SC_AW",
+          "m00_sc2axi/S_SC_AW"
+        ]
+      },
+      "S_SC_R_3": {
+        "interface_ports": [
+          "m00_nodes/S_SC_R",
+          "m00_sc2axi/M_SC_R"
         ]
       }
     },

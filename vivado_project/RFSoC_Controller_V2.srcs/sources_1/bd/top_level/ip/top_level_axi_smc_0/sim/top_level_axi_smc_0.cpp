@@ -180,6 +180,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
     mp_impl->S00_AXI_tlm_aximm_read_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->S00_AXI_tlm_aximm_write_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S01_AXI' transactor
 
@@ -252,6 +255,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
 
     mp_impl->S01_AXI_tlm_aximm_read_socket->bind(*(mp_S01_AXI_transactor->rd_socket));
     mp_impl->S01_AXI_tlm_aximm_write_socket->bind(mp_S01_AXI_wr_socket_stub->initiator_socket);
+  }
+  else
+  {
   }
 
   // configure 'S02_AXI' transactor
@@ -328,6 +334,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
 
     mp_impl->S02_AXI_tlm_aximm_read_socket->bind(mp_S02_AXI_rd_socket_stub->initiator_socket);
     mp_impl->S02_AXI_tlm_aximm_write_socket->bind(*(mp_S02_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M00_AXI' transactor
@@ -421,6 +430,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
 
     mp_impl->M00_AXI_tlm_aximm_read_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->M00_AXI_tlm_aximm_write_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -550,6 +562,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
     mp_impl->S00_AXI_tlm_aximm_read_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->S00_AXI_tlm_aximm_write_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S01_AXI' transactor
 
@@ -622,6 +637,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
 
     mp_impl->S01_AXI_tlm_aximm_read_socket->bind(*(mp_S01_AXI_transactor->rd_socket));
     mp_impl->S01_AXI_tlm_aximm_write_socket->bind(mp_S01_AXI_wr_socket_stub->initiator_socket);
+  }
+  else
+  {
   }
 
   // configure 'S02_AXI' transactor
@@ -698,6 +716,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
 
     mp_impl->S02_AXI_tlm_aximm_read_socket->bind(mp_S02_AXI_rd_socket_stub->initiator_socket);
     mp_impl->S02_AXI_tlm_aximm_write_socket->bind(*(mp_S02_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M00_AXI' transactor
@@ -791,6 +812,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
 
     mp_impl->M00_AXI_tlm_aximm_read_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->M00_AXI_tlm_aximm_write_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -920,6 +944,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
     mp_impl->S00_AXI_tlm_aximm_read_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->S00_AXI_tlm_aximm_write_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'S01_AXI' transactor
 
@@ -992,6 +1019,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
 
     mp_impl->S01_AXI_tlm_aximm_read_socket->bind(*(mp_S01_AXI_transactor->rd_socket));
     mp_impl->S01_AXI_tlm_aximm_write_socket->bind(mp_S01_AXI_wr_socket_stub->initiator_socket);
+  }
+  else
+  {
   }
 
   // configure 'S02_AXI' transactor
@@ -1068,6 +1098,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
 
     mp_impl->S02_AXI_tlm_aximm_read_socket->bind(mp_S02_AXI_rd_socket_stub->initiator_socket);
     mp_impl->S02_AXI_tlm_aximm_write_socket->bind(*(mp_S02_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M00_AXI' transactor
@@ -1162,6 +1195,9 @@ void top_level_axi_smc_0::before_end_of_elaboration()
     mp_impl->M00_AXI_tlm_aximm_read_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->M00_AXI_tlm_aximm_write_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
 }
 
@@ -1188,6 +1224,7 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_M00_AXI_transactor = NULL;
   mp_M00_AXI_awlock_converter = NULL;
   mp_M00_AXI_arlock_converter = NULL;
+
   // Instantiate Socket Stubs
   mp_S01_AXI_wr_socket_stub = NULL;
   mp_S02_AXI_rd_socket_stub = NULL;
@@ -1269,7 +1306,6 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_S00_AXI_transactor->RREADY(S00_AXI_rready);
   mp_S00_AXI_transactor->CLK(aclk);
   mp_S00_AXI_transactor->RST(aresetn);
-
   // configure S01_AXI_transactor
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
     S01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -1326,7 +1362,6 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_S01_AXI_transactor->RREADY(S01_AXI_rready);
   mp_S01_AXI_transactor->CLK(aclk);
   mp_S01_AXI_transactor->RST(aresetn);
-
   // configure S02_AXI_transactor
     xsc::common_cpp::properties S02_AXI_transactor_param_props;
     S02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -1386,7 +1421,6 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_S02_AXI_transactor->BREADY(S02_AXI_bready);
   mp_S02_AXI_transactor->CLK(aclk);
   mp_S02_AXI_transactor->RST(aresetn);
-
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
@@ -1465,7 +1499,6 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_M00_AXI_transactor->CLK(aclk);
   mp_M00_AXI_transactor->RST(aresetn);
 
-
   // initialize transactors stubs
   S00_AXI_transactor_target_wr_socket_stub = nullptr;
   S00_AXI_transactor_target_rd_socket_stub = nullptr;
@@ -1483,6 +1516,7 @@ void top_level_axi_smc_0::before_end_of_elaboration()
   {
     mp_impl->S00_AXI_tlm_aximm_read_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->S00_AXI_tlm_aximm_write_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -1499,6 +1533,7 @@ void top_level_axi_smc_0::before_end_of_elaboration()
     mp_impl->S01_AXI_tlm_aximm_read_socket->bind(*(mp_S01_AXI_transactor->rd_socket));
     mp_S01_AXI_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket", 0);
     mp_impl->S01_AXI_tlm_aximm_write_socket->bind(mp_S01_AXI_wr_socket_stub->initiator_socket);
+  
   }
   else
   {
@@ -1513,6 +1548,7 @@ void top_level_axi_smc_0::before_end_of_elaboration()
     mp_S02_AXI_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket", 0);
     mp_impl->S02_AXI_tlm_aximm_read_socket->bind(mp_S02_AXI_rd_socket_stub->initiator_socket);
     mp_impl->S02_AXI_tlm_aximm_write_socket->bind(*(mp_S02_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -1526,6 +1562,7 @@ void top_level_axi_smc_0::before_end_of_elaboration()
   {
     mp_impl->M00_AXI_tlm_aximm_read_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->M00_AXI_tlm_aximm_write_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -1561,6 +1598,7 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_M00_AXI_transactor = NULL;
   mp_M00_AXI_awlock_converter = NULL;
   mp_M00_AXI_arlock_converter = NULL;
+
   // Instantiate Socket Stubs
   mp_S01_AXI_wr_socket_stub = NULL;
   mp_S02_AXI_rd_socket_stub = NULL;
@@ -1642,7 +1680,6 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_S00_AXI_transactor->RREADY(S00_AXI_rready);
   mp_S00_AXI_transactor->CLK(aclk);
   mp_S00_AXI_transactor->RST(aresetn);
-
   // configure S01_AXI_transactor
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
     S01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -1699,7 +1736,6 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_S01_AXI_transactor->RREADY(S01_AXI_rready);
   mp_S01_AXI_transactor->CLK(aclk);
   mp_S01_AXI_transactor->RST(aresetn);
-
   // configure S02_AXI_transactor
     xsc::common_cpp::properties S02_AXI_transactor_param_props;
     S02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -1759,7 +1795,6 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_S02_AXI_transactor->BREADY(S02_AXI_bready);
   mp_S02_AXI_transactor->CLK(aclk);
   mp_S02_AXI_transactor->RST(aresetn);
-
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
@@ -1838,7 +1873,6 @@ top_level_axi_smc_0::top_level_axi_smc_0(const sc_core::sc_module_name& nm) : to
   mp_M00_AXI_transactor->CLK(aclk);
   mp_M00_AXI_transactor->RST(aresetn);
 
-
   // initialize transactors stubs
   S00_AXI_transactor_target_wr_socket_stub = nullptr;
   S00_AXI_transactor_target_rd_socket_stub = nullptr;
@@ -1856,6 +1890,7 @@ void top_level_axi_smc_0::before_end_of_elaboration()
   {
     mp_impl->S00_AXI_tlm_aximm_read_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->S00_AXI_tlm_aximm_write_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -1872,6 +1907,7 @@ void top_level_axi_smc_0::before_end_of_elaboration()
     mp_impl->S01_AXI_tlm_aximm_read_socket->bind(*(mp_S01_AXI_transactor->rd_socket));
     mp_S01_AXI_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket", 0);
     mp_impl->S01_AXI_tlm_aximm_write_socket->bind(mp_S01_AXI_wr_socket_stub->initiator_socket);
+  
   }
   else
   {
@@ -1886,6 +1922,7 @@ void top_level_axi_smc_0::before_end_of_elaboration()
     mp_S02_AXI_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket", 0);
     mp_impl->S02_AXI_tlm_aximm_read_socket->bind(mp_S02_AXI_rd_socket_stub->initiator_socket);
     mp_impl->S02_AXI_tlm_aximm_write_socket->bind(*(mp_S02_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -1899,6 +1936,7 @@ void top_level_axi_smc_0::before_end_of_elaboration()
   {
     mp_impl->M00_AXI_tlm_aximm_read_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->M00_AXI_tlm_aximm_write_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  
   }
   else
   {

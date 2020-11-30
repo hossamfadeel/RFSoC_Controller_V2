@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:module_ref:rfsoc_pl_ctrl_verilog_wrapper:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "rfsoc_pl_ctrl_verilog_wrapper,Vivado 2020.1.1" *)
+(* X_CORE_INFO = "rfsoc_pl_ctrl_verilog_wrapper,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "top_level_rfsoc_pl_ctrl_verilo_0_0,rfsoc_pl_ctrl_verilog_wrapper,{}" *)
-(* CORE_GENERATION_INFO = "top_level_rfsoc_pl_ctrl_verilo_0_0,rfsoc_pl_ctrl_verilog_wrapper,{x_ipProduct=Vivado 2020.1.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=rfsoc_pl_ctrl_verilog_wrapper,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,ps_axis_width=32}" *)
+(* CORE_GENERATION_INFO = "top_level_rfsoc_pl_ctrl_verilo_0_0,rfsoc_pl_ctrl_verilog_wrapper,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=rfsoc_pl_ctrl_verilog_wrapper,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,ps_axis_width=32}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_rfsoc_pl_ctrl_verilo_0_0 (

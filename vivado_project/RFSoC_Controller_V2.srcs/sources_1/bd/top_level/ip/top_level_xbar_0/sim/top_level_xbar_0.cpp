@@ -438,6 +438,9 @@ void top_level_xbar_0::before_end_of_elaboration()
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M00_AXI' transactor
 
@@ -567,6 +570,9 @@ void top_level_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M01_AXI' transactor
@@ -698,6 +704,9 @@ void top_level_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M02_AXI' transactor
 
@@ -827,6 +836,9 @@ void top_level_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -1214,6 +1226,9 @@ void top_level_xbar_0::before_end_of_elaboration()
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M00_AXI' transactor
 
@@ -1343,6 +1358,9 @@ void top_level_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M01_AXI' transactor
@@ -1474,6 +1492,9 @@ void top_level_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M02_AXI' transactor
 
@@ -1603,6 +1624,9 @@ void top_level_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -1990,6 +2014,9 @@ void top_level_xbar_0::before_end_of_elaboration()
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M00_AXI' transactor
 
@@ -2119,6 +2146,9 @@ void top_level_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M01_AXI' transactor
@@ -2250,6 +2280,9 @@ void top_level_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M02_AXI' transactor
 
@@ -2380,6 +2413,9 @@ void top_level_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
 }
 
@@ -2468,7 +2504,7 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_m_axi_rvalid_converter_2 = NULL;
   mp_m_axi_rready_converter_2 = NULL;
 
-  // initialize junctures
+  // initialize port junctures
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arprot = NULL;
   mp_m_axi_concat_arvalid = NULL;
@@ -2488,6 +2524,7 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
   mp_m_axi_split_wready = NULL;
+
   // Instantiate Socket Stubs
 
   // configure S00_AXI_transactor
@@ -2577,7 +2614,6 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_S00_AXI_transactor->RREADY(m_s_axi_rready_converter_signal);
   mp_S00_AXI_transactor->CLK(aclk);
   mp_S00_AXI_transactor->RST(aresetn);
-
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -2768,7 +2804,6 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_M00_AXI_transactor->RREADY(m_m_axi_rready_converter_0_signal);
   mp_M00_AXI_transactor->CLK(aclk);
   mp_M00_AXI_transactor->RST(aresetn);
-
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -2929,7 +2964,6 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_M01_AXI_transactor->RREADY(m_m_axi_rready_converter_1_signal);
   mp_M01_AXI_transactor->CLK(aclk);
   mp_M01_AXI_transactor->RST(aresetn);
-
   // configure M02_AXI_transactor
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -3091,7 +3125,6 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_M02_AXI_transactor->CLK(aclk);
   mp_M02_AXI_transactor->RST(aresetn);
 
-
   // initialize transactors stubs
   S00_AXI_transactor_target_wr_socket_stub = nullptr;
   S00_AXI_transactor_target_rd_socket_stub = nullptr;
@@ -3111,6 +3144,7 @@ void top_level_xbar_0::before_end_of_elaboration()
   {
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -3126,6 +3160,7 @@ void top_level_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -3141,6 +3176,7 @@ void top_level_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -3156,6 +3192,7 @@ void top_level_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -3253,7 +3290,7 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_m_axi_rvalid_converter_2 = NULL;
   mp_m_axi_rready_converter_2 = NULL;
 
-  // initialize junctures
+  // initialize port junctures
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arprot = NULL;
   mp_m_axi_concat_arvalid = NULL;
@@ -3273,6 +3310,7 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
   mp_m_axi_split_wready = NULL;
+
   // Instantiate Socket Stubs
 
   // configure S00_AXI_transactor
@@ -3362,7 +3400,6 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_S00_AXI_transactor->RREADY(m_s_axi_rready_converter_signal);
   mp_S00_AXI_transactor->CLK(aclk);
   mp_S00_AXI_transactor->RST(aresetn);
-
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -3553,7 +3590,6 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_M00_AXI_transactor->RREADY(m_m_axi_rready_converter_0_signal);
   mp_M00_AXI_transactor->CLK(aclk);
   mp_M00_AXI_transactor->RST(aresetn);
-
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -3714,7 +3750,6 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_M01_AXI_transactor->RREADY(m_m_axi_rready_converter_1_signal);
   mp_M01_AXI_transactor->CLK(aclk);
   mp_M01_AXI_transactor->RST(aresetn);
-
   // configure M02_AXI_transactor
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -3876,7 +3911,6 @@ top_level_xbar_0::top_level_xbar_0(const sc_core::sc_module_name& nm) : top_leve
   mp_M02_AXI_transactor->CLK(aclk);
   mp_M02_AXI_transactor->RST(aresetn);
 
-
   // initialize transactors stubs
   S00_AXI_transactor_target_wr_socket_stub = nullptr;
   S00_AXI_transactor_target_rd_socket_stub = nullptr;
@@ -3896,6 +3930,7 @@ void top_level_xbar_0::before_end_of_elaboration()
   {
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -3911,6 +3946,7 @@ void top_level_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -3926,6 +3962,7 @@ void top_level_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -3941,6 +3978,7 @@ void top_level_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
+  
   }
   else
   {

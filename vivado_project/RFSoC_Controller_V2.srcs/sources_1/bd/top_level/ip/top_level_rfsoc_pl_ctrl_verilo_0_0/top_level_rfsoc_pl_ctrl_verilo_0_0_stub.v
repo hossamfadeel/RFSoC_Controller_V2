@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2020.1.1 (win64) Build 2960000 Wed Aug  5 22:57:20 MDT 2020
-// Date        : Wed Oct 28 13:31:36 2020
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Sun Nov 29 16:32:43 2020
 // Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_pl_ctrl_verilo_0_0/top_level_rfsoc_pl_ctrl_verilo_0_0_stub.v
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "rfsoc_pl_ctrl_verilog_wrapper,Vivado 2020.1.1" *)
+(* X_CORE_INFO = "rfsoc_pl_ctrl_verilog_wrapper,Vivado 2020.2" *)
 module top_level_rfsoc_pl_ctrl_verilo_0_0(clk, rst, gpio_ctrl, s_axis_tdata, s_axis_tvalid, 
   s_axis_tready, m16_axis_tdata, m16_axis_tvalid, m16_axis_tready, m0_axis_tdata, 
   m0_axis_tvalid, m0_axis_tready, m1_axis_tdata, m1_axis_tvalid, m1_axis_tready, 

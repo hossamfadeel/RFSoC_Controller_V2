@@ -917,6 +917,11 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire    [1:0]    dac01_tdd_mode_i;
   wire    [1:0]    dac02_tdd_mode_i;
   wire    [1:0]    dac03_tdd_mode_i;
+  reg     [1:0]    dac00_tdd_mode_gated;
+  reg     [1:0]    dac01_tdd_mode_gated;
+  reg     [1:0]    dac02_tdd_mode_gated;
+  reg     [1:0]    dac03_tdd_mode_gated;
+  
   wire    [2:0]    dac00_fast_shutdown_i;
   wire    [2:0]    dac01_fast_shutdown_i;
   wire    [2:0]    dac02_fast_shutdown_i;
@@ -933,6 +938,11 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire    [1:0]    dac11_tdd_mode_i;
   wire    [1:0]    dac12_tdd_mode_i;
   wire    [1:0]    dac13_tdd_mode_i;
+  reg     [1:0]    dac10_tdd_mode_gated;
+  reg     [1:0]    dac11_tdd_mode_gated;
+  reg     [1:0]    dac12_tdd_mode_gated;
+  reg     [1:0]    dac13_tdd_mode_gated;
+  
   wire    [2:0]    dac10_fast_shutdown_i;
   wire    [2:0]    dac11_fast_shutdown_i;
   wire    [2:0]    dac12_fast_shutdown_i;
@@ -949,6 +959,11 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire    [1:0]    dac21_tdd_mode_i;
   wire    [1:0]    dac22_tdd_mode_i;
   wire    [1:0]    dac23_tdd_mode_i;
+  reg     [1:0]    dac20_tdd_mode_gated;
+  reg     [1:0]    dac21_tdd_mode_gated;
+  reg     [1:0]    dac22_tdd_mode_gated;
+  reg     [1:0]    dac23_tdd_mode_gated;
+  
   wire    [2:0]    dac20_fast_shutdown_i;
   wire    [2:0]    dac21_fast_shutdown_i;
   wire    [2:0]    dac22_fast_shutdown_i;
@@ -965,6 +980,11 @@ module top_level_usp_rf_data_converter_0_0_block (
   wire    [1:0]    dac31_tdd_mode_i;
   wire    [1:0]    dac32_tdd_mode_i;
   wire    [1:0]    dac33_tdd_mode_i;
+  reg     [1:0]    dac30_tdd_mode_gated;
+  reg     [1:0]    dac31_tdd_mode_gated;
+  reg     [1:0]    dac32_tdd_mode_gated;
+  reg     [1:0]    dac33_tdd_mode_gated;
+  
   wire    [2:0]    dac30_fast_shutdown_i;
   wire    [2:0]    dac31_fast_shutdown_i;
   wire    [2:0]    dac32_fast_shutdown_i;
@@ -1347,9 +1367,11 @@ module top_level_usp_rf_data_converter_0_0_block (
   reg   [31:0]     adc0_sample_rate;
   reg    [2:0]     adc0_multi_band;
   reg   [31:0]     adc0_calibration_timer_i;
-  reg   [31:0]     adc0_dividend;
-  reg   [53:0]     adc0_divider;
-  reg    [6:0]     adc0_index;
+  wire  [31:0]     adc0_calibration_timer0;
+  wire  [31:0]     adc0_calibration_timer1;
+  wire  [31:0]     adc0_calibration_timer2;
+  wire  [31:0]     adc0_calibration_timer3;
+  wire  [31:0]     adc0_calibration_timer4;
   reg   [15:0]     adc0_slice0_irq_en;
   reg   [15:0]     adc0_slice1_irq_en;
   reg   [15:0]     adc0_slice2_irq_en;
@@ -1387,9 +1409,11 @@ module top_level_usp_rf_data_converter_0_0_block (
   reg   [31:0]     adc1_sample_rate;
   reg    [2:0]     adc1_multi_band;
   reg   [31:0]     adc1_calibration_timer_i;
-  reg   [31:0]     adc1_dividend;
-  reg   [53:0]     adc1_divider;
-  reg    [6:0]     adc1_index;
+  wire  [31:0]     adc1_calibration_timer0;
+  wire  [31:0]     adc1_calibration_timer1;
+  wire  [31:0]     adc1_calibration_timer2;
+  wire  [31:0]     adc1_calibration_timer3;
+  wire  [31:0]     adc1_calibration_timer4;
   reg   [15:0]     adc1_slice0_irq_en;
   reg   [15:0]     adc1_slice1_irq_en;
   reg   [15:0]     adc1_slice2_irq_en;
@@ -1427,9 +1451,11 @@ module top_level_usp_rf_data_converter_0_0_block (
   reg   [31:0]     adc2_sample_rate;
   reg    [2:0]     adc2_multi_band;
   reg   [31:0]     adc2_calibration_timer_i;
-  reg   [31:0]     adc2_dividend;
-  reg   [53:0]     adc2_divider;
-  reg    [6:0]     adc2_index;
+  wire  [31:0]     adc2_calibration_timer0;
+  wire  [31:0]     adc2_calibration_timer1;
+  wire  [31:0]     adc2_calibration_timer2;
+  wire  [31:0]     adc2_calibration_timer3;
+  wire  [31:0]     adc2_calibration_timer4;
   reg   [15:0]     adc2_slice0_irq_en;
   reg   [15:0]     adc2_slice1_irq_en;
   reg   [15:0]     adc2_slice2_irq_en;
@@ -1467,9 +1493,11 @@ module top_level_usp_rf_data_converter_0_0_block (
   reg   [31:0]     adc3_sample_rate;
   reg    [2:0]     adc3_multi_band;
   reg   [31:0]     adc3_calibration_timer_i;
-  reg   [31:0]     adc3_dividend;
-  reg   [53:0]     adc3_divider;
-  reg    [6:0]     adc3_index;
+  wire  [31:0]     adc3_calibration_timer0;
+  wire  [31:0]     adc3_calibration_timer1;
+  wire  [31:0]     adc3_calibration_timer2;
+  wire  [31:0]     adc3_calibration_timer3;
+  wire  [31:0]     adc3_calibration_timer4;
   reg   [15:0]     adc3_slice0_irq_en;
   reg   [15:0]     adc3_slice1_irq_en;
   reg   [15:0]     adc3_slice2_irq_en;
@@ -5711,7 +5739,7 @@ module top_level_usp_rf_data_converter_0_0_block (
 
 
   // Register Bank 0 : 0x00000 - 0x1FFFC : Control/Status
-  assign IP2Bus_Data_control = bank0_read[0] ? {8'd2, 8'd3, 8'd0, 8'h00} :
+  assign IP2Bus_Data_control = bank0_read[0] ? {8'd2, 8'd4, 8'd0, 8'h00} :
                                bank0_read[1] ? {31'b0, master_reset} :
                                bank0_read[2] ? {16'b0, startup_delay} :
                                bank0_read[4] ? {30'b0, mt_adc_fifo_src_ff, mt_adc_fifo_en_ff} :

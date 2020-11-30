@@ -70,12 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_level_axis_data_fifo_1_1_synth_1" START { ROLLUP_AUTO }
-set_param power.BramSDPPropagationFix 1
-set_param chipscope.maxJobs 3
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableLutRouteBelPower 1
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -95,7 +89,7 @@ set_property ip_output_repo d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Co
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1.xci
+read_ip -quiet D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1.xci
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -151,6 +145,9 @@ catch {
  }
 OPTRACE "Write IP Cache" END { }
 }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 rename_ref -prefix_all top_level_axis_data_fifo_1_1_
 
@@ -166,7 +163,7 @@ OPTRACE "synth reports" END { }
 if { [catch {
   file copy -force D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_axis_data_fifo_1_1_synth_1/top_level_axis_data_fifo_1_1.dcp d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1.dcp
 } _RESULT ] } { 
-  send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+  send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
@@ -201,7 +198,7 @@ if { [catch {
 if { [catch {
   file copy -force D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_axis_data_fifo_1_1_synth_1/top_level_axis_data_fifo_1_1.dcp d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_1/top_level_axis_data_fifo_1_1.dcp
 } _RESULT ] } { 
-  send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+  send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 

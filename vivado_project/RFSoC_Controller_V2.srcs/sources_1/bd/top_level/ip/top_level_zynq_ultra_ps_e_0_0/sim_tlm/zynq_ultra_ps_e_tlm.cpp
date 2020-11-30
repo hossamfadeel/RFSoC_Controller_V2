@@ -170,7 +170,7 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
 
         //instantiating XTLM2TLM bridge and stiching it between 
         //S_AXI_HPC0_FPD_wr_socket/rd_socket sockets to s_axi_hpc_fpd[0] target socket of Zynqmp Qemu tlm wrapper
-        S_AXI_HPC0_FPD_buff = new zynqmp_tlm::xsc_xtlm_aximm_tran_buffer("S_AXI_HPC0_FPD_buff");
+        S_AXI_HPC0_FPD_buff = new xtlm::xtlm_aximm_fifo("S_AXI_HPC0_FPD_buff");
         S_AXI_HPC0_FPD_rd_socket->bind(*S_AXI_HPC0_FPD_buff->in_rd_socket);
         S_AXI_HPC0_FPD_wr_socket->bind(*S_AXI_HPC0_FPD_buff->in_wr_socket);
         S_AXI_HPC0_FPD_buff->out_wr_socket->bind(*S_AXI_HPC0_FPD_xtlm_brdg.wr_socket);

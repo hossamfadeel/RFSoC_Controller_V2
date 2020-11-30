@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:sc_exit:1.0
-// IP Revision: 10
+// IP Revision: 11
 
 `timescale 1ns/1ps
 
@@ -282,13 +282,13 @@ NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0"
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire m_axi_rready;
 
-  sc_exit_v1_0_10_top #(
+  sc_exit_v1_0_11_top #(
     .C_FAMILY("zynquplus"),
     .C_ENABLE_PIPELINING(1'H1),
     .C_IS_CASCADED(0),
     .C_SSC_ROUTE_WIDTH(3),
     .C_MEP_IDENTIFIER_WIDTH(2),
-    .C_SSC_ROUTE_ARRAY(12'B000100010001),
+    .C_SSC_ROUTE_ARRAY(12'B100010001000),
     .C_RDATA_WIDTH(128),
     .C_WDATA_WIDTH(128),
     .C_M_RUSER_BITS_PER_BYTE(0),

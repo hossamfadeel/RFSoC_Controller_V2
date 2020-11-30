@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_crossbar:2.1
-// IP Revision: 22
+// IP Revision: 23
 
 `timescale 1ns/1ps
 
@@ -185,7 +185,7 @@ TS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LE
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M00_AXI RREADY [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI RREADY [0:0] [1:1], xilinx.com:interface:aximm:1.0 M02_AXI RREADY [0:0] [2:2]" *)
 output wire [2 : 0] m_axi_rready;
 
-  axi_crossbar_v2_1_22_axi_crossbar #(
+  axi_crossbar_v2_1_23_axi_crossbar #(
     .C_FAMILY("zynquplus"),
     .C_NUM_SLAVE_SLOTS(1),
     .C_NUM_MASTER_SLOTS(3),
