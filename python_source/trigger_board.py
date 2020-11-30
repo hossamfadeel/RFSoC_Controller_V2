@@ -37,7 +37,7 @@ for i in range(0, num_trigs):
         raise RuntimeError("Error, while trying to trigger board")
     else:
         print("Board triggered! Trigger number: " + str(i+1))
-    time.sleep(0.5)
+    time.sleep(0.2)
     
     
 #If we need to readout the adc

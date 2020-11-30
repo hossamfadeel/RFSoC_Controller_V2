@@ -10,9 +10,9 @@ PAUSE
 
 python add_channel.py 1 test_waveforms\sawtooth.txt 16 20 1 5 4.25 0
 PAUSE
-python add_channel.py 1 test_waveforms\sawtooth.txt 16 20 1 5 4.5 0
+python add_channel.py 2 test_waveforms\sawtooth.txt 16 20 1 5 4.5 0
 PAUSE
-python add_channel.py 1 test_waveforms\sawtooth.txt 16 20 1 5 4.75 0
+python add_channel.py 3 test_waveforms\sawtooth.txt 16 20 1 5 4.75 0
 PAUSE
 
 ::Add the accompanying locking channel
