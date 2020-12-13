@@ -19,9 +19,8 @@ pm_slave.o: pm_slave.c xpfw_config.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xil_io.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xipipsu_hw.h xpfw_crc.h xpfw_mod_pm.h \
  pm_node.h pm_requirement.h pm_sram.h pm_usb.h xpfw_aib.h pm_periph.h \
- pm_pll.h pm_power.h pm_master.h pm_proc.h pm_gic_proxy.h \
- xpfw_rom_interface.h efuse.h pm_ddr.h pm_clock.h pm_gpp.h pm_extern.h \
- pm_system.h
+ pm_gpp.h pm_pll.h pm_power.h pm_master.h pm_proc.h pm_gic_proxy.h \
+ xpfw_rom_interface.h efuse.h pm_ddr.h pm_clock.h pm_extern.h pm_system.h
 
 xpfw_config.h:
 
@@ -109,6 +108,8 @@ xpfw_aib.h:
 
 pm_periph.h:
 
+pm_gpp.h:
+
 pm_pll.h:
 
 pm_power.h:
@@ -126,8 +127,6 @@ efuse.h:
 pm_ddr.h:
 
 pm_clock.h:
-
-pm_gpp.h:
 
 pm_extern.h:
 

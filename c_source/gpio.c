@@ -4,7 +4,7 @@
 #include "xgpio.h"
 
 
-#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+#define GPIO_DEVICE_0  XPAR_GPIO_0_DEVICE_ID
 
 XGpio Gpio; /* The Instance of the GPIO Driver */
 
@@ -17,17 +17,20 @@ u8 gpio_init()
 
 	gpio_state = 0;
 
-	if (XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID) != XST_SUCCESS)
+	if (XGpio_Initialize(&Gpio, GPIO_DEVICE_0) != XST_SUCCESS)
 	{
 		return 1;
 	}
 
-	//set channel 1 to be all outputs
+
+	//set channel 1 and 2 to be all outputs
 	XGpio_SetDataDirection(&Gpio, 1, 0);
+	XGpio_SetDataDirection(&Gpio, 2, 0);
 
 
 	//Turn all outputs off by default
 	XGpio_DiscreteWrite(&Gpio, 1, 0);
+	XGpio_DiscreteWrite(&Gpio, 2, 0);
 
 
 	return 0;
@@ -186,4 +189,9 @@ void gpio_trigger()
 {
 	gpio_set_pin(trigger_line, 1);
 	gpio_set_pin(trigger_line, 0);
+}
+
+void gpio_set_led_state(u8 state_val)
+{
+	XGpio_DiscreteWrite(&Gpio, 2, state_val);
 }

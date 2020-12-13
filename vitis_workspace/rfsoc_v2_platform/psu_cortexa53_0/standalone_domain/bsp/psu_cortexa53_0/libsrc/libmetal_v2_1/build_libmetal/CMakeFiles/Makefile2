@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe
+CMAKE_COMMAND = C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe
 
 # The command to remove a file.
-RM = C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe -E remove -f
+RM = C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =

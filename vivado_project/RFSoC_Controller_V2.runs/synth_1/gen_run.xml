@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1606696132">
+<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1607886549">
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
@@ -186,8 +186,6 @@
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rst_ps8_0_100M_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_auto_ds_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="top_level_auto_pc_0"/>
 </GenRun>

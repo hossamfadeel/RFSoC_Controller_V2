@@ -20,8 +20,8 @@ pm_system.o: pm_system.c xpfw_config.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xipipsu_hw.h xpfw_crc.h xpfw_mod_pm.h \
  pm_node.h pm_proc.h pm_power.h xpfw_rom_interface.h efuse.h \
  pm_gic_proxy.h pm_callbacks.h xpfw_resets.h pm_requirement.h pm_sram.h \
- pm_ddr.h pm_periph.h pm_hooks.h pm_extern.h pm_qspi.h pm_clock.h \
- pm_pll.h rpu.h
+ pm_ddr.h pm_periph.h pm_gpp.h pm_hooks.h pm_extern.h pm_qspi.h \
+ pm_clock.h pm_pll.h rpu.h
 
 xpfw_config.h:
 
@@ -124,6 +124,8 @@ pm_sram.h:
 pm_ddr.h:
 
 pm_periph.h:
+
+pm_gpp.h:
 
 pm_hooks.h:
 

@@ -18,7 +18,7 @@ pm_pinctrl.o: pm_pinctrl.c pm_common.h pmu_local.h xpfw_default.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xipipsu.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xil_io.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xipipsu_hw.h xpfw_crc.h xpfw_mod_pm.h \
- pm_slave.h pm_defs.h pm_node.h pm_periph.h pm_usb.h xpfw_aib.h \
+ pm_slave.h pm_defs.h pm_node.h pm_periph.h pm_gpp.h pm_usb.h xpfw_aib.h \
  pm_requirement.h pm_pinctrl.h
 
 pm_common.h:
@@ -98,6 +98,8 @@ pm_defs.h:
 pm_node.h:
 
 pm_periph.h:
+
+pm_gpp.h:
 
 pm_usb.h:
 

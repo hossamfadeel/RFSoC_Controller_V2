@@ -51,12 +51,42 @@ void cmd_handler_handoff()
 	}
 }
 
+u8 led_state;
+u32 led_counter;
+#define LED_COUNTER_THRESH 10000
+
+void update_led_state()
+{
+	//If we're handling a command
+	if(cmd_handler_state != state_idle)
+	{
+		//Turn everything on
+		gpio_set_led_state(0xFF);
+	}
+	else
+	{
+		gpio_set_led_state(led_state);
+		if(led_counter > LED_COUNTER_THRESH)
+		{
+			led_counter = 0;
+			led_state++;
+		}
+		else
+		{
+			led_counter++;
+		}
+	}
+}
+
 
 void cmd_handle_command()
 {
 	u8 ret_val = 0;
 	u8 ret_byte = CMD_ACK;
 	u32 adc_word = 0;
+
+
+
 
 	switch(cmd_handler_state)
 	{
@@ -292,9 +322,14 @@ void cmd_handle_command()
 //Returns 0 on success
 u8 cmd_init()
 {
+	//Command handler states
 	cmd_handler_state = 0;
 	cmd_byte = 0;
 	bytes_to_receive = 0;
+
+	//LED handler states
+	led_state = 0;
+	led_counter = 0;
 
 	print("Initializing peripherals...\r\n");
 

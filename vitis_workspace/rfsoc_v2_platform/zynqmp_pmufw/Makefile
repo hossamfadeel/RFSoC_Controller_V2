@@ -16,7 +16,7 @@ LSCRIPT := -Tlscript.ld
 CURRENT_DIR = $(shell pwd)
 DEPFILES := $(patsubst %.o, %.d, $(OBJS))
 LIBS := zynqmp_pmufw_bsp/psu_pmu_0/lib/libxil.a
-EXEC := executable.elf
+EXEC := pmufw.elf
 
 INCLUDEPATH := -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
 LIBPATH := -Lzynqmp_pmufw_bsp/psu_pmu_0/lib

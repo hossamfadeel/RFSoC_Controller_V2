@@ -3,7 +3,6 @@
 	<name>rfsoc_v2_application</name>
 	<comment>Created by Vitis v2020.1</comment>
 	<projects>
-		<project>rfsoc_v2_platform</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

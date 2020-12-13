@@ -89,7 +89,7 @@ set_property ip_output_repo d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Co
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_xbar_0/top_level_xbar_0.xci
+read_ip -quiet D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_xbar_0/top_level_xbar_0.xci
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_xbar_0/top_level_xbar_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

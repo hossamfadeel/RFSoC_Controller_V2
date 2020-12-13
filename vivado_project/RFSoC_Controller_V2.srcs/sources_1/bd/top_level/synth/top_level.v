@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Sun Nov 29 16:27:34 2020
+//Date        : Sun Dec 13 11:08:44 2020
 //Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -808,7 +808,7 @@ module s00_couplers_imp_1LSKJNT
         .s_axi_wvalid(auto_ds_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=23,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=1,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=23,numReposBlks=18,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=2,da_rf_converter_usp_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (adc0_clk_clk_n,
     adc0_clk_clk_p,
@@ -818,6 +818,7 @@ module top_level
     adc2_clk_clk_p,
     adc3_clk_clk_n,
     adc3_clk_clk_p,
+    app_leds_tri_o,
     dac0_clk_clk_n,
     dac0_clk_clk_p,
     dac1_clk_clk_n,
@@ -900,6 +901,7 @@ module top_level
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 adc2_clk CLK_P" *) input adc2_clk_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 adc3_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME adc3_clk, CAN_DEBUG false, FREQ_HZ 250000000" *) input adc3_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 adc3_clk CLK_P" *) input adc3_clk_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 app_leds TRI_O" *) output [7:0]app_leds_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac0_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dac0_clk, CAN_DEBUG false, FREQ_HZ 250000000" *) input dac0_clk_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac0_clk CLK_P" *) input dac0_clk_clk_p;
   (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 dac1_clk CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME dac1_clk, CAN_DEBUG false, FREQ_HZ 250000000" *) input dac1_clk_clk_n;
@@ -1048,6 +1050,7 @@ module top_level
   wire axi_dma_0_M_AXI_SG_WVALID;
   wire axi_dma_0_mm2s_introut;
   wire axi_dma_0_s2mm_introut;
+  wire [7:0]axi_gpio_0_GPIO2_TRI_O;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]axi_gpio_0_gpio_io_o;
   wire [48:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
@@ -1372,6 +1375,7 @@ module top_level
   assign adc2_clk_1_CLK_P = adc2_clk_clk_p;
   assign adc3_clk_1_CLK_N = adc3_clk_clk_n;
   assign adc3_clk_1_CLK_P = adc3_clk_clk_p;
+  assign app_leds_tri_o[7:0] = axi_gpio_0_GPIO2_TRI_O;
   assign dac0_clk_1_CLK_N = dac0_clk_clk_n;
   assign dac0_clk_1_CLK_P = dac0_clk_clk_p;
   assign dac1_clk_1_CLK_N = dac1_clk_clk_n;
@@ -1539,7 +1543,8 @@ module top_level
         .s_axis_s2mm_tready(axis_data_fifo_2_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_2_M_AXIS_TVALID));
   top_level_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_o(axi_gpio_0_gpio_io_o),
+       (.gpio2_io_o(axi_gpio_0_GPIO2_TRI_O),
+        .gpio_io_o(axi_gpio_0_gpio_io_o),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .s_axi_araddr(ps8_0_axi_periph_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps8_0_100M_peripheral_aresetn),

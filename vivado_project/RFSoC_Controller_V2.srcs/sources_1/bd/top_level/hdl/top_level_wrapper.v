@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Sun Nov 29 16:27:34 2020
+//Date        : Sun Dec 13 11:08:45 2020
 //Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 //Command     : generate_target top_level_wrapper.bd
 //Design      : top_level_wrapper
@@ -18,6 +18,7 @@ module top_level_wrapper
     adc2_clk_clk_p,
     adc3_clk_clk_n,
     adc3_clk_clk_p,
+    app_leds_tri_o,
     dac0_clk_clk_n,
     dac0_clk_clk_p,
     dac1_clk_clk_n,
@@ -100,6 +101,7 @@ module top_level_wrapper
   input adc2_clk_clk_p;
   input adc3_clk_clk_n;
   input adc3_clk_clk_p;
+  output [7:0]app_leds_tri_o;
   input dac0_clk_clk_n;
   input dac0_clk_clk_p;
   input dac1_clk_clk_n;
@@ -183,6 +185,7 @@ module top_level_wrapper
   wire adc2_clk_clk_p;
   wire adc3_clk_clk_n;
   wire adc3_clk_clk_p;
+  wire [7:0]app_leds_tri_o;
   wire dac0_clk_clk_n;
   wire dac0_clk_clk_p;
   wire dac1_clk_clk_n;
@@ -267,6 +270,7 @@ module top_level_wrapper
         .adc2_clk_clk_p(adc2_clk_clk_p),
         .adc3_clk_clk_n(adc3_clk_clk_n),
         .adc3_clk_clk_p(adc3_clk_clk_p),
+        .app_leds_tri_o(app_leds_tri_o),
         .dac0_clk_clk_n(dac0_clk_clk_n),
         .dac0_clk_clk_p(dac0_clk_clk_p),
         .dac1_clk_clk_n(dac1_clk_clk_n),

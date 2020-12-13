@@ -1,6 +1,8 @@
 #ifndef XPARAMETERS_H   /* prevent circular inclusions */
 #define XPARAMETERS_H   /* by using protection macros */
 
+#define XPAR_CPU_ID 6U
+
 
 /* Definitions for PMU Microblaze */
 #define XPAR_MICROBLAZE_ADDR_TAG_BITS 0
@@ -728,7 +730,7 @@
 #define XPAR_AXI_GPIO_0_HIGHADDR 0xA001FFFF
 #define XPAR_AXI_GPIO_0_DEVICE_ID 0
 #define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 0
-#define XPAR_AXI_GPIO_0_IS_DUAL 0
+#define XPAR_AXI_GPIO_0_IS_DUAL 1
 
 
 /******************************************************************/
@@ -738,7 +740,7 @@
 #define XPAR_GPIO_0_HIGHADDR 0xA001FFFF
 #define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_0_DEVICE_ID
 #define XPAR_GPIO_0_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_0_IS_DUAL 0
+#define XPAR_GPIO_0_IS_DUAL 1
 
 
 /******************************************************************/

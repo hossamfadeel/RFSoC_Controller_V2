@@ -44,6 +44,7 @@ void gpio_flush_buffers();
 void gpio_set_adc_dummy_data(u8 val);
 void gpio_set_adc_readout_enable(u8 val);
 void gpio_trigger();
+void gpio_set_led_state(u8 state_val);
 
 /////////////////////////////////////////////
 

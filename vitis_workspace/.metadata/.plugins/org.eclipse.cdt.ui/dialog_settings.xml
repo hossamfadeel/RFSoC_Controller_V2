@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="D:\repos\RFSoC_Controller_V2\c_source" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="D:\repos\RFSoC_Controller_V2\c_source"/>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
 	<section name="OptionalMessageDialog.hide.">
-		<item value="true" key="askReindex"/>
-		<item value="0" key="askReindex.detail"/>
+		<item key="askReindex" value="true"/>
+		<item key="askReindex.detail" value="0"/>
 	</section>
 	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item key="DIALOG_X_ORIGIN" value="706"/>
+		<item key="DIALOG_Y_ORIGIN" value="168"/>
+		<item key="DIALOG_WIDTH" value="522"/>
+		<item key="DIALOG_HEIGHT" value="534"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-27|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

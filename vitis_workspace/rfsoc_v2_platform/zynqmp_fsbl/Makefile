@@ -16,7 +16,7 @@ LSCRIPT := -Tlscript.ld
 CURRENT_DIR = $(shell pwd)
 DEPFILES := $(patsubst %.o, %.d, $(OBJS))
 LIBS := zynqmp_fsbl_bsp/psu_cortexa53_0/lib/libxil.a
-EXEC := executable.elf
+EXEC := fsbl_a53.elf
 
 INCLUDEPATH := -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
 LIBPATH := -Lzynqmp_fsbl_bsp/psu_cortexa53_0/lib

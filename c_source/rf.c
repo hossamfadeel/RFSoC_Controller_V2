@@ -27,6 +27,7 @@ u8 rf_get_dac_clock_status()
 void rf_update_clock_status()
 {
 	u8 Tile = 0x00;//Might need to change this later :)
+	u8 Status;
 	Status = XRFdc_Reset(&RFdcInst, XRFDC_ADC_TILE, Tile);
 	if (Status != XRFDC_SUCCESS) {
 		//return XRFDC_FAILURE;

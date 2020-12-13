@@ -115,9 +115,9 @@
                                 								
                                 <option id="xilinx.gnu.c.linker.option.lscript.2106425698" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" useByScannerDiscovery="false" value="../src/lscript.ld" valueType="string"/>
                                 								
-                                <option id="xilinx.gnu.c.link.option.paths.291410002" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" useByScannerDiscovery="false" valueType="libPaths"/>
+                                <option id="xilinx.gnu.c.link.option.paths.291410002" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" useByScannerDiscovery="false"/>
                                 								
-                                <option id="xilinx.gnu.c.link.option.libs.1766656631" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs" useByScannerDiscovery="false" valueType="libs"/>
+                                <option id="xilinx.gnu.c.link.option.libs.1766656631" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs" useByScannerDiscovery="false"/>
                                 								
                                 <inputType id="xilinx.gnu.linker.input.725151737" superClass="xilinx.gnu.linker.input">
                                     									

@@ -42,10 +42,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe
+CMAKE_COMMAND = C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe
 
 # The command to remove a file.
-RM = C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe -E remove -f
+RM = C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platfor
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
@@ -73,7 +73,7 @@ install/local/fast: install/local
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
@@ -84,7 +84,7 @@ install/strip/fast: install/strip
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake-gui.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake-gui.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -95,19 +95,19 @@ edit_cache/fast: edit_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe -P cmake_install.cmake
+	C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe -P cmake_install.cmake
+	C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/cmake.exe -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -128,7 +128,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	C:/Xilinx/Vitis/2020.1/tps/win64/cmake-3.3.2/bin/ctest.exe --force-new-ctest-process $(ARGS)
+	C:/Xilinx/Vitis/2020.2/tps/win64/cmake-3.3.2/bin/ctest.exe --force-new-ctest-process $(ARGS)
 .PHONY : test
 
 # Special rule for the target test

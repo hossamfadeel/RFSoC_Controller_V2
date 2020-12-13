@@ -18,8 +18,8 @@ pm_periph.o: pm_periph.c xpfw_config.h \
  xpfw_module.h zynqmp_pmufw_bsp/psu_pmu_0/include/xipipsu.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xil_io.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xipipsu_hw.h xpfw_crc.h xpfw_mod_pm.h \
- pm_node.h pm_master.h pm_proc.h pm_power.h xpfw_rom_interface.h efuse.h \
- pm_gic_proxy.h pm_requirement.h pm_sram.h
+ pm_node.h pm_gpp.h pm_master.h pm_proc.h pm_power.h xpfw_rom_interface.h \
+ efuse.h pm_gic_proxy.h pm_requirement.h pm_sram.h
 
 xpfw_config.h:
 
@@ -98,6 +98,8 @@ xpfw_crc.h:
 xpfw_mod_pm.h:
 
 pm_node.h:
+
+pm_gpp.h:
 
 pm_master.h:
 

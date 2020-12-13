@@ -19,8 +19,8 @@ pm_gic_proxy.o: pm_gic_proxy.c xpfw_config.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xipipsu.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xil_io.h \
  zynqmp_pmufw_bsp/psu_pmu_0/include/xipipsu_hw.h xpfw_crc.h xpfw_mod_pm.h \
- pm_slave.h pm_defs.h pm_node.h pm_periph.h pm_master.h pm_proc.h \
- pm_power.h xpfw_rom_interface.h efuse.h
+ pm_slave.h pm_defs.h pm_node.h pm_periph.h pm_gpp.h pm_master.h \
+ pm_proc.h pm_power.h xpfw_rom_interface.h efuse.h
 
 xpfw_config.h:
 
@@ -101,6 +101,8 @@ pm_defs.h:
 pm_node.h:
 
 pm_periph.h:
+
+pm_gpp.h:
 
 pm_master.h:
 
