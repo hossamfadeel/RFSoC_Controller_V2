@@ -21,60 +21,10 @@
   <key attr.name="vert_type" attr.type="string" for="node" id="VT"/>
   <graph edgedefault="undirected" id="G" parse.edgeids="canonical" parse.nodeids="canonical" parse.order="nodesfirst">
     <node id="n0">
-      <data key="BA">0x00A0040000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x00A007FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/zynq_ultra_ps_e_0</data>
-      <data key="MI">M_AXI_HPM0_FPD</data>
-      <data key="MS">SEG_usp_rf_data_converter_0_Reg</data>
-      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
-      <data key="TM">both</data>
-      <data key="SX">/usp_rf_data_converter_0</data>
-      <data key="SI">s_axi</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:usp_rf_data_converter:2.4</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
+      <data key="VM">top_level</data>
+      <data key="VT">BC</data>
     </node>
     <node id="n1">
-      <data key="BA">0xC0000000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0xDFFFFFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data_S2MM</data>
-      <data key="MX">/axi_dma_0</data>
-      <data key="MI">M_AXI_S2MM</data>
-      <data key="MS">SEG_zynq_ultra_ps_e_0_HPC0_QSPI</data>
-      <data key="MV">xilinx.com:ip:axi_dma:7.1</data>
-      <data key="TM">both</data>
-      <data key="SX">/zynq_ultra_ps_e_0</data>
-      <data key="SI">S_AXI_HPC0_FPD</data>
-      <data key="SS">HPC0_QSPI</data>
-      <data key="SV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
-      <data key="TU">memory</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n2">
-      <data key="BA">0xC0000000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0xDFFFFFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data_SG</data>
-      <data key="MX">/axi_dma_0</data>
-      <data key="MI">M_AXI_SG</data>
-      <data key="MS">SEG_zynq_ultra_ps_e_0_HPC0_QSPI</data>
-      <data key="MV">xilinx.com:ip:axi_dma:7.1</data>
-      <data key="TM">both</data>
-      <data key="SX">/zynq_ultra_ps_e_0</data>
-      <data key="SI">S_AXI_HPC0_FPD</data>
-      <data key="SS">HPC0_QSPI</data>
-      <data key="SV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
-      <data key="TU">memory</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n3">
       <data key="BA">0x00000000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x7FFFFFFF</data>
@@ -92,7 +42,7 @@
       <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n4">
+    <node id="n2">
       <data key="BA">0x00000000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x7FFFFFFF</data>
@@ -110,7 +60,7 @@
       <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n5">
+    <node id="n3">
       <data key="BA">0x00000000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x7FFFFFFF</data>
@@ -128,21 +78,30 @@
       <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n6">
-      <data key="TU">active</data>
-      <data key="VH">2</data>
-      <data key="VT">PM</data>
-    </node>
-    <node id="n7">
-      <data key="VM">top_level</data>
-      <data key="VT">BC</data>
-    </node>
-    <node id="n8">
+    <node id="n4">
       <data key="VH">2</data>
       <data key="VM">top_level</data>
       <data key="VT">VR</data>
     </node>
-    <node id="n9">
+    <node id="n5">
+      <data key="BA">0xC0000000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0xDFFFFFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data_SG</data>
+      <data key="MX">/axi_dma_0</data>
+      <data key="MI">M_AXI_SG</data>
+      <data key="MS">SEG_zynq_ultra_ps_e_0_HPC0_QSPI</data>
+      <data key="MV">xilinx.com:ip:axi_dma:7.1</data>
+      <data key="TM">both</data>
+      <data key="SX">/zynq_ultra_ps_e_0</data>
+      <data key="SI">S_AXI_HPC0_FPD</data>
+      <data key="SS">HPC0_QSPI</data>
+      <data key="SV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
+      <data key="TU">memory</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n6">
       <data key="BA">0x00A0010000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x00A001FFFF</data>
@@ -159,6 +118,47 @@
       <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
       <data key="TU">register</data>
       <data key="VT">AC</data>
+    </node>
+    <node id="n7">
+      <data key="BA">0x00A0040000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x00A007FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/zynq_ultra_ps_e_0</data>
+      <data key="MI">M_AXI_HPM0_FPD</data>
+      <data key="MS">SEG_usp_rf_data_converter_0_Reg</data>
+      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
+      <data key="TM">both</data>
+      <data key="SX">/usp_rf_data_converter_0</data>
+      <data key="SI">s_axi</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:usp_rf_data_converter:2.4</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n8">
+      <data key="BA">0xC0000000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0xDFFFFFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data_S2MM</data>
+      <data key="MX">/axi_dma_0</data>
+      <data key="MI">M_AXI_S2MM</data>
+      <data key="MS">SEG_zynq_ultra_ps_e_0_HPC0_QSPI</data>
+      <data key="MV">xilinx.com:ip:axi_dma:7.1</data>
+      <data key="TM">both</data>
+      <data key="SX">/zynq_ultra_ps_e_0</data>
+      <data key="SI">S_AXI_HPC0_FPD</data>
+      <data key="SS">HPC0_QSPI</data>
+      <data key="SV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
+      <data key="TU">memory</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n9">
+      <data key="TU">active</data>
+      <data key="VH">2</data>
+      <data key="VT">PM</data>
     </node>
     <node id="n10">
       <data key="BA">0x00A0000000</data>
@@ -196,35 +196,35 @@
       <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
-    <edge id="e0" source="n7" target="n8">
+    <edge id="e0" source="n0" target="n4">
     </edge>
-    <edge id="e1" source="n8" target="n6">
+    <edge id="e1" source="n4" target="n9">
     </edge>
-    <edge id="e2" source="n10" target="n6">
+    <edge id="e2" source="n10" target="n9">
       <data key="EH">2</data>
     </edge>
-    <edge id="e3" source="n9" target="n6">
+    <edge id="e3" source="n6" target="n9">
       <data key="EH">2</data>
     </edge>
-    <edge id="e4" source="n0" target="n6">
+    <edge id="e4" source="n7" target="n9">
       <data key="EH">2</data>
     </edge>
-    <edge id="e5" source="n4" target="n6">
+    <edge id="e5" source="n2" target="n9">
       <data key="EH">2</data>
     </edge>
-    <edge id="e6" source="n11" target="n6">
+    <edge id="e6" source="n11" target="n9">
       <data key="EH">2</data>
     </edge>
-    <edge id="e7" source="n5" target="n6">
+    <edge id="e7" source="n3" target="n9">
       <data key="EH">2</data>
     </edge>
-    <edge id="e8" source="n1" target="n6">
+    <edge id="e8" source="n8" target="n9">
       <data key="EH">2</data>
     </edge>
-    <edge id="e9" source="n3" target="n6">
+    <edge id="e9" source="n1" target="n9">
       <data key="EH">2</data>
     </edge>
-    <edge id="e10" source="n2" target="n6">
+    <edge id="e10" source="n5" target="n9">
       <data key="EH">2</data>
     </edge>
   </graph>
