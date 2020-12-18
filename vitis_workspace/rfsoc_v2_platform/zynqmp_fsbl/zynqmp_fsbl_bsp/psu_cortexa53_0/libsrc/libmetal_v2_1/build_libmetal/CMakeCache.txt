@@ -24,7 +24,7 @@ CMAKE_BUILD_TYPE:STRING=
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-CMAKE_C_FLAGS:STRING=-O2 -c -g -Wall -Wextra -Os -flto -ffat-lto-objects -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/include
+CMAKE_C_FLAGS:STRING=-O2 -c -g -Wall -Wextra -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/include
 
 //Flags used by the compiler during debug builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g

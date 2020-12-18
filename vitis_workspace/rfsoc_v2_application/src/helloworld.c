@@ -58,7 +58,7 @@ int main()
 {
     init_platform();
 
-    print("Starting RFSoC Controller V2...");
+    print("Starting RFSoC Controller V2...\r\n");
 
     //Entry point into c firmware
     cmd_handler_handoff();

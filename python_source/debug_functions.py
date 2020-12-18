@@ -4,7 +4,7 @@
 import rfsoc_board_driver as rbd
 
 
-portname = "COM5"
+portname = "COM8"
 
 def adc_readout_test():
 
@@ -24,7 +24,8 @@ def adc_readout_test():
     if(dac):
         raise RuntimeError("Error, DAC clock not detected, aborting adc readout test")
     if(adc):
-        raise RuntimeError("Error, ADC clock not detected, aborting adc readout test")
+        print("Warning, ADC clock not detected")
+        #raise RuntimeError("Error, ADC clock not detected, aborting adc readout test")
     
     #Select channel 0
     if(board_driver.select_channel(0)):
@@ -38,7 +39,7 @@ def adc_readout_test():
         
     
     #Turn on ADC dummy data
-    if(self.board.set_adc_dummy_data(1)):
+    if(board_driver.set_adc_dummy_data(1)):
         raise RuntimeError("Error, adc readout test was unable to turn on adc dummy data")
         
     #Flush the ADC buffers and disable adc readout
@@ -101,10 +102,11 @@ def dac_sawtooth_test():
         raise RuntimeError("Error, could not configure channels for DAC test")
         
     #Trigger the board once
-    if(board_obj.trigger())
+    if(board_obj.trigger()):
         raise RuntimeError("Error triggering board")
     
     return 0
     
     
-    
+
+adc_readout_test() 

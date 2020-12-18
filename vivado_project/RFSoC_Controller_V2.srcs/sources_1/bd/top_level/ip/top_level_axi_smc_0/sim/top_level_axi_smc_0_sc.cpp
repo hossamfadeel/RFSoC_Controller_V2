@@ -71,8 +71,6 @@ top_level_axi_smc_0_sc::top_level_axi_smc_0_sc(const sc_core::sc_module_name& nm
   S00_AXI_tlm_aximm_write_socket = mp_impl->S00_AXI_tlm_aximm_write_socket;
   S01_AXI_tlm_aximm_read_socket = mp_impl->S01_AXI_tlm_aximm_read_socket;
   S01_AXI_tlm_aximm_write_socket = mp_impl->S01_AXI_tlm_aximm_write_socket;
-  S02_AXI_tlm_aximm_read_socket = mp_impl->S02_AXI_tlm_aximm_read_socket;
-  S02_AXI_tlm_aximm_write_socket = mp_impl->S02_AXI_tlm_aximm_write_socket;
   M00_AXI_tlm_aximm_read_socket = mp_impl->M00_AXI_tlm_aximm_read_socket;
   M00_AXI_tlm_aximm_write_socket = mp_impl->M00_AXI_tlm_aximm_write_socket;
 }

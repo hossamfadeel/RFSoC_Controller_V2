@@ -48,7 +48,7 @@ u8 dma_init()
 {
 	int Status;
 
-	TxBufferPtr = (u8 *)TX_BUFFER_BASE ;
+	TxBufferPtr = (u8 *)TX_BUFFER_BASE;
 	RxBufferPtr = (u8 *)RX_BUFFER_BASE;
 	
 	XAxiDma_Config *CfgPtr;
@@ -69,7 +69,7 @@ u8 dma_init()
 
 	if(XAxiDma_HasSg(&AxiDma)){
 		xil_printf("Device configured as SG mode \r\n");
-		return XST_FAILURE;
+		//return XST_FAILURE;
 	}
 	
 	/* Disable interrupts, we use polling mode
@@ -78,7 +78,7 @@ u8 dma_init()
 						XAXIDMA_DEVICE_TO_DMA);
 	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
 						XAXIDMA_DMA_TO_DEVICE);
-
+	return 0;
 }
 
 //Returns 0 on success
@@ -108,7 +108,6 @@ u8 dma_read_word(u32* dma_ret_val)
 	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, MAX_PKT_LEN);
 	Xil_DCacheInvalidateRange((UINTPTR)RxBufferPtr, MAX_PKT_LEN);
 	
-	u32 dma_buffer[1];
 	//Start the transfer
 	int Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) RxBufferPtr,
 					1, XAXIDMA_DEVICE_TO_DMA);

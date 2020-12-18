@@ -28,8 +28,6 @@
 #define CMD_PING_BOARD 0x10
 #define CMD_TRIGGER 0x11
 
-
-
 //cmd handler state definitions
 #define state_idle 0
 #define state_wait_cmd_byte 1
@@ -48,6 +46,7 @@ void cmd_handler_handoff()
 	while(1)
 	{
 		cmd_handle_command();
+		update_led_state();
 	}
 }
 
@@ -161,7 +160,7 @@ void cmd_handle_command()
 						//Update the clock status
 						rf_update_clock_status();
 						//Build the response byte
-						ret_val = rf_get_dac_clock_status() & (rf_get_adc_clock_status() << 1);
+						ret_val = rf_get_dac_clock_status() | (rf_get_adc_clock_status() << 1);
 						//Return the response
 						uart_send_byte(ret_val);
 						cmd_handler_state = state_idle;
@@ -336,7 +335,6 @@ u8 cmd_init()
 	if(gpio_init())
 	{
 		print("Failed to initialize GPIO!\r\n");
-		return 1;
 	}
 	else
 	{
@@ -346,11 +344,19 @@ u8 cmd_init()
 	if(uart_init_interrupt() != 0)
 	{
 		print("Failed to initialize UART!\r\n");
-		return 1;
 	}
 	else
 	{
 		print("Successfully initialized UART!\r\n");
+	}
+
+	if(dma_init())
+	{
+		print("Failed to initialized DMA!\r\n");
+	}
+	else
+	{
+		print("Successfully initialized DMA!\r\n");
 	}
 
 	if(rf_init())

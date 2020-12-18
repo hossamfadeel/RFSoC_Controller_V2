@@ -1,7 +1,7 @@
 set (CMAKE_SYSTEM_PROCESSOR "arm" CACHE STRING "")
 set (MACHINE "zynqmp_a53")
 set (CROSS_PREFIX "aarch64-none-elf-" CACHE STRING "")
-set (CMAKE_C_FLAGS "-O2 -c -g -Wall -Wextra -Os -flto -ffat-lto-objects -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/include" CACHE STRING "")
+set (CMAKE_C_FLAGS "-O2 -c -g -Wall -Wextra -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/include" CACHE STRING "")
 set (CMAKE_SYSTEM_NAME "Generic" CACHE STRING "")
 include (CMakeForceCompiler)
 CMAKE_FORCE_C_COMPILER ("${CROSS_PREFIX}gcc" GNU)

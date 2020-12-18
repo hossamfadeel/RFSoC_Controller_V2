@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu29dr-ffvf1760-2-e
 
@@ -107,22 +110,16 @@ set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Control
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_10/bd_d79d_s00a2s_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_11/bd_d79d_sarn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_12/bd_d79d_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_13/bd_d79d_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_14/bd_d79d_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_15/bd_d79d_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_19/bd_d79d_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_20/bd_d79d_sarn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_21/bd_d79d_srn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_25/bd_d79d_s02a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_26/bd_d79d_sawn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_27/bd_d79d_swn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_28/bd_d79d_sbn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_29/bd_d79d_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_30/bd_d79d_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_31/bd_d79d_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_32/bd_d79d_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_33/bd_d79d_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_34/bd_d79d_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_16/bd_d79d_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_17/bd_d79d_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_18/bd_d79d_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_19/bd_d79d_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_20/bd_d79d_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_21/bd_d79d_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_22/bd_d79d_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_23/bd_d79d_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_24/bd_d79d_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/bd_0/ip/ip_25/bd_d79d_m00bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_usp_rf_data_converter_0_0/synth/top_level_usp_rf_data_converter_0_0_clocks.xdc]

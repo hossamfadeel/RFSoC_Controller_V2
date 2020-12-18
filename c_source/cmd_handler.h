@@ -13,6 +13,8 @@ void cmd_handler_handoff();
 void cmd_handle_command();
 
 u8 cmd_init();
+
+void update_led_state();
 ///////////////////////////////////////
 
 

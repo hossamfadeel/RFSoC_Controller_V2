@@ -355,7 +355,7 @@ class rfsoc_board_driver:
         self.port.write([CMD_PREAMBLE, CMD_READ_AXIS])
         axis_word_bytes = self.port.read(4)
         axis_status = self.port.read(1)
-        return axis_status, int.from_bytes(axis_word_bytes, byteorder = 'little', signed = False)
+        return axis_status[0], int.from_bytes(axis_word_bytes, byteorder = 'little', signed = False)
         
  
 #Static functions for loading instances of rfsoc_board from file
