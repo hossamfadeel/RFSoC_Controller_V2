@@ -1,8 +1,9 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_rfsoc_v2_application_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_no_fpga_flash
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_no_fpga_flash
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_no_fpga_flash/activeLaunchMode=systemdebug
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_no_fpga_flash/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_rfsoc_v2_application_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_rfsoc_v2_application_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

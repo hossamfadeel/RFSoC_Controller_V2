@@ -74,7 +74,7 @@
     <stringAttribute key="multilaunch.linux_remote_work_dir" value="/mnt/sd-mmcblk0p1/"/>
     <stringAttribute key="multilaunch.project_name" value="rfsoc_v2_application_system"/>
     <stringAttribute key="multilaunch.selected_apps" value=""/>
-    <stringAttribute key="multilaunch.standalone_peer_id" value="Local"/>
+    <stringAttribute key="multilaunch.standalone_peer_id" value="remote_hw_server"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
         <listEntry value="/rfsoc_v2_application_system"/>
     </listAttribute>
