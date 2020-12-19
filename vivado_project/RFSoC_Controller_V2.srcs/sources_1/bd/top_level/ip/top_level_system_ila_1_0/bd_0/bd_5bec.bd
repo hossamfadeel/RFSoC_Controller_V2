@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD0F9A6F45C184777",
+      "boundary_crc": "0x783BF45B32079784",
       "design_src": "SBD",
       "device": "xczu29dr-ffvf1760-2-e",
       "name": "bd_5bec",
@@ -29,11 +29,11 @@
             "value_src": "default"
           },
           "HAS_TKEEP": {
-            "value": "0",
+            "value": "1",
             "value_src": "default"
           },
           "HAS_TLAST": {
-            "value": "0",
+            "value": "1",
             "value_src": "default"
           },
           "HAS_TREADY": {
@@ -58,7 +58,7 @@
           },
           "TDATA_NUM_BYTES": {
             "value": "4",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "TDEST_WIDTH": {
             "value": "0",
@@ -161,7 +161,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "5"
+            "value": "6"
           },
           "C_PROBE0_MU_CNT": {
             "value": "1"
@@ -182,7 +182,7 @@
             "value": "0"
           },
           "C_PROBE2_WIDTH": {
-            "value": "1"
+            "value": "4"
           },
           "C_PROBE3_TYPE": {
             "value": "0"
@@ -194,6 +194,12 @@
             "value": "0"
           },
           "C_PROBE4_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE5_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE5_WIDTH": {
             "value": "1"
           },
           "C_TIME_TAG_WIDTH": {
@@ -239,7 +245,7 @@
             "value": "AXI4S"
           },
           "C_SLOT_0_HAS_TKEEP": {
-            "value": "0"
+            "value": "1"
           },
           "C_SLOT_0_HAS_TREADY": {
             "value": "1"
@@ -287,22 +293,28 @@
           "ila_lib/probe1"
         ]
       },
+      "net_slot_0_axis_tkeep": {
+        "ports": [
+          "g_inst/m_slot_0_axis_tkeep",
+          "ila_lib/probe2"
+        ]
+      },
       "net_slot_0_axis_tvalid": {
         "ports": [
           "g_inst/m_slot_0_axis_tvalid",
-          "ila_lib/probe2"
+          "ila_lib/probe3"
         ]
       },
       "net_slot_0_axis_tready": {
         "ports": [
           "g_inst/m_slot_0_axis_tready",
-          "ila_lib/probe3"
+          "ila_lib/probe4"
         ]
       },
       "net_slot_0_axis_tlast": {
         "ports": [
           "g_inst/m_slot_0_axis_tlast",
-          "ila_lib/probe4"
+          "ila_lib/probe5"
         ]
       }
     }

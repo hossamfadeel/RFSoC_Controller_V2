@@ -56,13 +56,17 @@ def adc_readout_test():
     if(board_driver.set_adc_readout(1)):
         raise RuntimeError("Error, adc readout test was unable to set adc readout")
         
+    #Run the DMA test
+    #board_driver.port.write([rbd.CMD_PREAMBLE, rbd.CMD_DMA_DEBUG])
+    #board_driver.wait_ack()
+        
     #Read out exactly 8 AXIS words and see what we get
     for i in range(0, 8):
         status, word = board_driver.read_axis_word()
         if(status):
             raise RuntimeError("Error while reading out AXIS word")
         
-        print("Got: " + str(word))
+        print("Got: " + hex(word))
         
     
     #disable adc readout

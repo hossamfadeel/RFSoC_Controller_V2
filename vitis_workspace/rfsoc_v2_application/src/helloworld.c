@@ -49,10 +49,7 @@
 #include "platform.h"
 #include "xil_printf.h"
 
-
-
 void cmd_handler_handoff();
-
 
 int main()
 {
@@ -60,10 +57,8 @@ int main()
 
     print("Starting RFSoC Controller V2...\r\n");
 
-    //Entry point into c firmware
+    //Entry point into RFSoC V2 c firmware
     cmd_handler_handoff();
-
-
 
     cleanup_platform();
     return 0;

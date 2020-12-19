@@ -6,6 +6,12 @@
 #include "dma.h"
 #include "rf.h"
 
+
+///Debug Definitions///
+#define DMA_DEBUG 0// set to for normal operation, disables DMA init on startup
+#define CMD_DMA_DEBUG 0x12 // Triggers DMA debug routine
+
+
 //Command definitions
 #define CMD_PREAMBLE 0xAA
 #define CMD_ACK 0x00
@@ -194,6 +200,16 @@ void cmd_handle_command()
 						cmd_handler_state = state_idle;
 					break;
 					
+					case CMD_DMA_DEBUG:
+#if DMA_DEBUG
+						print("Running DMA debug routine\r\n");
+						dma_test();
+						uart_send_byte(CMD_ACK);
+#else
+						print("Cannot run DMA debug when DMA debug is not enabled in C fimrware\r\n");
+						uart_send_byte(0xFF);
+#endif
+						cmd_handler_state = state_idle;
 					default:
 						xil_printf("Unknown command byte: 0x%x\r\n", cmd_byte);
 						cmd_handler_state = state_idle;
@@ -350,6 +366,7 @@ u8 cmd_init()
 		print("Successfully initialized UART!\r\n");
 	}
 
+#if DMA_DEBUG == 0
 	if(dma_init())
 	{
 		print("Failed to initialized DMA!\r\n");
@@ -358,6 +375,9 @@ u8 cmd_init()
 	{
 		print("Successfully initialized DMA!\r\n");
 	}
+#else
+	print("DMA debug mode set, skipping DMA initialization\r\n");
+#endif
 
 	if(rf_init())
 	{

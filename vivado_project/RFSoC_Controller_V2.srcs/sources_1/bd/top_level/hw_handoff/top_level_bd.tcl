@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# gpio_buffer, rfsoc_pl_ctrl_verilog_wrapper
+# axis_tlast_slice, gpio_buffer, rfsoc_pl_ctrl_verilog_wrapper
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -321,6 +321,17 @@ proc create_root_design { parentCell } {
    CONFIG.TDATA_NUM_BYTES {2} \
  ] $axis_gpio_async_fifo
 
+  # Create instance: axis_tlast_slice_0, and set properties
+  set block_name axis_tlast_slice
+  set block_cell_name axis_tlast_slice_0
+  if { [catch {set axis_tlast_slice_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $axis_tlast_slice_0 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: gpio_buffer_0, and set properties
   set block_name gpio_buffer
   set block_cell_name gpio_buffer_0
@@ -2038,9 +2049,10 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS [get_bd_intf_pins axis_data_ps_to_pl_fifo/M_AXIS] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/s_axis]
 connect_bd_intf_net -intf_net [get_bd_intf_nets axis_data_fifo_1_M_AXIS] [get_bd_intf_pins axis_data_ps_to_pl_fifo/M_AXIS] [get_bd_intf_pins system_ila_pl/SLOT_0_AXIS]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets axis_data_fifo_1_M_AXIS]
-  connect_bd_intf_net -intf_net axis_data_fifo_2_M_AXIS [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins axis_data_pl_to_ps_fifo/M_AXIS]
-connect_bd_intf_net -intf_net [get_bd_intf_nets axis_data_fifo_2_M_AXIS] [get_bd_intf_pins axis_data_pl_to_ps_fifo/M_AXIS] [get_bd_intf_pins system_ila_ps/SLOT_0_AXIS]
+  connect_bd_intf_net -intf_net axis_data_fifo_2_M_AXIS [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins axis_tlast_slice_0/m_axis]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axis_data_fifo_2_M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins system_ila_ps/SLOT_0_AXIS]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets axis_data_fifo_2_M_AXIS]
+  connect_bd_intf_net -intf_net axis_data_pl_to_ps_fifo_M_AXIS [get_bd_intf_pins axis_data_pl_to_ps_fifo/M_AXIS] [get_bd_intf_pins axis_tlast_slice_0/s_axis]
   connect_bd_intf_net -intf_net dac0_clk_1 [get_bd_intf_ports dac0_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac0_clk]
   connect_bd_intf_net -intf_net dac1_clk_1 [get_bd_intf_ports dac1_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac1_clk]
   connect_bd_intf_net -intf_net dac2_clk_1 [get_bd_intf_ports dac2_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac2_clk]

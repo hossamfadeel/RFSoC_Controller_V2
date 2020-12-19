@@ -110,7 +110,7 @@ u8 dma_read_word(u32* dma_ret_val)
 	
 	//Start the transfer
 	int Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) RxBufferPtr,
-					1, 1);
+			MAX_PKT_LEN, XAXIDMA_DEVICE_TO_DMA);
 	//Wait for the transfer to finish
 	while(XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)){}
 	

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1608320583">
+<GenRun Id="synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1608348787">
   <File Type="PA-TCL" Name="top_level_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_wrapper_reports.tcl"/>
@@ -130,6 +130,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../verilog_source/rtl/axis_tlast_slice.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/top_level/top_level.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -175,6 +182,7 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="top_level_gpio_buffer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_usp_rf_data_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_system_ila_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rst_ps8_0_100M_1"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_axi_dma_0_0"/>
@@ -185,4 +193,5 @@
   <BlockFileSet Type="BlockSrcs" Name="top_level_axis_data_fifo_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="top_level_rfsoc_pl_ctrl_verilo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="top_level_axis_tlast_slice_0_0"/>
 </GenRun>

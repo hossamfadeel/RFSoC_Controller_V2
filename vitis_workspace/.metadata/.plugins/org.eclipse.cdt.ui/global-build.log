@@ -1,28 +1,10 @@
-18:42:30 **** Incremental Build of project rfsoc_v2_platform ****
-buildplatform.bat 65153 rfsoc_v2_platform no_domain_build 
-XSDB Server Channel: tcfchan#35
-18:42:32 **** Build of configuration Debug for project xaxidma_example_simple_poll_1 ****
+13:00:10 **** Incremental Build of configuration Debug for project rfsoc_v2_application ****
 make all 
-'Building file: ../src/xaxidma_example_simple_poll.c'
-'Invoking: ARM v8 gcc compiler'
-aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xaxidma_example_simple_poll.o" -D __BAREMETAL__ -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/xaxidma_example_simple_poll.d" -MT"src/xaxidma_example_simple_poll.o" -o "src/xaxidma_example_simple_poll.o" "../src/xaxidma_example_simple_poll.c"
-'Finished building: ../src/xaxidma_example_simple_poll.c'
-' '
-'Building target: xaxidma_example_simple_poll_1.elf'
-'Invoking: ARM v8 gcc linker'
-aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/bsplib/lib -o "xaxidma_example_simple_poll_1.elf"  ./src/xaxidma_example_simple_poll.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lgcc,-lc,-lmetal,--end-group
-'Finished building target: xaxidma_example_simple_poll_1.elf'
-' '
-'Invoking: ARM v8 Print Size'
-aarch64-none-elf-size xaxidma_example_simple_poll_1.elf  |tee "xaxidma_example_simple_poll_1.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  44120	   4208	  23660	  71988	  11934	xaxidma_example_simple_poll_1.elf
-'Finished building: xaxidma_example_simple_poll_1.elf.size'
-' '
-18:42:34 **** Build of configuration Debug for project xaxidma_example_simple_poll_1_system ****
+make: Nothing to be done for 'all'.
+13:00:10 **** Incremental Build of configuration Debug for project rfsoc_v2_application_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 65153 D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm standalone_domain D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1_system/Debug/system.bif
-sdcard_gen --xpfm D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm --sys_config rfsoc_v2_platform --bif D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1_system/Debug/system.bif --bitstream D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1/_ide/bitstream/top_level_wrapper.bit --elf D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf,psu_cortexa53_0
-creating BOOT.BIN using D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1/_ide/bitstream/top_level_wrapper.bit
-Running C:/Xilinx/Vitis/2020.2/bin/bootgen -arch zynqmp -image D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+generate_system_bif.bat 59598 D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm standalone_domain D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application_system/Debug/system.bif
+sdcard_gen --xpfm D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm --sys_config rfsoc_v2_platform --bif D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application_system/Debug/system.bif --bitstream D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit --elf D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf,psu_cortexa53_0
+creating BOOT.BIN using D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen -arch zynqmp -image D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

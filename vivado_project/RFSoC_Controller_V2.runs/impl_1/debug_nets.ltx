@@ -1636,14 +1636,28 @@
                                 "id": 16,
                                 "type": "DATA_TRIGGER",
                                 "direction": "IN",
-                                "isVector": false,
+                                "isVector": true,
                                 "leftIndex": 0,
-                                "rightIndex": 0,
+                                "rightIndex": 3,
                                 "portIndex": 2,
                                 "nets": [
                                     {
-                                        "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tvalid",
-                                        "isBus": false
+                                        "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tkeep",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tkeep[3]"
+                                            },
+                                            {
+                                                "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tkeep[2]"
+                                            },
+                                            {
+                                                "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tkeep[1]"
+                                            },
+                                            {
+                                                "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tkeep[0]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -1658,7 +1672,7 @@
                                 "portIndex": 3,
                                 "nets": [
                                     {
-                                        "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tready",
+                                        "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tvalid",
                                         "isBus": false
                                     }
                                 ]
@@ -1672,6 +1686,22 @@
                                 "leftIndex": 0,
                                 "rightIndex": 0,
                                 "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tready",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 19,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 5,
                                 "nets": [
                                     {
                                         "name": "top_level_i/system_ila_ps/inst/net_slot_0_axis_tlast",
@@ -1696,7 +1726,25 @@
                                         }
                                     },
                                     {
+                                        "logical_port": "TKEEP",
+                                        "physical_pin": {
+                                            "id": 16,
+                                            "name": "probe2",
+                                            "leftBit": 0,
+                                            "width": 4
+                                        }
+                                    },
+                                    {
                                         "logical_port": "TLAST",
+                                        "physical_pin": {
+                                            "id": 19,
+                                            "name": "probe5",
+                                            "leftBit": 0,
+                                            "width": 1
+                                        }
+                                    },
+                                    {
+                                        "logical_port": "TREADY",
                                         "physical_pin": {
                                             "id": 18,
                                             "name": "probe4",
@@ -1705,19 +1753,10 @@
                                         }
                                     },
                                     {
-                                        "logical_port": "TREADY",
+                                        "logical_port": "TVALID",
                                         "physical_pin": {
                                             "id": 17,
                                             "name": "probe3",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
-                                    },
-                                    {
-                                        "logical_port": "TVALID",
-                                        "physical_pin": {
-                                            "id": 16,
-                                            "name": "probe2",
                                             "leftBit": 0,
                                             "width": 1
                                         }

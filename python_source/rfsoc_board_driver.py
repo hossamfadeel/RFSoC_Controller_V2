@@ -37,6 +37,7 @@ CMD_SET_ADC_DUMMY_DATA = 0x0E #Turns on dummy data mode for ADC
 CMD_SET_ADC_READOUT = 0x0F
 CMD_PING_BOARD = 0x10
 CMD_TRIGGER = 0x11
+CMD_DMA_DEBUG = 0x12 # debug purposes only
 
 #########################################
 #Low-level hardware driver for the board#
@@ -368,7 +369,7 @@ class rfsoc_board_driver:
         axis_status = self.port.read(1)
         astat = 0
         try:
-            astat = axis_status(0)
+            astat = axis_status[0]
         except:
             astat = 1
         return astat, int.from_bytes(axis_word_bytes, byteorder = 'little', signed = False)

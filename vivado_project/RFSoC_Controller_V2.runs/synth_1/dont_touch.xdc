@@ -55,6 +55,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_s
 # IP: bd/top_level/ip/top_level_xbar_0/top_level_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_xbar_0 || ORIG_REF_NAME==top_level_xbar_0} -quiet] -quiet
 
+# IP: bd/top_level/ip/top_level_axis_tlast_slice_0_0/top_level_axis_tlast_slice_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_axis_tlast_slice_0_0 || ORIG_REF_NAME==top_level_axis_tlast_slice_0_0} -quiet] -quiet
+
 # IP: bd/top_level/ip/top_level_auto_ds_0/top_level_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==top_level_auto_ds_0 || ORIG_REF_NAME==top_level_auto_ds_0} -quiet] -quiet
 

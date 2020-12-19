@@ -59,10 +59,12 @@ module bd_5bec_g_inst_0 (
   slot_0_axis_tvalid,
   slot_0_axis_tready,
   slot_0_axis_tdata,
+  slot_0_axis_tkeep,
   slot_0_axis_tlast,
   m_slot_0_axis_tvalid,
   m_slot_0_axis_tready,
   m_slot_0_axis_tdata,
+  m_slot_0_axis_tkeep,
   m_slot_0_axis_tlast
 );
 
@@ -80,7 +82,9 @@ input wire slot_0_axis_tvalid;
 input wire slot_0_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_0_axis TDATA" *)
 input wire [31 : 0] slot_0_axis_tdata;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME slot_0_axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_0_axis TKEEP" *)
+input wire [3 : 0] slot_0_axis_tkeep;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME slot_0_axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_0_axis TLAST" *)
 input wire slot_0_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_0_axis TVALID" *)
@@ -89,7 +93,9 @@ output wire m_slot_0_axis_tvalid;
 output wire m_slot_0_axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_0_axis TDATA" *)
 output wire [31 : 0] m_slot_0_axis_tdata;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_slot_0_axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_0_axis TKEEP" *)
+output wire [3 : 0] m_slot_0_axis_tkeep;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_slot_0_axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_0_axis TLAST" *)
 output wire m_slot_0_axis_tlast;
 
@@ -197,7 +203,7 @@ output wire m_slot_0_axis_tlast;
     .C_SLOT_0_HAS_BURST(1),
     .C_SLOT_0_HAS_WSTRB(1),
     .C_SLOT_0_HAS_TSTRB(0),
-    .C_SLOT_0_HAS_TKEEP(0),
+    .C_SLOT_0_HAS_TKEEP(1),
     .C_SLOT_1_HAS_BRESP(1),
     .C_SLOT_1_HAS_RRESP(1),
     .C_SLOT_1_HAS_LOCK(1),
@@ -2182,7 +2188,7 @@ output wire m_slot_0_axis_tlast;
     .slot_0_axis_tready(slot_0_axis_tready),
     .slot_0_axis_tdata(slot_0_axis_tdata),
     .slot_0_axis_tstrb(4'B0),
-    .slot_0_axis_tkeep(4'B0),
+    .slot_0_axis_tkeep(slot_0_axis_tkeep),
     .slot_0_axis_tlast(slot_0_axis_tlast),
     .slot_0_axis_tid(1'B0),
     .slot_0_axis_tdest(1'B0),
@@ -2886,7 +2892,7 @@ output wire m_slot_0_axis_tlast;
     .m_slot_0_axis_tready(m_slot_0_axis_tready),
     .m_slot_0_axis_tdata(m_slot_0_axis_tdata),
     .m_slot_0_axis_tstrb(),
-    .m_slot_0_axis_tkeep(),
+    .m_slot_0_axis_tkeep(m_slot_0_axis_tkeep),
     .m_slot_0_axis_tlast(m_slot_0_axis_tlast),
     .m_slot_0_axis_tid(),
     .m_slot_0_axis_tdest(),
