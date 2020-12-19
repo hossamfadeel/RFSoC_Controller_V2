@@ -474,13 +474,15 @@ initial begin
 	end
 	
 	//set the readout enable bit
-	gpio_ctrl[adc_readout_enable] <= 1;
+	gpio_ctrl[adc_readout_enable] <= 0;
 	
 	//Try reading out each ADC one at a time
 	for(k = 0; k < 16; k = k + 1) begin
 	
 		select_channel(k);
 		
+		repeat(10) clk_cycle();
+		gpio_ctrl[adc_readout_enable] <= 1;
 		repeat(10) clk_cycle();
 		
 		adc_axis_tready <= 1;
@@ -495,6 +497,10 @@ initial begin
 		
 		repeat(10) clk_cycle();
 		adc_axis_tready <= 0;
+		repeat(10) clk_cycle();
+
+		repeat(10) clk_cycle();
+		gpio_ctrl[adc_readout_enable] <= 0;
 		repeat(10) clk_cycle();
 	
 	end

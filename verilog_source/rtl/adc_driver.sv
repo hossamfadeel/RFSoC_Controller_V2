@@ -110,6 +110,9 @@ adc_storage_fifo
     s_axis_tready_1 | gpio_ctrl[adc_buffer_flush] 
 );
 
+wire m_axis_tvalid_int;
+//Data is valid iff adc readout is enabled
+assign m_axis_tvalid = m_axis_tvalid_int & gpio_ctrl[adc_readout_enable];
 
 axis_pl_to_ps axis_pl_to_ps_inst
 (
@@ -124,7 +127,8 @@ axis_pl_to_ps axis_pl_to_ps_inst
 	
 	//Output to PS
 	m_axis_tdata,
-    m_axis_tvalid & gpio_ctrl[adc_readout_enable],
+    m_axis_tvalid_int,
+	//Stop readout if adc readout is disabled
     (m_axis_tready & gpio_ctrl[adc_readout_enable]) | gpio_ctrl[adc_buffer_flush],
 	
 	gpio_ctrl

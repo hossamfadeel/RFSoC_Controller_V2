@@ -1,0 +1,21 @@
+18:42:32 **** Build of configuration Debug for project xaxidma_example_simple_poll_1 ****
+make all 
+'Building file: ../src/xaxidma_example_simple_poll.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xaxidma_example_simple_poll.o" -D __BAREMETAL__ -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/xaxidma_example_simple_poll.d" -MT"src/xaxidma_example_simple_poll.o" -o "src/xaxidma_example_simple_poll.o" "../src/xaxidma_example_simple_poll.c"
+'Finished building: ../src/xaxidma_example_simple_poll.c'
+' '
+'Building target: xaxidma_example_simple_poll_1.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/bsplib/lib -o "xaxidma_example_simple_poll_1.elf"  ./src/xaxidma_example_simple_poll.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lgcc,-lc,-lmetal,--end-group
+'Finished building target: xaxidma_example_simple_poll_1.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size xaxidma_example_simple_poll_1.elf  |tee "xaxidma_example_simple_poll_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  44120	   4208	  23660	  71988	  11934	xaxidma_example_simple_poll_1.elf
+'Finished building: xaxidma_example_simple_poll_1.elf.size'
+' '
+
+18:42:33 Build Finished (took 805ms)
+

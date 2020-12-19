@@ -1,13 +1,4 @@
-D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
--- Compiling package rfsoc_pl_ctrl_tb_sv_unit
--- Importing package rfsoc_config
--- Compiling module rfsoc_pl_ctrl_tb
-
-Top level modules:
-	rfsoc_pl_ctrl_tb
-
-} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/fifo_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/fifo_tb.sv
+D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/fifo_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/fifo_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
 -- Compiling package fifo_tb_sv_unit
 -- Importing package rfsoc_config
@@ -93,14 +84,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Ap
 Top level modules:
 	dac_driver_tb
 
-} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/axis_ps_to_pl_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/axis_ps_to_pl_tb.sv
+} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_cpu_readback_tester.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_cpu_readback_tester.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
--- Compiling package axis_ps_to_pl_tb_sv_unit
+-- Compiling package axis_cpu_readback_tester_sv_unit
 -- Importing package rfsoc_config
--- Compiling module axis_ps_to_pl_tb
+-- Compiling module axis_cpu_readback_tester
+-- Compiling module axis_cpu_readback_tester_tb
 
 Top level modules:
-	axis_ps_to_pl_tb
+	axis_cpu_readback_tester_tb
 
 } {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/axis_pl_to_ps_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/axis_pl_to_ps_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
@@ -111,15 +103,14 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Ap
 Top level modules:
 	axis_pl_to_ps_tb
 
-} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_cpu_readback_tester.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_cpu_readback_tester.sv
+} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/axis_ps_to_pl_tb.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/axis_ps_to_pl_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
--- Compiling package axis_cpu_readback_tester_sv_unit
+-- Compiling package axis_ps_to_pl_tb_sv_unit
 -- Importing package rfsoc_config
--- Compiling module axis_cpu_readback_tester
--- Compiling module axis_cpu_readback_tester_tb
+-- Compiling module axis_ps_to_pl_tb
 
 Top level modules:
-	axis_cpu_readback_tester_tb
+	axis_ps_to_pl_tb
 
 } {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
@@ -149,15 +140,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Ap
 Top level modules:
 	shift_register
 
-} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
--- Compiling package axis_n_mux_sv_unit
--- Importing package rfsoc_config
--- Compiling module axis_n_mux
-
-Top level modules:
-	axis_n_mux
-
 } {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/rtl/adc_driver.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/rtl/adc_driver.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
 -- Compiling package adc_driver_sv_unit
@@ -175,6 +157,24 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Ap
 Top level modules:
 	axis_fifo
 	axis_async_fifo_def
+
+} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
+-- Compiling package axis_n_mux_sv_unit
+-- Importing package rfsoc_config
+-- Compiling module axis_n_mux
+
+Top level modules:
+	axis_n_mux
+
+} {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/rtl/dac_ctrl.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/rtl/dac_ctrl.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020
+-- Compiling package dac_ctrl_sv_unit
+-- Importing package rfsoc_config
+-- Compiling module dac_ctrl
+
+Top level modules:
+	dac_ctrl
 
 } {} {}} D:/repos/RFSoC_Controller_V2/verilog_source/rtl/rfsoc_pl_ctrl.sv {1 {vlog -work work -sv -stats=none D:/repos/RFSoC_Controller_V2/verilog_source/rtl/rfsoc_pl_ctrl.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1_3 Compiler 2020.04 Apr 28 2020

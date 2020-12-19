@@ -368,7 +368,7 @@ u8 cmd_init()
 		print("Successfully initialized RF components!\r\n");
 	}
 
-	print("Finished initializing peripherals\r\n");
+	print("Finished initializing peripherals\r\n===============================\r\n");
 	//Clear the buffer once
 	uart_clear_buffer();
 

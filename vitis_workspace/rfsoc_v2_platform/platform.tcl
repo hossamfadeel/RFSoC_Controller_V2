@@ -14,7 +14,6 @@ platform create -name {rfsoc_v2_platform}\
 
 platform write
 platform generate -domains 
-platform active {rfsoc_v2_platform}
 bsp reload
 bsp config stdin "psu_coresight_0"
 bsp config stdout "psu_coresight_0"
@@ -22,6 +21,12 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate
-platform active {rfsoc_v2_platform}
 platform config -updatehw {D:/repos/RFSoC_Controller_V2/vivado_project/top_level_wrapper.xsa}
-platform generate
+platform generate -domains 
+platform generate -domains standalone_domain 
+platform generate -domains standalone_domain 
+domain active {zynqmp_fsbl}
+bsp reload
+domain active {standalone_domain}
+bsp reload
+platform generate -domains 

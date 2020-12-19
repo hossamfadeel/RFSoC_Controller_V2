@@ -1,4 +1,4 @@
-10:41:35 **** Incremental Build of configuration Debug for project rfsoc_v2_application ****
+12:53:06 **** Incremental Build of configuration Debug for project rfsoc_v2_application ****
 make all 
 'Building file: D:/repos/RFSoC_Controller_V2/c_source/cmd_handler.c'
 'Invoking: ARM v8 gcc compiler'
@@ -22,5 +22,5 @@ aarch64-none-elf-size rfsoc_v2_application.elf  |tee "rfsoc_v2_application.elf.s
 'Finished building: rfsoc_v2_application.elf.size'
 ' '
 
-10:41:36 Build Finished (took 1s.169ms)
+12:53:08 Build Finished (took 1s.179ms)
 

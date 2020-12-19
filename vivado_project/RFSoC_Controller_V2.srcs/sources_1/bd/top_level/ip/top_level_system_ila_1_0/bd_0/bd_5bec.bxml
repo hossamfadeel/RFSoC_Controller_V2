@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="bd_5bec" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1608315107"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1608315107"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1608315107"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1608315107"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1608320565"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1608320565"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1608320565"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1608320565"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\bd_5bec.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -25,6 +25,14 @@
       </File>
       <File Name="ip\ip_0\bd_5bec_ila_lib_0.xci" Type="IP">
         <Instance HierarchyPath="ila_lib"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\ip_1\bd_5bec_g_inst_0.xci" Type="IP">
+        <Instance HierarchyPath="g_inst"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

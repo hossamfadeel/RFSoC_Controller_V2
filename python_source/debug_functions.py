@@ -4,7 +4,7 @@
 import rfsoc_board_driver as rbd
 
 
-portname = "COM8"
+portname = "COM6"
 
 def adc_readout_test():
 

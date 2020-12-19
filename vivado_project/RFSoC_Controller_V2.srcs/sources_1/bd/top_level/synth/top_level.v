@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Fri Dec 18 10:11:35 2020
+//Date        : Fri Dec 18 11:42:31 2020
 //Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -1064,9 +1064,9 @@ module top_level
   (* CONN_BUS_INFO = "axis_data_fifo_1_M_AXIS xilinx.com:interface:axis:1.0 None TLAST" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axis_data_fifo_1_M_AXIS_TLAST;
   (* CONN_BUS_INFO = "axis_data_fifo_1_M_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axis_data_fifo_1_M_AXIS_TREADY;
   (* CONN_BUS_INFO = "axis_data_fifo_1_M_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axis_data_fifo_1_M_AXIS_TVALID;
-  wire [31:0]axis_data_fifo_2_M_AXIS_TDATA;
-  wire axis_data_fifo_2_M_AXIS_TREADY;
-  wire axis_data_fifo_2_M_AXIS_TVALID;
+  (* CONN_BUS_INFO = "axis_data_fifo_2_M_AXIS xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]axis_data_fifo_2_M_AXIS_TDATA;
+  (* CONN_BUS_INFO = "axis_data_fifo_2_M_AXIS xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axis_data_fifo_2_M_AXIS_TREADY;
+  (* CONN_BUS_INFO = "axis_data_fifo_2_M_AXIS xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire axis_data_fifo_2_M_AXIS_TVALID;
   wire dac0_clk_1_CLK_N;
   wire dac0_clk_1_CLK_P;
   wire dac1_clk_1_CLK_N;
@@ -1853,8 +1853,13 @@ module top_level
         .probe0(gpio_buffer_0_gpio_out),
         .resetn(rst_ps8_0_100M1_peripheral_aresetn));
   top_level_system_ila_1_0 system_ila_ps
-       (.clk(zynq_ultra_ps_e_0_pl_clk0),
-        .probe0(axi_gpio_0_gpio_io_o));
+       (.SLOT_0_AXIS_tdata(axis_data_fifo_2_M_AXIS_TDATA),
+        .SLOT_0_AXIS_tlast(1'b0),
+        .SLOT_0_AXIS_tready(axis_data_fifo_2_M_AXIS_TREADY),
+        .SLOT_0_AXIS_tvalid(axis_data_fifo_2_M_AXIS_TVALID),
+        .clk(zynq_ultra_ps_e_0_pl_clk0),
+        .probe0(axi_gpio_0_gpio_io_o),
+        .resetn(rst_ps8_0_100M_peripheral_aresetn));
   top_level_usp_rf_data_converter_0_0 usp_rf_data_converter_0
        (.adc0_clk_n(adc0_clk_1_CLK_N),
         .adc0_clk_p(adc0_clk_1_CLK_P),

@@ -7,6 +7,7 @@ import serial #Used to open serial ports for board communication
 import pickle #Used for object serialization
 import re #Used for waveform file readout
 import numpy as np #Used for waveform formatting
+import time
 
 #Configuration file this object is saved to between script calls
 config_filename = "rfsoc_config_file.dat"
@@ -61,8 +62,18 @@ class rfsoc_board_driver:
             
     def open_board(self):
         if(self.dummy_mode == 0):
-            self.port.open()
-            
+            attempts = 0
+            while(attempts < 100):
+                try:
+                    self.port.open()
+                    return
+                except:
+                    if(attempts%10 == 0):
+                        print("Failed to open serial port, trying attempt " + str(attempts+1))
+                    time.sleep(0.1)
+                    attempts += 1
+            raise RuntimeError("Unable to open serial port for communication with FPGA.")
+                
     def close_board(self):
         if(self.dummy_mode == 0):
             self.port.close()
@@ -355,7 +366,12 @@ class rfsoc_board_driver:
         self.port.write([CMD_PREAMBLE, CMD_READ_AXIS])
         axis_word_bytes = self.port.read(4)
         axis_status = self.port.read(1)
-        return axis_status[0], int.from_bytes(axis_word_bytes, byteorder = 'little', signed = False)
+        astat = 0
+        try:
+            astat = axis_status(0)
+        except:
+            astat = 1
+        return astat, int.from_bytes(axis_word_bytes, byteorder = 'little', signed = False)
         
  
 #Static functions for loading instances of rfsoc_board from file

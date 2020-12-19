@@ -106,11 +106,11 @@ u8 dma_read_word(u32* dma_ret_val)
 	
 	//Flush the buffer and force a cache reload
 	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, MAX_PKT_LEN);
-	Xil_DCacheInvalidateRange((UINTPTR)RxBufferPtr, MAX_PKT_LEN);
+	//Xil_DCacheInvalidateRange((UINTPTR)RxBufferPtr, MAX_PKT_LEN);
 	
 	//Start the transfer
 	int Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) RxBufferPtr,
-					1, XAXIDMA_DEVICE_TO_DMA);
+					1, 1);
 	//Wait for the transfer to finish
 	while(XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)){}
 	

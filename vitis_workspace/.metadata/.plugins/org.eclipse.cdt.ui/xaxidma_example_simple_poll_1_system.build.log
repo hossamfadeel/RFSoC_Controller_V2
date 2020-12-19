@@ -1,0 +1,10 @@
+18:42:34 **** Build of configuration Debug for project xaxidma_example_simple_poll_1_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 65153 D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm standalone_domain D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1_system/Debug/system.bif
+sdcard_gen --xpfm D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm --sys_config rfsoc_v2_platform --bif D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1_system/Debug/system.bif --bitstream D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1/_ide/bitstream/top_level_wrapper.bit --elf D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1/Debug/xaxidma_example_simple_poll_1.elf,psu_cortexa53_0
+creating BOOT.BIN using D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1/_ide/bitstream/top_level_wrapper.bit
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen -arch zynqmp -image D:/repos/RFSoC_Controller_V2/vitis_workspace/xaxidma_example_simple_poll_1_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+18:42:43 Build Finished (took 9s.485ms)
+
