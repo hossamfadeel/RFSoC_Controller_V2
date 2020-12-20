@@ -157,6 +157,13 @@ void cmd_handle_command()
 					case CMD_FLUSH_BUFFERS:
 						//Flush the buffers via GPIO
 						gpio_flush_buffers();
+
+						//Read from DMA 32 times to completely flush clock crossing buffer
+						u32 dummy_dma_word;
+						for(int i = 0; i < 32; i++)
+						{
+							dma_read_word(&dummy_dma_word);
+						}
 						//Send an ACK
 						uart_send_byte(CMD_ACK);
 						cmd_handler_state = state_idle;

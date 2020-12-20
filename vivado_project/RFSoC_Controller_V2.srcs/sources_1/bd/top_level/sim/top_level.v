@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Fri Dec 18 19:31:58 2020
+//Date        : Sat Dec 19 14:57:34 2020
 //Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -1619,6 +1619,8 @@ module top_level
         .m_axis_tlast(axis_data_fifo_2_M_AXIS_TLAST),
         .m_axis_tready(axis_data_fifo_2_M_AXIS_TREADY),
         .m_axis_tvalid(axis_data_fifo_2_M_AXIS_TVALID),
+        .ps_clk(zynq_ultra_ps_e_0_pl_clk0),
+        .rst(rst_ps8_0_100M_peripheral_aresetn),
         .s_axis_tdata(axis_data_pl_to_ps_fifo_M_AXIS_TDATA),
         .s_axis_tready(axis_data_pl_to_ps_fifo_M_AXIS_TREADY),
         .s_axis_tvalid(axis_data_pl_to_ps_fifo_M_AXIS_TVALID));

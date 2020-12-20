@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Fri Dec 18 19:35:25 2020
+-- Date        : Fri Dec 18 19:35:23 2020
 -- Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_system_ila_1_0/top_level_system_ila_1_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top top_level_system_ila_1_0 -prefix
+--               top_level_system_ila_1_0_ top_level_system_ila_1_0_stub.vhdl
 -- Design      : top_level_system_ila_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu29dr-ffvf1760-2-e

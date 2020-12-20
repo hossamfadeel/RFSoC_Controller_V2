@@ -40,8 +40,16 @@ XAxiDma AxiDma;
 
 #define DMA_DEV_ID		XPAR_AXIDMA_0_DEVICE_ID
 
+
+#define DMA_MAX_TRIES 10000 //How many cycles the CPU will wait for DMA transfer to finish before giving up
+
 u8 *TxBufferPtr;
 u8 *RxBufferPtr;
+
+void dma_reset()
+{
+	XAxiDma_Selftest(&AxiDma);
+}
 
 //Retuns 0 on success
 u8 dma_init()
@@ -92,7 +100,15 @@ u8 dma_write_word(u32 word)
 	int Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) TxBufferPtr,
 					1, XAXIDMA_DMA_TO_DEVICE);
 	//Wait for the transfer to finish
-	while(XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){}
+	int count = 0;
+	while(XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))
+	{
+		count++;
+		if(count > DMA_MAX_TRIES)
+		{
+			return 1;
+		}
+	}
 	
 	if (Status != XST_SUCCESS) {
 			return 1;
@@ -112,7 +128,16 @@ u8 dma_read_word(u32* dma_ret_val)
 	int Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) RxBufferPtr,
 			MAX_PKT_LEN, XAXIDMA_DEVICE_TO_DMA);
 	//Wait for the transfer to finish
-	while(XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)){}
+	int count = 0;
+	while(XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA))
+	{
+		count++;
+		if(count > DMA_MAX_TRIES)
+		{
+			*dma_ret_val = 0;
+			return 1;
+		}
+	}
 	
 	*dma_ret_val = ((u32*) RxBufferPtr)[0];
 	

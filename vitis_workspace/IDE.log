@@ -2317,3 +2317,206 @@ con
 ----------------End of Script----------------
 
 13:31:34 INFO  : Launch script is exported to file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application_system\_ide\scripts\systemdebugger_no_fpga_flash_standalone.tcl'
+13:42:36 INFO  : Checking for BSP changes to sync application flags for project 'rfsoc_v2_application'...
+13:43:44 INFO  : Disconnected from the channel tcfchan#13.
+13:43:44 INFO  : Connected through redirection to target on host '192.168.3.2' and port '3121'.
+13:43:45 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+13:43:45 INFO  : 'jtag frequency' command is executed.
+13:43:45 INFO  : Sourcing of 'C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:43:45 INFO  : Context for 'APU' is selected.
+13:43:46 INFO  : System reset is completed.
+13:43:49 INFO  : 'after 3000' command is executed.
+13:43:49 INFO  : Context for 'APU' is selected.
+13:43:50 INFO  : Cleared APU and A53 resets
+13:43:50 INFO  : Context for 'RPU' is selected.
+13:43:51 INFO  : Cleared RPU and R5 resets
+13:43:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}' command is executed.
+13:44:11 INFO  : Device configured successfully with "D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit"
+13:44:11 INFO  : Context for 'APU' is selected.
+13:44:12 INFO  : Hardware design and registers information is loaded from 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa'.
+13:44:12 INFO  : 'configparams force-mem-access 1' command is executed.
+13:44:13 INFO  : Context for 'APU' is selected.
+13:44:13 INFO  : Boot mode is read from the target.
+13:44:13 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:44:13 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:44:14 INFO  : The application 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:44:14 INFO  : 'set bp_44_14_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:44:14 INFO  : 'con -block -timeout 60' command is executed.
+13:44:15 INFO  : 'bpremove $bp_44_14_fsbl_bp' command is executed.
+13:44:15 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:44:15 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:44:17 INFO  : The application 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:44:17 INFO  : 'configparams force-mem-access 0' command is executed.
+13:44:17 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.3.2:3121]
+source C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+reset_apu
+targets -set -nocase -filter {name =~"RPU*"}
+clear_rpu_reset
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}
+fpga -file D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf
+set bp_44_14_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_44_14_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:44:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:44:18 INFO  : 'con' command is executed.
+13:44:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:44:18 INFO  : Launch script is exported to file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application_system\_ide\scripts\systemdebugger_no_fpga_flash_standalone.tcl'
+14:06:25 INFO  : Checking for BSP changes to sync application flags for project 'rfsoc_v2_application'...
+14:06:43 INFO  : Disconnected from the channel tcfchan#15.
+14:06:43 INFO  : Connected through redirection to target on host '192.168.3.2' and port '3121'.
+14:06:44 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+14:06:44 INFO  : 'jtag frequency' command is executed.
+14:06:44 INFO  : Sourcing of 'C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:06:44 INFO  : Context for 'APU' is selected.
+14:06:45 INFO  : System reset is completed.
+14:06:49 INFO  : 'after 3000' command is executed.
+14:06:49 INFO  : Context for 'APU' is selected.
+14:06:49 INFO  : Cleared APU and A53 resets
+14:06:49 INFO  : Context for 'RPU' is selected.
+14:06:50 INFO  : Cleared RPU and R5 resets
+14:06:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}' command is executed.
+14:07:10 INFO  : Device configured successfully with "D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit"
+14:07:11 INFO  : Context for 'APU' is selected.
+14:07:11 INFO  : Hardware design and registers information is loaded from 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa'.
+14:07:11 INFO  : 'configparams force-mem-access 1' command is executed.
+14:07:12 INFO  : Context for 'APU' is selected.
+14:07:12 INFO  : Boot mode is read from the target.
+14:07:12 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:07:12 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:07:13 INFO  : The application 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:07:13 INFO  : 'set bp_7_13_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:07:14 INFO  : 'con -block -timeout 60' command is executed.
+14:07:15 INFO  : 'bpremove $bp_7_13_fsbl_bp' command is executed.
+14:07:15 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:07:15 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:07:17 INFO  : The application 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:07:17 INFO  : 'configparams force-mem-access 0' command is executed.
+14:07:17 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.3.2:3121]
+source C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+reset_apu
+targets -set -nocase -filter {name =~"RPU*"}
+clear_rpu_reset
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}
+fpga -file D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf
+set bp_7_13_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_7_13_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:07:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:07:18 INFO  : 'con' command is executed.
+14:07:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:07:18 INFO  : Launch script is exported to file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application_system\_ide\scripts\systemdebugger_no_fpga_flash_standalone.tcl'
+14:18:19 INFO  : Checking for BSP changes to sync application flags for project 'rfsoc_v2_application'...
+14:18:39 INFO  : Disconnected from the channel tcfchan#17.
+14:18:39 INFO  : Connected through redirection to target on host '192.168.3.2' and port '3121'.
+14:18:40 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+14:18:40 INFO  : 'jtag frequency' command is executed.
+14:18:40 INFO  : Sourcing of 'C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:18:40 INFO  : Context for 'APU' is selected.
+14:18:41 INFO  : System reset is completed.
+14:18:45 INFO  : 'after 3000' command is executed.
+14:18:45 INFO  : Context for 'APU' is selected.
+14:18:45 INFO  : Cleared APU and A53 resets
+14:18:45 INFO  : Context for 'RPU' is selected.
+14:18:46 INFO  : Cleared RPU and R5 resets
+14:18:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}' command is executed.
+14:19:07 INFO  : Device configured successfully with "D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit"
+14:19:07 INFO  : Context for 'APU' is selected.
+14:19:08 INFO  : Hardware design and registers information is loaded from 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa'.
+14:19:08 INFO  : 'configparams force-mem-access 1' command is executed.
+14:19:08 INFO  : Context for 'APU' is selected.
+14:19:08 INFO  : Boot mode is read from the target.
+14:19:08 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:19:08 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:19:09 INFO  : The application 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:19:09 INFO  : 'set bp_19_9_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:19:10 INFO  : 'con -block -timeout 60' command is executed.
+14:19:11 INFO  : 'bpremove $bp_19_9_fsbl_bp' command is executed.
+14:19:11 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:19:11 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:19:13 INFO  : The application 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:19:14 INFO  : 'configparams force-mem-access 0' command is executed.
+14:19:14 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.3.2:3121]
+source C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+reset_apu
+targets -set -nocase -filter {name =~"RPU*"}
+clear_rpu_reset
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}
+fpga -file D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf
+set bp_19_9_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_19_9_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:19:14 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:19:14 INFO  : 'con' command is executed.
+14:19:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:19:14 INFO  : Launch script is exported to file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application_system\_ide\scripts\systemdebugger_no_fpga_flash_standalone.tcl'
+14:56:24 INFO  : Checking for BSP changes to sync application flags for project 'rfsoc_v2_application'...
+15:14:54 WARN  : channel "tcfchan#19" closed

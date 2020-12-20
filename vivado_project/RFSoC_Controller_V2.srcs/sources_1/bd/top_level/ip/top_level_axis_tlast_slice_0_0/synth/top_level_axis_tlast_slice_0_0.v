@@ -56,6 +56,8 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_level_axis_tlast_slice_0_0 (
+  ps_clk,
+  rst,
   s_axis_tdata,
   s_axis_tvalid,
   s_axis_tready,
@@ -66,6 +68,12 @@ module top_level_axis_tlast_slice_0_0 (
   m_axis_tvalid
 );
 
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ps_clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ps_clk CLK" *)
+input wire ps_clk;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, FREQ_HZ 100000000, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
+input wire rst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TDATA" *)
 input wire [31 : 0] s_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TVALID" *)
@@ -86,6 +94,8 @@ input wire m_axis_tready;
 output wire m_axis_tvalid;
 
   axis_tlast_slice inst (
+    .ps_clk(ps_clk),
+    .rst(rst),
     .s_axis_tdata(s_axis_tdata),
     .s_axis_tvalid(s_axis_tvalid),
     .s_axis_tready(s_axis_tready),

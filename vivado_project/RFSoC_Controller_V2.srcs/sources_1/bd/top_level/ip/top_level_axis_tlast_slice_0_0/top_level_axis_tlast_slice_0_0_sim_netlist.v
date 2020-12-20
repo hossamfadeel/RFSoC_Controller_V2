@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Fri Dec 18 19:34:02 2020
+// Date        : Sat Dec 19 15:01:27 2020
 // Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_tlast_slice_0_0/top_level_axis_tlast_slice_0_0_sim_netlist.v
@@ -16,7 +16,9 @@
 (* X_CORE_INFO = "axis_tlast_slice,Vivado 2020.2" *) 
 (* NotValidForBitStream *)
 module top_level_axis_tlast_slice_0_0
-   (s_axis_tdata,
+   (ps_clk,
+    rst,
+    s_axis_tdata,
     s_axis_tvalid,
     s_axis_tready,
     m_axis_tdata,
@@ -24,8 +26,10 @@ module top_level_axis_tlast_slice_0_0
     m_axis_tlast,
     m_axis_tready,
     m_axis_tvalid);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ps_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ps_clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input ps_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, FREQ_HZ 100000000, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TDATA" *) input [31:0]s_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TVALID" *) input s_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TVALID" *) (* X_INTERFACE_PARAMETER = "FREQ_HZ 100000000" *) input s_axis_tvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis, FREQ_HZ 100000000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *) output s_axis_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) output [31:0]m_axis_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TKEEP" *) output [3:0]m_axis_tkeep;
@@ -36,7 +40,6 @@ module top_level_axis_tlast_slice_0_0
   wire \<const1> ;
   wire m_axis_tready;
   wire [31:0]s_axis_tdata;
-  wire s_axis_tvalid;
 
   assign m_axis_tdata[31:0] = s_axis_tdata;
   assign m_axis_tkeep[3] = \<const1> ;
@@ -44,7 +47,7 @@ module top_level_axis_tlast_slice_0_0
   assign m_axis_tkeep[1] = \<const1> ;
   assign m_axis_tkeep[0] = \<const1> ;
   assign m_axis_tlast = \<const1> ;
-  assign m_axis_tvalid = s_axis_tvalid;
+  assign m_axis_tvalid = \<const1> ;
   assign s_axis_tready = m_axis_tready;
   VCC VCC
        (.P(\<const1> ));

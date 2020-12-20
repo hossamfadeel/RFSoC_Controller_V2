@@ -611,8 +611,8 @@ class rfsoc_board:
    
 #Constants for this class
 NANOSECONDS_PER_DAC_WORD = 4
-DAC_MAX_VALUE = 32767#0x7FFF
-DAC_MIN_VALUE = -32768#0x8000
+DAC_MAX_VALUE = 32767 - 5#0x7FFF
+DAC_MIN_VALUE = -32768 + 5#0x8000
 DAC_FIFO_LEN = 4096 * 16 # in number of samples
             
 class rfsoc_channel:
@@ -729,21 +729,17 @@ class rfsoc_channel:
     #Returns a scaled stream, all scaling happens about 0
     def scale_stream(self, stream, new_min, new_max):
         
-        pos_scale = 0
-        #Prevent divide by 0
-        if(max(stream)):
-            pos_scale = new_max/max(stream)
-        neg_scale = 0
-        if(min(stream)):
-            neg_scale = new_min/min(stream)
+        scale = 0
+        #If the largest magnitude value in a stream is positive we scale based on that and the new max
+        #Otherwise we scale based on the min (most negative) and the new min
+        if(abs(max(stream)) > abs(min(stream))):
+            scale = new_max / max(stream)
+        else:
+            scale = abs(new_min / min(stream))
         
         out_stream = []
         for s in stream:
-            s_f = s * pos_scale
-            if(s < 0):
-                s_f = s * neg_scale
-                
-            out_stream.append(s_f)
+            out_stream.append(s * scale)
             
         return out_stream
 
