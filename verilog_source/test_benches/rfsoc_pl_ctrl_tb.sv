@@ -306,6 +306,7 @@ rfsoc_pl_ctrl_verilog_wrapper dut
 );
 
 integer num_adc_errors, num_dac_errors;
+integer adc_run_cycles;
 
 initial begin
 
@@ -346,6 +347,9 @@ initial begin
 	adc_axis_tready <= 0;
 	
 	
+	adc_run_cycles = 8;
+	
+	
 	//System reset
 	repeat(10) clk_cycle();
 	rst <= 0;
@@ -375,9 +379,9 @@ initial begin
 		
 		//ADC Stuff///////////////////
 		//Set the capture cycles to 4
-		set_adc_run_cycles(4);
+		set_adc_run_cycles(adc_run_cycles);
 		//Set the shift val to 2
-		set_adc_shift_val(2);
+		set_adc_shift_val(0);
 		//////////////////////////////
 		
 		//Load in 5 words (40 ps words) (5*16 samples total)
@@ -401,7 +405,7 @@ initial begin
 	
 	
 	//Trigger exactly 4 times
-	for(i = 0; i < 4; i = i + 1) begin
+	for(i = 0; i < 1; i = i + 1) begin
 	
 		gpio_ctrl[trigger_line] <= 1;
 		clk_cycle();
@@ -477,7 +481,7 @@ initial begin
 	gpio_ctrl[adc_readout_enable] <= 0;
 	
 	//Try reading out each ADC one at a time
-	for(k = 0; k < 16; k = k + 1) begin
+	for(k = 0; k < adc_stop_channel; k = k + 1) begin
 	
 		select_channel(k);
 		
@@ -486,7 +490,7 @@ initial begin
 		repeat(10) clk_cycle();
 		
 		adc_axis_tready <= 1;
-		for(j = 0; j < 16; j = j + 1) begin
+		for(j = 0; j < adc_run_cycles*4; j = j + 1) begin
 
 			if(adc_axis_tdata != adc_dummy_data[(j*32)+:32])begin
 				num_adc_errors = num_adc_errors + 1;

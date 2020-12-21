@@ -9,13 +9,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1025fs"></ZoomEndTime>
-      <Cursor1Time time="652fs"></Cursor1Time>
+      <ZoomStartTime time="502fs"></ZoomStartTime>
+      <ZoomEndTime time="516fs"></ZoomEndTime>
+      <Cursor1Time time="512fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="741"></NameColumnWidth>
-      <ValueColumnWidth column_width="258"></ValueColumnWidth>
+      <ValueColumnWidth column_width="249"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wave_markers>
@@ -35,7 +35,7 @@
       <obj_property name="Detail_Data">Interface_(i2:s0)_(axis_data_fifo_2_M_AXIS)_tooltip</obj_property>
       <obj_property name="Render_Data">Interface_(i2:s0)_(axis_data_fifo_2_M_AXIS)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
       <obj_property name="isExpanded"></obj_property>

@@ -90,7 +90,8 @@ always @ (posedge clk or negedge rst) begin
 				
 				//If there is an incomming word from pl side
 				//and the crossing fifo is ready to receive it
-				else if(s_axis_tvalid && fifo_tready)begin
+				//And readout is enabled
+				else if(s_axis_tvalid && fifo_tready && gpio_ctrl[adc_readout_enable])begin
 				
 					//Store it in the word buffer and write the first word into the fifo
 					word_buff <= s_axis_tdata;

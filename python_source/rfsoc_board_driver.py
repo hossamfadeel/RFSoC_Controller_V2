@@ -82,9 +82,11 @@ class rfsoc_board_driver:
     #Waits for a single byte to be received and returns it
     def wait_ack(self):
     
-        retval = self.port.read(1)
-        return retval[0]
-
+        try:
+            retval = self.port.read(1)
+            return retval[0]
+        except IndexError:#If we timed out
+            return 1
     
     #Returns 0 if board is up, 1 otherwise
     def ping_board(self):

@@ -28,8 +28,13 @@ module adc_driver
 );
 
 reg [15:0] gpio_ctrl;
-always @ (posedge clk) begin
-	gpio_ctrl <= gpio_ctrl_ext;
+always @ (posedge clk or negedge rst) begin
+	if(!rst) begin
+		gpio_ctrl <= 0;
+	end
+	else begin
+		gpio_ctrl <= gpio_ctrl_ext;
+	end
 end
 
 //Always ready to receive data from ADC whether or not we're keeping it

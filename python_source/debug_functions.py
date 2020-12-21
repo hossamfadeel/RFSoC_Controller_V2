@@ -32,7 +32,7 @@ def adc_readout_test():
         raise RuntimeError("Error, adc readout test was unable to select board channel")
     
     #Set the shift to 0 and the run cycles to 2
-    run_cycles = 2
+    run_cycles = 8
     if(board_driver.set_adc_run_cycles(run_cycles)):
         raise RuntimeError("Error, adc readout test was unable to set adc shift")
     if(board_driver.set_adc_shift(0)):
@@ -60,6 +60,11 @@ def adc_readout_test():
     #Run the DMA test
     #board_driver.port.write([rbd.CMD_PREAMBLE, rbd.CMD_DMA_DEBUG])
     #board_driver.wait_ack()
+    
+    #make 4 garbage reads first
+    for i in range(0, 4):
+        status, word = board_driver.read_axis_word()
+        print("Garbage read was " + hex(word))
         
     #Read out exactly 8 AXIS words and see what we get
     for i in range(0, run_cycles*4):

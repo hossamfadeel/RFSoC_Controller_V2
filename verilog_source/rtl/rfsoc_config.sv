@@ -5,8 +5,8 @@
 package rfsoc_config;
 
 
-parameter dac_stop_channel = 8;//Any channels higher than this number will receive reduced FIFO memory
-parameter adc_stop_channel = 1;//Any channels higher than this number will receive reduced FIFO memory
+parameter dac_stop_channel = 8;//Any channels higher than this number will not exist
+parameter adc_stop_channel = 1;//Any channels higher than this number will not exist
 parameter dac_fifo_mem_width = 12;
 parameter adc_fifo_mem_width = 12;
 parameter config_reg_width = 32;//changes width of run cycle count, delay cycle count

@@ -2520,3 +2520,77 @@ con
 14:19:14 INFO  : Launch script is exported to file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application_system\_ide\scripts\systemdebugger_no_fpga_flash_standalone.tcl'
 14:56:24 INFO  : Checking for BSP changes to sync application flags for project 'rfsoc_v2_application'...
 15:14:54 WARN  : channel "tcfchan#19" closed
+10:43:50 INFO  : Hardware specification for platform project 'rfsoc_v2_platform' is updated.
+10:44:23 INFO  : Result from executing command 'getProjects': rfsoc_v2_platform
+10:44:23 INFO  : Result from executing command 'getPlatforms': rfsoc_v2_platform|D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm
+10:44:33 INFO  : Checking for BSP changes to sync application flags for project 'rfsoc_v2_application'...
+10:44:47 INFO  : The hardware specfication used by project 'rfsoc_v2_application' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+10:44:47 INFO  : The file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application\_ide\bitstream\top_level_wrapper.bit' stored in project is removed.
+10:44:47 INFO  : The updated bitstream files are copied from platform to folder 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application\_ide\bitstream' in project 'rfsoc_v2_application'.
+10:44:47 INFO  : The file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application\_ide\psinit\psu_init.tcl' stored in project is removed.
+10:44:48 INFO  : The updated ps init files are copied from platform to folder 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application\_ide\psinit' in project 'rfsoc_v2_application'.
+10:45:34 INFO  : Connected through redirection to target on host '192.168.3.2' and port '3121'.
+10:45:35 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308A5F038' is selected.
+10:45:35 INFO  : 'jtag frequency' command is executed.
+10:45:35 INFO  : Sourcing of 'C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:45:35 INFO  : Context for 'APU' is selected.
+10:45:36 INFO  : System reset is completed.
+10:45:39 INFO  : 'after 3000' command is executed.
+10:45:39 INFO  : Context for 'APU' is selected.
+10:45:40 INFO  : Cleared APU and A53 resets
+10:45:40 INFO  : Context for 'RPU' is selected.
+10:45:41 INFO  : Cleared RPU and R5 resets
+10:45:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}' command is executed.
+10:46:01 INFO  : Device configured successfully with "D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit"
+10:46:01 INFO  : Context for 'APU' is selected.
+10:46:03 INFO  : Hardware design and registers information is loaded from 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa'.
+10:46:03 INFO  : 'configparams force-mem-access 1' command is executed.
+10:46:03 INFO  : Context for 'APU' is selected.
+10:46:03 INFO  : Boot mode is read from the target.
+10:46:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:46:03 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:46:04 INFO  : The application 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:46:04 INFO  : 'set bp_46_4_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:46:06 INFO  : 'con -block -timeout 60' command is executed.
+10:46:06 INFO  : 'bpremove $bp_46_4_fsbl_bp' command is executed.
+10:46:06 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:46:06 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:46:08 INFO  : The application 'D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:46:09 INFO  : 'configparams force-mem-access 0' command is executed.
+10:46:09 INFO  : ----------------XSDB Script----------------
+connect -path [list tcp::1534 tcp:192.168.3.2:3121]
+source C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+reset_apu
+targets -set -nocase -filter {name =~"RPU*"}
+clear_rpu_reset
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}
+fpga -file D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf
+set bp_46_4_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_46_4_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:46:09 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:46:09 INFO  : 'con' command is executed.
+10:46:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:46:09 INFO  : Launch script is exported to file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application_system\_ide\scripts\systemdebugger_no_fpga_flash_standalone.tcl'

@@ -188,3 +188,6 @@ timestamp=[2020-12-19 14:18:20], mode=BUILD, duration=0:00:01.010, duration_ms=1
 timestamp=[2020-12-19 14:18:29], mode=BUILD, duration=0:00:09.118, duration_ms=9118, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}
 timestamp=[2020-12-19 14:56:25], mode=BUILD, duration=0:00:01.026, duration_ms=1026, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
 timestamp=[2020-12-19 14:56:36], mode=BUILD, duration=0:00:10.605, duration_ms=10605, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}
+timestamp=[2020-12-21 10:44:24], mode=PLATFORM_GENERATION, duration=0:00:04.320, duration_ms=4320, data={name=rfsoc_v2_platform}
+timestamp=[2020-12-21 10:44:46], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
+timestamp=[2020-12-21 10:44:58], mode=BUILD, duration=0:00:09.323, duration_ms=9323, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}

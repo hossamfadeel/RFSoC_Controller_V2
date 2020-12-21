@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.397059",
-   "Default View_TopLeft":"-708,5",
+   "Default View_ScaleFactor":"0.397899",
+   "Default View_TopLeft":"-689,0",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -62,8 +62,8 @@ preplace inst system_ila_ps -pg 1 -lvl 7 -x 2750 -y 1850 -defaultsOSRD
 preplace inst usp_rf_data_converter_0 -pg 1 -lvl 3 -x 1130 -y 710 -defaultsOSRD
 preplace inst xlconcat_0 -pg 1 -lvl 8 -x 3100 -y 1490 -defaultsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 9 -x 3540 -y 1870 -defaultsOSRD
-preplace inst rfsoc_pl_ctrl_verilo_0 -pg 1 -lvl 4 -x 1660 -y 370 -defaultsOSRD
 preplace inst axis_tlast_slice_0 -pg 1 -lvl 6 -x 2410 -y 1650 -defaultsOSRD
+preplace inst rfsoc_pl_ctrl_verilo_0 -pg 1 -lvl 4 -x 1660 -y 370 -defaultsOSRD
 preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 1 10 370 1340 800 1740 1490 1740 NJ 1740 2300 1740 2520 1510 2970 1740 NJ 1740 3860 2290 4150J
 preplace netloc xlconcat_0_dout 1 8 1 3240 1490n
 preplace netloc axi_dma_0_mm2s_introut 1 7 1 2930 1480n
