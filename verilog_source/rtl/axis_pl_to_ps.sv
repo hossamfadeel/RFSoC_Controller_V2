@@ -108,30 +108,36 @@ always @ (posedge clk or negedge rst) begin
 			
 			state_write_1: begin
 			
-				//Default valid line to 0
-				fifo_tvalid <= 0;
-				
 				//Stop reading from input fifo
 				s_axis_tready <= 0;
+			
+				//Data going to fifo is always valid in this state
+				fifo_tvalid <= 1;
 				
-				//If we're flushing the buffer
-				if(gpio_ctrl[adc_buffer_flush]) begin
-					reset_regs();
+				//If the fifo was actually ready to receive that data
+				if(fifo_tready) begin
+				
+					//Put the next word out to the fifo
+					fifo_tdata <= word_buff[(ps_word_counter * ps_axis_width)+:ps_axis_width];
+				
+					//If that was the last bit of data
+					if(ps_word_counter == fifo_words_to_write - 1) begin
+						ps_word_counter <= 0;
+						state <= state_write_2;
+					end
+					else begin
+						ps_word_counter <= ps_word_counter + 1;
+					end
 				end
 			
-				//If we're writing the last word and the fifo is ready
-				else if(ps_word_counter == fifo_words_to_write - 1 && fifo_tready) begin
-					fifo_tvalid <= 1;
-					fifo_tdata <= word_buff[(ps_word_counter * ps_axis_width)+:ps_axis_width];
-					ps_word_counter <= 0;
+			end
+			
+			//Make sure that last write went through
+			state_write_2: begin
+				if(fifo_tready) begin
+					fifo_tvalid <= 0;
 					state <= state_idle;
 				end
-				else if(fifo_tready) begin
-					ps_word_counter <= ps_word_counter + 1;
-					fifo_tvalid <= 1;
-					fifo_tdata <= word_buff[(ps_word_counter * ps_axis_width)+:ps_axis_width];
-				end
-			
 			end
 	
 			default begin

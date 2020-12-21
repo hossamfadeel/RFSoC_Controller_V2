@@ -167,7 +167,7 @@ void gpio_set_adc_shift_val(u64 val)
 
 void gpio_flush_buffers()
 {
-	for(int i = 0; i < 100; i = i + 1)
+	for(int i = 0; i < 65535; i = i + 1)
 	{
 		gpio_set_pin(adc_buffer_flush, 1);
 	}

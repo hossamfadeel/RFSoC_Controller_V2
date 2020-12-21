@@ -306,7 +306,7 @@ rfsoc_pl_ctrl_verilog_wrapper dut
 );
 
 integer num_adc_errors, num_dac_errors;
-integer adc_run_cycles;
+integer adc_run_cycles, adc_shift_val;
 
 initial begin
 
@@ -347,7 +347,9 @@ initial begin
 	adc_axis_tready <= 0;
 	
 	
-	adc_run_cycles = 8;
+	//ADC testing parameters
+	adc_run_cycles = 16;
+	adc_shift_val = 0;
 	
 	
 	//System reset
@@ -381,7 +383,7 @@ initial begin
 		//Set the capture cycles to 4
 		set_adc_run_cycles(adc_run_cycles);
 		//Set the shift val to 2
-		set_adc_shift_val(0);
+		set_adc_shift_val(adc_shift_val);
 		//////////////////////////////
 		
 		//Load in 5 words (40 ps words) (5*16 samples total)
@@ -405,7 +407,7 @@ initial begin
 	
 	
 	//Trigger exactly 4 times
-	for(i = 0; i < 1; i = i + 1) begin
+	for(i = 0; i < 2**adc_shift_val; i = i + 1) begin
 	
 		gpio_ctrl[trigger_line] <= 1;
 		clk_cycle();
@@ -492,10 +494,17 @@ initial begin
 		adc_axis_tready <= 1;
 		for(j = 0; j < adc_run_cycles*4; j = j + 1) begin
 
-			if(adc_axis_tdata != adc_dummy_data[(j*32)+:32])begin
+			if(adc_axis_tdata != adc_dummy_data[((j%4)*32)+:32])begin
 				num_adc_errors = num_adc_errors + 1;
 			end
 			clk_cycle();
+			
+			//Random stops to simulate presense of buffer
+			if((j+2)%5 == 0) begin
+				adc_axis_tready <= 0;
+				repeat(20) clk_cycle();
+				adc_axis_tready <= 1;
+			end
 		
 		end
 		

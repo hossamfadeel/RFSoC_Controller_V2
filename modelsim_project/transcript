@@ -343,3 +343,175 @@ run -all
 # Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 489
 run -all
 # rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+restart -f
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 489
+run -all
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+run -all
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of axis_pl_to_ps.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+run -all
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 497
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+run -all
+# rfsoc_pl_ctrl test complete, 36 errors total, 0 DAC errors, 36 ADC errors
+# Compile of axis_pl_to_ps.sv failed with 1 errors.
+# Compile of axis_pl_to_ps.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+run -all
+# rfsoc_pl_ctrl test complete, 37 errors total, 0 DAC errors, 37 ADC errors
+# Compile of axis_pl_to_ps.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+run -all
+# rfsoc_pl_ctrl test complete, 36 errors total, 0 DAC errors, 36 ADC errors
+# Compile of axis_pl_to_ps.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.axis_pl_to_ps_sv_unit
+# Loading work.axis_pl_to_ps
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+run -all
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors

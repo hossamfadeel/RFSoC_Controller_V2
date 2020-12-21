@@ -7,6 +7,8 @@ import rfsoc_board_driver as rbd
 portname = "COM6"
 
 def adc_readout_test():
+    
+    run_cycles = 121
 
     #Create a board driver object
     board_driver = rbd.rfsoc_board_driver(portname)
@@ -32,7 +34,7 @@ def adc_readout_test():
         raise RuntimeError("Error, adc readout test was unable to select board channel")
     
     #Set the shift to 0 and the run cycles to 2
-    run_cycles = 8
+    
     if(board_driver.set_adc_run_cycles(run_cycles)):
         raise RuntimeError("Error, adc readout test was unable to set adc shift")
     if(board_driver.set_adc_shift(0)):
@@ -67,12 +69,18 @@ def adc_readout_test():
         print("Garbage read was " + hex(word))
         
     #Read out exactly 8 AXIS words and see what we get
+    expected_vals = [0x70008000, 0x50006000, 0x30004000, 0x10002000]
+    errs = 0
     for i in range(0, run_cycles*4):
         status, word = board_driver.read_axis_word()
         if(status):
             raise RuntimeError("Error while reading out AXIS word")
         
         print("Got: " + hex(word))
+        
+        if(word != expected_vals[i%4]):
+            print("Bad ADC value, expected " + hex(expected_vals[i%4]) + ", got " + hex(word) + ", i was " + str(i))
+            errs += 1
         
     
     #disable adc readout
@@ -82,6 +90,9 @@ def adc_readout_test():
     #We're done
     
     board_driver.close_board()
+    
+    print("ADC readout test complete, errors: " + str(errs))
+    
     return 0
     
 def dac_sawtooth_test():

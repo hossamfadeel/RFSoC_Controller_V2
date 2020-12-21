@@ -11592,3 +11592,2049 @@ D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqm
 D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
 
 TRACE::2020-12-21.10:44:23::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:39::SCWPlatform::Clearing the existing platform
+TRACE::2020-12-21.12:54:39::SCWSystem::Clearing the existing sysconfig
+TRACE::2020-12-21.12:54:39::SCWBDomain::clearing the fsbl build
+TRACE::2020-12-21.12:54:39::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:39::SCWBDomain::clearing the pmufw build
+TRACE::2020-12-21.12:54:39::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:39::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:39::SCWSystem::Clearing the domains completed.
+TRACE::2020-12-21.12:54:39::SCWPlatform::Clearing the opened hw db.
+TRACE::2020-12-21.12:54:39::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:39::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:39::SCWPlatform:: Platform location is D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:39::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:39::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:39::SCWPlatform::Removing the HwDB with name D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:39::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:39::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:39::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:39::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:39::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:39::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:39::SCWPlatform::Do not have an existing db opened. 
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened new HwDB with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWReader::Active system found as  rfsoc_v2_platform
+TRACE::2020-12-21.12:54:50::SCWReader::Handling sysconfig rfsoc_v2_platform
+TRACE::2020-12-21.12:54:50::SCWDomain::checking for install qemu data   : 
+TRACE::2020-12-21.12:54:50::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2020-12-21.12:54:50::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2020-12-21.12:54:50::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWReader::Boot application domain added for zynqmp_fsbl
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2020-12-21.12:54:50::SCWMssOS::No sw design opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::mss exists loading the mss file  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::Opened the sw design from mss  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::Adding the swdes entry D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2020-12-21.12:54:50::SCWMssOS::updating the scw layer about changes
+TRACE::2020-12-21.12:54:50::SCWMssOS::Opened the sw design.  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS:: library already available in sw design:  xilsecure:4.3
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS:: library already available in sw design:  xilpm:3.2
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:54:50::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:54:50::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:54:50::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-12-21.12:54:50::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWReader::No isolation master present  
+TRACE::2020-12-21.12:54:50::SCWDomain::checking for install qemu data   : 
+TRACE::2020-12-21.12:54:50::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2020-12-21.12:54:50::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2020-12-21.12:54:50::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWReader::Boot application domain added for zynqmp_pmufw
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:50::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:50::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:50::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.12:54:50::SCWMssOS::No sw design opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::mss exists loading the mss file  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::Opened the sw design from mss  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:50::SCWMssOS::Adding the swdes entry D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2020-12-21.12:54:50::SCWMssOS::updating the scw layer about changes
+TRACE::2020-12-21.12:54:51::SCWMssOS::Opened the sw design.  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS:: library already available in sw design:  xilfpga:5.3
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS:: library already available in sw design:  xilsecure:4.3
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS:: library already available in sw design:  xilskey:7.0
+TRACE::2020-12-21.12:54:51::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:54:51::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:54:51::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:54:51::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-12-21.12:54:51::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWReader::No isolation master present  
+TRACE::2020-12-21.12:54:51::SCWDomain::checking for install qemu data   : 
+TRACE::2020-12-21.12:54:51::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2020-12-21.12:54:51::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2020-12-21.12:54:51::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::No sw design opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::mss exists loading the mss file  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::Opened the sw design from mss  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::Adding the swdes entry D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2020-12-21.12:54:51::SCWMssOS::updating the scw layer about changes
+TRACE::2020-12-21.12:54:51::SCWMssOS::Opened the sw design.  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:54:51::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:54:51::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:54:51::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-12-21.12:54:51::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:51::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:54:51::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:54:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:54:51::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:54:51::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:54:51::SCWReader::No isolation master present  
+TRACE::2020-12-21.12:54:55::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:55::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:55::SCWPlatform:: Platform location is D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa
+TRACE::2020-12-21.12:54:55::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:54:55::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWMssOS::Doing hw sync for the mss in domain: zynqmp_fsbl
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:07::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::update - Opened existing hwdb top_level_wrapper_13
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWMssOS::Doing hw sync for the mss in domain: zynqmp_pmufw
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:07::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::update - Opened existing hwdb top_level_wrapper_13
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Opened existing hwdb top_level_wrapper_12
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:07::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::update - Opened existing hwdb top_level_wrapper_13
+TRACE::2020-12-21.12:55:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:07::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Completed hw sync for the mss in domain: zynqmp_fsbl
+TRACE::2020-12-21.12:55:07::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Completed hw sync for the mss in domain: zynqmp_pmufw
+TRACE::2020-12-21.12:55:07::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:07::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2020-12-21.12:55:07::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:07::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:07::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:07::SCWPlatform::Do not have an existing db opened. 
+TRACE::2020-12-21.12:55:19::SCWPlatform::Opened new HwDB with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:19::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::Adding the swdes entry, mss present, able to open swdb D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2020-12-21.12:55:19::SCWMssOS::Writing the mss file completed D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:19::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::Adding the swdes entry, mss present, able to open swdb D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2020-12-21.12:55:19::SCWMssOS::Writing the mss file completed D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:19::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::Adding the swdes entry, mss present, able to open swdb D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2020-12-21.12:55:19::SCWMssOS::Writing the mss file completed D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:19::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:19::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:19::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:19::SCWPlatform::Opened existing hwdb top_level_wrapper_14
+TRACE::2020-12-21.12:55:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:19::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:19::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:19::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:19::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:19::SCWPlatform::Opened existing hwdb top_level_wrapper_14
+TRACE::2020-12-21.12:55:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:19::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:19::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:19::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:19::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:19::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:19::SCWPlatform::Opened existing hwdb top_level_wrapper_14
+TRACE::2020-12-21.12:55:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:19::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:19::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:19::SCWWriter::formatted JSON is {
+	"platformName":	"rfsoc_v2_platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rfsoc_v2_platform",
+	"platHandOff":	"D:/repos/RFSoC_Controller_V2/vivado_project/top_level_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top_level_wrapper.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rfsoc_v2_platform",
+	"systems":	[{
+			"systemName":	"rfsoc_v2_platform",
+			"systemDesc":	"rfsoc_v2_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rfsoc_v2_platform",
+			"sysActiveDom":	"zynqmp_fsbl",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"fe81ac95ab45e7e8c71ae35c11eb3dd9",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.4", "xilsecure:4.3", "xilpm:3.2"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"6ef77aaa5cd5eea02f8eb84f1a02822d",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:5.3", "xilsecure:4.3", "xilskey:7.0"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on psu_cortexa53_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"2071b8c6c3236c0967231841e3dafda2",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"psu_coresight_0",
+							"stdout":	"psu_coresight_0",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2020-12-21.12:55:48::SCWPlatform::Started generating the artifacts platform rfsoc_v2_platform
+TRACE::2020-12-21.12:55:48::SCWPlatform::Sanity checking of platform is completed
+LOG::2020-12-21.12:55:48::SCWPlatform::Started generating the artifacts for system configuration rfsoc_v2_platform
+LOG::2020-12-21.12:55:48::SCWSystem::Checking the domain zynqmp_fsbl
+LOG::2020-12-21.12:55:48::SCWSystem::Doing application build for :  zynqmp_fsbl
+TRACE::2020-12-21.12:55:48::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2020-12-21.12:55:48::SCWDomain::Skipping the build for domain :  zynqmp_fsbl
+LOG::2020-12-21.12:55:48::SCWSystem::Checking the domain zynqmp_pmufw
+LOG::2020-12-21.12:55:48::SCWSystem::Doing application build for :  zynqmp_pmufw
+TRACE::2020-12-21.12:55:48::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2020-12-21.12:55:48::SCWDomain::Skipping the build for domain :  zynqmp_pmufw
+LOG::2020-12-21.12:55:48::SCWSystem::Checking the domain standalone_domain
+LOG::2020-12-21.12:55:48::SCWSystem::Not a boot domain 
+LOG::2020-12-21.12:55:48::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2020-12-21.12:55:48::SCWDomain::Generating domain artifcats
+TRACE::2020-12-21.12:55:48::SCWMssOS::Generating standalone artifcats
+TRACE::2020-12-21.12:55:48::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/qemu/
+TRACE::2020-12-21.12:55:48::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/qemu/
+TRACE::2020-12-21.12:55:48::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/qemu/
+TRACE::2020-12-21.12:55:48::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/qemu/
+TRACE::2020-12-21.12:55:48::SCWMssOS:: Copying the user libraries. 
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Opened existing hwdb top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:48::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:48::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::Completed writing the mss file at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp
+TRACE::2020-12-21.12:55:48::SCWMssOS::Mss edits present, copying mssfile into export location D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2020-12-21.12:55:48::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2020-12-21.12:55:48::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2020-12-21.12:55:48::SCWMssOS::skipping the bsp build ... 
+TRACE::2020-12-21.12:55:48::SCWMssOS::Copying to export directory.
+TRACE::2020-12-21.12:55:48::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2020-12-21.12:55:48::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2020-12-21.12:55:48::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2020-12-21.12:55:48::SCWSystem::Completed Processing the sysconfig rfsoc_v2_platform
+LOG::2020-12-21.12:55:48::SCWPlatform::Completed generating the artifacts for system configuration rfsoc_v2_platform
+TRACE::2020-12-21.12:55:48::SCWPlatform::Started preparing the platform 
+TRACE::2020-12-21.12:55:48::SCWSystem::Writing the bif file for system config rfsoc_v2_platform
+TRACE::2020-12-21.12:55:48::SCWSystem::dir created 
+TRACE::2020-12-21.12:55:48::SCWSystem::Writing the bif 
+TRACE::2020-12-21.12:55:48::SCWPlatform::Started writing the spfm file 
+TRACE::2020-12-21.12:55:48::SCWPlatform::Started writing the xpfm file 
+TRACE::2020-12-21.12:55:48::SCWPlatform::Completed generating the platform
+TRACE::2020-12-21.12:55:48::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:55:48::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:55:48::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:48::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:55:48::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:55:48::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:48::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.12:55:48::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.12:55:48::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Opened existing hwdb top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:48::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:48::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Opened existing hwdb top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:48::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:48::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Opened existing hwdb top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:48::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:48::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWWriter::formatted JSON is {
+	"platformName":	"rfsoc_v2_platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rfsoc_v2_platform",
+	"platHandOff":	"D:/repos/RFSoC_Controller_V2/vivado_project/top_level_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top_level_wrapper.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rfsoc_v2_platform",
+	"systems":	[{
+			"systemName":	"rfsoc_v2_platform",
+			"systemDesc":	"rfsoc_v2_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rfsoc_v2_platform",
+			"sysActiveDom":	"zynqmp_fsbl",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"fe81ac95ab45e7e8c71ae35c11eb3dd9",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.4", "xilsecure:4.3", "xilpm:3.2"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"6ef77aaa5cd5eea02f8eb84f1a02822d",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:5.3", "xilsecure:4.3", "xilskey:7.0"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on psu_cortexa53_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"2071b8c6c3236c0967231841e3dafda2",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"psu_coresight_0",
+							"stdout":	"psu_coresight_0",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2020-12-21.12:55:48::SCWPlatform::updated the xpfm file.
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.12:55:48::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.12:55:48::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Opened existing hwdb top_level_wrapper_14
+TRACE::2020-12-21.12:55:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.12:55:48::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.12:55:48::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.12:55:48::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:31::SCWPlatform::Clearing the existing platform
+TRACE::2020-12-21.14:54:31::SCWSystem::Clearing the existing sysconfig
+TRACE::2020-12-21.14:54:31::SCWBDomain::clearing the fsbl build
+TRACE::2020-12-21.14:54:31::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:31::SCWBDomain::clearing the pmufw build
+TRACE::2020-12-21.14:54:31::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:31::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:31::SCWSystem::Clearing the domains completed.
+TRACE::2020-12-21.14:54:31::SCWPlatform::Clearing the opened hw db.
+TRACE::2020-12-21.14:54:31::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:31::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:31::SCWPlatform:: Platform location is D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:31::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:31::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:31::SCWPlatform::Removing the HwDB with name D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:31::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:31::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:31::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:31::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:31::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:31::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:31::SCWPlatform::Do not have an existing db opened. 
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened new HwDB with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWReader::Active system found as  rfsoc_v2_platform
+TRACE::2020-12-21.14:54:46::SCWReader::Handling sysconfig rfsoc_v2_platform
+TRACE::2020-12-21.14:54:46::SCWDomain::checking for install qemu data   : 
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWReader::Boot application domain added for zynqmp_fsbl
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2020-12-21.14:54:46::SCWMssOS::No sw design opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::mss exists loading the mss file  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Opened the sw design from mss  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Adding the swdes entry D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2020-12-21.14:54:46::SCWMssOS::updating the scw layer about changes
+TRACE::2020-12-21.14:54:46::SCWMssOS::Opened the sw design.  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS:: library already available in sw design:  xilffs:4.4
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS:: library already available in sw design:  xilsecure:4.3
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS:: library already available in sw design:  xilpm:3.2
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:54:46::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:54:46::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:54:46::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-12-21.14:54:46::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWReader::No isolation master present  
+TRACE::2020-12-21.14:54:46::SCWDomain::checking for install qemu data   : 
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWReader::Boot application domain added for zynqmp_pmufw
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::No sw design opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::mss exists loading the mss file  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Opened the sw design from mss  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Adding the swdes entry D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2020-12-21.14:54:46::SCWMssOS::updating the scw layer about changes
+TRACE::2020-12-21.14:54:46::SCWMssOS::Opened the sw design.  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS:: library already available in sw design:  xilfpga:5.3
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS:: library already available in sw design:  xilsecure:4.3
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS:: library already available in sw design:  xilskey:7.0
+TRACE::2020-12-21.14:54:46::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:54:46::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:54:46::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:54:46::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-12-21.14:54:46::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWReader::No isolation master present  
+TRACE::2020-12-21.14:54:46::SCWDomain::checking for install qemu data   : 
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt
+TRACE::2020-12-21.14:54:46::SCWDomain:: Using the PMUQEMU args from install at  : C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::No sw design opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::mss exists loading the mss file  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Opened the sw design from mss  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Adding the swdes entry D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2020-12-21.14:54:46::SCWMssOS::updating the scw layer about changes
+TRACE::2020-12-21.14:54:46::SCWMssOS::Opened the sw design.  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:54:46::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:54:46::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:54:46::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-12-21.14:54:46::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:46::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:54:46::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:54:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:54:46::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:54:46::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:54:46::SCWReader::No isolation master present  
+TRACE::2020-12-21.14:54:58::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:58::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:58::SCWPlatform:: Platform location is D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa
+TRACE::2020-12-21.14:54:58::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:54:58::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWMssOS::Doing hw sync for the mss in domain: zynqmp_fsbl
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:12::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::update - Opened existing hwdb top_level_wrapper_18
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWMssOS::Doing hw sync for the mss in domain: zynqmp_pmufw
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:12::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::update - Opened existing hwdb top_level_wrapper_18
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Opened existing hwdb top_level_wrapper_17
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:12::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/tempdsa/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:12::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:12::SCWPlatform::update - Opened existing hwdb top_level_wrapper_18
+TRACE::2020-12-21.14:55:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:12::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Completed hw sync for the mss in domain: zynqmp_fsbl
+TRACE::2020-12-21.14:55:12::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Completed hw sync for the mss in domain: zynqmp_pmufw
+TRACE::2020-12-21.14:55:12::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:12::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:12::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2020-12-21.14:55:12::SCWMssOS::Removing the swdes entry for  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:13::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:13::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:13::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:13::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:13::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:13::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:13::SCWPlatform::Do not have an existing db opened. 
+TRACE::2020-12-21.14:55:26::SCWPlatform::Opened new HwDB with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:26::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::Adding the swdes entry, mss present, able to open swdb D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2020-12-21.14:55:26::SCWMssOS::Writing the mss file completed D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:26::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::Adding the swdes entry, mss present, able to open swdb D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2020-12-21.14:55:26::SCWMssOS::Writing the mss file completed D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:26::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::Adding the swdes entry, mss present, able to open swdb D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss with des name system_1
+TRACE::2020-12-21.14:55:26::SCWMssOS::Writing the mss file completed D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:26::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:26::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:26::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:26::SCWPlatform::Opened existing hwdb top_level_wrapper_19
+TRACE::2020-12-21.14:55:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:26::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:26::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:26::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:26::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:26::SCWPlatform::Opened existing hwdb top_level_wrapper_19
+TRACE::2020-12-21.14:55:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:26::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:26::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:26::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:26::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:26::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:26::SCWPlatform::Opened existing hwdb top_level_wrapper_19
+TRACE::2020-12-21.14:55:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:26::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:26::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:26::SCWWriter::formatted JSON is {
+	"platformName":	"rfsoc_v2_platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rfsoc_v2_platform",
+	"platHandOff":	"D:/repos/RFSoC_Controller_V2/vivado_project/top_level_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top_level_wrapper.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rfsoc_v2_platform",
+	"systems":	[{
+			"systemName":	"rfsoc_v2_platform",
+			"systemDesc":	"rfsoc_v2_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rfsoc_v2_platform",
+			"sysActiveDom":	"zynqmp_fsbl",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"fe81ac95ab45e7e8c71ae35c11eb3dd9",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.4", "xilsecure:4.3", "xilpm:3.2"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"6ef77aaa5cd5eea02f8eb84f1a02822d",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:5.3", "xilsecure:4.3", "xilskey:7.0"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on psu_cortexa53_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"2071b8c6c3236c0967231841e3dafda2",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"psu_coresight_0",
+							"stdout":	"psu_coresight_0",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2020-12-21.14:55:34::SCWPlatform::Started generating the artifacts platform rfsoc_v2_platform
+TRACE::2020-12-21.14:55:34::SCWPlatform::Sanity checking of platform is completed
+LOG::2020-12-21.14:55:34::SCWPlatform::Started generating the artifacts for system configuration rfsoc_v2_platform
+LOG::2020-12-21.14:55:34::SCWSystem::Checking the domain zynqmp_fsbl
+LOG::2020-12-21.14:55:34::SCWSystem::Doing application build for :  zynqmp_fsbl
+TRACE::2020-12-21.14:55:34::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2020-12-21.14:55:34::SCWDomain::Skipping the build for domain :  zynqmp_fsbl
+LOG::2020-12-21.14:55:34::SCWSystem::Checking the domain zynqmp_pmufw
+LOG::2020-12-21.14:55:34::SCWSystem::Doing application build for :  zynqmp_pmufw
+TRACE::2020-12-21.14:55:34::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2020-12-21.14:55:34::SCWDomain::Skipping the build for domain :  zynqmp_pmufw
+LOG::2020-12-21.14:55:34::SCWSystem::Checking the domain standalone_domain
+LOG::2020-12-21.14:55:34::SCWSystem::Not a boot domain 
+LOG::2020-12-21.14:55:34::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2020-12-21.14:55:34::SCWDomain::Generating domain artifcats
+TRACE::2020-12-21.14:55:34::SCWMssOS::Generating standalone artifcats
+TRACE::2020-12-21.14:55:34::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/qemu/
+TRACE::2020-12-21.14:55:34::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/qemu/
+TRACE::2020-12-21.14:55:34::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/qemu/
+TRACE::2020-12-21.14:55:34::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt To D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/qemu/
+TRACE::2020-12-21.14:55:34::SCWMssOS:: Copying the user libraries. 
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Opened existing hwdb top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:34::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:34::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::Completed writing the mss file at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp
+TRACE::2020-12-21.14:55:34::SCWMssOS::Mss edits present, copying mssfile into export location D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2020-12-21.14:55:34::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2020-12-21.14:55:34::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2020-12-21.14:55:34::SCWMssOS::skipping the bsp build ... 
+TRACE::2020-12-21.14:55:34::SCWMssOS::Copying to export directory.
+TRACE::2020-12-21.14:55:34::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2020-12-21.14:55:34::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2020-12-21.14:55:34::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2020-12-21.14:55:34::SCWSystem::Completed Processing the sysconfig rfsoc_v2_platform
+LOG::2020-12-21.14:55:34::SCWPlatform::Completed generating the artifacts for system configuration rfsoc_v2_platform
+TRACE::2020-12-21.14:55:34::SCWPlatform::Started preparing the platform 
+TRACE::2020-12-21.14:55:34::SCWSystem::Writing the bif file for system config rfsoc_v2_platform
+TRACE::2020-12-21.14:55:34::SCWSystem::dir created 
+TRACE::2020-12-21.14:55:34::SCWSystem::Writing the bif 
+TRACE::2020-12-21.14:55:34::SCWPlatform::Started writing the spfm file 
+TRACE::2020-12-21.14:55:34::SCWPlatform::Started writing the xpfm file 
+TRACE::2020-12-21.14:55:34::SCWPlatform::Completed generating the platform
+TRACE::2020-12-21.14:55:34::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:55:34::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:55:34::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:34::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:55:34::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:55:34::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:34::SCWMssOS::Saving the mss changes D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2020-12-21.14:55:34::SCWMssOS::Completed writemss as part of save.
+TRACE::2020-12-21.14:55:34::SCWMssOS::Commit changes completed.
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Opened existing hwdb top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:34::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:34::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Opened existing hwdb top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:34::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:34::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Opened existing hwdb top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:34::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:34::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWWriter::formatted JSON is {
+	"platformName":	"rfsoc_v2_platform",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rfsoc_v2_platform",
+	"platHandOff":	"D:/repos/RFSoC_Controller_V2/vivado_project/top_level_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top_level_wrapper.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rfsoc_v2_platform",
+	"systems":	[{
+			"systemName":	"rfsoc_v2_platform",
+			"systemDesc":	"rfsoc_v2_platform",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rfsoc_v2_platform",
+			"sysActiveDom":	"zynqmp_fsbl",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"fe81ac95ab45e7e8c71ae35c11eb3dd9",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.4", "xilsecure:4.3", "xilpm:3.2"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"6ef77aaa5cd5eea02f8eb84f1a02822d",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:5.3", "xilsecure:4.3", "xilskey:7.0"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on psu_cortexa53_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/",
+					"pmuQemuArgs":	"C:/Xilinx/Vitis/2020.2/data/emulation/platforms/zynqmp/sw/a53_standalone/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.3",
+					"mssFile":	"",
+					"md5Digest":	"2071b8c6c3236c0967231841e3dafda2",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"psu_coresight_0",
+							"stdout":	"psu_coresight_0",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2020-12-21.14:55:34::SCWPlatform::updated the xpfm file.
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to open the hw design at D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA given D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA absoulate path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform::DSA directory D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Platform Path D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/hw/top_level_wrapper.xsa
+TRACE::2020-12-21.14:55:34::SCWPlatform:: Unique name xilinx:zcu1275::0.0
+TRACE::2020-12-21.14:55:34::SCWPlatform::Trying to set the existing hwdb with name top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Opened existing hwdb top_level_wrapper_19
+TRACE::2020-12-21.14:55:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-12-21.14:55:34::SCWMssOS::Checking the sw design at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
+TRACE::2020-12-21.14:55:34::SCWMssOS::DEBUG:  swdes dump  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss|system_1||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2020-12-21.14:55:34::SCWMssOS::Sw design exists and opened at  D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/psu_cortexa53_0/standalone_domain/bsp/system.mss
