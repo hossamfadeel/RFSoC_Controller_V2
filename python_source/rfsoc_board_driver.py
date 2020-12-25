@@ -73,7 +73,8 @@ class rfsoc_board_driver:
                         print("Failed to open serial port, trying attempt " + str(attempts+1))
                     time.sleep(0.1)
                     attempts += 1
-            raise RuntimeError("Unable to open serial port for communication with FPGA.")
+            #Just throw whatever error we were having
+            self.port.open()
                 
     def close_board(self):
         if(self.dummy_mode == 0):
@@ -346,15 +347,26 @@ class rfsoc_board_driver:
             return 0
         return 1
         
-    #Word is 32-bit dac word
+    #Writes an entire DAC word (16 samples or 8 axis words)
+    #Samples must be a 16 entry list of DAC samples (16-bit signed)
     #Returns 0 on success
-    def write_axis_word(self, word):
+    def write_axis_word(self, samples):
     
         if(self.dummy_mode):
             return 0
         
-        bytes_list = list((word).to_bytes(4, byteorder='little', signed = False))
-        self.port.write([CMD_PREAMBLE, CMD_WRITE_AXIS, bytes_list])
+        if(len(samples) != 16):
+            print("Error, samples list must have 16 samples for DAC write")
+            return 1
+        
+        bytes_list = []
+        
+        for s in samples:
+            bytes_list.append(s.to_bytes(2, byteorder='little', signed = True))
+            
+        
+        self.port.write([CMD_PREAMBLE, CMD_WRITE_AXIS])
+        self.port.write(bytes_list)
         res = self.wait_ack()
         if(res == CMD_ACK):
             return 0
@@ -415,12 +427,15 @@ class rfsoc_board:
         #Initialize the board driver
         self.board_driver = rfsoc_board_driver(portname, dm)
         
+        self.board_driver.open_board()
+        
         #Try to ping the board
         if(self.board_driver.ping_board()):
             print("Could not communicate with FPGA board!")
         else:
             print("Connection to FPGA board is up!")
-        
+            
+        self.board_driver.close_board()
         return
     
     #Returns 0 on success
@@ -445,7 +460,7 @@ class rfsoc_board:
                 if(self.configure_adc_channel(c)):
                     return 1
             else:
-                if(self.configure_adc_channel(c)):
+                if(self.configure_dac_channel(c)):
                     return 1
         #Success
         self.board_driver.close_board()
@@ -486,24 +501,25 @@ class rfsoc_board:
             return 1
             
         #Set the post delay cycles 
-        if(self.board_driver.set_post_delay()):
+        if(self.board_driver.set_post_delay(channel.post_delay_cycles)):
             print("Error while trying to set post delay cycles, aborting DAC channel, configuration")
             return 1
         
         #Now we load the waveform in by putting samples together
-        i = 0
-        axis_words = [] #32-bit entries to be written to axis bus
-        while(i < len(channel.waveform_samples)-1):
-            
-            #Swap i and i+1 if this is backwards
-            new_sample = (channel.waveform_samples[i] << 16) | (channel.waveform_samples[i+1])
-            axis_words.append(new_sample)
-            i += 2
+        if(len(channel.waveform_samples)%16 != 0):
+            print("Error, channel #" + str(channel.channel_num) + " must have a waveform samples list with a length of a multiple of 16")
+            return 1
         
-        for a in axis_words:
-            if(self.board_driver.write_word(a)):
-                print("Error while trying to write DAC word to AXIS, aborting DAC channel configuration")
+        for i in range(0, len(channel.waveform_samples), 16):
+            #Build the sub-array
+            samples_list = []
+            for j in range(0, 16):
+                samples_list.append(channel.waveform_samples[i+j])
+            #Send the samples list
+            if(self.board_driver.write_axis_word(samples_list)):
+                print("Error while writing DAC word")
                 return 1
+            
                 
         #Set the mux select to 1 to permit normal operation
         if(self.board_driver.set_mux_sel(1)):
@@ -583,25 +599,37 @@ class rfsoc_board:
         self.board_driver.set_adc_readout(1)
         
         #Figure out how many times we need to read the axis bus
-        num_axis_reads = int(adc_obj.adc_run_cycles)
+        num_adc_reads = int(adc_obj.adc_run_cycles)
         
-        sample_list = []
-        for i in range(0, num_axis_reads):
-            
-            #Read out an AXIS 32-bit word
+        #Do 4 garbage reads first regardless of buffer flush state
+        for i in range(0, 4):
             status, word = self.board_driver.read_axis_word()
-            if(status):
-                print("Error while reading AXIS word during ADC readout, read " + str(i) + " out of " + str(num_axis_reads) + " expected reads")
-                self.board_driver.close_board()
-                return sample_list
-            #Otherwise break it into two samples and add it to the list
-            sample_0 = (word  >> 16) & 0xFFFF
-            sample_1 = word & 0xFFFF
+        
+        
+        sample_list = [] #Samples to be returned
+        for i in range(0, num_adc_reads):
             
-            #Change this order if the samples are in the wrong order
-            sample_list.append(sample_0)
-            sample_list.append(sample_1)
+            adc_word_samples = [] #Used for re-arranging the order of stuff
+            #We will read out 4 AXIS words for every ADC word
+            for j in range(0, 4):
             
+                #Read out an AXIS 32-bit word
+                status, word = self.board_driver.read_axis_word()
+                if(status):
+                    print("Error while reading AXIS word during ADC readout, read " + str((i*4)+j) + " out of " + str(num_adc_reads*4) + " expected reads")
+                    self.board_driver.close_board()
+                    return sample_list
+                #Otherwise break it into two samples and add it to the list
+                sample_0 = (word  >> 16) & 0xFFFF
+                sample_1 = word & 0xFFFF
+                
+                #Change this order if the samples are in the wrong order
+                adc_word_samples.append(sample_0)
+                adc_word_samples.append(sample_1)
+           
+            #TODO
+            #Will probably need to change the order in which the samples are added
+            sample_list += adc_word_samples
         
         #Reset the shift and readout values
         self.board_driver.set_adc_readout(0)

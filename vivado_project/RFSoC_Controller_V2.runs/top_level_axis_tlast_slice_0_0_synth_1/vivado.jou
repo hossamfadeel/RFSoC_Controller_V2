@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Dec 19 15:00:53 2020
-# Process ID: 117908
+# Start of session at: Thu Dec 24 14:49:32 2020
+# Process ID: 116264
 # Current directory: D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_axis_tlast_slice_0_0_synth_1
 # Command line: vivado.exe -log top_level_axis_tlast_slice_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_axis_tlast_slice_0_0.tcl
 # Log file: D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_axis_tlast_slice_0_0_synth_1/top_level_axis_tlast_slice_0_0.vds

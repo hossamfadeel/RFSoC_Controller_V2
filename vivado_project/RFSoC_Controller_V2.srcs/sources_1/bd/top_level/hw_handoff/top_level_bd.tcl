@@ -277,6 +277,8 @@ proc create_root_design { parentCell } {
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
   set_property -dict [ list \
+   CONFIG.c_include_mm2s_dre {1} \
+   CONFIG.c_include_s2mm_dre {1} \
    CONFIG.c_include_sg {0} \
    CONFIG.c_sg_include_stscntrl_strm {0} \
  ] $axi_dma_0
@@ -310,7 +312,13 @@ proc create_root_design { parentCell } {
   set axis_data_ps_to_pl_fifo [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_ps_to_pl_fifo ]
   set_property -dict [ list \
    CONFIG.FIFO_DEPTH {16} \
+   CONFIG.HAS_TKEEP {0} \
+   CONFIG.HAS_TLAST {0} \
+   CONFIG.HAS_TSTRB {0} \
    CONFIG.IS_ACLK_ASYNC {1} \
+   CONFIG.TDEST_WIDTH {0} \
+   CONFIG.TID_WIDTH {0} \
+   CONFIG.TUSER_WIDTH {0} \
  ] $axis_data_ps_to_pl_fifo
 
   # Create instance: axis_gpio_async_fifo, and set properties
@@ -369,10 +377,11 @@ proc create_root_design { parentCell } {
   # Create instance: system_ila_pl, and set properties
   set system_ila_pl [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_pl ]
   set_property -dict [ list \
-   CONFIG.C_BRAM_CNT {0.5} \
-   CONFIG.C_DATA_DEPTH {4096} \
+   CONFIG.C_BRAM_CNT {38.5} \
+   CONFIG.C_DATA_DEPTH {1024} \
    CONFIG.C_MON_TYPE {MIX} \
-   CONFIG.C_NUM_MONITOR_SLOTS {3} \
+   CONFIG.C_NUM_MONITOR_SLOTS {7} \
+   CONFIG.C_NUM_OF_PROBES {1} \
    CONFIG.C_SLOT_0_APC_EN {0} \
    CONFIG.C_SLOT_0_AXI_DATA_SEL {1} \
    CONFIG.C_SLOT_0_AXI_TRIG_SEL {1} \
@@ -385,19 +394,39 @@ proc create_root_design { parentCell } {
    CONFIG.C_SLOT_2_AXI_DATA_SEL {1} \
    CONFIG.C_SLOT_2_AXI_TRIG_SEL {1} \
    CONFIG.C_SLOT_2_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_3_APC_EN {0} \
+   CONFIG.C_SLOT_3_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_3_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_3_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_4_APC_EN {0} \
+   CONFIG.C_SLOT_4_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_4_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_4_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_5_APC_EN {0} \
+   CONFIG.C_SLOT_5_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_5_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_5_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_6_APC_EN {0} \
+   CONFIG.C_SLOT_6_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_6_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_6_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
  ] $system_ila_pl
 
   # Create instance: system_ila_ps, and set properties
   set system_ila_ps [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_ps ]
   set_property -dict [ list \
    CONFIG.C_MON_TYPE {MIX} \
-   CONFIG.C_NUM_MONITOR_SLOTS {1} \
+   CONFIG.C_NUM_MONITOR_SLOTS {2} \
    CONFIG.C_NUM_OF_PROBES {1} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_SLOT_0_APC_EN {0} \
    CONFIG.C_SLOT_0_AXI_DATA_SEL {1} \
    CONFIG.C_SLOT_0_AXI_TRIG_SEL {1} \
    CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_1_APC_EN {0} \
+   CONFIG.C_SLOT_1_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_1_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_1_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
  ] $system_ila_ps
 
   # Create instance: usp_rf_data_converter_0, and set properties
@@ -2041,6 +2070,8 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net adc2_clk_1 [get_bd_intf_ports adc2_clk] [get_bd_intf_pins usp_rf_data_converter_0/adc2_clk]
   connect_bd_intf_net -intf_net adc3_clk_1 [get_bd_intf_ports adc3_clk] [get_bd_intf_pins usp_rf_data_converter_0/adc3_clk]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXIS_MM2S [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins axis_data_ps_to_pl_fifo/S_AXIS]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins system_ila_ps/SLOT_0_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_MM2S [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] [get_bd_intf_pins axi_smc/S00_AXI]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_S2MM [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins axi_smc/S01_AXI]
   connect_bd_intf_net -intf_net axi_gpio_0_GPIO2 [get_bd_intf_ports app_leds] [get_bd_intf_pins axi_gpio_0/GPIO2]
@@ -2050,7 +2081,7 @@ proc create_root_design { parentCell } {
 connect_bd_intf_net -intf_net [get_bd_intf_nets axis_data_fifo_1_M_AXIS] [get_bd_intf_pins axis_data_ps_to_pl_fifo/M_AXIS] [get_bd_intf_pins system_ila_pl/SLOT_0_AXIS]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets axis_data_fifo_1_M_AXIS]
   connect_bd_intf_net -intf_net axis_data_fifo_2_M_AXIS [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins axis_tlast_slice_0/m_axis]
-connect_bd_intf_net -intf_net [get_bd_intf_nets axis_data_fifo_2_M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins system_ila_ps/SLOT_0_AXIS]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axis_data_fifo_2_M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins system_ila_ps/SLOT_1_AXIS]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets axis_data_fifo_2_M_AXIS]
   connect_bd_intf_net -intf_net axis_data_pl_to_ps_fifo_M_AXIS [get_bd_intf_pins axis_data_pl_to_ps_fifo/M_AXIS] [get_bd_intf_pins axis_tlast_slice_0/s_axis]
   connect_bd_intf_net -intf_net dac0_clk_1 [get_bd_intf_ports dac0_clk] [get_bd_intf_pins usp_rf_data_converter_0/dac0_clk]
@@ -2074,9 +2105,17 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m0_axis] 
 connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m16_axis] [get_bd_intf_pins axis_data_pl_to_ps_fifo/S_AXIS] [get_bd_intf_pins system_ila_pl/SLOT_2_AXIS]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m16_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m1_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m1_axis] [get_bd_intf_pins usp_rf_data_converter_0/s01_axis]
+connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m1_axis] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m1_axis] [get_bd_intf_pins system_ila_pl/SLOT_3_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m1_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m2_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m2_axis] [get_bd_intf_pins usp_rf_data_converter_0/s02_axis]
+connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m2_axis] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m2_axis] [get_bd_intf_pins system_ila_pl/SLOT_4_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m2_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m3_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m3_axis] [get_bd_intf_pins usp_rf_data_converter_0/s03_axis]
+connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m3_axis] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m3_axis] [get_bd_intf_pins system_ila_pl/SLOT_5_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m3_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m4_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m4_axis] [get_bd_intf_pins usp_rf_data_converter_0/s10_axis]
+connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m4_axis] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m4_axis] [get_bd_intf_pins system_ila_pl/SLOT_6_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m4_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m5_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m5_axis] [get_bd_intf_pins usp_rf_data_converter_0/s11_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m6_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m6_axis] [get_bd_intf_pins usp_rf_data_converter_0/s12_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m7_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m7_axis] [get_bd_intf_pins usp_rf_data_converter_0/s13_axis]

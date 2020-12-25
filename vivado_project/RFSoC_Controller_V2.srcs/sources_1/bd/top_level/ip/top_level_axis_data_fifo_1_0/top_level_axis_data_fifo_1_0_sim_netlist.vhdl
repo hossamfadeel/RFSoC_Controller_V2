@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Sun Nov 29 16:35:38 2020
+-- Date        : Thu Dec 24 14:50:43 2020
 -- Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_data_fifo_1_0/top_level_axis_data_fifo_1_0_sim_netlist.vhdl
@@ -5890,7 +5890,7 @@ entity top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top is
   attribute C_ACLKEN_CONV_MODE : integer;
   attribute C_ACLKEN_CONV_MODE of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top : entity is 0;
   attribute C_AXIS_SIGNAL_SET : integer;
-  attribute C_AXIS_SIGNAL_SET of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top : entity is 27;
+  attribute C_AXIS_SIGNAL_SET of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top : entity is 3;
   attribute C_AXIS_TDATA_WIDTH : integer;
   attribute C_AXIS_TDATA_WIDTH of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top : entity is 32;
   attribute C_AXIS_TDEST_WIDTH : integer;
@@ -6015,8 +6015,10 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top
   signal \gen_fifo.xpm_fifo_axis_inst_n_59\ : STD_LOGIC;
   signal \gen_fifo.xpm_fifo_axis_inst_n_60\ : STD_LOGIC;
   signal \gen_fifo.xpm_fifo_axis_inst_n_61\ : STD_LOGIC;
+  signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute AXIS_DATA_WIDTH : integer;
@@ -6169,6 +6171,11 @@ begin
   dbiterr <= \<const0>\;
   m_axis_tdest(0) <= \<const0>\;
   m_axis_tid(0) <= \<const0>\;
+  m_axis_tkeep(3) <= \<const0>\;
+  m_axis_tkeep(2) <= \<const0>\;
+  m_axis_tkeep(1) <= \<const0>\;
+  m_axis_tkeep(0) <= \<const0>\;
+  m_axis_tlast <= \<const0>\;
   m_axis_tstrb(3) <= \<const0>\;
   m_axis_tstrb(2) <= \<const0>\;
   m_axis_tstrb(1) <= \<const0>\;
@@ -6192,8 +6199,8 @@ GND: unisim.vcomponents.GND
       m_axis_tdata(31 downto 0) => m_axis_tdata(31 downto 0),
       m_axis_tdest(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tdest_UNCONNECTED\(0),
       m_axis_tid(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tid_UNCONNECTED\(0),
-      m_axis_tkeep(3 downto 0) => m_axis_tkeep(3 downto 0),
-      m_axis_tlast => m_axis_tlast,
+      m_axis_tkeep(3 downto 0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tkeep_UNCONNECTED\(3 downto 0),
+      m_axis_tlast => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tlast_UNCONNECTED\,
       m_axis_tready => m_axis_tready,
       m_axis_tstrb(3 downto 0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tstrb_UNCONNECTED\(3 downto 0),
       m_axis_tuser(0) => \NLW_gen_fifo.xpm_fifo_axis_inst_m_axis_tuser_UNCONNECTED\(0),
@@ -6210,8 +6217,8 @@ GND: unisim.vcomponents.GND
       s_axis_tdata(31 downto 0) => s_axis_tdata(31 downto 0),
       s_axis_tdest(0) => '0',
       s_axis_tid(0) => '0',
-      s_axis_tkeep(3 downto 0) => s_axis_tkeep(3 downto 0),
-      s_axis_tlast => s_axis_tlast,
+      s_axis_tkeep(3 downto 0) => B"0000",
+      s_axis_tlast => '0',
       s_axis_tready => s_axis_tready,
       s_axis_tstrb(3 downto 0) => B"0000",
       s_axis_tuser(0) => '0',
@@ -6235,14 +6242,10 @@ entity top_level_axis_data_fifo_1_0 is
     s_axis_tvalid : in STD_LOGIC;
     s_axis_tready : out STD_LOGIC;
     s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axis_tkeep : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
     m_axis_aclk : in STD_LOGIC;
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_tkeep : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axis_tlast : out STD_LOGIC
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of top_level_axis_data_fifo_1_0 : entity is true;
@@ -6258,6 +6261,7 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0 is
   signal NLW_inst_almost_empty_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_almost_full_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_dbiterr_UNCONNECTED : STD_LOGIC;
+  signal NLW_inst_m_axis_tlast_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_prog_empty_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_prog_full_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_sbiterr_UNCONNECTED : STD_LOGIC;
@@ -6265,12 +6269,13 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0 is
   signal NLW_inst_axis_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_inst_m_axis_tdest_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_m_axis_tid_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_inst_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_inst_m_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_inst_m_axis_tuser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute C_ACLKEN_CONV_MODE : integer;
   attribute C_ACLKEN_CONV_MODE of inst : label is 0;
   attribute C_AXIS_SIGNAL_SET : integer;
-  attribute C_AXIS_SIGNAL_SET of inst : label is 27;
+  attribute C_AXIS_SIGNAL_SET of inst : label is 3;
   attribute C_AXIS_TDATA_WIDTH : integer;
   attribute C_AXIS_TDATA_WIDTH of inst : label is 32;
   attribute C_AXIS_TDEST_WIDTH : integer;
@@ -6377,22 +6382,18 @@ architecture STRUCTURE of top_level_axis_data_fifo_1_0 is
   attribute X_INTERFACE_INFO of m_axis_aclk : signal is "xilinx.com:signal:clock:1.0 M_CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of m_axis_aclk : signal is "XIL_INTERFACENAME M_CLKIF, ASSOCIATED_BUSIF M_AXIS, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0";
-  attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 M_AXIS TLAST";
-  attribute X_INTERFACE_PARAMETER of m_axis_tlast : signal is "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS TREADY";
   attribute X_INTERFACE_INFO of m_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 M_AXIS TVALID";
   attribute X_INTERFACE_INFO of s_axis_aclk : signal is "xilinx.com:signal:clock:1.0 S_CLKIF CLK";
   attribute X_INTERFACE_PARAMETER of s_axis_aclk : signal is "XIL_INTERFACENAME S_CLKIF, ASSOCIATED_BUSIF S_AXIS, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, ASSOCIATED_RESET s_axis_aresetn, INSERT_VIP 0, ASSOCIATED_CLKEN s_axis_aclken";
   attribute X_INTERFACE_INFO of s_axis_aresetn : signal is "xilinx.com:signal:reset:1.0 S_RSTIF RST";
   attribute X_INTERFACE_PARAMETER of s_axis_aresetn : signal is "XIL_INTERFACENAME S_RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
-  attribute X_INTERFACE_INFO of s_axis_tlast : signal is "xilinx.com:interface:axis:1.0 S_AXIS TLAST";
-  attribute X_INTERFACE_PARAMETER of s_axis_tlast : signal is "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axis_tready : signal is "xilinx.com:interface:axis:1.0 S_AXIS TREADY";
   attribute X_INTERFACE_INFO of s_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 S_AXIS TVALID";
   attribute X_INTERFACE_INFO of m_axis_tdata : signal is "xilinx.com:interface:axis:1.0 M_AXIS TDATA";
-  attribute X_INTERFACE_INFO of m_axis_tkeep : signal is "xilinx.com:interface:axis:1.0 M_AXIS TKEEP";
+  attribute X_INTERFACE_PARAMETER of m_axis_tdata : signal is "XIL_INTERFACENAME M_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axis_tdata : signal is "xilinx.com:interface:axis:1.0 S_AXIS TDATA";
-  attribute X_INTERFACE_INFO of s_axis_tkeep : signal is "xilinx.com:interface:axis:1.0 S_AXIS TKEEP";
+  attribute X_INTERFACE_PARAMETER of s_axis_tdata : signal is "XIL_INTERFACENAME S_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0";
 begin
 inst: entity work.top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top
      port map (
@@ -6408,8 +6409,8 @@ inst: entity work.top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top
       m_axis_tdata(31 downto 0) => m_axis_tdata(31 downto 0),
       m_axis_tdest(0) => NLW_inst_m_axis_tdest_UNCONNECTED(0),
       m_axis_tid(0) => NLW_inst_m_axis_tid_UNCONNECTED(0),
-      m_axis_tkeep(3 downto 0) => m_axis_tkeep(3 downto 0),
-      m_axis_tlast => m_axis_tlast,
+      m_axis_tkeep(3 downto 0) => NLW_inst_m_axis_tkeep_UNCONNECTED(3 downto 0),
+      m_axis_tlast => NLW_inst_m_axis_tlast_UNCONNECTED,
       m_axis_tready => m_axis_tready,
       m_axis_tstrb(3 downto 0) => NLW_inst_m_axis_tstrb_UNCONNECTED(3 downto 0),
       m_axis_tuser(0) => NLW_inst_m_axis_tuser_UNCONNECTED(0),
@@ -6422,8 +6423,8 @@ inst: entity work.top_level_axis_data_fifo_1_0_axis_data_fifo_v2_0_4_top
       s_axis_tdata(31 downto 0) => s_axis_tdata(31 downto 0),
       s_axis_tdest(0) => '0',
       s_axis_tid(0) => '0',
-      s_axis_tkeep(3 downto 0) => s_axis_tkeep(3 downto 0),
-      s_axis_tlast => s_axis_tlast,
+      s_axis_tkeep(3 downto 0) => B"1111",
+      s_axis_tlast => '1',
       s_axis_tready => s_axis_tready,
       s_axis_tstrb(3 downto 0) => B"1111",
       s_axis_tuser(0) => '0',

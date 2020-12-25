@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Dec 21 14:27:27 2020
+| Date         : Thu Dec 24 15:02:36 2020
 | Host         : JAMES-LENOVO running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_wrapper_utilization_synth.rpt -pb top_level_wrapper_utilization_synth.pb
 | Design       : top_level_wrapper
@@ -173,7 +173,7 @@ Table of Contents
 | top_level_zynq_ultra_ps_e_0_0       |    1 |
 | top_level_xbar_0                    |    1 |
 | top_level_usp_rf_data_converter_0_0 |    1 |
-| top_level_system_ila_1_0            |    1 |
+| top_level_system_ila_0_1            |    1 |
 | top_level_system_ila_0_0            |    1 |
 | top_level_rst_ps8_0_100M_1          |    1 |
 | top_level_rst_ps8_0_100M_0          |    1 |

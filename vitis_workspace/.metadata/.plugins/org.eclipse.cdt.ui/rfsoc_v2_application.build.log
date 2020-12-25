@@ -1,9 +1,9 @@
-14:55:57 **** Incremental Build of configuration Debug for project rfsoc_v2_application ****
+16:24:52 **** Incremental Build of configuration Debug for project rfsoc_v2_application ****
 make all 
-'Building file: D:/repos/RFSoC_Controller_V2/c_source/gpio.c'
+'Building file: D:/repos/RFSoC_Controller_V2/c_source/cmd_handler.c'
 'Invoking: ARM v8 gcc compiler'
-aarch64-none-elf-gcc -Wall -O0 -g3 -I"D:\repos\RFSoC_Controller_V2\c_source" -I"D:\repos\RFSoC_Controller_V2\c_source" -c -fmessage-length=0 -MT"src/c_source/gpio.o" -D __BAREMETAL__ -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/c_source/gpio.d" -MT"src/c_source/gpio.o" -o "src/c_source/gpio.o" "D:/repos/RFSoC_Controller_V2/c_source/gpio.c"
-'Finished building: D:/repos/RFSoC_Controller_V2/c_source/gpio.c'
+aarch64-none-elf-gcc -Wall -O0 -g3 -I"D:\repos\RFSoC_Controller_V2\c_source" -I"D:\repos\RFSoC_Controller_V2\c_source" -c -fmessage-length=0 -MT"src/c_source/cmd_handler.o" -D __BAREMETAL__ -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/c_source/cmd_handler.d" -MT"src/c_source/cmd_handler.o" -o "src/c_source/cmd_handler.o" "D:/repos/RFSoC_Controller_V2/c_source/cmd_handler.c"
+'Finished building: D:/repos/RFSoC_Controller_V2/c_source/cmd_handler.c'
 ' '
 'Building target: rfsoc_v2_application.elf'
 'Invoking: ARM v8 gcc linker'
@@ -13,9 +13,9 @@ aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/repos/RFSoC_Controller_V2
 'Invoking: ARM v8 Print Size'
 aarch64-none-elf-size rfsoc_v2_application.elf  |tee "rfsoc_v2_application.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 205364	   9600	  31964	 246928	  3c490	rfsoc_v2_application.elf
+ 205572	   9600	  32012	 247184	  3c590	rfsoc_v2_application.elf
 'Finished building: rfsoc_v2_application.elf.size'
 ' '
 
-14:55:58 Build Finished (took 1s.309ms)
+16:24:53 Build Finished (took 1s.0ms)
 

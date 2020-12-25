@@ -1,6 +1,6 @@
-14:55:32 **** Incremental Build of project rfsoc_v2_platform ****
+15:35:00 **** Incremental Build of project rfsoc_v2_platform ****
 buildplatform.bat 59598 rfsoc_v2_platform no_domain_build 
-XSDB Server Channel: tcfchan#27
+XSDB Server Channel: tcfchan#42
 
-14:55:34 Build Finished (took 2s.486ms)
+15:35:02 Build Finished (took 2s.212ms)
 

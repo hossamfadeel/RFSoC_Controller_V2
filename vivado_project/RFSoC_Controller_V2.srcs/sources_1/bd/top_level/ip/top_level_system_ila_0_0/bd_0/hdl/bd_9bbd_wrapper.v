@@ -8,7 +8,6 @@
 
 module bd_9bbd_wrapper
    (SLOT_0_AXIS_tdata,
-    SLOT_0_AXIS_tkeep,
     SLOT_0_AXIS_tlast,
     SLOT_0_AXIS_tready,
     SLOT_0_AXIS_tvalid,
@@ -20,11 +19,26 @@ module bd_9bbd_wrapper
     SLOT_2_AXIS_tlast,
     SLOT_2_AXIS_tready,
     SLOT_2_AXIS_tvalid,
+    SLOT_3_AXIS_tdata,
+    SLOT_3_AXIS_tlast,
+    SLOT_3_AXIS_tready,
+    SLOT_3_AXIS_tvalid,
+    SLOT_4_AXIS_tdata,
+    SLOT_4_AXIS_tlast,
+    SLOT_4_AXIS_tready,
+    SLOT_4_AXIS_tvalid,
+    SLOT_5_AXIS_tdata,
+    SLOT_5_AXIS_tlast,
+    SLOT_5_AXIS_tready,
+    SLOT_5_AXIS_tvalid,
+    SLOT_6_AXIS_tdata,
+    SLOT_6_AXIS_tlast,
+    SLOT_6_AXIS_tready,
+    SLOT_6_AXIS_tvalid,
     clk,
     probe0,
     resetn);
   input [31:0]SLOT_0_AXIS_tdata;
-  input [3:0]SLOT_0_AXIS_tkeep;
   input SLOT_0_AXIS_tlast;
   input SLOT_0_AXIS_tready;
   input SLOT_0_AXIS_tvalid;
@@ -36,12 +50,27 @@ module bd_9bbd_wrapper
   input SLOT_2_AXIS_tlast;
   input SLOT_2_AXIS_tready;
   input SLOT_2_AXIS_tvalid;
+  input [255:0]SLOT_3_AXIS_tdata;
+  input SLOT_3_AXIS_tlast;
+  input SLOT_3_AXIS_tready;
+  input SLOT_3_AXIS_tvalid;
+  input [255:0]SLOT_4_AXIS_tdata;
+  input SLOT_4_AXIS_tlast;
+  input SLOT_4_AXIS_tready;
+  input SLOT_4_AXIS_tvalid;
+  input [255:0]SLOT_5_AXIS_tdata;
+  input SLOT_5_AXIS_tlast;
+  input SLOT_5_AXIS_tready;
+  input SLOT_5_AXIS_tvalid;
+  input [255:0]SLOT_6_AXIS_tdata;
+  input SLOT_6_AXIS_tlast;
+  input SLOT_6_AXIS_tready;
+  input SLOT_6_AXIS_tvalid;
   input clk;
   input [15:0]probe0;
   input resetn;
 
   wire [31:0]SLOT_0_AXIS_tdata;
-  wire [3:0]SLOT_0_AXIS_tkeep;
   wire SLOT_0_AXIS_tlast;
   wire SLOT_0_AXIS_tready;
   wire SLOT_0_AXIS_tvalid;
@@ -53,13 +82,28 @@ module bd_9bbd_wrapper
   wire SLOT_2_AXIS_tlast;
   wire SLOT_2_AXIS_tready;
   wire SLOT_2_AXIS_tvalid;
+  wire [255:0]SLOT_3_AXIS_tdata;
+  wire SLOT_3_AXIS_tlast;
+  wire SLOT_3_AXIS_tready;
+  wire SLOT_3_AXIS_tvalid;
+  wire [255:0]SLOT_4_AXIS_tdata;
+  wire SLOT_4_AXIS_tlast;
+  wire SLOT_4_AXIS_tready;
+  wire SLOT_4_AXIS_tvalid;
+  wire [255:0]SLOT_5_AXIS_tdata;
+  wire SLOT_5_AXIS_tlast;
+  wire SLOT_5_AXIS_tready;
+  wire SLOT_5_AXIS_tvalid;
+  wire [255:0]SLOT_6_AXIS_tdata;
+  wire SLOT_6_AXIS_tlast;
+  wire SLOT_6_AXIS_tready;
+  wire SLOT_6_AXIS_tvalid;
   wire clk;
   wire [15:0]probe0;
   wire resetn;
 
   bd_9bbd bd_9bbd_i
        (.SLOT_0_AXIS_tdata(SLOT_0_AXIS_tdata),
-        .SLOT_0_AXIS_tkeep(SLOT_0_AXIS_tkeep),
         .SLOT_0_AXIS_tlast(SLOT_0_AXIS_tlast),
         .SLOT_0_AXIS_tready(SLOT_0_AXIS_tready),
         .SLOT_0_AXIS_tvalid(SLOT_0_AXIS_tvalid),
@@ -71,6 +115,22 @@ module bd_9bbd_wrapper
         .SLOT_2_AXIS_tlast(SLOT_2_AXIS_tlast),
         .SLOT_2_AXIS_tready(SLOT_2_AXIS_tready),
         .SLOT_2_AXIS_tvalid(SLOT_2_AXIS_tvalid),
+        .SLOT_3_AXIS_tdata(SLOT_3_AXIS_tdata),
+        .SLOT_3_AXIS_tlast(SLOT_3_AXIS_tlast),
+        .SLOT_3_AXIS_tready(SLOT_3_AXIS_tready),
+        .SLOT_3_AXIS_tvalid(SLOT_3_AXIS_tvalid),
+        .SLOT_4_AXIS_tdata(SLOT_4_AXIS_tdata),
+        .SLOT_4_AXIS_tlast(SLOT_4_AXIS_tlast),
+        .SLOT_4_AXIS_tready(SLOT_4_AXIS_tready),
+        .SLOT_4_AXIS_tvalid(SLOT_4_AXIS_tvalid),
+        .SLOT_5_AXIS_tdata(SLOT_5_AXIS_tdata),
+        .SLOT_5_AXIS_tlast(SLOT_5_AXIS_tlast),
+        .SLOT_5_AXIS_tready(SLOT_5_AXIS_tready),
+        .SLOT_5_AXIS_tvalid(SLOT_5_AXIS_tvalid),
+        .SLOT_6_AXIS_tdata(SLOT_6_AXIS_tdata),
+        .SLOT_6_AXIS_tlast(SLOT_6_AXIS_tlast),
+        .SLOT_6_AXIS_tready(SLOT_6_AXIS_tready),
+        .SLOT_6_AXIS_tvalid(SLOT_6_AXIS_tvalid),
         .clk(clk),
         .probe0(probe0),
         .resetn(resetn));

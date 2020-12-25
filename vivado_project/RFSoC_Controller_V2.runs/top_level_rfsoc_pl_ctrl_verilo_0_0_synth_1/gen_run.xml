@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1608589426">
+<GenRun Id="top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1" LaunchPart="xczu29dr-ffvf1760-2-e" LaunchTime="1608850156">
   <File Type="PA-TCL" Name="top_level_rfsoc_pl_ctrl_verilo_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_level_rfsoc_pl_ctrl_verilo_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_level_rfsoc_pl_ctrl_verilo_0_0_reports.tcl"/>
@@ -46,9 +46,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

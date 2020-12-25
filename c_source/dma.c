@@ -90,15 +90,22 @@ u8 dma_init()
 }
 
 //Returns 0 on success
-u8 dma_write_word(u32 word)
+//Writes an entire dac word (8 32-bit words)
+u8 dma_write_word(u32* words)
 {
 	//Force a cache reload
 	Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, MAX_PKT_LEN);
 	
-	*((u32*) TxBufferPtr) = word;
+	u32* tx_buff_ptr = (u32*) TxBufferPtr;
+
+	for(int i = 0; i < 8; i++)
+	{
+		tx_buff_ptr[i] = words[i];
+	}
+
 	//Start the transfer
 	int Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) TxBufferPtr,
-					1, XAXIDMA_DMA_TO_DEVICE);
+					8*4, XAXIDMA_DMA_TO_DEVICE);
 	//Wait for the transfer to finish
 	int count = 0;
 	while(XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))

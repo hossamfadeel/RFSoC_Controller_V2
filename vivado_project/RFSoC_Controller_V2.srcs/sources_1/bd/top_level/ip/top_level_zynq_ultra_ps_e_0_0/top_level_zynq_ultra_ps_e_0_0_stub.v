@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Sun Nov 29 16:30:46 2020
+// Date        : Sun Nov 29 16:30:44 2020
 // Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_zynq_ultra_ps_e_0_0/top_level_zynq_ultra_ps_e_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top top_level_zynq_ultra_ps_e_0_0 -prefix
+//               top_level_zynq_ultra_ps_e_0_0_ top_level_zynq_ultra_ps_e_0_0_stub.v
 // Design      : top_level_zynq_ultra_ps_e_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xczu29dr-ffvf1760-2-e

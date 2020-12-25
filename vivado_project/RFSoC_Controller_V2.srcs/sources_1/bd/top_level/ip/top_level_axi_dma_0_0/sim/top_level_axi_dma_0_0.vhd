@@ -388,14 +388,14 @@ BEGIN
       C_M_AXI_MM2S_ADDR_WIDTH => 32,
       C_M_AXI_MM2S_DATA_WIDTH => 32,
       C_M_AXIS_MM2S_TDATA_WIDTH => 32,
-      C_INCLUDE_MM2S_DRE => 0,
+      C_INCLUDE_MM2S_DRE => 1,
       C_INCLUDE_S2MM => 1,
       C_INCLUDE_S2MM_SF => 1,
       C_S2MM_BURST_SIZE => 16,
       C_M_AXI_S2MM_ADDR_WIDTH => 32,
       C_M_AXI_S2MM_DATA_WIDTH => 32,
       C_S_AXIS_S2MM_TDATA_WIDTH => 32,
-      C_INCLUDE_S2MM_DRE => 0,
+      C_INCLUDE_S2MM_DRE => 1,
       C_INCREASE_THROUGHPUT => 0,
       C_FAMILY => "zynquplus"
     )

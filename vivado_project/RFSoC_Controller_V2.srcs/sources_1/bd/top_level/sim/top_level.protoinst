@@ -225,8 +225,6 @@
 					"ports": {
 						"ACLK": { "actual": "m_axis_aclk"},
 						"TDATA": { "actual": "m_axis_tdata"},
-						"TKEEP": { "actual": "m_axis_tkeep"},
-						"TLAST": { "actual": "m_axis_tlast"},
 						"TREADY": { "actual": "m_axis_tready"},
 						"TVALID": { "actual": "m_axis_tvalid"}
 					}
@@ -237,8 +235,6 @@
 						"ACLK": { "actual": "s_axis_aclk"},
 						"ARESETN": { "actual": "s_axis_aresetn"},
 						"TDATA": { "actual": "s_axis_tdata"},
-						"TKEEP": { "actual": "s_axis_tkeep"},
-						"TLAST": { "actual": "s_axis_tlast"},
 						"TREADY": { "actual": "s_axis_tready"},
 						"TVALID": { "actual": "s_axis_tvalid"}
 					}

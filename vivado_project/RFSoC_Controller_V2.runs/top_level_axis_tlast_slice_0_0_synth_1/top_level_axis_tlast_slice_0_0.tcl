@@ -70,11 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "top_level_axis_tlast_slice_0_0_synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
-set_param chipscope.maxJobs 3
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu29dr-ffvf1760-2-e
@@ -94,7 +89,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_tlast_slice.v
-read_ip -quiet d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_tlast_slice_0_0/top_level_axis_tlast_slice_0_0.xci
+read_ip -quiet D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_axis_tlast_slice_0_0/top_level_axis_tlast_slice_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

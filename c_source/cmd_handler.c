@@ -134,11 +134,6 @@ void cmd_handle_command()
 						bytes_to_receive = 1;
 						cmd_handler_state = state_wait_payload;
 					break;
-					//4 byte case
-					case CMD_WRITE_AXIS:
-						bytes_to_receive = 4;
-						cmd_handler_state = state_wait_payload;
-					break;
 					//8 byte cases
 					case CMD_SET_RUN_CYCLES:
 					case CMD_SET_PRE_DELAY:
@@ -151,8 +146,10 @@ void cmd_handle_command()
 					//32 byte cases
 					case CMD_SET_MASK:
 					case CMD_SET_LOCKING_WAVEFORM:
-						bytes_to_receive = 8;
+					case CMD_WRITE_AXIS:
+						bytes_to_receive = 32;
 						cmd_handler_state = state_wait_payload;
+					break;
 						
 					case CMD_FLUSH_BUFFERS:
 						//Flush the buffers via GPIO
@@ -259,19 +256,6 @@ void cmd_handle_command()
 						break;
 					}
 				}
-				else if(bytes_to_receive == 4)
-				{
-					u32 dac_word = 0;
-					for(int i = 0; i < 4; i = i + 1)
-					{
-						dac_word |= ((u32)uart_get_buffer_byte()) << (i*8);
-					}
-					//If we encounter an error writing to DMA
-					if(dma_write_word(dac_word))
-					{
-						ret_byte = 0x01;//Make sure the python script knows it
-					}
-				}
 				else if(bytes_to_receive == 8)
 				{
 					//Reassemble the 64-bit number
@@ -301,7 +285,7 @@ void cmd_handle_command()
 					}
 				}
 				//Must have been a 32-byte payload
-				else
+				else if(bytes_to_receive == 32)
 				{
 					//Assemble the payload into an array of samples
 					u16 payload_array[16];
@@ -311,6 +295,9 @@ void cmd_handle_command()
 						payload_array[i] |= (u16)uart_get_buffer_byte() << 8;
 					}
 					
+					//Make a small local array for AXIS words
+					u32 axis_words[8];
+
 					switch(cmd_byte)
 					{
 						case CMD_SET_MASK:
@@ -319,7 +306,23 @@ void cmd_handle_command()
 						case CMD_SET_LOCKING_WAVEFORM:
 							gpio_set_locking_waveform(payload_array);
 						break;
+						case CMD_WRITE_AXIS:
+
+							//Combine the samples into sets of words (2 samples per word)
+							for(int i = 0; i < 8; i++)
+							{
+								axis_words[i] = ((u32)payload_array[2*i] << 16) | ((u32)payload_array[(2*i)+1]);
+							}
+							if(dma_write_word(axis_words))
+							{
+								ret_byte = 0x01;//Make sure the python script knows it
+							}
+						break;
 					}
+				}
+				else
+				{
+					xil_printf("Error, expected to receive %i bytes but this number of bytes is not valid\r\n", bytes_to_receive);
 				}
 				
 				//Send the ACK

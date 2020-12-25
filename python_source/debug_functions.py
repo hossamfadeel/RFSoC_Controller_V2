@@ -2,13 +2,17 @@
 
 
 import rfsoc_board_driver as rbd
+import waveform_plotter as wp
 
 
 portname = "COM6"
 
 def adc_readout_test():
     
-    run_cycles = 121
+    num_test_trigs = 5 #Number of times to re-trigger and run the test again without a buffer flush
+    
+    run_cycles = 64
+    shift_val = 2
 
     #Create a board driver object
     board_driver = rbd.rfsoc_board_driver(portname)
@@ -37,7 +41,7 @@ def adc_readout_test():
     
     if(board_driver.set_adc_run_cycles(run_cycles)):
         raise RuntimeError("Error, adc readout test was unable to set adc shift")
-    if(board_driver.set_adc_shift(0)):
+    if(board_driver.set_adc_shift(shift_val)):
         raise RuntimeError("Error, adc readout test was unable to set adc shift")
         
     
@@ -51,41 +55,54 @@ def adc_readout_test():
     if(board_driver.flush_buffers()):
         raise RuntimeError("Error, adc readout test was unable to flush buffers")
         
-    #Trigger the board once
-    if(board_driver.trigger()):
-        raise RuntimeError("Error, adc readout test could not trigger board")
         
-    #Enable adc readout
-    if(board_driver.set_adc_readout(1)):
-        raise RuntimeError("Error, adc readout test was unable to set adc readout")
+    for j in range(0, num_test_trigs):
         
-    #Run the DMA test
-    #board_driver.port.write([rbd.CMD_PREAMBLE, rbd.CMD_DMA_DEBUG])
-    #board_driver.wait_ack()
-    
-    #make 4 garbage reads first
-    for i in range(0, 4):
-        status, word = board_driver.read_axis_word()
-        print("Garbage read was " + hex(word))
+        print("Test number: " + str(j))
         
-    #Read out exactly 8 AXIS words and see what we get
-    expected_vals = [0x70008000, 0x50006000, 0x30004000, 0x10002000]
-    errs = 0
-    for i in range(0, run_cycles*4):
-        status, word = board_driver.read_axis_word()
-        if(status):
-            raise RuntimeError("Error while reading out AXIS word")
+        #Trigger the board once
+        for i in range(0, pow(2, shift_val)):
+            if(board_driver.trigger()):
+                raise RuntimeError("Error, adc readout test could not trigger board")
         
-        print("Got: " + hex(word))
         
-        if(word != expected_vals[i%4]):
-            print("Bad ADC value, expected " + hex(expected_vals[i%4]) + ", got " + hex(word) + ", i was " + str(i))
-            errs += 1
+        #Set shift value back to 0
+        if(board_driver.set_adc_shift(0)):
+            raise RuntimeError("Error, adc readout test was unable to set adc shift")
+        #Enable adc readout
+        if(board_driver.set_adc_readout(1)):
+            raise RuntimeError("Error, adc readout test was unable to set adc readout")
         
-    
-    #disable adc readout
-    if(board_driver.set_adc_readout(0)):
-        raise RuntimeError("Error, adc readout test was unable to set adc readout")
+        #make 4 garbage reads first
+        for i in range(0, 4):
+            status, word = board_driver.read_axis_word()
+            print("Garbage read was " + hex(word))
+            
+        #Read out exactly 8 AXIS words and see what we get
+        expected_vals = [0x70008000, 0x50006000, 0x30004000, 0x10002000]
+        errs = 0
+        for i in range(0, run_cycles*4):
+            status, word = board_driver.read_axis_word()
+            if(status):
+                raise RuntimeError("Error while reading out AXIS word")
+            
+            print("Got: " + hex(word))
+            
+            if(word != expected_vals[i%4]):
+                print("Bad ADC value, expected " + hex(expected_vals[i%4]) + ", got " + hex(word) + ", i was " + str(i))
+                errs += 1
+            
+        
+        #disable adc readout
+        if(board_driver.set_adc_readout(0)):
+            raise RuntimeError("Error, adc readout test was unable to set adc readout")
+        #Reset shift val back to its normal value
+        if(board_driver.set_adc_shift(shift_val)):
+            raise RuntimeError("Error, adc readout test was unable to set adc shift")
+            
+        #If we have any errors just stop here
+        if(errs):
+            break
         
     #We're done
     
@@ -113,8 +130,12 @@ def dac_sawtooth_test():
     board_obj.channel_list.append(c3)
     board_obj.channel_list.append(c4)
     
+    #wp.plot_dac_waveforms(board_obj.channel_list)
+    
     #Check the status of the clocks
+    board_obj.board_driver.open_board()
     dac_status, adc_status = board_obj.board_driver.check_clocks()
+    board_obj.board_driver.close_board()
     if(dac_status):
         raise RuntimeError("Error, the DAC RF clock for the FPGA was not detected, cannot upload waveforms without an RF clock present")
         
@@ -130,4 +151,5 @@ def dac_sawtooth_test():
     
     
 
-adc_readout_test() 
+#adc_readout_test() 
+dac_sawtooth_test()
