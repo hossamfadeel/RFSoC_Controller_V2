@@ -20,6 +20,10 @@ module dac_driver
     input wire s_axis_tvalid,
     output reg s_axis_tready,
 	
+	output wire [255:0] m1_axis_tdata,
+    output wire m1_axis_tvalid,
+    input wire m1_axis_tready,
+	
 	input wire trigger_in,
 	
 	input wire select_in
@@ -84,6 +88,8 @@ axis_sync_fifo #(mem_width) waveform_fifo
 	
 );
 
+assign m1_axis_tdata = s0_axis_tdata;
+assign m1_axis_tvalid = s0_axis_tvalid;
 
 //axis loopback mux
 wire waveform_fifo_tready_dummy;

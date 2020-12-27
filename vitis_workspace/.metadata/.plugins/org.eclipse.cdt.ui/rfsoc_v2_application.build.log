@@ -1,21 +1,6 @@
-16:24:52 **** Incremental Build of configuration Debug for project rfsoc_v2_application ****
+09:31:36 **** Incremental Build of configuration Debug for project rfsoc_v2_application ****
 make all 
-'Building file: D:/repos/RFSoC_Controller_V2/c_source/cmd_handler.c'
-'Invoking: ARM v8 gcc compiler'
-aarch64-none-elf-gcc -Wall -O0 -g3 -I"D:\repos\RFSoC_Controller_V2\c_source" -I"D:\repos\RFSoC_Controller_V2\c_source" -c -fmessage-length=0 -MT"src/c_source/cmd_handler.o" -D __BAREMETAL__ -ID:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/c_source/cmd_handler.d" -MT"src/c_source/cmd_handler.o" -o "src/c_source/cmd_handler.o" "D:/repos/RFSoC_Controller_V2/c_source/cmd_handler.c"
-'Finished building: D:/repos/RFSoC_Controller_V2/c_source/cmd_handler.c'
-' '
-'Building target: rfsoc_v2_application.elf'
-'Invoking: ARM v8 gcc linker'
-aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LD:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/bsplib/lib -o "rfsoc_v2_application.elf"  ./src/c_source/cmd_handler.o ./src/c_source/dma.o ./src/c_source/gpio.o ./src/c_source/rf.o ./src/c_source/uart.o  ./src/dma_test.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lgcc,-lc,-lmetal,--end-group
-'Finished building target: rfsoc_v2_application.elf'
-' '
-'Invoking: ARM v8 Print Size'
-aarch64-none-elf-size rfsoc_v2_application.elf  |tee "rfsoc_v2_application.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 205572	   9600	  32012	 247184	  3c590	rfsoc_v2_application.elf
-'Finished building: rfsoc_v2_application.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-16:24:53 Build Finished (took 1s.0ms)
+09:31:37 Build Finished (took 216ms)
 

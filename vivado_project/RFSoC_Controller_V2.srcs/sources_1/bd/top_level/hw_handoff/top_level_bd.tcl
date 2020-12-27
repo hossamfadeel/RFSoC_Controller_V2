@@ -377,10 +377,10 @@ proc create_root_design { parentCell } {
   # Create instance: system_ila_pl, and set properties
   set system_ila_pl [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_pl ]
   set_property -dict [ list \
-   CONFIG.C_BRAM_CNT {38.5} \
+   CONFIG.C_BRAM_CNT {2.5} \
    CONFIG.C_DATA_DEPTH {1024} \
    CONFIG.C_MON_TYPE {MIX} \
-   CONFIG.C_NUM_MONITOR_SLOTS {7} \
+   CONFIG.C_NUM_MONITOR_SLOTS {9} \
    CONFIG.C_NUM_OF_PROBES {1} \
    CONFIG.C_SLOT_0_APC_EN {0} \
    CONFIG.C_SLOT_0_AXI_DATA_SEL {1} \
@@ -410,6 +410,14 @@ proc create_root_design { parentCell } {
    CONFIG.C_SLOT_6_AXI_DATA_SEL {1} \
    CONFIG.C_SLOT_6_AXI_TRIG_SEL {1} \
    CONFIG.C_SLOT_6_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_7_APC_EN {0} \
+   CONFIG.C_SLOT_7_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_7_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_7_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_8_APC_EN {0} \
+   CONFIG.C_SLOT_8_AXI_DATA_SEL {1} \
+   CONFIG.C_SLOT_8_AXI_TRIG_SEL {1} \
+   CONFIG.C_SLOT_8_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
  ] $system_ila_pl
 
   # Create instance: system_ila_ps, and set properties
@@ -2104,6 +2112,10 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m0_axis] 
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m16_axis [get_bd_intf_pins axis_data_pl_to_ps_fifo/S_AXIS] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m16_axis]
 connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m16_axis] [get_bd_intf_pins axis_data_pl_to_ps_fifo/S_AXIS] [get_bd_intf_pins system_ila_pl/SLOT_2_AXIS]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m16_axis]
+connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m17_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m17_axis] [get_bd_intf_pins system_ila_pl/SLOT_7_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m17_axis]
+connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m18_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m18_axis] [get_bd_intf_pins system_ila_pl/SLOT_8_AXIS]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m18_axis]
   connect_bd_intf_net -intf_net rfsoc_pl_ctrl_verilo_0_m1_axis [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m1_axis] [get_bd_intf_pins usp_rf_data_converter_0/s01_axis]
 connect_bd_intf_net -intf_net [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m1_axis] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/m1_axis] [get_bd_intf_pins system_ila_pl/SLOT_3_AXIS]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets rfsoc_pl_ctrl_verilo_0_m1_axis]

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Thu Dec 24 14:52:01 2020
+-- Date        : Sat Dec 26 16:54:54 2020
 -- Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_pl_ctrl_verilo_0_0/top_level_rfsoc_pl_ctrl_verilo_0_0_stub.vhdl
@@ -118,7 +118,13 @@ entity top_level_rfsoc_pl_ctrl_verilo_0_0 is
     s14_axis_tready : out STD_LOGIC;
     s15_axis_tdata : in STD_LOGIC_VECTOR ( 127 downto 0 );
     s15_axis_tvalid : in STD_LOGIC;
-    s15_axis_tready : out STD_LOGIC
+    s15_axis_tready : out STD_LOGIC;
+    m17_axis_tdata : out STD_LOGIC_VECTOR ( 255 downto 0 );
+    m17_axis_tvalid : out STD_LOGIC;
+    m17_axis_tready : in STD_LOGIC;
+    m18_axis_tdata : out STD_LOGIC_VECTOR ( 255 downto 0 );
+    m18_axis_tvalid : out STD_LOGIC;
+    m18_axis_tready : in STD_LOGIC
   );
 
 end top_level_rfsoc_pl_ctrl_verilo_0_0;
@@ -127,7 +133,7 @@ architecture stub of top_level_rfsoc_pl_ctrl_verilo_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,rst,gpio_ctrl[15:0],s_axis_tdata[31:0],s_axis_tvalid,s_axis_tready,m16_axis_tdata[31:0],m16_axis_tvalid,m16_axis_tready,m0_axis_tdata[255:0],m0_axis_tvalid,m0_axis_tready,m1_axis_tdata[255:0],m1_axis_tvalid,m1_axis_tready,m2_axis_tdata[255:0],m2_axis_tvalid,m2_axis_tready,m3_axis_tdata[255:0],m3_axis_tvalid,m3_axis_tready,m4_axis_tdata[255:0],m4_axis_tvalid,m4_axis_tready,m5_axis_tdata[255:0],m5_axis_tvalid,m5_axis_tready,m6_axis_tdata[255:0],m6_axis_tvalid,m6_axis_tready,m7_axis_tdata[255:0],m7_axis_tvalid,m7_axis_tready,m8_axis_tdata[255:0],m8_axis_tvalid,m8_axis_tready,m9_axis_tdata[255:0],m9_axis_tvalid,m9_axis_tready,m10_axis_tdata[255:0],m10_axis_tvalid,m10_axis_tready,m11_axis_tdata[255:0],m11_axis_tvalid,m11_axis_tready,m12_axis_tdata[255:0],m12_axis_tvalid,m12_axis_tready,m13_axis_tdata[255:0],m13_axis_tvalid,m13_axis_tready,m14_axis_tdata[255:0],m14_axis_tvalid,m14_axis_tready,m15_axis_tdata[255:0],m15_axis_tvalid,m15_axis_tready,s0_axis_tdata[127:0],s0_axis_tvalid,s0_axis_tready,s1_axis_tdata[127:0],s1_axis_tvalid,s1_axis_tready,s2_axis_tdata[127:0],s2_axis_tvalid,s2_axis_tready,s3_axis_tdata[127:0],s3_axis_tvalid,s3_axis_tready,s4_axis_tdata[127:0],s4_axis_tvalid,s4_axis_tready,s5_axis_tdata[127:0],s5_axis_tvalid,s5_axis_tready,s6_axis_tdata[127:0],s6_axis_tvalid,s6_axis_tready,s7_axis_tdata[127:0],s7_axis_tvalid,s7_axis_tready,s8_axis_tdata[127:0],s8_axis_tvalid,s8_axis_tready,s9_axis_tdata[127:0],s9_axis_tvalid,s9_axis_tready,s10_axis_tdata[127:0],s10_axis_tvalid,s10_axis_tready,s11_axis_tdata[127:0],s11_axis_tvalid,s11_axis_tready,s12_axis_tdata[127:0],s12_axis_tvalid,s12_axis_tready,s13_axis_tdata[127:0],s13_axis_tvalid,s13_axis_tready,s14_axis_tdata[127:0],s14_axis_tvalid,s14_axis_tready,s15_axis_tdata[127:0],s15_axis_tvalid,s15_axis_tready";
+attribute black_box_pad_pin of stub : architecture is "clk,rst,gpio_ctrl[15:0],s_axis_tdata[31:0],s_axis_tvalid,s_axis_tready,m16_axis_tdata[31:0],m16_axis_tvalid,m16_axis_tready,m0_axis_tdata[255:0],m0_axis_tvalid,m0_axis_tready,m1_axis_tdata[255:0],m1_axis_tvalid,m1_axis_tready,m2_axis_tdata[255:0],m2_axis_tvalid,m2_axis_tready,m3_axis_tdata[255:0],m3_axis_tvalid,m3_axis_tready,m4_axis_tdata[255:0],m4_axis_tvalid,m4_axis_tready,m5_axis_tdata[255:0],m5_axis_tvalid,m5_axis_tready,m6_axis_tdata[255:0],m6_axis_tvalid,m6_axis_tready,m7_axis_tdata[255:0],m7_axis_tvalid,m7_axis_tready,m8_axis_tdata[255:0],m8_axis_tvalid,m8_axis_tready,m9_axis_tdata[255:0],m9_axis_tvalid,m9_axis_tready,m10_axis_tdata[255:0],m10_axis_tvalid,m10_axis_tready,m11_axis_tdata[255:0],m11_axis_tvalid,m11_axis_tready,m12_axis_tdata[255:0],m12_axis_tvalid,m12_axis_tready,m13_axis_tdata[255:0],m13_axis_tvalid,m13_axis_tready,m14_axis_tdata[255:0],m14_axis_tvalid,m14_axis_tready,m15_axis_tdata[255:0],m15_axis_tvalid,m15_axis_tready,s0_axis_tdata[127:0],s0_axis_tvalid,s0_axis_tready,s1_axis_tdata[127:0],s1_axis_tvalid,s1_axis_tready,s2_axis_tdata[127:0],s2_axis_tvalid,s2_axis_tready,s3_axis_tdata[127:0],s3_axis_tvalid,s3_axis_tready,s4_axis_tdata[127:0],s4_axis_tvalid,s4_axis_tready,s5_axis_tdata[127:0],s5_axis_tvalid,s5_axis_tready,s6_axis_tdata[127:0],s6_axis_tvalid,s6_axis_tready,s7_axis_tdata[127:0],s7_axis_tvalid,s7_axis_tready,s8_axis_tdata[127:0],s8_axis_tvalid,s8_axis_tready,s9_axis_tdata[127:0],s9_axis_tvalid,s9_axis_tready,s10_axis_tdata[127:0],s10_axis_tvalid,s10_axis_tready,s11_axis_tdata[127:0],s11_axis_tvalid,s11_axis_tready,s12_axis_tdata[127:0],s12_axis_tvalid,s12_axis_tready,s13_axis_tdata[127:0],s13_axis_tvalid,s13_axis_tready,s14_axis_tdata[127:0],s14_axis_tvalid,s14_axis_tready,s15_axis_tdata[127:0],s15_axis_tvalid,s15_axis_tready,m17_axis_tdata[255:0],m17_axis_tvalid,m17_axis_tready,m18_axis_tdata[255:0],m18_axis_tvalid,m18_axis_tready";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "rfsoc_pl_ctrl_verilog_wrapper,Vivado 2020.2";
 begin

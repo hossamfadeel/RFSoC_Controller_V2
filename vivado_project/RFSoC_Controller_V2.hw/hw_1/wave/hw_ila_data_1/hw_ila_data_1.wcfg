@@ -9,15 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="4097fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="493fs"></ZoomStartTime>
+      <ZoomEndTime time="542fs"></ZoomEndTime>
+      <Cursor1Time time="533fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="837"></NameColumnWidth>
-      <ValueColumnWidth column_width="231"></ValueColumnWidth>
+      <NameColumnWidth column_width="803"></NameColumnWidth>
+      <ValueColumnWidth column_width="466"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="10" />
    <wave_markers>
    </wave_markers>
    <wvobject fp_name="top_level_i/system_ila_pl/inst/probe0_1" type="array">
@@ -28,68 +28,6 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="group2" type="group">
-      <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : Interface</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Detail_Data">Interface_(i1:s0)_(axis_data_fifo_1_M_AXIS)_tooltip</obj_property>
-      <obj_property name="Render_Data">Interface_(i1:s0)_(axis_data_fifo_1_M_AXIS)</obj_property>
-      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <wvobject fp_name="group3" type="group">
-         <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : T Channel</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="Detail_Data">T_Channel_(i1:s0)_(axis_data_fifo_1_M_AXIS)_tooltip</obj_property>
-         <obj_property name="Render_Data">T_Channel_(i1:s0)_(axis_data_fifo_1_M_AXIS)</obj_property>
-         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-         <obj_property name="CustomSignalColor">Purple</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tvalid" type="logic">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tvalid</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tvalid</obj_property>
-            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TVALID</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tready" type="logic">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tready</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
-            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TREADY</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tlast" type="logic">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tlast</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tlast</obj_property>
-            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TLAST</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tdata" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tdata[31:0]</obj_property>
-            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TDATA</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tkeep" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tkeep[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axis_tkeep[3:0]</obj_property>
-            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TKEEP</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
    </wvobject>
    <wvobject fp_name="group9" type="group">
       <obj_property name="label">slot_1 : rfsoc_pl_ctrl_verilo_0_m0_axis : Interface</obj_property>
@@ -153,7 +91,6 @@
       <obj_property name="CustomSignalColor">Cornsilk</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="group16" type="group">
          <obj_property name="label">slot_2 : rfsoc_pl_ctrl_verilo_0_m16_axis : T Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -405,6 +342,171 @@
             <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_6_axis_tdata[255:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_6_axis_tdata[255:0]</obj_property>
             <obj_property name="label">slot_6 : rfsoc_pl_ctrl_verilo_0_m4_axis : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group2" type="group">
+      <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s0)_(axis_data_fifo_1_M_AXIS)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s0)_(axis_data_fifo_1_M_AXIS)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group3" type="group">
+         <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s0)_(axis_data_fifo_1_M_AXIS)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s0)_(axis_data_fifo_1_M_AXIS)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tvalid</obj_property>
+            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tready</obj_property>
+            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tlast</obj_property>
+            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_0_axis_tdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_0_axis_tdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axis_tdata[31:0]</obj_property>
+            <obj_property name="label">slot_0 : axis_data_fifo_1_M_AXIS : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group285" type="group">
+      <obj_property name="label">slot_7 : rfsoc_pl_ctrl_verilo_0_m17_axis : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s7)_(rfsoc_pl_ctrl_verilo_0_m17_axis)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s7)_(rfsoc_pl_ctrl_verilo_0_m17_axis)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group286" type="group">
+         <obj_property name="label">slot_7 : rfsoc_pl_ctrl_verilo_0_m17_axis : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s7)_(rfsoc_pl_ctrl_verilo_0_m17_axis)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s7)_(rfsoc_pl_ctrl_verilo_0_m17_axis)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_7_axis_tvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_7_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_7_axis_tvalid</obj_property>
+            <obj_property name="label">slot_7 : rfsoc_pl_ctrl_verilo_0_m17_axis : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_7_axis_tready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_7_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_7_axis_tready</obj_property>
+            <obj_property name="label">slot_7 : rfsoc_pl_ctrl_verilo_0_m17_axis : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_7_axis_tlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_7_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_7_axis_tlast</obj_property>
+            <obj_property name="label">slot_7 : rfsoc_pl_ctrl_verilo_0_m17_axis : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_7_axis_tdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_7_axis_tdata[255:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_7_axis_tdata[255:0]</obj_property>
+            <obj_property name="label">slot_7 : rfsoc_pl_ctrl_verilo_0_m17_axis : TDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group291" type="group">
+      <obj_property name="label">slot_8 : rfsoc_pl_ctrl_verilo_0_m18_axis : Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s8)_(rfsoc_pl_ctrl_verilo_0_m18_axis)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s8)_(rfsoc_pl_ctrl_verilo_0_m18_axis)</obj_property>
+      <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group292" type="group">
+         <obj_property name="label">slot_8 : rfsoc_pl_ctrl_verilo_0_m18_axis : T Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">T_Channel_(i1:s8)_(rfsoc_pl_ctrl_verilo_0_m18_axis)_tooltip</obj_property>
+         <obj_property name="Render_Data">T_Channel_(i1:s8)_(rfsoc_pl_ctrl_verilo_0_m18_axis)</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
+         <obj_property name="CustomSignalColor">Purple</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_8_axis_tvalid" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_8_axis_tvalid</obj_property>
+            <obj_property name="ObjectShortName">net_slot_8_axis_tvalid</obj_property>
+            <obj_property name="label">slot_8 : rfsoc_pl_ctrl_verilo_0_m18_axis : TVALID</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_8_axis_tready" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_8_axis_tready</obj_property>
+            <obj_property name="ObjectShortName">net_slot_8_axis_tready</obj_property>
+            <obj_property name="label">slot_8 : rfsoc_pl_ctrl_verilo_0_m18_axis : TREADY</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_8_axis_tlast" type="logic">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_8_axis_tlast</obj_property>
+            <obj_property name="ObjectShortName">net_slot_8_axis_tlast</obj_property>
+            <obj_property name="label">slot_8 : rfsoc_pl_ctrl_verilo_0_m18_axis : TLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="top_level_i/system_ila_pl/inst/net_slot_8_axis_tdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">top_level_i/system_ila_pl/inst/net_slot_8_axis_tdata[255:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_8_axis_tdata[255:0]</obj_property>
+            <obj_property name="label">slot_8 : rfsoc_pl_ctrl_verilo_0_m18_axis : TDATA</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

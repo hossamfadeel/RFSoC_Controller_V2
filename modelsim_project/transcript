@@ -515,3 +515,421 @@ run -all
 # Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
 run -all
 # rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of axis_ps_to_pl.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+# Loading work.axis_ps_to_pl_sv_unit
+# Loading work.axis_ps_to_pl
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/s_axis_tready
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/clk \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/rst \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/m_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/m_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/m_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/word_cnt \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/word_buff \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/async_fifo_data \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/async_fifo_valid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/async_fifo_ready
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/s_axis_tready_int
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+# Compile of rfsoc_pl_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tready
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 491
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/s_axis_tdata_int \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/s_axis_tvalid_int \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/s_axis_tready_int
+# Compile of axis_selector.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.axis_selector
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 401
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tready
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 401
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 368
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/channel_select \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/channel_select_int
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 373
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/async_fifo_data \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/async_fifo_valid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/async_fifo_ready
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/clk \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/rst \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tready
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 373
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 401
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 373
+run -all
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/clk \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/channel_select \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/m_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/m_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_sel/m_axis_tready
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 372
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 366
+run -all
+# Break in Module rfsoc_pl_ctrl_tb at D:/repos/RFSoC_Controller_V2/verilog_source/test_benches/rfsoc_pl_ctrl_tb.sv line 374
+# Compile of axis_ps_to_pl.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+# Loading work.axis_ps_to_pl_sv_unit
+# Loading work.axis_ps_to_pl
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m0_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m1_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m2_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m3_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m4_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m5_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m6_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m7_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m8_axis_tdata
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m0_axis_tvalid
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m1_axis_tvalid
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/s_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/m_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/m_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/axis_ps_pl_crossing/m_axis_tready
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# Compile of rfsoc_pl_ctrl_verilog_wrapper.v was successful.
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+# 3 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+# Loading work.rfsoc_pl_ctrl_verilog_wrapper
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of dac_driver.sv was successful.
+# Compile of rfsoc_pl_ctrl.sv failed with 1 errors.
+# Compile of rfsoc_pl_ctrl_verilog_wrapper.v failed with 1 errors.
+# Compile of rfsoc_pl_ctrl_tb.sv failed with 1 errors.
+# 4 compiles, 3 failed with 3 errors.
+# Compile of rfsoc_pl_ctrl.sv was successful.
+# Compile of rfsoc_pl_ctrl_verilog_wrapper.v was successful.
+# Compile of rfsoc_pl_ctrl_tb.sv failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+# Loading work.rfsoc_pl_ctrl_verilog_wrapper
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+# Loading work.dac_driver_sv_unit
+# Loading work.dac_driver
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m17_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m17_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m17_axis_tready \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m18_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m18_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m18_axis_tready
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+add wave -position insertpoint  \
+{sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/genblk1[0]/genblk1/real_channel_ctrl/s0_axis_tdata} \
+{sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/genblk1[0]/genblk1/real_channel_ctrl/s0_axis_tready} \
+{sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/genblk1[0]/genblk1/real_channel_ctrl/s0_axis_tvalid}
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+add wave -position insertpoint  \
+{sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/genblk1[0]/genblk1/real_channel_ctrl/m1_axis_tdata} \
+{sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/genblk1[0]/genblk1/real_channel_ctrl/m1_axis_tvalid}
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_sv_unit
+# Loading work.rfsoc_pl_ctrl
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+add wave -position insertpoint  \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m0_axis_tdata \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m0_axis_tvalid \
+sim:/rfsoc_pl_ctrl_tb/dut/rfsoc_pl_ctrl_inst/m0_axis_tready
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 40 errors total, 40 DAC errors, 0 ADC errors

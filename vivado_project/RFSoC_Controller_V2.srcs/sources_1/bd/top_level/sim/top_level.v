@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Thu Dec 24 14:59:04 2020
+//Date        : Sat Dec 26 16:48:07 2020
 //Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -1156,6 +1156,10 @@ module top_level
   (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m16_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [31:0]rfsoc_pl_ctrl_verilo_0_m16_axis_TDATA;
   (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m16_axis xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m16_axis_TREADY;
   (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m16_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m16_axis_TVALID;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m17_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [255:0]rfsoc_pl_ctrl_verilo_0_m17_axis_TDATA;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m17_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m17_axis_TVALID;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m18_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [255:0]rfsoc_pl_ctrl_verilo_0_m18_axis_TDATA;
+  (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m18_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m18_axis_TVALID;
   (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m1_axis xilinx.com:interface:axis:1.0 None TDATA" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [255:0]rfsoc_pl_ctrl_verilo_0_m1_axis_TDATA;
   (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m1_axis xilinx.com:interface:axis:1.0 None TREADY" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m1_axis_TREADY;
   (* CONN_BUS_INFO = "rfsoc_pl_ctrl_verilo_0_m1_axis xilinx.com:interface:axis:1.0 None TVALID" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire rfsoc_pl_ctrl_verilo_0_m1_axis_TVALID;
@@ -1752,6 +1756,12 @@ module top_level
         .m16_axis_tdata(rfsoc_pl_ctrl_verilo_0_m16_axis_TDATA),
         .m16_axis_tready(rfsoc_pl_ctrl_verilo_0_m16_axis_TREADY),
         .m16_axis_tvalid(rfsoc_pl_ctrl_verilo_0_m16_axis_TVALID),
+        .m17_axis_tdata(rfsoc_pl_ctrl_verilo_0_m17_axis_TDATA),
+        .m17_axis_tready(1'b1),
+        .m17_axis_tvalid(rfsoc_pl_ctrl_verilo_0_m17_axis_TVALID),
+        .m18_axis_tdata(rfsoc_pl_ctrl_verilo_0_m18_axis_TDATA),
+        .m18_axis_tready(1'b1),
+        .m18_axis_tvalid(rfsoc_pl_ctrl_verilo_0_m18_axis_TVALID),
         .m1_axis_tdata(rfsoc_pl_ctrl_verilo_0_m1_axis_TDATA),
         .m1_axis_tready(rfsoc_pl_ctrl_verilo_0_m1_axis_TREADY),
         .m1_axis_tvalid(rfsoc_pl_ctrl_verilo_0_m1_axis_TVALID),
@@ -1874,6 +1884,14 @@ module top_level
         .SLOT_6_AXIS_tlast(1'b0),
         .SLOT_6_AXIS_tready(rfsoc_pl_ctrl_verilo_0_m4_axis_TREADY),
         .SLOT_6_AXIS_tvalid(rfsoc_pl_ctrl_verilo_0_m4_axis_TVALID),
+        .SLOT_7_AXIS_tdata(rfsoc_pl_ctrl_verilo_0_m17_axis_TDATA),
+        .SLOT_7_AXIS_tlast(1'b0),
+        .SLOT_7_AXIS_tready(1'b1),
+        .SLOT_7_AXIS_tvalid(rfsoc_pl_ctrl_verilo_0_m17_axis_TVALID),
+        .SLOT_8_AXIS_tdata(rfsoc_pl_ctrl_verilo_0_m18_axis_TDATA),
+        .SLOT_8_AXIS_tlast(1'b0),
+        .SLOT_8_AXIS_tready(1'b1),
+        .SLOT_8_AXIS_tvalid(rfsoc_pl_ctrl_verilo_0_m18_axis_TVALID),
         .clk(usp_rf_data_converter_0_clk_dac0),
         .probe0(gpio_buffer_0_gpio_out),
         .resetn(rst_ps8_0_100M1_peripheral_aresetn));

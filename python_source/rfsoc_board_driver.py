@@ -16,6 +16,8 @@ config_filename = "rfsoc_config_file.dat"
 UART_TIMEOUT = 3 #in seconds
 BAUDRATE = 115200
 
+GARBAGE_WORD = [0x7FFF,0,0x7FFF,0,0x7FFF,0,0x7FFF,0,0x7FFF,0,0x7FFF,0,0x7FFF,0,0x7FFF,0]#Used for flushing DMA
+
 #Command definitions
 CMD_PREAMBLE = 0xAA
 CMD_ACK = 0x00
@@ -102,16 +104,21 @@ class rfsoc_board_driver:
         return 1
     
     #Returns 0 on success
+    #Set channel to -1 for buffer flush
     def select_channel(self, channel_num):
         
-        if(channel_num < 0 or channel_num > 15):
+        if(channel_num < -1 or channel_num > 15):
             print("Error, channel number must be between 0 and 15")
             return 1
         
         if(self.dummy_mode):
             return 0
         
-        self.port.write([CMD_PREAMBLE, CMD_SELECT_CHANNEL, channel_num & 0xFF])
+        if(channel_num == -1):
+            channel_byte = 0xFF
+        else:
+            channel_byte = channel_num & 0xFF
+        self.port.write([CMD_PREAMBLE, CMD_SELECT_CHANNEL, channel_byte])
         res = self.wait_ack()
         if(res == CMD_ACK):
             return 0
@@ -361,8 +368,13 @@ class rfsoc_board_driver:
         
         bytes_list = []
         
-        for s in samples:
-            bytes_list.append(s.to_bytes(2, byteorder='little', signed = True))
+        #List of samples actually needs to be reversed
+        samples_r = samples.copy()
+        samples_r.reverse()
+        
+        
+        for s in samples_r:
+            bytes_list += list(s.to_bytes(2, byteorder='little', signed = True))
             
         
         self.port.write([CMD_PREAMBLE, CMD_WRITE_AXIS])
@@ -454,13 +466,16 @@ class rfsoc_board:
         if(self.board_driver.set_adc_dummy_data(dummy_adc)):
             return 1
         
-        #Loop through the channels and configure then
-        for c in self. channel_list:
+        #Loop through the channels and configure
+        
+        for c in self.channel_list:
+            if(c.type == "DAC"):
+                res = self.configure_dac_channel(c)
+                if(res):
+                    return 1
+        for c in self.channel_list:
             if(c.type == "ADC"):
                 if(self.configure_adc_channel(c)):
-                    return 1
-            else:
-                if(self.configure_dac_channel(c)):
                     return 1
         #Success
         self.board_driver.close_board()
@@ -502,7 +517,12 @@ class rfsoc_board:
             
         #Set the post delay cycles 
         if(self.board_driver.set_post_delay(channel.post_delay_cycles)):
-            print("Error while trying to set post delay cycles, aborting DAC channel, configuration")
+            print("Error while trying to set post delay cycles, aborting DAC channel configuration")
+            return 1
+        
+        #Set the run cycles
+        if(self.board_driver.set_run_cycles(channel.run_cycles)):
+            print("Error while trying to set run cycles, aborting DAC channel configuration")
             return 1
         
         #Now we load the waveform in by putting samples together
@@ -510,17 +530,35 @@ class rfsoc_board:
             print("Error, channel #" + str(channel.channel_num) + " must have a waveform samples list with a length of a multiple of 16")
             return 1
         
+        flushed = 0#Flag for if we've flushed the DAC input for the garbage write yet0
         for i in range(0, len(channel.waveform_samples), 16):
             #Build the sub-array
             samples_list = []
             for j in range(0, 16):
                 samples_list.append(channel.waveform_samples[i+j])
+                
+            #If we haven't flushed yet
+            if(flushed == 0):
+                #Set the channel to -1 for flush
+                self.board_driver.select_channel(-1)
+                #Do a garbage write
+                self.board_driver.write_axis_word(samples_list)
+                #Reselect the correct channel
+                self.board_driver.select_channel(channel.channel_num)
+                #Set the flushed flag
+                flushed = 1
+                continue #Go to next word
+               
+                
+                
             #Send the samples list
             if(self.board_driver.write_axis_word(samples_list)):
                 print("Error while writing DAC word")
                 return 1
             
-                
+        #Do one more garbage write to get that last write to go through
+        self.board_driver.write_axis_word(GARBAGE_WORD)
+        
         #Set the mux select to 1 to permit normal operation
         if(self.board_driver.set_mux_sel(1)):
             print("Error while trying to set DAC mux sel, aborting DAC channel configuration")
@@ -644,6 +682,8 @@ NANOSECONDS_PER_DAC_WORD = 4
 DAC_MAX_VALUE = 32767 - 5#0x7FFF
 DAC_MIN_VALUE = -32768 + 5#0x8000
 DAC_FIFO_LEN = 4096 * 16 # in number of samples
+
+MIN_WAVE_SAMPLES = 128 #This is for fixing issues with the 3 buffer stages in the waveform fifos
             
 class rfsoc_channel:
 
@@ -892,7 +932,7 @@ class rfsoc_channel:
         fine_delay = int((self.pre_delay * 4) % 16)
         
         #Set up a preliminary number of run cycles
-        self.run_cycles = (self.period/4) * self.num_repeat_cycles
+        self.run_cycles = int((self.period/4) * self.num_repeat_cycles)
         
         self.mask_samples = []
         #If the fine delay is not 0
@@ -925,6 +965,14 @@ class rfsoc_channel:
         #Check if it's too long
         if(len(self.waveform_samples) > DAC_FIFO_LEN):
             raise ValueError("Error, waveform is larger than size of DAC fifo, waveform is " + str(len(self.waveform_samples)) + " samples long, DAC fifo can only hold " + str(DAC_FIFO_LEN) + " samples")
+            
+        #Check if it's too short
+        if(len(self.waveform_samples) < MIN_WAVE_SAMPLES):
+            #Append it to itself until it's long enougn
+            wave_cpy = self.waveform_samples.copy()
+            self.waveform_samples = []
+            while(len(self.waveform_samples) < MIN_WAVE_SAMPLES):
+                self.waveform_samples += wave_cpy
         
         #Set the post delay and pre_delay
         self.pre_delay_cycles = coarse_delay

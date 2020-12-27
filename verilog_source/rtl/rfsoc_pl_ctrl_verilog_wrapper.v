@@ -153,7 +153,15 @@ module rfsoc_pl_ctrl_verilog_wrapper
 	
 	(* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) input wire [127:0] s15_axis_tdata,
     (* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) input wire s15_axis_tvalid,
-    (* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) output wire s15_axis_tready
+    (* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) output wire s15_axis_tready,
+	
+	(* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) output wire [255:0] m17_axis_tdata,
+	(* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) output wire m17_axis_tvalid,
+	(* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) input wire m17_axis_tready,//not connected to anything
+	
+	(* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) output wire [255:0] m18_axis_tdata,
+	(* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) output wire m18_axis_tvalid,
+	(* X_INTERFACE_PARAMETER = "FREQ_HZ 250000000"*) input wire m18_axis_tready//not connected to anything
 	
 );
 
@@ -307,7 +315,15 @@ rfsoc_pl_ctrl rfsoc_pl_ctrl_inst
 	
 	s15_axis_tdata,
     s15_axis_tvalid,
-    s15_axis_tready
+    s15_axis_tready,
+	
+	m17_axis_tdata,
+	m17_axis_tvalid,
+	m17_axis_tready,//not connected to anything
+	
+	m18_axis_tdata,
+	m18_axis_tvalid,
+	m18_axis_tready//not connected to anything
 	
 );
 

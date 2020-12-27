@@ -145,7 +145,7 @@ wire s15_axis_tvalid = 1;
 wire s15_axis_tready;
 
 
-integer i, j, k;
+integer i, j, k, l;
 
 wire [255:0] test_mask = {{8{16'h0000}}, {8{16'hFFFF}}};
 reg [31:0] axis_word_reg;
@@ -154,6 +154,15 @@ reg [31:0] axis_word_reg;
 wire [31:0] adc_axis_tdata;
 wire adc_axis_tvalid;
 reg adc_axis_tready;
+
+//Debug output bus
+wire [255:0] m17_axis_tdata;
+wire m17_axis_tvalid;
+wire m17_axis_tready;
+
+wire [255:0] m18_axis_tdata;
+wire m18_axis_tvalid;
+wire m18_axis_tready;
 
 rfsoc_pl_ctrl_verilog_wrapper dut
 (
@@ -301,7 +310,15 @@ rfsoc_pl_ctrl_verilog_wrapper dut
 	
 	s15_axis_tdata,
     s15_axis_tvalid,
-    s15_axis_tready
+    s15_axis_tready,
+	
+	m17_axis_tdata,
+	m17_axis_tvalid,
+	m17_axis_tready,//not connected to anything
+	
+	m18_axis_tdata,
+	m18_axis_tvalid,
+	m18_axis_tready//not connected to anything
 	
 );
 
@@ -358,6 +375,14 @@ initial begin
 	repeat(10) clk_cycle();
 	rst <= 1;
 	repeat(10) clk_cycle();
+	
+	//Input flushing testing
+	select_channel(8'hFF);
+	repeat(10) clk_cycle();
+	for(j = 0; j < 10; j = j + 1) begin
+		load_axis_word(0);
+	end
+	repeat(10) clk_cycle();
 
 
 	for(j = 0; j < 16; j = j + 1) begin
@@ -389,9 +414,29 @@ initial begin
 		//Load in 5 words (40 ps words) (5*16 samples total)
 		axis_word_reg <= 32'haaaaaaaa;
 		clk_cycle();
+		
+		//Do a pretend garbage write of an entire dac word
+		repeat(10) clk_cycle();
+		select_channel(8'hFF);
+		repeat(10) clk_cycle();
+		for(k = 0; k < 8; k = k + 1) begin
+			load_axis_word(0);
+			repeat(10) clk_cycle();
+		end
+		select_channel(j);
+		repeat(10) clk_cycle();
+		
+		//For debugging purposes k lim is 2
 		for(k = 0; k < 5; k = k + 1) begin
-			repeat(8) load_axis_word(axis_word_reg);
-			clk_cycle();
+			//Trying to make this more cycle-accurate for debugging
+			for(l = 0; l < 4; l = l + 1) begin
+				load_axis_word(axis_word_reg);
+				clk_cycle();
+				load_axis_word(axis_word_reg);
+				clk_cycle();
+				clk_cycle();
+			end
+			repeat(20) clk_cycle();
 			axis_word_reg = axis_word_reg + 32'h11111111;
 		end
 		axis_word_reg <= 32'haaaaaaaa;
@@ -584,7 +629,12 @@ begin
 	
 	for(i = 0; i < 16; i = i + 1) begin
 
-		gpio_ctrl[sdata] <= i == channel_num ? 1'b1 : 1'b0;
+		if(channel_num == 8'hFF) begin
+			gpio_ctrl[sdata] <= 0;
+		end
+		else begin
+			gpio_ctrl[sdata] <= i == channel_num ? 1'b1 : 1'b0;
+		end
 	
 		clk_cycle();
 		gpio_ctrl[channel_sel_clk] <= 1;

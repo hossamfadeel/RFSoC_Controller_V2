@@ -159,10 +159,16 @@ module top_level_rfsoc_pl_ctrl_verilo_0_0 (
   s14_axis_tready,
   s15_axis_tdata,
   s15_axis_tvalid,
-  s15_axis_tready
+  s15_axis_tready,
+  m17_axis_tdata,
+  m17_axis_tvalid,
+  m17_axis_tready,
+  m18_axis_tdata,
+  m18_axis_tvalid,
+  m18_axis_tready
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m0_axis:m10_axis:m11_axis:m12_axis:m13_axis:m14_axis:m15_axis:m16_axis:m1_axis:m2_axis:m3_axis:m4_axis:m5_axis:m6_axis:m7_axis:m8_axis:m9_axis:s0_axis:s10_axis:s11_axis:s12_axis:s13_axis:s14_axis:s15_axis:s1_axis:s2_axis:s3_axis:s4_axis:s5_axis:s6_axis:s7_axis:s8_axis:s9_axis:s_axis, ASSOCIATED_RESET rst, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m0_axis:m10_axis:m11_axis:m12_axis:m13_axis:m14_axis:m15_axis:m16_axis:m17_axis:m18_axis:m1_axis:m2_axis:m3_axis:m4_axis:m5_axis:m6_axis:m7_axis:m8_axis:m9_axis:s0_axis:s10_axis:s11_axis:s12_axis:s13_axis:s14_axis:s15_axis:s1_axis:s2_axis:s3_axis:s4_axis:s5_axis:s6_axis:s7_axis:s8_axis:s9_axis:s_axis, ASSOCIATED_RESET rst, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -407,6 +413,20 @@ input wire s15_axis_tvalid;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s15_axis, FREQ_HZ 250000000, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s15_axis TREADY" *)
 output wire s15_axis_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m17_axis TDATA" *)
+output wire [255 : 0] m17_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m17_axis TVALID" *)
+output wire m17_axis_tvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m17_axis, FREQ_HZ 250000000, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m17_axis TREADY" *)
+input wire m17_axis_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m18_axis TDATA" *)
+output wire [255 : 0] m18_axis_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m18_axis TVALID" *)
+output wire m18_axis_tvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m18_axis, FREQ_HZ 250000000, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m18_axis TREADY" *)
+input wire m18_axis_tready;
 
   rfsoc_pl_ctrl_verilog_wrapper #(
     .ps_axis_width(32)
@@ -515,6 +535,12 @@ output wire s15_axis_tready;
     .s14_axis_tready(s14_axis_tready),
     .s15_axis_tdata(s15_axis_tdata),
     .s15_axis_tvalid(s15_axis_tvalid),
-    .s15_axis_tready(s15_axis_tready)
+    .s15_axis_tready(s15_axis_tready),
+    .m17_axis_tdata(m17_axis_tdata),
+    .m17_axis_tvalid(m17_axis_tvalid),
+    .m17_axis_tready(m17_axis_tready),
+    .m18_axis_tdata(m18_axis_tdata),
+    .m18_axis_tvalid(m18_axis_tvalid),
+    .m18_axis_tready(m18_axis_tready)
   );
 endmodule

@@ -4406,6 +4406,24 @@ module bd_9bbd_g_inst_0_gigantic_mux # (
      assign m_slot_6_axis_tid = slot_6_axis_tid ;
      assign m_slot_6_axis_tkeep = slot_6_axis_tkeep ;
      assign m_slot_6_axis_tdest = slot_6_axis_tdest ;
+     assign m_slot_7_axis_tvalid = slot_7_axis_tvalid ;
+     assign m_slot_7_axis_tready = slot_7_axis_tready ;
+     assign m_slot_7_axis_tdata = slot_7_axis_tdata ;
+     assign m_slot_7_axis_tstrb = slot_7_axis_tstrb ;
+     assign m_slot_7_axis_tlast = slot_7_axis_tlast ;
+     assign m_slot_7_axis_tuser = slot_7_axis_tuser ;
+     assign m_slot_7_axis_tid = slot_7_axis_tid ;
+     assign m_slot_7_axis_tkeep = slot_7_axis_tkeep ;
+     assign m_slot_7_axis_tdest = slot_7_axis_tdest ;
+     assign m_slot_8_axis_tvalid = slot_8_axis_tvalid ;
+     assign m_slot_8_axis_tready = slot_8_axis_tready ;
+     assign m_slot_8_axis_tdata = slot_8_axis_tdata ;
+     assign m_slot_8_axis_tstrb = slot_8_axis_tstrb ;
+     assign m_slot_8_axis_tlast = slot_8_axis_tlast ;
+     assign m_slot_8_axis_tuser = slot_8_axis_tuser ;
+     assign m_slot_8_axis_tid = slot_8_axis_tid ;
+     assign m_slot_8_axis_tkeep = slot_8_axis_tkeep ;
+     assign m_slot_8_axis_tdest = slot_8_axis_tdest ;
 
     
     

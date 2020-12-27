@@ -30,7 +30,7 @@ always @ (*) begin
 
 	//Default assignment
 	if(channel_select_int == 0) begin
-		s_axis_tready <= 0;
+		s_axis_tready <= 1;
 		m_axis_tdata <= 0;
 		m_axis_tvalid <= 0;
 	end

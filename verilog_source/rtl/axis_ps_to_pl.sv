@@ -10,10 +10,12 @@ module axis_ps_to_pl
 	
 	input wire rst,
 	
+	input wire [15:0] channel_select,
+	
 	//AXIS input from PS
 	input wire [ps_axis_width-1:0] s_axis_tdata,
     input wire s_axis_tvalid,
-    output wire s_axis_tready,
+    output reg s_axis_tready,
 	
 	
 	//AXIS output to PL
@@ -33,8 +35,7 @@ reg [255:0] async_fifo_data;
 reg async_fifo_valid;
 wire async_fifo_ready;
 
-//ready to receive data when the async fifo is not full
-assign s_axis_tready = async_fifo_ready;
+
 
 //fifo instantiation
 axis_sync_fifo #(4, 256) ps_to_pl_sync_fifo 
@@ -59,6 +60,8 @@ begin
 	async_fifo_valid <= 0;
 	word_cnt <= 0;
 	word_buff <= 0;
+	
+	s_axis_tready <= 0;
 
 end
 endtask
@@ -78,17 +81,29 @@ always @ (posedge clk or negedge rst) begin
 		
 		//Reset write line for async fifo interface
 		async_fifo_valid <= 0;
+		
+		//Always ready to read data till we are not
+		s_axis_tready <= 1;
 
 		//if there is an incomming word from PS
-		if(s_axis_tvalid) begin
+		//And a challel is selected
+		if(s_axis_tvalid && channel_select != 0) begin
 		
 			//If this is the last word in the sequence
 			if(word_cnt == (ps_per_pl-1)) begin
-				//Push this word and the buffer out to the async fifo
-				async_fifo_data <= {word_buff[255-ps_axis_width:0], s_axis_tdata};
-				word_buff <= {word_buff[255-ps_axis_width:0], s_axis_tdata};
-				async_fifo_valid <= 1;
-				word_cnt <= 0;
+				//If the async fifo is ready
+				if(async_fifo_ready) begin
+					//Push this word and the buffer out to the async fifo
+					async_fifo_data <= {word_buff[255-ps_axis_width:0], s_axis_tdata};
+					word_buff <= {word_buff[255-ps_axis_width:0], s_axis_tdata};
+					async_fifo_valid <= 1;
+					word_cnt <= 0;
+					
+					s_axis_tready <= 1;//Indicating we read this word
+				end
+				else begin
+					s_axis_tready <= 0;//Indicating we did not read this word
+				end
 			end
 			else begin
 				//Store this word in the correct buffer position

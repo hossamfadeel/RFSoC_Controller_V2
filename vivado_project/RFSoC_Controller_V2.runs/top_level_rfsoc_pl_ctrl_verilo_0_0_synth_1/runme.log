@@ -16,17 +16,17 @@ WARNING: [IP_Flow 19-3571] IP 'top_level_rfsoc_pl_ctrl_verilo_0_0' is restricted
 * Module reference is stale and needs refreshing.
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu29dr'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu29dr'
-INFO: [Common 17-86] Your Synthesis license expires in 15 day(s)
+INFO: [Common 17-86] Your Synthesis license expires in 10 day(s)
 INFO: [Device 21-403] Loading part xczu29dr-ffvf1760-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 259672
+INFO: [Synth 8-7075] Helper process launched with PID 219968
 load diablo GTM unisim library
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo with formal parameter declaration list [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:108]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axis_async_fifo_def with formal parameter declaration list [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:417]
-WARNING: [Synth 8-2507] parameter declaration becomes local in axis_ps_to_pl with formal parameter declaration list [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_ps_to_pl.sv:26]
+WARNING: [Synth 8-2507] parameter declaration becomes local in axis_ps_to_pl with formal parameter declaration list [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_ps_to_pl.sv:28]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1433.402 ; gain = 188.730
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1430.867 ; gain = 186.840
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_pl_ctrl_verilo_0_0' [d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_pl_ctrl_verilo_0_0/synth/top_level_rfsoc_pl_ctrl_verilo_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'rfsoc_pl_ctrl_verilog_wrapper' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/rfsoc_pl_ctrl_verilog_wrapper.v:5]
@@ -216,32 +216,32 @@ INFO: [Synth 8-6155] done synthesizing module 'rfsoc_pl_ctrl' (14#1) [D:/repos/R
 INFO: [Synth 8-6155] done synthesizing module 'rfsoc_pl_ctrl_verilog_wrapper' (15#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/rfsoc_pl_ctrl_verilog_wrapper.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_pl_ctrl_verilo_0_0' (16#1) [d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_pl_ctrl_verilo_0_0/synth/top_level_rfsoc_pl_ctrl_verilo_0_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1500.949 ; gain = 256.277
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1499.699 ; gain = 255.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1516.164 ; gain = 271.492
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1515.098 ; gain = 271.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1516.164 ; gain = 271.492
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1515.098 ; gain = 271.070
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.831 . Memory (MB): peak = 1516.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.861 . Memory (MB): peak = 1515.098 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1691.133 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1691.699 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1733.191 ; gain = 42.059
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1733.742 ; gain = 42.043
 load diablo GTM unisim library
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 1733.191 ; gain = 488.520
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1733.742 ; gain = 489.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -249,13 +249,13 @@ Start Loading Part and Timing Information
 Loading part: xczu29dr-ffvf1760-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 1733.191 ; gain = 488.520
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1733.742 ; gain = 489.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 1733.191 ; gain = 488.520
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1733.742 ; gain = 489.715
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dac_ctrl'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'adc_ctrl'
@@ -285,7 +285,7 @@ WARNING: [Synth 8-327] inferring latch for variable 's_axis_tready_reg' [D:/repo
 WARNING: [Synth 8-327] inferring latch for variable 'm_axis_tdata_reg' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv:33]
 WARNING: [Synth 8-327] inferring latch for variable 'm_axis_tvalid_reg' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv:32]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:30 . Memory (MB): peak = 1733.191 ; gain = 488.520
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1733.742 ; gain = 489.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -311,7 +311,7 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 4     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 11    
-	                1 Bit    Registers := 114   
+	                1 Bit    Registers := 115   
 +---RAMs : 
 	            1024K Bit	(4096 X 256 bit)          RAMs := 8     
 	             512K Bit	(4096 X 128 bit)          RAMs := 1     
@@ -334,7 +334,7 @@ Detailed RTL Component Info :
 	   2 Input    3 Bit        Muxes := 16    
 	   2 Input    2 Bit        Muxes := 45    
 	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 225   
+	   2 Input    1 Bit        Muxes := 227   
 	   3 Input    1 Bit        Muxes := 16    
 	   5 Input    1 Bit        Muxes := 96    
 	  16 Input    1 Bit        Muxes := 3     
@@ -371,7 +371,7 @@ INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 3
 INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 18 for RAM "rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst /adc_storage_fifo/sync_fifo/mem_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 2 for RAM "rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst /adc_storage_fifo/sync_fifo/mem_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 1824.270 ; gain = 579.598
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:50 . Memory (MB): peak = 1881.180 ; gain = 637.152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -381,6 +381,7 @@ Block RAM: Preliminary Mapping	Report (see note below)
 +---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
 |Module Name                                        | RTL Object                                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
 +---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|dac_driver:                                        | waveform_fifo/sync_fifo/mem_reg                    | 4 K x 256(READ_FIRST)  | W |   | 4 K x 256(WRITE_FIRST) |   | R | Port A and B     | 1      | 28     | 4,4,4,4,4,4,4,1 | 
 |dac_driver:                                        | waveform_fifo/sync_fifo/mem_reg                    | 4 K x 256(READ_FIRST)  | W |   | 4 K x 256(WRITE_FIRST) |   | R | Port A and B     | 1      | 28     | 4,4,4,4,4,4,4,1 | 
 |rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst  | axis_pl_to_ps_inst/pl_to_ps_fifo/sync_fifo/mem_reg | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      |                 | 
 |rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst  | adc_storage_fifo/sync_fifo/mem_reg                 | 4 K x 128(READ_FIRST)  | W |   | 4 K x 128(WRITE_FIRST) |   | R | Port A and B     | 1      | 14     | 4,4,4,2,1       | 
@@ -395,13 +396,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 2074.707 ; gain = 830.035
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 2081.895 ; gain = 837.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 2075.383 ; gain = 830.711
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 2082.758 ; gain = 838.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -411,6 +412,7 @@ Block RAM: Final Mapping	Report
 +---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
 |Module Name                                        | RTL Object                                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
 +---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|dac_driver:                                        | waveform_fifo/sync_fifo/mem_reg                    | 4 K x 256(READ_FIRST)  | W |   | 4 K x 256(WRITE_FIRST) |   | R | Port A and B     | 1      | 28     | 4,4,4,4,4,4,4,1 | 
 |dac_driver:                                        | waveform_fifo/sync_fifo/mem_reg                    | 4 K x 256(READ_FIRST)  | W |   | 4 K x 256(WRITE_FIRST) |   | R | Port A and B     | 1      | 28     | 4,4,4,4,4,4,4,1 | 
 |rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst  | axis_pl_to_ps_inst/pl_to_ps_fifo/sync_fifo/mem_reg | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      |                 | 
 |rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst  | adc_storage_fifo/sync_fifo/mem_reg                 | 4 K x 128(READ_FIRST)  | W |   | 4 K x 128(WRITE_FIRST) |   | R | Port A and B     | 1      | 14     | 4,4,4,2,1       | 
@@ -424,7 +426,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:01:15 . Memory (MB): peak = 2149.367 ; gain = 904.695
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 2151.984 ; gain = 907.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -442,37 +444,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 2169.828 ; gain = 925.156
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 2170.039 ; gain = 926.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 2169.828 ; gain = 925.156
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 2170.039 ; gain = 926.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:22 ; elapsed = 00:01:23 . Memory (MB): peak = 2169.828 ; gain = 925.156
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 2170.039 ; gain = 926.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:22 ; elapsed = 00:01:23 . Memory (MB): peak = 2169.828 ; gain = 925.156
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 2170.039 ; gain = 926.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 2169.828 ; gain = 925.156
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 2170.039 ; gain = 926.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 2169.828 ; gain = 925.156
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 2170.039 ; gain = 926.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -490,579 +492,46 @@ Report Cell Usage:
 +------+---------+------+
 |1     |CARRY8   |   170|
 |2     |LUT1     |  1034|
-|3     |LUT2     |  2335|
+|3     |LUT2     |  2336|
 |4     |LUT3     |   459|
-|5     |LUT4     |  1198|
+|5     |LUT4     |  1201|
 |6     |LUT5     |  2724|
-|7     |LUT6     |  2619|
+|7     |LUT6     |  2624|
 |8     |RAMB18E2 |    10|
 |10    |RAMB36E2 |   242|
-|16    |FDCE     |  6690|
+|16    |FDCE     |  6691|
 |17    |FDPE     |     1|
 |18    |FDRE     |  7478|
 |19    |LD       |     1|
-|20    |LDC      |    34|
+|20    |LDC      |    33|
+|21    |LDP      |     1|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 2169.828 ; gain = 925.156
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 2170.039 ; gain = 926.012
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:01:16 . Memory (MB): peak = 2169.828 ; gain = 708.129
-Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 2169.828 ; gain = 925.156
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:01:05 . Memory (MB): peak = 2170.039 ; gain = 707.367
+Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 2170.039 ; gain = 926.012
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2186.801 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.775 . Memory (MB): peak = 2186.105 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 205 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2257.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2252.973 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 35 instances were transformed.
   LD => LDCE: 1 instance 
-  LDC => LDCE: 34 instances
+  LDC => LDCE: 33 instances
+  LDP => LDPE: 1 instance 
 
 INFO: [Common 17-83] Releasing license: Synthesis
 90 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:44 ; elapsed = 00:01:47 . Memory (MB): peak = 2257.793 ; gain = 1258.398
-INFO: [Common 17-1381] The checkpoint 'D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1/top_level_rfsoc_pl_ctrl_verilo_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2257.793 ; gain = 0.000
-WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1174] Renamed 114 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1/top_level_rfsoc_pl_ctrl_verilo_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2257.793 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_utilization -file top_level_rfsoc_pl_ctrl_verilo_0_0_utilization_synth.rpt -pb top_level_rfsoc_pl_ctrl_verilo_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 21 14:26:11 2020...
-
-*** Running vivado
-    with args -log top_level_rfsoc_pl_ctrl_verilo_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_rfsoc_pl_ctrl_verilo_0_0.tcl
-
-
-
-****** Vivado v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source top_level_rfsoc_pl_ctrl_verilo_0_0.tcl -notrace
-Command: synth_design -top top_level_rfsoc_pl_ctrl_verilo_0_0 -part xczu29dr-ffvf1760-2-e -mode out_of_context
-Starting synth_design
-WARNING: [IP_Flow 19-3571] IP 'top_level_rfsoc_pl_ctrl_verilo_0_0' is restricted:
-* Module reference is stale and needs refreshing.
-Attempting to get a license for feature 'Synthesis' and/or device 'xczu29dr'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu29dr'
-INFO: [Common 17-86] Your Synthesis license expires in 12 day(s)
-INFO: [Device 21-403] Loading part xczu29dr-ffvf1760-2-e
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
-INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 213664
-load diablo GTM unisim library
-WARNING: [Synth 8-2507] parameter declaration becomes local in axis_fifo with formal parameter declaration list [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:108]
-WARNING: [Synth 8-2507] parameter declaration becomes local in axis_async_fifo_def with formal parameter declaration list [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:417]
-WARNING: [Synth 8-2507] parameter declaration becomes local in axis_ps_to_pl with formal parameter declaration list [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_ps_to_pl.sv:26]
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1430.223 ; gain = 186.457
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top_level_rfsoc_pl_ctrl_verilo_0_0' [d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_pl_ctrl_verilo_0_0/synth/top_level_rfsoc_pl_ctrl_verilo_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'rfsoc_pl_ctrl_verilog_wrapper' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/rfsoc_pl_ctrl_verilog_wrapper.v:5]
-	Parameter ps_axis_width bound to: 32 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'rfsoc_pl_ctrl' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/rfsoc_pl_ctrl.sv:4]
-INFO: [Synth 8-6157] synthesizing module 'dac_driver' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/dac_driver.sv:4]
-	Parameter mem_width bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'dac_ctrl' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/dac_ctrl.sv:11]
-	Parameter state_idle bound to: 4'b0000 
-	Parameter state_pre_run bound to: 4'b0001 
-	Parameter state_run bound to: 4'b0010 
-	Parameter state_cleanup bound to: 4'b0011 
-INFO: [Synth 8-6157] synthesizing module 'shift_register' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:3]
-	Parameter width bound to: 256 - type: integer 
-	Parameter state_wait_sclk bound to: 1'b0 
-	Parameter state_cleanup bound to: 1'b1 
-INFO: [Synth 8-226] default block is never used [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:42]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register' (1#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized0' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:3]
-	Parameter width bound to: 32 - type: integer 
-	Parameter state_wait_sclk bound to: 1'b0 
-	Parameter state_cleanup bound to: 1'b1 
-INFO: [Synth 8-226] default block is never used [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:42]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized0' (1#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized1' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:3]
-	Parameter width bound to: 8 - type: integer 
-	Parameter state_wait_sclk bound to: 1'b0 
-	Parameter state_cleanup bound to: 1'b1 
-INFO: [Synth 8-226] default block is never used [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:42]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized1' (1#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'dac_ctrl' (2#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/dac_ctrl.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'axis_sync_fifo' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv:3]
-	Parameter mem_width bound to: 12 - type: integer 
-	Parameter bus_width bound to: 256 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axis_fifo' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:27]
-	Parameter DEPTH bound to: 4096 - type: integer 
-	Parameter DATA_WIDTH bound to: 256 - type: integer 
-	Parameter KEEP_ENABLE bound to: 1'b0 
-	Parameter KEEP_WIDTH bound to: 32 - type: integer 
-	Parameter LAST_ENABLE bound to: 1'b0 
-	Parameter ID_ENABLE bound to: 1'b0 
-	Parameter ID_WIDTH bound to: 8 - type: integer 
-	Parameter DEST_ENABLE bound to: 0 - type: integer 
-	Parameter DEST_WIDTH bound to: 8 - type: integer 
-	Parameter USER_ENABLE bound to: 0 - type: integer 
-	Parameter USER_WIDTH bound to: 1 - type: integer 
-	Parameter PIPELINE_OUTPUT bound to: 2 - type: integer 
-	Parameter FRAME_FIFO bound to: 0 - type: integer 
-	Parameter USER_BAD_FRAME_VALUE bound to: 1'b1 
-	Parameter USER_BAD_FRAME_MASK bound to: 1'b1 
-	Parameter DROP_BAD_FRAME bound to: 0 - type: integer 
-	Parameter DROP_WHEN_FULL bound to: 0 - type: integer 
-	Parameter ADDR_WIDTH bound to: 12 - type: integer 
-	Parameter KEEP_OFFSET bound to: 256 - type: integer 
-	Parameter LAST_OFFSET bound to: 256 - type: integer 
-	Parameter ID_OFFSET bound to: 256 - type: integer 
-	Parameter DEST_OFFSET bound to: 256 - type: integer 
-	Parameter USER_OFFSET bound to: 256 - type: integer 
-	Parameter WIDTH bound to: 256 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axis_fifo' (3#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:27]
-INFO: [Synth 8-6155] done synthesizing module 'axis_sync_fifo' (4#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'axis_mux' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_mux.sv:24]
-INFO: [Synth 8-6155] done synthesizing module 'axis_mux' (5#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_mux.sv:24]
-INFO: [Synth 8-6155] done synthesizing module 'dac_driver' (6#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/dac_driver.sv:4]
-INFO: [Synth 8-6157] synthesizing module 'adc_driver' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/adc_driver.sv:5]
-	Parameter mem_width bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'adc_ctrl' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/adc_ctrl.sv:8]
-	Parameter state_wait_trigger bound to: 2'b00 
-	Parameter state_trigger bound to: 2'b01 
-	Parameter state_cleanup bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'adc_ctrl' (7#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/adc_ctrl.sv:8]
-INFO: [Synth 8-6157] synthesizing module 'axis_sync_fifo__parameterized0' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv:3]
-	Parameter mem_width bound to: 12 - type: integer 
-	Parameter bus_width bound to: 128 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axis_fifo__parameterized0' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:27]
-	Parameter DEPTH bound to: 4096 - type: integer 
-	Parameter DATA_WIDTH bound to: 128 - type: integer 
-	Parameter KEEP_ENABLE bound to: 1'b0 
-	Parameter KEEP_WIDTH bound to: 16 - type: integer 
-	Parameter LAST_ENABLE bound to: 1'b0 
-	Parameter ID_ENABLE bound to: 1'b0 
-	Parameter ID_WIDTH bound to: 8 - type: integer 
-	Parameter DEST_ENABLE bound to: 0 - type: integer 
-	Parameter DEST_WIDTH bound to: 8 - type: integer 
-	Parameter USER_ENABLE bound to: 0 - type: integer 
-	Parameter USER_WIDTH bound to: 1 - type: integer 
-	Parameter PIPELINE_OUTPUT bound to: 2 - type: integer 
-	Parameter FRAME_FIFO bound to: 0 - type: integer 
-	Parameter USER_BAD_FRAME_VALUE bound to: 1'b1 
-	Parameter USER_BAD_FRAME_MASK bound to: 1'b1 
-	Parameter DROP_BAD_FRAME bound to: 0 - type: integer 
-	Parameter DROP_WHEN_FULL bound to: 0 - type: integer 
-	Parameter ADDR_WIDTH bound to: 12 - type: integer 
-	Parameter KEEP_OFFSET bound to: 128 - type: integer 
-	Parameter LAST_OFFSET bound to: 128 - type: integer 
-	Parameter ID_OFFSET bound to: 128 - type: integer 
-	Parameter DEST_OFFSET bound to: 128 - type: integer 
-	Parameter USER_OFFSET bound to: 128 - type: integer 
-	Parameter WIDTH bound to: 128 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axis_fifo__parameterized0' (7#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:27]
-INFO: [Synth 8-6155] done synthesizing module 'axis_sync_fifo__parameterized0' (7#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'axis_pl_to_ps' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_pl_to_ps.sv:6]
-	Parameter fifo_words_to_write bound to: 4 - type: integer 
-	Parameter state_idle bound to: 3'b000 
-	Parameter state_write_1 bound to: 3'b001 
-	Parameter state_write_2 bound to: 3'b010 
-	Parameter state_write_3 bound to: 3'b011 
-INFO: [Synth 8-6157] synthesizing module 'axis_sync_fifo__parameterized1' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv:3]
-	Parameter mem_width bound to: 4 - type: integer 
-	Parameter bus_width bound to: 32 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axis_fifo__parameterized1' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:27]
-	Parameter DEPTH bound to: 16 - type: integer 
-	Parameter DATA_WIDTH bound to: 32 - type: integer 
-	Parameter KEEP_ENABLE bound to: 1'b0 
-	Parameter KEEP_WIDTH bound to: 4 - type: integer 
-	Parameter LAST_ENABLE bound to: 1'b0 
-	Parameter ID_ENABLE bound to: 1'b0 
-	Parameter ID_WIDTH bound to: 8 - type: integer 
-	Parameter DEST_ENABLE bound to: 0 - type: integer 
-	Parameter DEST_WIDTH bound to: 8 - type: integer 
-	Parameter USER_ENABLE bound to: 0 - type: integer 
-	Parameter USER_WIDTH bound to: 1 - type: integer 
-	Parameter PIPELINE_OUTPUT bound to: 2 - type: integer 
-	Parameter FRAME_FIFO bound to: 0 - type: integer 
-	Parameter USER_BAD_FRAME_VALUE bound to: 1'b1 
-	Parameter USER_BAD_FRAME_MASK bound to: 1'b1 
-	Parameter DROP_BAD_FRAME bound to: 0 - type: integer 
-	Parameter DROP_WHEN_FULL bound to: 0 - type: integer 
-	Parameter ADDR_WIDTH bound to: 4 - type: integer 
-	Parameter KEEP_OFFSET bound to: 32 - type: integer 
-	Parameter LAST_OFFSET bound to: 32 - type: integer 
-	Parameter ID_OFFSET bound to: 32 - type: integer 
-	Parameter DEST_OFFSET bound to: 32 - type: integer 
-	Parameter USER_OFFSET bound to: 32 - type: integer 
-	Parameter WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axis_fifo__parameterized1' (7#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:27]
-INFO: [Synth 8-6155] done synthesizing module 'axis_sync_fifo__parameterized1' (7#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'axis_pl_to_ps' (8#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_pl_to_ps.sv:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_driver' (9#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/adc_driver.sv:5]
-INFO: [Synth 8-6157] synthesizing module 'channel_selector' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/channel_selector.sv:8]
-INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized2' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:3]
-	Parameter width bound to: 16 - type: integer 
-	Parameter state_wait_sclk bound to: 1'b0 
-	Parameter state_cleanup bound to: 1'b1 
-INFO: [Synth 8-226] default block is never used [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:42]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized2' (9#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/shift_register.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'channel_selector' (10#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/channel_selector.sv:8]
-INFO: [Synth 8-6157] synthesizing module 'axis_ps_to_pl' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_ps_to_pl.sv:6]
-	Parameter ps_axis_width bound to: 32 - type: integer 
-	Parameter ps_per_pl bound to: 8 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axis_sync_fifo__parameterized2' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv:3]
-	Parameter mem_width bound to: 4 - type: integer 
-	Parameter bus_width bound to: 256 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axis_fifo__parameterized2' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:27]
-	Parameter DEPTH bound to: 16 - type: integer 
-	Parameter DATA_WIDTH bound to: 256 - type: integer 
-	Parameter KEEP_ENABLE bound to: 1'b0 
-	Parameter KEEP_WIDTH bound to: 32 - type: integer 
-	Parameter LAST_ENABLE bound to: 1'b0 
-	Parameter ID_ENABLE bound to: 1'b0 
-	Parameter ID_WIDTH bound to: 8 - type: integer 
-	Parameter DEST_ENABLE bound to: 0 - type: integer 
-	Parameter DEST_WIDTH bound to: 8 - type: integer 
-	Parameter USER_ENABLE bound to: 0 - type: integer 
-	Parameter USER_WIDTH bound to: 1 - type: integer 
-	Parameter PIPELINE_OUTPUT bound to: 2 - type: integer 
-	Parameter FRAME_FIFO bound to: 0 - type: integer 
-	Parameter USER_BAD_FRAME_VALUE bound to: 1'b1 
-	Parameter USER_BAD_FRAME_MASK bound to: 1'b1 
-	Parameter DROP_BAD_FRAME bound to: 0 - type: integer 
-	Parameter DROP_WHEN_FULL bound to: 0 - type: integer 
-	Parameter ADDR_WIDTH bound to: 4 - type: integer 
-	Parameter KEEP_OFFSET bound to: 256 - type: integer 
-	Parameter LAST_OFFSET bound to: 256 - type: integer 
-	Parameter ID_OFFSET bound to: 256 - type: integer 
-	Parameter DEST_OFFSET bound to: 256 - type: integer 
-	Parameter USER_OFFSET bound to: 256 - type: integer 
-	Parameter WIDTH bound to: 256 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axis_fifo__parameterized2' (10#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_fifos.sv:27]
-INFO: [Synth 8-6155] done synthesizing module 'axis_sync_fifo__parameterized2' (10#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/fifo_wrappers.sv:3]
-INFO: [Synth 8-6155] done synthesizing module 'axis_ps_to_pl' (11#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_ps_to_pl.sv:6]
-INFO: [Synth 8-6157] synthesizing module 'axis_selector' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_selector.sv:6]
-INFO: [Synth 8-6155] done synthesizing module 'axis_selector' (12#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_selector.sv:6]
-INFO: [Synth 8-6157] synthesizing module 'axis_n_mux' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'axis_n_mux' (13#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'rfsoc_pl_ctrl' (14#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/rfsoc_pl_ctrl.sv:4]
-INFO: [Synth 8-6155] done synthesizing module 'rfsoc_pl_ctrl_verilog_wrapper' (15#1) [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/rfsoc_pl_ctrl_verilog_wrapper.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top_level_rfsoc_pl_ctrl_verilo_0_0' (16#1) [d:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.srcs/sources_1/bd/top_level/ip/top_level_rfsoc_pl_ctrl_verilo_0_0/synth/top_level_rfsoc_pl_ctrl_verilo_0_0.v:58]
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1498.898 ; gain = 255.133
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1498.898 ; gain = 255.133
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1498.898 ; gain = 255.133
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1498.898 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1687.453 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1729.172 ; gain = 41.719
-load diablo GTM unisim library
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1729.172 ; gain = 485.406
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xczu29dr-ffvf1760-2-e
-INFO: [Synth 8-6742] Reading net delay rules and data
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1729.172 ; gain = 485.406
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1729.172 ; gain = 485.406
----------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dac_ctrl'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'adc_ctrl'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-              state_idle |                              000 |                             0000
-           state_pre_run |                              001 |                             0001
-               state_run |                              010 |                             0010
-           state_cleanup |                              011 |                             0011
-                  iSTATE |                              100 |                             1111
-*
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'dac_ctrl'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-      state_wait_trigger |                             0001 |                               00
-           state_trigger |                             0010 |                               01
-           state_cleanup |                             0100 |                               10
-                  iSTATE |                             1000 |                               11
-*
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'adc_ctrl'
-WARNING: [Synth 8-327] inferring latch for variable 's_axis_tready_reg' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_selector.sv:33]
-WARNING: [Synth 8-327] inferring latch for variable 's_axis_tready_reg' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv:41]
-WARNING: [Synth 8-327] inferring latch for variable 'm_axis_tdata_reg' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv:33]
-WARNING: [Synth 8-327] inferring latch for variable 'm_axis_tvalid_reg' [D:/repos/RFSoC_Controller_V2/verilog_source/rtl/axis_n_mux.sv:32]
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 1729.172 ; gain = 485.406
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   33 Bit       Adders := 24    
-	   2 Input   32 Bit       Adders := 9     
-	   2 Input   16 Bit       Adders := 10    
-	   2 Input   13 Bit       Adders := 27    
-	   2 Input    5 Bit       Adders := 6     
-+---XORs : 
-	   2 Input     13 Bit         XORs := 9     
-	   2 Input      5 Bit         XORs := 2     
-+---Registers : 
-	              256 Bit    Registers := 60    
-	              128 Bit    Registers := 4     
-	               33 Bit    Registers := 16    
-	               32 Bit    Registers := 64    
-	               16 Bit    Registers := 16    
-	               13 Bit    Registers := 26    
-	                8 Bit    Registers := 32    
-	                5 Bit    Registers := 4     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 11    
-	                1 Bit    Registers := 114   
-+---RAMs : 
-	            1024K Bit	(4096 X 256 bit)          RAMs := 8     
-	             512K Bit	(4096 X 128 bit)          RAMs := 1     
-	               4K Bit	(16 X 256 bit)          RAMs := 1     
-	              512 Bit	(16 X 32 bit)          RAMs := 1     
-+---Muxes : 
-	   2 Input  256 Bit        Muxes := 56    
-	   2 Input  128 Bit        Muxes := 4     
-	   4 Input  128 Bit        Muxes := 1     
-	   2 Input   33 Bit        Muxes := 8     
-	   5 Input   33 Bit        Muxes := 16    
-	   5 Input   32 Bit        Muxes := 8     
-	   2 Input   32 Bit        Muxes := 4     
-	   4 Input   32 Bit        Muxes := 2     
-	   2 Input   16 Bit        Muxes := 1     
-	   4 Input   16 Bit        Muxes := 1     
-	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 1     
-	   5 Input    3 Bit        Muxes := 8     
-	   2 Input    3 Bit        Muxes := 16    
-	   2 Input    2 Bit        Muxes := 45    
-	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 225   
-	   3 Input    1 Bit        Muxes := 16    
-	   5 Input    1 Bit        Muxes := 96    
-	  16 Input    1 Bit        Muxes := 3     
-	   4 Input    1 Bit        Muxes := 12    
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 4272 (col length:192)
-BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-INFO: [Synth 8-5779] Default cascade height of 4 will be used for BRAM '"dac_driver:/waveform_fifo/sync_fifo/mem_reg"'.
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "dac_driver:/waveform_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "dac_driver:/waveform_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "dac_driver:/waveform_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "dac_driver:/waveform_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "dac_driver:/waveform_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "dac_driver:/waveform_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "dac_driver:/waveform_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 4 for RAM "dac_driver:/waveform_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-7082] The signal axis_pl_to_ps_inst/pl_to_ps_fifo/sync_fifo/mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
-INFO: [Synth 8-5779] Default cascade height of 4 will be used for BRAM '"rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst /adc_storage_fifo/sync_fifo/mem_reg"'.
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst /adc_storage_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst /adc_storage_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 4 and width 36 for RAM "rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst /adc_storage_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-5555] Implemented Block Ram Cascade chain of height 2 and width 18 for RAM "rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst /adc_storage_fifo/sync_fifo/mem_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 2 for RAM "rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst /adc_storage_fifo/sync_fifo/mem_reg"
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:14 . Memory (MB): peak = 1748.090 ; gain = 504.324
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Block RAM: Preliminary Mapping	Report (see note below)
-+---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
-|Module Name                                        | RTL Object                                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
-+---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
-|dac_driver:                                        | waveform_fifo/sync_fifo/mem_reg                    | 4 K x 256(READ_FIRST)  | W |   | 4 K x 256(WRITE_FIRST) |   | R | Port A and B     | 1      | 28     | 4,4,4,4,4,4,4,1 | 
-|rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst  | axis_pl_to_ps_inst/pl_to_ps_fifo/sync_fifo/mem_reg | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      |                 | 
-|rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst  | adc_storage_fifo/sync_fifo/mem_reg                 | 4 K x 128(READ_FIRST)  | W |   | 4 K x 128(WRITE_FIRST) |   | R | Port A and B     | 1      | 14     | 4,4,4,2,1       | 
-|rfsoc_pl_ctrl_insti_1/axis_ps_pl_crossing          | ps_to_pl_sync_fifo/sync_fifo/mem_reg               | 16 x 256(READ_FIRST)   | W |   | 16 x 256(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      |                 | 
-+---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
-
-Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 2067.090 ; gain = 823.324
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 2067.766 ; gain = 824.000
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Block RAM: Final Mapping	Report
-+---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
-|Module Name                                        | RTL Object                                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
-+---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
-|dac_driver:                                        | waveform_fifo/sync_fifo/mem_reg                    | 4 K x 256(READ_FIRST)  | W |   | 4 K x 256(WRITE_FIRST) |   | R | Port A and B     | 1      | 28     | 4,4,4,4,4,4,4,1 | 
-|rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst  | axis_pl_to_ps_inst/pl_to_ps_fifo/sync_fifo/mem_reg | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      |                 | 
-|rfsoc_pl_ctrl_insti_1/\genblk1[0].adc_driver_inst  | adc_storage_fifo/sync_fifo/mem_reg                 | 4 K x 128(READ_FIRST)  | W |   | 4 K x 128(WRITE_FIRST) |   | R | Port A and B     | 1      | 14     | 4,4,4,2,1       | 
-|rfsoc_pl_ctrl_insti_1/axis_ps_pl_crossing          | ps_to_pl_sync_fifo/sync_fifo/mem_reg               | 16 x 256(READ_FIRST)   | W |   | 16 x 256(WRITE_FIRST)  |   | R | Port A and B     | 0      | 4      |                 | 
-+---------------------------------------------------+----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:34 . Memory (MB): peak = 2140.703 ; gain = 896.938
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:37 ; elapsed = 00:01:38 . Memory (MB): peak = 2162.238 ; gain = 918.473
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:37 ; elapsed = 00:01:38 . Memory (MB): peak = 2162.238 ; gain = 918.473
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:40 ; elapsed = 00:01:41 . Memory (MB): peak = 2162.238 ; gain = 918.473
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:01:41 . Memory (MB): peak = 2162.238 ; gain = 918.473
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:42 ; elapsed = 00:01:43 . Memory (MB): peak = 2162.238 ; gain = 918.473
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:42 ; elapsed = 00:01:43 . Memory (MB): peak = 2162.238 ; gain = 918.473
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
-
-Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |CARRY8   |   170|
-|2     |LUT1     |  1034|
-|3     |LUT2     |  2335|
-|4     |LUT3     |   459|
-|5     |LUT4     |  1198|
-|6     |LUT5     |  2724|
-|7     |LUT6     |  2619|
-|8     |RAMB18E2 |    10|
-|10    |RAMB36E2 |   242|
-|16    |FDCE     |  6690|
-|17    |FDPE     |     1|
-|18    |FDRE     |  7478|
-|19    |LD       |     1|
-|20    |LDC      |    34|
-+------+---------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:42 ; elapsed = 00:01:43 . Memory (MB): peak = 2162.238 ; gain = 918.473
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:31 . Memory (MB): peak = 2162.238 ; gain = 688.199
-Synthesis Optimization Complete : Time (s): cpu = 00:01:42 ; elapsed = 00:01:43 . Memory (MB): peak = 2162.238 ; gain = 918.473
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2177.277 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 205 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2249.340 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 35 instances were transformed.
-  LD => LDCE: 1 instance 
-  LDC => LDCE: 34 instances
-
-INFO: [Common 17-83] Releasing license: Synthesis
-90 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:04 ; elapsed = 00:02:07 . Memory (MB): peak = 2249.340 ; gain = 1228.930
+synth_design: Time (s): cpu = 00:01:28 ; elapsed = 00:01:31 . Memory (MB): peak = 2252.973 ; gain = 1253.660
 INFO: [Common 17-1381] The checkpoint 'D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1/top_level_rfsoc_pl_ctrl_verilo_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 114 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/top_level_rfsoc_pl_ctrl_verilo_0_0_synth_1/top_level_rfsoc_pl_ctrl_verilo_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_level_rfsoc_pl_ctrl_verilo_0_0_utilization_synth.rpt -pb top_level_rfsoc_pl_ctrl_verilo_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 24 14:52:06 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 26 16:55:00 2020...

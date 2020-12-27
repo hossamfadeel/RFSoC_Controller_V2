@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Dec 24 15:18:16 2020
+| Date         : Sat Dec 26 17:13:37 2020
 | Host         : JAMES-LENOVO running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_level_wrapper_methodology_drc_routed.rpt -pb top_level_wrapper_methodology_drc_routed.pb -rpx top_level_wrapper_methodology_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -140,7 +140,7 @@ Related violations: <none>
 
 LUTAR-1#9 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[31]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[0]/CLR,
+LUT cell top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_sel/m_axis_tdata_reg[31]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[0]/CLR,
 top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[10]/CLR,
 top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[11]/CLR,
 top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/m_axis_tdata_reg[12]/CLR,
@@ -160,7 +160,7 @@ Related violations: <none>
 
 LUTAR-1#10 Warning
 LUT drives async reset alert  
-LUT cell top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_n_mux_inst/s_axis_tready_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tready_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tready_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) top_level_i/rfsoc_pl_ctrl_verilo_0/inst/rfsoc_pl_ctrl_inst/axis_sel/s_axis_tready_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-9#1 Warning

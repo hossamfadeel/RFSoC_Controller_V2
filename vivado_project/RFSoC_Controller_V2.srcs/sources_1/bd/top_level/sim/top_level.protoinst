@@ -959,6 +959,26 @@
 						"TVALID": { "actual": "m16_axis_tvalid"}
 					}
 				},
+				"/rfsoc_pl_ctrl_verilo_0/m17_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "rst"},
+						"TDATA": { "actual": "m17_axis_tdata"},
+						"TREADY": { "actual": "m17_axis_tready"},
+						"TVALID": { "actual": "m17_axis_tvalid"}
+					}
+				},
+				"/rfsoc_pl_ctrl_verilo_0/m18_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "rst"},
+						"TDATA": { "actual": "m18_axis_tdata"},
+						"TREADY": { "actual": "m18_axis_tready"},
+						"TVALID": { "actual": "m18_axis_tvalid"}
+					}
+				},
 				"/rfsoc_pl_ctrl_verilo_0/m1_axis": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {

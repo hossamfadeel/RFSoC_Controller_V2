@@ -6,7 +6,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "bd_9bbd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_9bbd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}" *) (* HW_HANDOFF = "top_level_system_ila_0_0.hwdef" *) 
+(* CORE_GENERATION_INFO = "bd_9bbd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_9bbd,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "top_level_system_ila_0_0.hwdef" *) 
 module bd_9bbd
    (SLOT_0_AXIS_tdata,
     SLOT_0_AXIS_tlast,
@@ -36,6 +36,14 @@ module bd_9bbd
     SLOT_6_AXIS_tlast,
     SLOT_6_AXIS_tready,
     SLOT_6_AXIS_tvalid,
+    SLOT_7_AXIS_tdata,
+    SLOT_7_AXIS_tlast,
+    SLOT_7_AXIS_tready,
+    SLOT_7_AXIS_tvalid,
+    SLOT_8_AXIS_tdata,
+    SLOT_8_AXIS_tlast,
+    SLOT_8_AXIS_tready,
+    SLOT_8_AXIS_tvalid,
     clk,
     probe0,
     resetn);
@@ -67,7 +75,15 @@ module bd_9bbd
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_6_AXIS TLAST" *) input SLOT_6_AXIS_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_6_AXIS TREADY" *) input SLOT_6_AXIS_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_6_AXIS TVALID" *) input SLOT_6_AXIS_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXIS:SLOT_1_AXIS:SLOT_2_AXIS:SLOT_3_AXIS:SLOT_4_AXIS:SLOT_5_AXIS:SLOT_6_AXIS, ASSOCIATED_RESET resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_7_AXIS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_7_AXIS, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, FREQ_HZ 250000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [255:0]SLOT_7_AXIS_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_7_AXIS TLAST" *) input SLOT_7_AXIS_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_7_AXIS TREADY" *) input SLOT_7_AXIS_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_7_AXIS TVALID" *) input SLOT_7_AXIS_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_8_AXIS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_8_AXIS, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, FREQ_HZ 250000000, HAS_TKEEP 0, HAS_TLAST 0, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [255:0]SLOT_8_AXIS_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_8_AXIS TLAST" *) input SLOT_8_AXIS_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_8_AXIS TREADY" *) input SLOT_8_AXIS_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_8_AXIS TVALID" *) input SLOT_8_AXIS_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXIS:SLOT_1_AXIS:SLOT_2_AXIS:SLOT_3_AXIS:SLOT_4_AXIS:SLOT_5_AXIS:SLOT_6_AXIS:SLOT_7_AXIS:SLOT_8_AXIS, ASSOCIATED_RESET resetn, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input clk;
   input [15:0]probe0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input resetn;
 
@@ -95,6 +111,14 @@ module bd_9bbd
   wire Conn6_TLAST;
   wire Conn6_TREADY;
   wire Conn6_TVALID;
+  wire [255:0]Conn7_TDATA;
+  wire Conn7_TLAST;
+  wire Conn7_TREADY;
+  wire Conn7_TVALID;
+  wire [255:0]Conn8_TDATA;
+  wire Conn8_TLAST;
+  wire Conn8_TREADY;
+  wire Conn8_TVALID;
   wire [31:0]Conn_TDATA;
   wire Conn_TLAST;
   wire Conn_TREADY;
@@ -128,6 +152,14 @@ module bd_9bbd
   wire net_slot_6_axis_tlast;
   wire net_slot_6_axis_tready;
   wire net_slot_6_axis_tvalid;
+  wire [255:0]net_slot_7_axis_tdata;
+  wire net_slot_7_axis_tlast;
+  wire net_slot_7_axis_tready;
+  wire net_slot_7_axis_tvalid;
+  wire [255:0]net_slot_8_axis_tdata;
+  wire net_slot_8_axis_tlast;
+  wire net_slot_8_axis_tready;
+  wire net_slot_8_axis_tvalid;
   wire [15:0]probe0_1;
   wire resetn_1;
 
@@ -155,6 +187,14 @@ module bd_9bbd
   assign Conn6_TLAST = SLOT_6_AXIS_tlast;
   assign Conn6_TREADY = SLOT_6_AXIS_tready;
   assign Conn6_TVALID = SLOT_6_AXIS_tvalid;
+  assign Conn7_TDATA = SLOT_7_AXIS_tdata[255:0];
+  assign Conn7_TLAST = SLOT_7_AXIS_tlast;
+  assign Conn7_TREADY = SLOT_7_AXIS_tready;
+  assign Conn7_TVALID = SLOT_7_AXIS_tvalid;
+  assign Conn8_TDATA = SLOT_8_AXIS_tdata[255:0];
+  assign Conn8_TLAST = SLOT_8_AXIS_tlast;
+  assign Conn8_TREADY = SLOT_8_AXIS_tready;
+  assign Conn8_TVALID = SLOT_8_AXIS_tvalid;
   assign Conn_TDATA = SLOT_0_AXIS_tdata[31:0];
   assign Conn_TLAST = SLOT_0_AXIS_tlast;
   assign Conn_TREADY = SLOT_0_AXIS_tready;
@@ -193,6 +233,14 @@ module bd_9bbd
         .m_slot_6_axis_tlast(net_slot_6_axis_tlast),
         .m_slot_6_axis_tready(net_slot_6_axis_tready),
         .m_slot_6_axis_tvalid(net_slot_6_axis_tvalid),
+        .m_slot_7_axis_tdata(net_slot_7_axis_tdata),
+        .m_slot_7_axis_tlast(net_slot_7_axis_tlast),
+        .m_slot_7_axis_tready(net_slot_7_axis_tready),
+        .m_slot_7_axis_tvalid(net_slot_7_axis_tvalid),
+        .m_slot_8_axis_tdata(net_slot_8_axis_tdata),
+        .m_slot_8_axis_tlast(net_slot_8_axis_tlast),
+        .m_slot_8_axis_tready(net_slot_8_axis_tready),
+        .m_slot_8_axis_tvalid(net_slot_8_axis_tvalid),
         .slot_0_axis_tdata(Conn_TDATA),
         .slot_0_axis_tlast(Conn_TLAST),
         .slot_0_axis_tready(Conn_TREADY),
@@ -220,7 +268,15 @@ module bd_9bbd
         .slot_6_axis_tdata(Conn6_TDATA),
         .slot_6_axis_tlast(Conn6_TLAST),
         .slot_6_axis_tready(Conn6_TREADY),
-        .slot_6_axis_tvalid(Conn6_TVALID));
+        .slot_6_axis_tvalid(Conn6_TVALID),
+        .slot_7_axis_tdata(Conn7_TDATA),
+        .slot_7_axis_tlast(Conn7_TLAST),
+        .slot_7_axis_tready(Conn7_TREADY),
+        .slot_7_axis_tvalid(Conn7_TVALID),
+        .slot_8_axis_tdata(Conn8_TDATA),
+        .slot_8_axis_tlast(Conn8_TLAST),
+        .slot_8_axis_tready(Conn8_TREADY),
+        .slot_8_axis_tvalid(Conn8_TVALID));
   bd_9bbd_ila_lib_0 ila_lib
        (.clk(clk_1),
         .probe0(probe0_1),
@@ -245,7 +301,15 @@ module bd_9bbd
         .probe26(net_slot_6_axis_tvalid),
         .probe27(net_slot_6_axis_tready),
         .probe28(net_slot_6_axis_tlast),
+        .probe29(net_slot_7_axis_tdata),
         .probe3(net_slot_0_axis_tready),
+        .probe30(net_slot_7_axis_tvalid),
+        .probe31(net_slot_7_axis_tready),
+        .probe32(net_slot_7_axis_tlast),
+        .probe33(net_slot_8_axis_tdata),
+        .probe34(net_slot_8_axis_tvalid),
+        .probe35(net_slot_8_axis_tready),
+        .probe36(net_slot_8_axis_tlast),
         .probe4(net_slot_0_axis_tlast),
         .probe5(net_slot_1_axis_tdata),
         .probe6(net_slot_1_axis_tvalid),

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Dec 24 14:52:01 2020
+| Date         : Sat Dec 26 16:54:54 2020
 | Host         : JAMES-LENOVO running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_level_rfsoc_pl_ctrl_verilo_0_0_utilization_synth.rpt -pb top_level_rfsoc_pl_ctrl_verilo_0_0_utilization_synth.pb
 | Design       : top_level_rfsoc_pl_ctrl_verilo_0_0
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| CLB LUTs*               |  8838 |     0 |    425280 |  2.08 |
-|   LUT as Logic          |  8838 |     0 |    425280 |  2.08 |
+| CLB LUTs*               |  8844 |     0 |    425280 |  2.08 |
+|   LUT as Logic          |  8844 |     0 |    425280 |  2.08 |
 |   LUT as Memory         |     0 |     0 |    213600 |  0.00 |
-| CLB Registers           | 14204 |     0 |    850560 |  1.67 |
-|   Register as Flip Flop | 14169 |     0 |    850560 |  1.67 |
+| CLB Registers           | 14205 |     0 |    850560 |  1.67 |
+|   Register as Flip Flop | 14170 |     0 |    850560 |  1.67 |
 |   Register as Latch     |    35 |     0 |    850560 | <0.01 |
 | CARRY8                  |   170 |     0 |     53160 |  0.32 |
 | F7 Muxes                |     0 |     0 |    212640 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 1     |          Yes |           - |          Set |
+| 2     |          Yes |           - |          Set |
 | 6725  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 7478  |          Yes |       Reset |            - |
@@ -163,17 +163,18 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 7478 |            Register |
-| FDCE     | 6690 |            Register |
+| FDCE     | 6691 |            Register |
 | LUT5     | 2724 |                 CLB |
-| LUT6     | 2619 |                 CLB |
-| LUT2     | 2335 |                 CLB |
-| LUT4     | 1198 |                 CLB |
+| LUT6     | 2624 |                 CLB |
+| LUT2     | 2336 |                 CLB |
+| LUT4     | 1201 |                 CLB |
 | LUT1     | 1034 |                 CLB |
 | LUT3     |  459 |                 CLB |
 | RAMB36E2 |  242 |            BLOCKRAM |
 | CARRY8   |  170 |                 CLB |
-| LDCE     |   35 |            Register |
+| LDCE     |   34 |            Register |
 | RAMB18E2 |   10 |            BLOCKRAM |
+| LDPE     |    1 |            Register |
 | FDPE     |    1 |            Register |
 +----------+------+---------------------+
 

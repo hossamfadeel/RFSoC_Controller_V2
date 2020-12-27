@@ -84,6 +84,14 @@ module bd_9bbd_g_inst_0 (
   slot_6_axis_tready,
   slot_6_axis_tdata,
   slot_6_axis_tlast,
+  slot_7_axis_tvalid,
+  slot_7_axis_tready,
+  slot_7_axis_tdata,
+  slot_7_axis_tlast,
+  slot_8_axis_tvalid,
+  slot_8_axis_tready,
+  slot_8_axis_tdata,
+  slot_8_axis_tlast,
   m_slot_0_axis_tvalid,
   m_slot_0_axis_tready,
   m_slot_0_axis_tdata,
@@ -111,7 +119,15 @@ module bd_9bbd_g_inst_0 (
   m_slot_6_axis_tvalid,
   m_slot_6_axis_tready,
   m_slot_6_axis_tdata,
-  m_slot_6_axis_tlast
+  m_slot_6_axis_tlast,
+  m_slot_7_axis_tvalid,
+  m_slot_7_axis_tready,
+  m_slot_7_axis_tdata,
+  m_slot_7_axis_tlast,
+  m_slot_8_axis_tvalid,
+  m_slot_8_axis_tready,
+  m_slot_8_axis_tdata,
+  m_slot_8_axis_tlast
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME signal_clock, ASSOCIATED_RESET aresetn, ASSOCIATED_BUSIF m_slot_0_axi:m_slot_1_axi:m_slot_2_axi:m_slot_3_axi:m_slot_4_axi:m_slot_5_axi:m_slot_6_axi:m_slot_7_axi:m_slot_8_axi:m_slot_9_axi:m_slot_10_axi:m_slot_11_axi:m_slot_12_axi:m_slot_13_axi:m_slot_14_axi:m_slot_15_axi:m_slot_0_axis:m_slot_1_axis:m_slot_2_axis:m_slot_3_axis:m_slot_4_axis:m_slot_5_axis:m_slot_6_axis:m_slot_7_axis:m_slot_8_axis:m_slot_9_axis:m_slot_10_axis:m_slot_11_axis:m_slot_12_axis:m_slot_13_axis:m_slot_14_a\
@@ -185,6 +201,24 @@ input wire [255 : 0] slot_6_axis_tdata;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME slot_6_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_6_axis TLAST" *)
 input wire slot_6_axis_tlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_7_axis TVALID" *)
+input wire slot_7_axis_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_7_axis TREADY" *)
+input wire slot_7_axis_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_7_axis TDATA" *)
+input wire [255 : 0] slot_7_axis_tdata;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME slot_7_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_7_axis TLAST" *)
+input wire slot_7_axis_tlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_8_axis TVALID" *)
+input wire slot_8_axis_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_8_axis TREADY" *)
+input wire slot_8_axis_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_8_axis TDATA" *)
+input wire [255 : 0] slot_8_axis_tdata;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME slot_8_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 slot_8_axis TLAST" *)
+input wire slot_8_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_0_axis TVALID" *)
 output wire m_slot_0_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_0_axis TREADY" *)
@@ -248,6 +282,24 @@ output wire [255 : 0] m_slot_6_axis_tdata;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_slot_6_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_6_axis TLAST" *)
 output wire m_slot_6_axis_tlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_7_axis TVALID" *)
+output wire m_slot_7_axis_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_7_axis TREADY" *)
+output wire m_slot_7_axis_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_7_axis TDATA" *)
+output wire [255 : 0] m_slot_7_axis_tdata;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_slot_7_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_7_axis TLAST" *)
+output wire m_slot_7_axis_tlast;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_8_axis TVALID" *)
+output wire m_slot_8_axis_tvalid;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_8_axis TREADY" *)
+output wire m_slot_8_axis_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_8_axis TDATA" *)
+output wire [255 : 0] m_slot_8_axis_tdata;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_slot_8_axis, TDATA_NUM_BYTES 32, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN top_level_usp_rf_data_converter_0_0_clk_dac0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_slot_8_axis TLAST" *)
+output wire m_slot_8_axis_tlast;
 
   bd_9bbd_g_inst_0_gigantic_mux #(
     .C_MUX_0_HAS_BRESP(1),
@@ -294,7 +346,7 @@ output wire m_slot_6_axis_tlast;
     .C_MUX_3_HAS_WSTRB(1),
     .C_MUX_3_HAS_TSTRB(1),
     .C_MUX_3_HAS_TKEEP(1),
-    .C_NUM_MONITOR_SLOTS(7),
+    .C_NUM_MONITOR_SLOTS(9),
     .C_SLOT_0_TXN_CNTR_EN(1),
     .C_SLOT_1_TXN_CNTR_EN(1),
     .C_SLOT_2_TXN_CNTR_EN(1),
@@ -429,8 +481,8 @@ output wire m_slot_6_axis_tlast;
     .C_SLOT_7_HAS_REGION(1),
     .C_SLOT_7_HAS_BURST(1),
     .C_SLOT_7_HAS_WSTRB(1),
-    .C_SLOT_7_HAS_TSTRB(1),
-    .C_SLOT_7_HAS_TKEEP(1),
+    .C_SLOT_7_HAS_TSTRB(0),
+    .C_SLOT_7_HAS_TKEEP(0),
     .C_SLOT_8_HAS_BRESP(1),
     .C_SLOT_8_HAS_RRESP(1),
     .C_SLOT_8_HAS_LOCK(1),
@@ -440,8 +492,8 @@ output wire m_slot_6_axis_tlast;
     .C_SLOT_8_HAS_REGION(1),
     .C_SLOT_8_HAS_BURST(1),
     .C_SLOT_8_HAS_WSTRB(1),
-    .C_SLOT_8_HAS_TSTRB(1),
-    .C_SLOT_8_HAS_TKEEP(1),
+    .C_SLOT_8_HAS_TSTRB(0),
+    .C_SLOT_8_HAS_TKEEP(0),
     .C_SLOT_9_HAS_BRESP(1),
     .C_SLOT_9_HAS_RRESP(1),
     .C_SLOT_9_HAS_LOCK(1),
@@ -742,8 +794,8 @@ output wire m_slot_6_axis_tlast;
     .C_SLOT_4_MON_MODE("FT"),
     .C_SLOT_5_MON_MODE("FT"),
     .C_SLOT_6_MON_MODE("FT"),
-    .C_SLOT_7_MON_MODE("RT"),
-    .C_SLOT_8_MON_MODE("RT"),
+    .C_SLOT_7_MON_MODE("FT"),
+    .C_SLOT_8_MON_MODE("FT"),
     .C_SLOT_9_MON_MODE("RT"),
     .C_SLOT_10_MON_MODE("RT"),
     .C_SLOT_11_MON_MODE("RT"),
@@ -1523,19 +1575,19 @@ output wire m_slot_6_axis_tlast;
     .C_SLOT_7_AXI_ADDR_WIDTH(32),
     .C_SLOT_7_AXI_DATA_WIDTH(32),
     .C_SLOT_7_AXI_ID_WIDTH(1),
-    .C_SLOT_7_AXI_PROTOCOL("AXI4"),
-    .C_SLOT_7_AXIS_TDATA_WIDTH(32),
-    .C_SLOT_7_AXIS_TID_WIDTH(1),
-    .C_SLOT_7_AXIS_TDEST_WIDTH(1),
-    .C_SLOT_7_AXIS_TUSER_WIDTH(1),
+    .C_SLOT_7_AXI_PROTOCOL("AXI4S"),
+    .C_SLOT_7_AXIS_TDATA_WIDTH(256),
+    .C_SLOT_7_AXIS_TID_WIDTH(0),
+    .C_SLOT_7_AXIS_TDEST_WIDTH(0),
+    .C_SLOT_7_AXIS_TUSER_WIDTH(0),
     .C_SLOT_8_AXI_ADDR_WIDTH(32),
     .C_SLOT_8_AXI_DATA_WIDTH(32),
     .C_SLOT_8_AXI_ID_WIDTH(1),
-    .C_SLOT_8_AXI_PROTOCOL("AXI4"),
-    .C_SLOT_8_AXIS_TDATA_WIDTH(32),
-    .C_SLOT_8_AXIS_TID_WIDTH(1),
-    .C_SLOT_8_AXIS_TDEST_WIDTH(1),
-    .C_SLOT_8_AXIS_TUSER_WIDTH(1),
+    .C_SLOT_8_AXI_PROTOCOL("AXI4S"),
+    .C_SLOT_8_AXIS_TDATA_WIDTH(256),
+    .C_SLOT_8_AXIS_TID_WIDTH(0),
+    .C_SLOT_8_AXIS_TDEST_WIDTH(0),
+    .C_SLOT_8_AXIS_TUSER_WIDTH(0),
     .C_SLOT_9_AXI_ADDR_WIDTH(32),
     .C_SLOT_9_AXI_DATA_WIDTH(32),
     .C_SLOT_9_AXI_ID_WIDTH(1),
@@ -2642,12 +2694,12 @@ output wire m_slot_6_axis_tlast;
     .slot_7_axi_rlast(1'B0),
     .slot_7_axi_rvalid(1'B0),
     .slot_7_axi_rready(1'B0),
-    .slot_7_axis_tvalid(1'B0),
-    .slot_7_axis_tready(1'B0),
-    .slot_7_axis_tdata(32'B0),
-    .slot_7_axis_tstrb(4'B0),
-    .slot_7_axis_tkeep(4'B0),
-    .slot_7_axis_tlast(1'B0),
+    .slot_7_axis_tvalid(slot_7_axis_tvalid),
+    .slot_7_axis_tready(slot_7_axis_tready),
+    .slot_7_axis_tdata(slot_7_axis_tdata),
+    .slot_7_axis_tstrb(32'B0),
+    .slot_7_axis_tkeep(32'B0),
+    .slot_7_axis_tlast(slot_7_axis_tlast),
     .slot_7_axis_tid(1'B0),
     .slot_7_axis_tdest(1'B0),
     .slot_7_axis_tuser(1'B0),
@@ -2686,12 +2738,12 @@ output wire m_slot_6_axis_tlast;
     .slot_8_axi_rlast(1'B0),
     .slot_8_axi_rvalid(1'B0),
     .slot_8_axi_rready(1'B0),
-    .slot_8_axis_tvalid(1'B0),
-    .slot_8_axis_tready(1'B0),
-    .slot_8_axis_tdata(32'B0),
-    .slot_8_axis_tstrb(4'B0),
-    .slot_8_axis_tkeep(4'B0),
-    .slot_8_axis_tlast(1'B0),
+    .slot_8_axis_tvalid(slot_8_axis_tvalid),
+    .slot_8_axis_tready(slot_8_axis_tready),
+    .slot_8_axis_tdata(slot_8_axis_tdata),
+    .slot_8_axis_tstrb(32'B0),
+    .slot_8_axis_tkeep(32'B0),
+    .slot_8_axis_tlast(slot_8_axis_tlast),
     .slot_8_axis_tid(1'B0),
     .slot_8_axis_tdest(1'B0),
     .slot_8_axis_tuser(1'B0),
@@ -3346,12 +3398,12 @@ output wire m_slot_6_axis_tlast;
     .m_slot_7_axi_rlast(),
     .m_slot_7_axi_rvalid(),
     .m_slot_7_axi_rready(),
-    .m_slot_7_axis_tvalid(),
-    .m_slot_7_axis_tready(),
-    .m_slot_7_axis_tdata(),
+    .m_slot_7_axis_tvalid(m_slot_7_axis_tvalid),
+    .m_slot_7_axis_tready(m_slot_7_axis_tready),
+    .m_slot_7_axis_tdata(m_slot_7_axis_tdata),
     .m_slot_7_axis_tstrb(),
     .m_slot_7_axis_tkeep(),
-    .m_slot_7_axis_tlast(),
+    .m_slot_7_axis_tlast(m_slot_7_axis_tlast),
     .m_slot_7_axis_tid(),
     .m_slot_7_axis_tdest(),
     .m_slot_7_axis_tuser(),
@@ -3390,12 +3442,12 @@ output wire m_slot_6_axis_tlast;
     .m_slot_8_axi_rlast(),
     .m_slot_8_axi_rvalid(),
     .m_slot_8_axi_rready(),
-    .m_slot_8_axis_tvalid(),
-    .m_slot_8_axis_tready(),
-    .m_slot_8_axis_tdata(),
+    .m_slot_8_axis_tvalid(m_slot_8_axis_tvalid),
+    .m_slot_8_axis_tready(m_slot_8_axis_tready),
+    .m_slot_8_axis_tdata(m_slot_8_axis_tdata),
     .m_slot_8_axis_tstrb(),
     .m_slot_8_axis_tkeep(),
-    .m_slot_8_axis_tlast(),
+    .m_slot_8_axis_tlast(m_slot_8_axis_tlast),
     .m_slot_8_axis_tid(),
     .m_slot_8_axis_tdest(),
     .m_slot_8_axis_tuser(),

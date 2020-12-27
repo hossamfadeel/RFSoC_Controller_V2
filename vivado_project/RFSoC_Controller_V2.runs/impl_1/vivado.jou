@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Dec 24 15:02:44 2020
-# Process ID: 79920
+# Start of session at: Sat Dec 26 16:57:58 2020
+# Process ID: 77028
 # Current directory: D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/impl_1
 # Command line: vivado.exe -log top_level_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_level_wrapper.tcl -notrace
 # Log file: D:/repos/RFSoC_Controller_V2/vivado_project/RFSoC_Controller_V2.runs/impl_1/top_level_wrapper.vdi

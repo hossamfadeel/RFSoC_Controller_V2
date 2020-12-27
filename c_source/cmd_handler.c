@@ -259,7 +259,7 @@ void cmd_handle_command()
 				else if(bytes_to_receive == 8)
 				{
 					//Reassemble the 64-bit number
-					u8 payload_64 = 0;
+					u64 payload_64 = 0;
 					for(int i = 0; i < 8; i = i + 1)
 					{
 						payload_64 |= ((u64)uart_get_buffer_byte()) << (i * 8);

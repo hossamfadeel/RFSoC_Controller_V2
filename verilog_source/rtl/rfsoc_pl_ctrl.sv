@@ -150,7 +150,17 @@ module rfsoc_pl_ctrl
 	
 	input wire [127:0] s15_axis_tdata,
     input wire s15_axis_tvalid,
-    output wire s15_axis_tready
+    output wire s15_axis_tready,
+	
+	
+	//This is a debug output
+	output wire [255:0] m17_axis_tdata,
+	output wire m17_axis_tvalid,
+	input wire m17_axis_tready,//not connected to anything
+	
+	output wire [255:0] m18_axis_tdata,
+	output wire m18_axis_tvalid,
+	input wire m18_axis_tready//not connected to anything
 	
 );
 
@@ -183,16 +193,23 @@ channel_selector chan_sel
 wire [255:0] s_axis_tdata_int;
 wire s_axis_tvalid_int;
 wire s_axis_tready_int;
+
+//Allows a buffer flush when no channel is selected
+wire s_axis_tready_int_out;
+assign s_axis_tready = channel_select == 16'b0 ? 1'b1 : s_axis_tready_int_out;
+
 axis_ps_to_pl #(32) axis_ps_pl_crossing
 (
 	clk,
 	
 	rst_int,
 	
+	channel_select,
+	
 	//AXIS input from PS
 	s_axis_tdata,
     s_axis_tvalid,
-    s_axis_tready,
+    s_axis_tready_int_out,//So we can OR it to s_axis_tready for buffer flushing
 	
 	
 	//AXIS output to PL
@@ -201,8 +218,12 @@ axis_ps_to_pl #(32) axis_ps_pl_crossing
     s_axis_tready_int
 );
 
+//For debugging what is going into the buffer selection
+assign m17_axis_tdata = s_axis_tdata_int;
+assign m17_axis_tvalid = s_axis_tvalid_int;
+
 //AXIS selector
-//Output bus
+//Output bus from selector to DAC drivers
 wire [((256*16)-1):0] m_axis_tdata;
 wire [15:0] m_axis_tvalid;
 wire [15:0] m_axis_tready;
@@ -254,9 +275,17 @@ axis_n_mux axis_n_mux_inst
 );
 
 //Wide bus for routing signals into the adc drivers from RFSOC
-wire [(ps_axis_width*128)-1:0] adc_in_axis_tdata;
+wire [(16*128)-1:0] adc_in_axis_tdata;
 wire [15:0] adc_in_axis_tvalid;
 wire [15:0] adc_in_axis_tready;
+
+//Debug axis for accessing input to waveform fifo
+wire [((256*16)-1):0] w_axis_tdata;
+wire [15:0] w_axis_tvalid;
+wire [15:0] w_axis_tready;
+//Putting the input of chan 0's waveform fifo out to the ILA
+assign m18_axis_tdata = w_axis_tdata[(0*256)+:256];
+assign m18_axis_tvalid = w_axis_tvalid[0];
 
 //genloop for creating channels
 genvar i;
@@ -302,6 +331,10 @@ for(i = 0; i < 16; i = i + 1) begin
 			m_axis_tdata[(i*256)+:256],
 			m_axis_tvalid[i],
 			m_axis_tready[i],
+			
+			w_axis_tdata[(i*256)+:256],
+			w_axis_tvalid[i],
+			w_axis_tready[i],
 			
 			trigger_int,
 			

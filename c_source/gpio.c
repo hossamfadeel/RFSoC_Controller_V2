@@ -59,7 +59,15 @@ void gpio_select_channel(u8 channel_num)
 {
 	for(int i = 0; i < 16; i = i + 1)
 	{
-		gpio_set_pin(sdata, i == channel_num ? 1 : 0);
+		//Changed to allow us to write 0 for buffer flushing
+		if(channel_num == 0xFF)
+		{
+			gpio_set_pin(sdata, 0);
+		}
+		else
+		{
+			gpio_set_pin(sdata, i == channel_num ? 1 : 0);
+		}
 		gpio_set_pin(channel_sel_clk, 1);
 		gpio_set_pin(channel_sel_clk, 0);
 	}
