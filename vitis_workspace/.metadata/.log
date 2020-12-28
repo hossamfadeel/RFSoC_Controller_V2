@@ -25656,3 +25656,12 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-839: Laun
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-12-27 09:32:55.002
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-839: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-27 20:55:42.289
+!MESSAGE XSCT Command: [disconnect tcfchan#64], Thread: Thread-4600
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-27 20:55:42.314
+!MESSAGE XSCT command with result: [disconnect tcfchan#64], Result: [null, ]. Thread: Thread-4600
+
+!ENTRY org.eclipse.core.jobs 2 2 2020-12-27 20:55:44.673
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.tm.internal.terminal.emulator.VT100TerminalControl$3

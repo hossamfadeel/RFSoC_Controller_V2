@@ -146,6 +146,9 @@ def dac_sawtooth_test():
     #Trigger the board once
     if(board_obj.trigger()):
         raise RuntimeError("Error triggering board")
+        
+    if(board_obj.trigger()):
+        raise RuntimeError("Error triggering board")
     
     return 0
     

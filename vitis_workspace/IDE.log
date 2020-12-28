@@ -3789,3 +3789,4 @@ con
 ----------------End of Script----------------
 
 09:32:55 INFO  : Launch script is exported to file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application_system\_ide\scripts\systemdebugger_no_fpga_flash_standalone.tcl'
+20:55:42 INFO  : Disconnected from the channel tcfchan#64.

@@ -933,3 +933,18 @@ run -all
 # 
 # 
 # rfsoc_pl_ctrl test complete, 40 errors total, 40 DAC errors, 0 ADC errors
+# Compile of rfsoc_pl_ctrl_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.rfsoc_pl_ctrl_tb_sv_unit
+# Loading work.rfsoc_pl_ctrl_tb
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# rfsoc_pl_ctrl test complete, 0 errors total, 0 DAC errors, 0 ADC errors
+# End time: 20:54:06 on Dec 27,2020, Elapsed time: 225:32:54
+# Errors: 0, Warnings: 1

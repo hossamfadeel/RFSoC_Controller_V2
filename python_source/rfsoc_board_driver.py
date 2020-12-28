@@ -798,20 +798,33 @@ class rfsoc_channel:
     
     #Returns a scaled stream, all scaling happens about 0
     def scale_stream(self, stream, new_min, new_max):
-        
-        scale = 0
-        #If the largest magnitude value in a stream is positive we scale based on that and the new max
-        #Otherwise we scale based on the min (most negative) and the new min
-        if(abs(max(stream)) > abs(min(stream))):
-            scale = new_max / max(stream)
-        else:
-            scale = abs(new_min / min(stream))
-        
-        out_stream = []
+    
+        #Check if there are values in the stream outside of [-1,1]
         for s in stream:
-            out_stream.append(s * scale)
-            
-        return out_stream
+            if(s > 1 or s < -1):
+                print("Warning, found values in input waveform outside of [-1, 1], using Jim's scaling function instead")
+                scale = 0
+                #If the largest magnitude value in a stream is positive we scale based on that and the new max
+                #Otherwise we scale based on the min (most negative) and the new min
+                if(abs(max(stream)) > abs(min(stream))):
+                    scale = new_max / max(stream)
+                else:
+                    scale = abs(new_min / min(stream))
+                
+                out_stream = []
+                for s in stream:
+                    out_stream.append(s * scale)
+                    
+                return out_stream
+        
+        #Christian's code
+        slope = (new_max-new_min)/2
+        new_stream = []
+        for i in range(len(stream)):
+            new_stream.append(stream[i]*slope)
+             
+        return new_stream
+        
 
     #Rotates the values within a stream by shift number of samples
     def rotate_stream(self, stream, shift):
