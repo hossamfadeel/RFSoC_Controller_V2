@@ -58,7 +58,7 @@ void cmd_handler_handoff()
 
 u8 led_state;
 u32 led_counter;
-#define LED_COUNTER_THRESH 10000
+#define LED_COUNTER_THRESH 10000000
 
 void update_led_state()
 {

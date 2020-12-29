@@ -448,6 +448,8 @@ class rfsoc_board:
     #list of channel objects used to configure the board
     channel_list = []
     
+    is_connected = 0
+    
     #Port name is the name of the serial port
     def __init__(self, portname, dm = 0):
         
@@ -461,8 +463,10 @@ class rfsoc_board:
         #Try to ping the board
         if(self.board_driver.ping_board()):
             print("Could not communicate with FPGA board!")
+            self.is_connected = 0
         else:
             print("Connection to FPGA board is up!")
+            self.is_connected = 1
             
         self.board_driver.close_board()
         return

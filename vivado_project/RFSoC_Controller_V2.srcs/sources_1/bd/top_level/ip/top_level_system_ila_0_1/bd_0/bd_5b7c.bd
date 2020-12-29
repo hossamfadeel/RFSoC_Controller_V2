@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xABC0D63B3EF52F4D",
+      "boundary_crc": "0xAC17A60FFAF7D39D",
       "design_src": "SBD",
       "device": "xczu29dr-ffvf1760-2-e",
       "name": "bd_5b7c",
@@ -131,6 +131,18 @@
             "value_src": "default"
           }
         }
+      },
+      "SLOT_2_GPIO": {
+        "mode": "Monitor",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_O": {
+            "physical_name": "SLOT_2_GPIO_tri_o",
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
       }
     },
     "ports": {
@@ -184,6 +196,11 @@
             "value_src": "constant"
           }
         }
+      },
+      "SLOT_2_GPIO_tri_o": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
       }
     },
     "components": {
@@ -219,7 +236,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "11"
+            "value": "12"
           },
           "C_PROBE0_MU_CNT": {
             "value": "1"
@@ -235,6 +252,12 @@
           },
           "C_PROBE10_WIDTH": {
             "value": "1"
+          },
+          "C_PROBE11_TYPE": {
+            "value": "0"
+          },
+          "C_PROBE11_WIDTH": {
+            "value": "8"
           },
           "C_PROBE1_TYPE": {
             "value": "0"
@@ -375,16 +398,16 @@
       }
     },
     "interface_nets": {
-      "Conn1": {
-        "interface_ports": [
-          "SLOT_1_AXIS",
-          "g_inst/slot_1_axis"
-        ]
-      },
       "Conn": {
         "interface_ports": [
           "SLOT_0_AXIS",
           "g_inst/slot_0_axis"
+        ]
+      },
+      "Conn1": {
+        "interface_ports": [
+          "SLOT_1_AXIS",
+          "g_inst/slot_1_axis"
         ]
       }
     },
@@ -466,6 +489,12 @@
         "ports": [
           "g_inst/m_slot_1_axis_tlast",
           "ila_lib/probe10"
+        ]
+      },
+      "SLOT_2_GPIO_tri_o_1": {
+        "ports": [
+          "SLOT_2_GPIO_tri_o",
+          "ila_lib/probe11"
         ]
       }
     }
