@@ -33,8 +33,8 @@ XRFdc RFdcInst;      /* RFdc driver instance */
 #define ADC_BUFFER_DEPTH 65536
 //Core functions
 u8 rf_init();
-u8 rf_get_adc_clock_status();
-u8 rf_get_dac_clock_status();
+u8 rf_get_adc_clock_status(u8 tile_num);
+u8 rf_get_dac_clock_status(u8 tile_num);
 int rf_self_test();
 void rf_update_clock_status();
 

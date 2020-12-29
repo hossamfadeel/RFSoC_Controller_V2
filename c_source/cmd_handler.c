@@ -170,7 +170,20 @@ void cmd_handle_command()
 						//Update the clock status
 						rf_update_clock_status();
 						//Build the response byte
-						ret_val = rf_get_dac_clock_status() | (rf_get_adc_clock_status() << 1);
+						ret_val = 0;
+						for(int i = 0; i < 8; i++)
+						{
+							u8 status;
+							if(i < 4)//Get the DAC status
+							{
+								status = rf_get_adc_clock_status(i);
+							}
+							else//Get the ADC status
+							{
+								status = rf_get_adc_clock_status(i-4);
+							}
+							ret_val |= ((status ? 1:0) << i);
+						}
 						//Return the response
 						uart_send_byte(ret_val);
 						cmd_handler_state = state_idle;
@@ -402,13 +415,20 @@ u8 cmd_init()
 	//Clear the buffer once
 	uart_clear_buffer();
 
-	if(rf_get_adc_clock_status())
+	print("Available clocks:\r\n");
+	for(int i = 0; i < 8; i++)
 	{
-		print("No running clock detected for ADC!\r\n");
-	}
-	if(rf_get_dac_clock_status())
-	{
-		print("No running clock detected for DAC!\r\n");
+		u8 status;
+		if(i < 4)
+		{
+			status = rf_get_dac_clock_status(i);
+			xil_printf("DAC channels %i-%i: %s\r\n", (i*4)+1, (i*4)+4, status ? "NO" : "YES");
+		}
+		else
+		{
+			status = rf_get_adc_clock_status(i);
+			xil_printf("ADC channels %i-%i: %s\r\n", ((i-4)*4)+1, ((i-4)*4)+4, status ? "NO" : "YES");
+		}
 	}
 
 	return 0;

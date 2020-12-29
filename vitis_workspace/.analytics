@@ -232,3 +232,18 @@ timestamp=[2020-12-26 12:07:27], mode=BUILD, duration=0:00:08.200, duration_ms=8
 timestamp=[2020-12-27 09:31:10], mode=PLATFORM_GENERATION, duration=0:00:03.013, duration_ms=3013, data={name=rfsoc_v2_platform}
 timestamp=[2020-12-27 09:31:37], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
 timestamp=[2020-12-27 09:31:47], mode=BUILD, duration=0:00:08.387, duration_ms=8387, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 16:44:23], mode=WORKBENCH_START, duration=0:00:10.771, duration_ms=10771, data={}
+timestamp=[2020-12-28 16:44:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.963, duration_ms=963, data={editors_count=5, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,rfsoc_v2_application,rfsoc_v2_application_system,rfsoc_v2_platform}
+timestamp=[2020-12-28 16:44:24], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.063, duration_ms=63, data={}
+timestamp=[2020-12-28 16:53:51], mode=BUILD, duration=0:00:00.617, duration_ms=617, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 16:54:02], mode=BUILD, duration=0:00:11.029, duration_ms=11029, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 16:58:48], mode=BUILD, duration=0:00:00.396, duration_ms=396, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 16:58:56], mode=BUILD, duration=0:00:08.087, duration_ms=8087, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 17:04:12], mode=BUILD, duration=0:00:01.314, duration_ms=1314, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 17:04:20], mode=BUILD, duration=0:00:07.855, duration_ms=7855, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 17:06:15], mode=BUILD, duration=0:00:01.001, duration_ms=1001, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 17:06:23], mode=BUILD, duration=0:00:07.883, duration_ms=7883, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 17:10:08], mode=BUILD, duration=0:00:00.954, duration_ms=954, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 17:10:17], mode=BUILD, duration=0:00:08.410, duration_ms=8410, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 17:21:32], mode=BUILD, duration=0:00:00.945, duration_ms=945, data={name=rfsoc_v2_application, configuration=Debug, clean_build=false}
+timestamp=[2020-12-28 17:21:40], mode=BUILD, duration=0:00:07.813, duration_ms=7813, data={name=rfsoc_v2_application_system, configuration=Debug, clean_build=false}

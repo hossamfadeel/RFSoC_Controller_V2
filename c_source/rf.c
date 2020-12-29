@@ -9,46 +9,57 @@
 #include "gpio.h"
 #include "uart.h"
 
-
-u8 dac_available;
-u8 adc_available;
+//One indicator for each tile
+u8 dac_available[4];
+u8 adc_available[4];
 
 //Returns 0 if a clock is detected
-u8 rf_get_adc_clock_status()
+u8 rf_get_adc_clock_status(u8 tile_num)
 {
-	return adc_available ? 0 : 1;
+	return adc_available[tile_num] ? 0 : 1;
 }
 //Returns 1 if a clock is not detected
-u8 rf_get_dac_clock_status()
+u8 rf_get_dac_clock_status(u8 tile_num)
 {
-	return dac_available ? 0 : 1;
+	return dac_available[tile_num] ? 0 : 1;
 }
 
 void rf_update_clock_status()
 {
-	u8 Tile = 0x00;//Might need to change this later :)
+	for(int i = 0; i < 4; i++)
+	{
+		dac_available[i] = 0;
+		adc_available[i] = 0;
+	}
+
+	//Loop through all tiles and try to reset them
 	u8 Status;
-	Status = XRFdc_Reset(&RFdcInst, XRFDC_ADC_TILE, Tile);
-	if (Status != XRFDC_SUCCESS) {
-		//return XRFDC_FAILURE;
-		debug_print("Failed to reset ADC tile");
-		adc_available = 0;
+	for(u8 Tile = 0; Tile < 4; Tile++){
+		Status = XRFdc_Reset(&RFdcInst, XRFDC_ADC_TILE, Tile);
+		if (Status != XRFDC_SUCCESS) {
+			//return XRFDC_FAILURE;
+			xil_printf("Failed to reset ADC tile #%i\r\n", Tile);
+			adc_available[Tile] = 0;
+		}
+		else
+		{
+			xil_printf("ADC input clock for tile #%i detected successfully!\r\n", Tile);
+			adc_available[Tile] = 1;
+		}
 	}
-	else
-	{
-		debug_print("ADC input clock detected successfully!");
-		adc_available = 1;
-	}
-	Status = XRFdc_Reset(&RFdcInst, XRFDC_DAC_TILE, Tile);
-	if (Status != XRFDC_SUCCESS) {
-		//return XRFDC_FAILURE;
-		debug_print("Failed to reset DAC tile");
-		dac_available = 0;
-	}
-	else
-	{
-		debug_print("DAC input clock detected successfully!");
-		dac_available = 1;
+
+	for(u8 Tile = 0; Tile < 4; Tile++){
+		Status = XRFdc_Reset(&RFdcInst, XRFDC_DAC_TILE, Tile);
+		if (Status != XRFDC_SUCCESS) {
+			//return XRFDC_FAILURE;
+			xil_printf("Failed to reset DAC tile #%i\r\n", Tile);
+			dac_available[Tile] = 0;
+		}
+		else
+		{
+			xil_printf("DAC input clock for tile #%i detected successfully!\r\n", Tile);
+			dac_available[Tile] = 1;
+		}
 	}
 }
 
@@ -215,28 +226,7 @@ int rf_self_test()
 		}
 	}
 
-	Status = XRFdc_Reset(RFdcInstPtr, XRFDC_ADC_TILE, Tile);
-	if (Status != XRFDC_SUCCESS) {
-		//return XRFDC_FAILURE;
-		debug_print("Failed to reset ADC tile");
-		adc_available = 0;
-	}
-	else
-	{
-		debug_print("ADC input clock detected successfully!");
-		adc_available = 1;
-	}
-	Status = XRFdc_Reset(RFdcInstPtr, XRFDC_DAC_TILE, Tile);
-	if (Status != XRFDC_SUCCESS) {
-		//return XRFDC_FAILURE;
-		debug_print("Failed to reset DAC tile");
-		dac_available = 0;
-	}
-	else
-	{
-		debug_print("DAC input clock detected successfully!");
-		dac_available = 1;
-	}
+	rf_update_clock_status();
 
 	for (Block = 0; Block <4; Block++) {
 		if (XRFdc_IsDACBlockEnabled(RFdcInstPtr, Tile, Block)) {

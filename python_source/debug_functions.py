@@ -117,12 +117,12 @@ def dac_sawtooth_test():
     #Create a new high level board object and some channels
     board_obj = rbd.rfsoc_board(portname)
     locking_filename = "test_waveforms\\tdcsq.txt"
-    waveform_filename = "test_waveforms\\testw.txt"
-    c0 = rbd.rfsoc_channel("DAC",0,0,1,8+   0,32,8,5,1,waveform_filename,locking_filename,0,0)
-    c1 = rbd.rfsoc_channel("DAC",1,0,1,8+0.25,32,8,5,1,waveform_filename,locking_filename,0,0)
-    c2 = rbd.rfsoc_channel("DAC",2,0,1,8+ 0.5,32,8,5,1,waveform_filename,locking_filename,0,0)
-    c3 = rbd.rfsoc_channel("DAC",3,0,1,8+0.75,32,8,5,1,waveform_filename,locking_filename,0,0)
-    c4 = rbd.rfsoc_channel("DAC",4,0,1,8+   1,32,8,5,1,waveform_filename,locking_filename,0,0)
+    waveform_filename = "test_waveforms\\testw2.txt"
+    c0 = rbd.rfsoc_channel("DAC",0,0,1,8+   0,32,4,5,1,waveform_filename,locking_filename,0,0)
+    c1 = rbd.rfsoc_channel("DAC",1,0,1,8+0.25,32,4,5,1,waveform_filename,locking_filename,0,0)
+    c2 = rbd.rfsoc_channel("DAC",2,0,1,8+ 0.5,32,4,5,1,waveform_filename,locking_filename,0,0)
+    c3 = rbd.rfsoc_channel("DAC",3,0,1,8+0.75,32,4,5,1,waveform_filename,locking_filename,0,0)
+    c4 = rbd.rfsoc_channel("DAC",4,0,1,8+   1,32,4,5,1,waveform_filename,locking_filename,0,0)
 
     board_obj.channel_list.append(c0)
     board_obj.channel_list.append(c1)

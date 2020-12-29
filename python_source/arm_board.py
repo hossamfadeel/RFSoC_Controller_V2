@@ -50,7 +50,9 @@ if(found == 0):
     board.channel_list.append(c)
 
 #Check the status of the clocks
+board.board_driver.open_board()
 dac_status, adc_status = board.board_driver.check_clocks()
+board.board_driver.close_board()
 if(dac_status):
     raise RuntimeError("Error, the DAC RF clock for the FPGA was not detected, cannot upload waveforms without an RF clock present")
 if(adc_status and adc_run_cycles != 0):

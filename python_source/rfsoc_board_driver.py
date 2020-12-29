@@ -302,19 +302,36 @@ class rfsoc_board_driver:
         return 1
 
     #Returns dac clock status (0 if ok) and then adc clock status (0 if ok)
-    def check_clocks(self):
+    def check_clocks(self, full_stats = 0):
     
         if(self.dummy_mode):
             return 0, 0
         
+        self.port.timeout = 20 # need a longer timeout here
         self.port.write([CMD_PREAMBLE, CMD_CHECK_CLOCKS])
         
         res = self.port.read(1)
         clock_byte = res[0]
-        dac_status = clock_byte & 0x01
-        adc_status = clock_byte & 0x02
         
-        return dac_status, adc_status
+        dac_status = not(clock_byte & 0x01)
+        adc_status = not(clock_byte & 0x10)
+        
+        dac0 = not(clock_byte & 0x01)
+        dac1 = not(clock_byte & 0x02)
+        dac2 = not(clock_byte & 0x04)
+        dac3 = not(clock_byte & 0x08)
+        
+        adc0 = not(clock_byte & 0x10)
+        adc1 = not(clock_byte & 0x20)
+        adc2 = not(clock_byte & 0x40)
+        adc3 = not(clock_byte & 0x80)
+        
+        self.port.timeout = UART_TIMEOUT
+
+        if(full_stats == 0):
+            return dac_status, adc_status
+        else:
+            return dac0, dac1, dac2, dac3, adc0, adc1, adc2, adc3
     
     #If set, all ADC data will be a known pattern (see adc_driver.sv)
     #Returns 0 on success
