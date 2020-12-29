@@ -66,6 +66,7 @@ module top_level_system_ila_0_1 (
   SLOT_1_AXIS_tlast,
   SLOT_1_AXIS_tvalid,
   SLOT_1_AXIS_tready,
+  SLOT_2_GPIO_tri_o,
   resetn
 );
 
@@ -95,6 +96,8 @@ input wire SLOT_1_AXIS_tvalid;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SLOT_1_AXIS, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN top_level_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TREADY" *)
 input wire SLOT_1_AXIS_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 SLOT_2_GPIO TRI_O" *)
+input wire [7 : 0] SLOT_2_GPIO_tri_o;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.resetn RST" *)
 input wire resetn;
@@ -112,6 +115,7 @@ input wire resetn;
     .SLOT_1_AXIS_tlast(SLOT_1_AXIS_tlast),
     .SLOT_1_AXIS_tvalid(SLOT_1_AXIS_tvalid),
     .SLOT_1_AXIS_tready(SLOT_1_AXIS_tready),
+    .SLOT_2_GPIO_tri_o(SLOT_2_GPIO_tri_o),
     .resetn(resetn)
   );
 endmodule

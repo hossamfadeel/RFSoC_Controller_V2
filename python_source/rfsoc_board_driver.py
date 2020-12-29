@@ -264,7 +264,7 @@ class rfsoc_board_driver:
         if(self.dummy_mode):
             return 0
     
-        bytes_list = list((adc_run_cycles).to_bytes(8, byteorder='little', signed = False))
+        bytes_list = list((int(adc_run_cycles)).to_bytes(8, byteorder='little', signed = False))
         self.port.write([CMD_PREAMBLE, CMD_SET_ADC_RUN_CYCLES])
         self.port.write(bytes_list)
         
@@ -280,7 +280,7 @@ class rfsoc_board_driver:
         if(self.dummy_mode):
             return 0
 
-        bytes_list = list((adc_shift).to_bytes(8, byteorder='little', signed = False))
+        bytes_list = list((int(adc_shift)).to_bytes(8, byteorder='little', signed = False))
         self.port.write([CMD_PREAMBLE, CMD_SET_ADC_SHIFT])
         self.port.write(bytes_list)
         
@@ -448,8 +448,6 @@ class rfsoc_board:
     #list of channel objects used to configure the board
     channel_list = []
     
-    is_connected = 0
-    
     #Port name is the name of the serial port
     def __init__(self, portname, dm = 0):
         
@@ -463,10 +461,8 @@ class rfsoc_board:
         #Try to ping the board
         if(self.board_driver.ping_board()):
             print("Could not communicate with FPGA board!")
-            self.is_connected = 0
         else:
             print("Connection to FPGA board is up!")
-            self.is_connected = 1
             
         self.board_driver.close_board()
         return

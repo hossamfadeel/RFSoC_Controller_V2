@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Sat Dec 26 16:48:07 2020
+//Date        : Mon Dec 28 22:28:17 2020
 //Host        : JAMES-LENOVO running 64-bit major release  (build 9200)
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -1021,7 +1021,7 @@ module top_level
   wire axi_dma_0_M_AXI_S2MM_WVALID;
   wire axi_dma_0_mm2s_introut;
   wire axi_dma_0_s2mm_introut;
-  wire [7:0]axi_gpio_0_GPIO2_TRI_O;
+  (* CONN_BUS_INFO = "axi_gpio_0_GPIO2 xilinx.com:interface:gpio:1.0 None TRI_O" *) (* DEBUG = "true" *) (* MARK_DEBUG *) wire [7:0]axi_gpio_0_GPIO2_TRI_O;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]axi_gpio_0_gpio_io_o;
   wire [48:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
@@ -1906,6 +1906,7 @@ module top_level
         .SLOT_1_AXIS_tlast(axis_data_fifo_2_M_AXIS_TLAST),
         .SLOT_1_AXIS_tready(axis_data_fifo_2_M_AXIS_TREADY),
         .SLOT_1_AXIS_tvalid(axis_data_fifo_2_M_AXIS_TVALID),
+        .SLOT_2_GPIO_tri_o(axi_gpio_0_GPIO2_TRI_O),
         .clk(zynq_ultra_ps_e_0_pl_clk0),
         .probe0(axi_gpio_0_gpio_io_o),
         .resetn(rst_ps8_0_100M_peripheral_aresetn));

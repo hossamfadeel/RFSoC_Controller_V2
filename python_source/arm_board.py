@@ -13,7 +13,7 @@ import waveform_plotter as wp
 if(len(sys.argv) != 4):
     raise ValueError("Error, incorrect number of arguments, please see top of arm_board.py for list of arguments")
 
-adc_run_cycles = int(sys.argv[1]) / 4 #Divide by 4 to go from ns to number of cycles
+adc_run_cycles = int(int(sys.argv[1]) / 4) #Divide by 4 to go from ns to number of cycles
 display_waveforms = int(sys.argv[2])
 adc_shift = math.log2(int(sys.argv[3]))
 
@@ -50,15 +50,15 @@ if(found == 0):
     board.channel_list.append(c)
 
 #Check the status of the clocks
-board.board_driver.open_board()
-dac_status, adc_status = board.board_driver.check_clocks()
-board.board_driver.close_board()
-if(dac_status):
-    raise RuntimeError("Error, the DAC RF clock for the FPGA was not detected, cannot upload waveforms without an RF clock present")
-if(adc_status and adc_run_cycles != 0):
-    raise RuntimeError("Error, the ADC RF clock for the FPGA was not detected, cannot use ADC without clock")
-elif(adc_status):
-    print("Warning, ADC clock not detected")
+# board.board_driver.open_board()
+# dac_status, adc_status = board.board_driver.check_clocks()
+# board.board_driver.close_board()
+# if(dac_status):
+    # raise RuntimeError("Error, the DAC RF clock for the FPGA was not detected, cannot upload waveforms without an RF clock present")
+# if(adc_status and adc_run_cycles != 0):
+    # raise RuntimeError("Error, the ADC RF clock for the FPGA was not detected, cannot use ADC without clock")
+# elif(adc_status):
+    # print("Warning, ADC clock not detected")
     
     
 #Configure all channels

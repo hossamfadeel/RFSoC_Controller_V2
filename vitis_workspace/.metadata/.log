@@ -14148,3 +14148,9 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-16: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-12-28 21:41:27.530
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 00:01:02.416
+!MESSAGE XSCT Command: [disconnect tcfchan#13], Thread: Thread-1012
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 00:01:02.449
+!MESSAGE XSCT command with result: [disconnect tcfchan#13], Result: [null, ]. Thread: Thread-1012

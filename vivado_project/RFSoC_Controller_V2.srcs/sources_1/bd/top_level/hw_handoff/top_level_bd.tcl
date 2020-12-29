@@ -424,7 +424,7 @@ proc create_root_design { parentCell } {
   set system_ila_ps [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_ps ]
   set_property -dict [ list \
    CONFIG.C_MON_TYPE {MIX} \
-   CONFIG.C_NUM_MONITOR_SLOTS {2} \
+   CONFIG.C_NUM_MONITOR_SLOTS {3} \
    CONFIG.C_NUM_OF_PROBES {1} \
    CONFIG.C_PROBE0_TYPE {0} \
    CONFIG.C_SLOT_0_APC_EN {0} \
@@ -435,6 +435,8 @@ proc create_root_design { parentCell } {
    CONFIG.C_SLOT_1_AXI_DATA_SEL {1} \
    CONFIG.C_SLOT_1_AXI_TRIG_SEL {1} \
    CONFIG.C_SLOT_1_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} \
+   CONFIG.C_SLOT_2_INTF_TYPE {xilinx.com:interface:gpio_rtl:1.0} \
+   CONFIG.C_SLOT_2_TYPE {0} \
  ] $system_ila_ps
 
   # Create instance: usp_rf_data_converter_0, and set properties
@@ -2083,6 +2085,8 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_i
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_MM2S [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] [get_bd_intf_pins axi_smc/S00_AXI]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_S2MM [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins axi_smc/S01_AXI]
   connect_bd_intf_net -intf_net axi_gpio_0_GPIO2 [get_bd_intf_ports app_leds] [get_bd_intf_pins axi_gpio_0/GPIO2]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axi_gpio_0_GPIO2] [get_bd_intf_ports app_leds] [get_bd_intf_pins system_ila_ps/SLOT_2_GPIO]
+  set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_intf_nets axi_gpio_0_GPIO2]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HPC0_FPD]
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_gpio_async_fifo/M_AXIS] [get_bd_intf_pins gpio_buffer_0/s_axis]
   connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS [get_bd_intf_pins axis_data_ps_to_pl_fifo/M_AXIS] [get_bd_intf_pins rfsoc_pl_ctrl_verilo_0/s_axis]

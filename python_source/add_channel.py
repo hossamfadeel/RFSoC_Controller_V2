@@ -70,22 +70,21 @@ for c in board.channel_list:
         found = 1
         print("Appending configuration for channel " + str(channel_number+1))
         #If we're about to overwrite something that is already configured
-        if(is_locking and c.locking_filename != ""):
-            print("Warning, overriding locking cycle configuration for channel " + str(channel_number))
-        if(not is_locking and c.waveform_filename != ""):
-            print("Warning, overriding waveform configuration for channel " + str(channel_number))
+        #if(is_locking and c.locking_filename != ""):
+            #print("Warning, overriding locking cycle configuration for channel " + str(channel_number))
+        #if(not is_locking and c.waveform_filename != ""):
+            #print("Warning, overriding waveform configuration for channel " + str(channel_number))
+		
+        c.locking_filename = locking_filename
+        c.locking_amp_factor = locking_amp_factor
+        c.locking_shift = locking_phase
+        c.waveform_filename = waveform_filename
+        c.period = waveform_period
+        c.post_delay = post_delay
+        c.waveform_amp_factor = amp_mul_factor
+        c.num_repeat_cycles = num_repeat_cycles
+        c.pre_delay = zero_delay
         
-        if(is_locking):
-            c.locking_filename = locking_filename
-            c.locking_amp_factor = locking_amp_factor
-            c.locking_shift = locking_phase
-        else:
-            c.waveform_filename = waveform_filename
-            c.period = waveform_period
-            c.post_delay = post_delay
-            c.waveform_amp_factor = amp_mul_factor
-            c.num_repeat_cycles = num_repeat_cycles
-            c.pre_delay = zero_delay
         
         #Check the new parameters
         c.check_parameters()

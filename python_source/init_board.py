@@ -21,19 +21,21 @@ def auto_detect(port_list, use_dummy_mode, org_port):
 #First argument is the portname to use as the COM port for connecting to FPGA
 #Second argument is 1 if we're using dummy mode
 
+is_c = 0
+skip = 0
 
 #if we weren't passed a port as an argument
 if(len(sys.argv) < 2):
-    raise ValueError("Error, please provide a portname as an argument..., usage is \"init_board.py PORTNAME\"")
-    
-portname = sys.argv[1]
+    print("No port name provided for board initialization, will attempt auto-discovery")
+    skip = 1
+else:
+    portname = sys.argv[1]
 
 use_dummy_mode = 0
 if(len(sys.argv) == 3):
     use_dummy_mode = sys.argv[2]
 
-is_c = 0
-skip = 0
+
 port_list = rbd.get_port_list()
 if(use_dummy_mode == 0):
     if portname not in port_list:
@@ -57,7 +59,7 @@ if not skip: #If we should at least try the user's port
 else:
     is_c = auto_detect(port_list, use_dummy_mode, portname)
     
-        
+#If we successfully connected to the board
 if(is_c):
 
     #Done
