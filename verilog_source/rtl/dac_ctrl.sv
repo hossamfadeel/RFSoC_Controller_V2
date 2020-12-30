@@ -146,6 +146,8 @@ localparam [3:0] state_idle = 0,
 reg output_on;
 //assign m_axis_tdata = output_on ? (mask_on ? (s_axis_tdata & mask_out) : mask_inv ? (s_axis_tdata & (~mask_out)) : s_axis_tdata) : (state == state_idle ? locking_waveform : 0);
 
+reg [255:0] first_dac_word;//Holds the first DAC word we read out during triggering
+
 //Assignment for output to m_axis_tdata and pipeline register
 reg [255:0] m_axis_tdata_int;
 always @ (posedge clk) begin
@@ -159,7 +161,8 @@ always @ * begin
 			m_axis_tdata_int <= s_axis_tdata & mask_out;
 		end
 		else if(mask_inv && mask_enable[0]) begin
-			m_axis_tdata_int <= s_axis_tdata & (~mask_out);
+			//Need to use the very first sample we read out on the last cycle
+			m_axis_tdata_int <= first_dac_word & (~mask_out);
 		end
 		else begin
 			m_axis_tdata_int <= s_axis_tdata;
@@ -191,6 +194,7 @@ begin
 	pre_delay_cycle_counter <= 0;
 	post_delay_cycle_counter <= 0;
 	locking_cycle <= 0;
+	first_dac_word <= 0;
 end
 endtask
 
@@ -236,6 +240,8 @@ always @ (posedge clk or negedge rst) begin
 					loopback_valid <= 1;//Start writing back into waveform fifo
 					s_axis_tready <= 1'b1;//Start reading out data
 					state <= state_run;
+					
+					first_dac_word <= s_axis_tdata;//Save that first word for later use with mask
 				end
 				else begin
 					pre_delay_cycle_counter <= pre_delay_cycle_counter - 1;
@@ -251,7 +257,12 @@ always @ (posedge clk or negedge rst) begin
 					cycle_count <= cycle_count - 1;
 					if(cycle_count == 2) begin
 						mask_inv <= 1;//Invert mask for second to last cycle
-						//s_axis_tready <= 1'b0;//Stop reading out the waveform
+						
+						//If the mask is on we have an extra cycle to complete without reading out the waveform fifo
+						if(mask_enable[0]) begin
+							s_axis_tready <= 1'b0;//Stop reading out the waveform
+							loopback_valid <= 0;//Stop writing back into fifo
+						end
 					end
 					else if(cycle_count == 1) begin//If we're on the last cycle
 						loopback_valid <= 0;//Stop writing back into fifo

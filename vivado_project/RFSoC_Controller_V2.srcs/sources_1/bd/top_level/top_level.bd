@@ -857,16 +857,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "auto_ds_to_auto_pc": {
                 "interface_ports": [
                   "auto_ds/M_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               },
               "s00_couplers_to_auto_ds": {
@@ -1057,12 +1057,6 @@
           }
         },
         "interface_nets": {
-          "ps8_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "m00_couplers_to_ps8_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
@@ -1085,6 +1079,12 @@
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
+            ]
+          },
+          "ps8_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           },
           "xbar_to_m01_couplers": {
@@ -1148,7 +1148,7 @@
             "value": "MIX"
           },
           "C_NUM_MONITOR_SLOTS": {
-            "value": "9"
+            "value": "13"
           },
           "C_NUM_OF_PROBES": {
             "value": "1"
@@ -1163,6 +1163,42 @@
             "value": "1"
           },
           "C_SLOT_0_INTF_TYPE": {
+            "value": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "C_SLOT_10_APC_EN": {
+            "value": "0"
+          },
+          "C_SLOT_10_AXI_DATA_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_10_AXI_TRIG_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_10_INTF_TYPE": {
+            "value": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "C_SLOT_11_APC_EN": {
+            "value": "0"
+          },
+          "C_SLOT_11_AXI_DATA_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_11_AXI_TRIG_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_11_INTF_TYPE": {
+            "value": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "C_SLOT_12_APC_EN": {
+            "value": "0"
+          },
+          "C_SLOT_12_AXI_DATA_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_12_AXI_TRIG_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_12_INTF_TYPE": {
             "value": "xilinx.com:interface:axis_rtl:1.0"
           },
           "C_SLOT_1_APC_EN": {
@@ -1260,6 +1296,18 @@
           },
           "C_SLOT_8_INTF_TYPE": {
             "value": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "C_SLOT_9_APC_EN": {
+            "value": "0"
+          },
+          "C_SLOT_9_AXI_DATA_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_9_AXI_TRIG_SEL": {
+            "value": "1"
+          },
+          "C_SLOT_9_INTF_TYPE": {
+            "value": "xilinx.com:interface:axis_rtl:1.0"
           }
         },
         "interface_ports": {
@@ -1296,6 +1344,22 @@
             "vlnv": "xilinx.com:interface:axis_rtl:1.0"
           },
           "SLOT_8_AXIS": {
+            "mode": "Monitor",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "SLOT_9_AXIS": {
+            "mode": "Monitor",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "SLOT_10_AXIS": {
+            "mode": "Monitor",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "SLOT_11_AXIS": {
+            "mode": "Monitor",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
+          },
+          "SLOT_12_AXIS": {
             "mode": "Monitor",
             "vlnv": "xilinx.com:interface:axis_rtl:1.0"
           }
@@ -7203,8 +7267,17 @@
       "rfsoc_pl_ctrl_verilo_0_m6_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/s12_axis",
-          "rfsoc_pl_ctrl_verilo_0/m6_axis"
-        ]
+          "rfsoc_pl_ctrl_verilo_0/m6_axis",
+          "system_ila_pl/SLOT_10_AXIS"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "usp_rf_data_converter_0_vout21": {
         "interface_ports": [
@@ -7427,8 +7500,17 @@
       "rfsoc_pl_ctrl_verilo_0_m7_axis": {
         "interface_ports": [
           "rfsoc_pl_ctrl_verilo_0/m7_axis",
-          "usp_rf_data_converter_0/s13_axis"
-        ]
+          "usp_rf_data_converter_0/s13_axis",
+          "system_ila_pl/SLOT_11_AXIS"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "usp_rf_data_converter_0_vout33": {
         "interface_ports": [
@@ -7805,14 +7887,32 @@
       "rfsoc_pl_ctrl_verilo_0_m5_axis": {
         "interface_ports": [
           "rfsoc_pl_ctrl_verilo_0/m5_axis",
-          "usp_rf_data_converter_0/s11_axis"
-        ]
+          "usp_rf_data_converter_0/s11_axis",
+          "system_ila_pl/SLOT_9_AXIS"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "rfsoc_pl_ctrl_verilo_0_m8_axis": {
         "interface_ports": [
           "usp_rf_data_converter_0/s20_axis",
-          "rfsoc_pl_ctrl_verilo_0/m8_axis"
-        ]
+          "rfsoc_pl_ctrl_verilo_0/m8_axis",
+          "system_ila_pl/SLOT_12_AXIS"
+        ],
+        "hdl_attributes": {
+          "DEBUG": {
+            "value": "true"
+          },
+          "MARK_DEBUG": {
+            "value": "true"
+          }
+        }
       },
       "usp_rf_data_converter_0_vout22": {
         "interface_ports": [

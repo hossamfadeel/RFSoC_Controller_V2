@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Dec 28 22:47:51 2020
+| Date         : Wed Dec 30 11:04:52 2020
 | Host         : JAMES-LENOVO running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_level_wrapper_drc_routed.rpt -pb top_level_wrapper_drc_routed.pb -rpx top_level_wrapper_drc_routed.rpx
 | Design       : top_level_wrapper
@@ -42,7 +42,7 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-180 net(s) have no routable loads. The problem bus(es) and/or net(s) are top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc0_clk_n_3[12],
+178 net(s) have no routable loads. The problem bus(es) and/or net(s) are top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc0_clk_n_3[12],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc0_clk_n_3[13],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc0_clk_n_3[1],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc0_clk_n_3[4],
@@ -57,7 +57,7 @@ top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc0_clk_n_4[6],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc0_clk_n_4[7],
 top_level_i/usp_rf_data_converter_0/inst/top_level_usp_rf_data_converter_0_0_rf_wrapper_i/adc0_clk_n_5[1]
- (the first 15 of 166 listed).
+ (the first 15 of 164 listed).
 Related violations: <none>
 
 REQP-1935#1 Advisory

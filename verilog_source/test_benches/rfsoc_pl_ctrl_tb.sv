@@ -366,7 +366,7 @@ initial begin
 	
 	//ADC testing parameters
 	adc_run_cycles = 16;
-	adc_shift_val = 0;
+	adc_shift_val = 2;
 	
 	
 	//System reset
@@ -393,7 +393,7 @@ initial begin
 		set_mux_sel(0);
 		set_mask_enable(1);
 		//Set repeat cycles to 20
-		set_cycle_count(10);
+		set_cycle_count(10 + 1);//Plus 1 because we're using the mask
 		//Set the mask to half off half on
 		set_mask(test_mask);
 		//Set the locking waveform
@@ -498,7 +498,11 @@ initial begin
 		check_channels({16{16'hdddd}});
 		pl_clk_cycle();
 		
-		check_channels({{8{16'heeee}}, {8{16'h0000}}});
+		check_channels({16{16'heeee}});
+		pl_clk_cycle();
+		
+		//Last cycle should be first word with opposite mask
+		check_channels({{8{16'haaaa}},{8{16'h0000}}});
 		pl_clk_cycle();
 		
 		//post cycle delay

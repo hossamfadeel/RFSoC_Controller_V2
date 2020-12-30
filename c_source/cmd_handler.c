@@ -168,7 +168,7 @@ void cmd_handle_command()
 					
 					case CMD_CHECK_CLOCKS:
 						//Update the clock status
-						rf_update_clock_status();
+						rf_update_clock_status_soft();
 						//Build the response byte
 						ret_val = 0;
 						for(int i = 0; i < 8; i++)
@@ -176,13 +176,14 @@ void cmd_handle_command()
 							u8 status;
 							if(i < 4)//Get the DAC status
 							{
-								status = rf_get_adc_clock_status(i);
+								status = rf_get_dac_clock_status(i);
 							}
 							else//Get the ADC status
 							{
 								status = rf_get_adc_clock_status(i-4);
 							}
-							ret_val |= ((status ? 1:0) << i);
+							//If 1 then the clocks are active so we return 0 to signal no problem
+							ret_val |= ((status ? 0:1) << i);
 						}
 						//Return the response
 						uart_send_byte(ret_val);
@@ -207,7 +208,11 @@ void cmd_handle_command()
 					break;
 					
 					case CMD_PING_BOARD:
-						uart_send_byte(CMD_ACK);
+						//Need to respond in a more specific way
+						uart_send_byte(0xAA);
+						uart_send_byte(0xBB);
+						uart_send_byte(0xCC);
+						uart_send_byte(0xDD);
 						cmd_handler_state = state_idle;
 					break;
 					

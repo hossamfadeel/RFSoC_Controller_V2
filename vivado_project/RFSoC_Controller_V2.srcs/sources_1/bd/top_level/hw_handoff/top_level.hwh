@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Dec 28 22:28:31 2020" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 30 10:45:21 2020" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu1275:part0:1.0" DEVICE="xczu29dr" NAME="top_level" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -6131,7 +6131,7 @@
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WLAST_TO_AWVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WRITE_TO_BVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_CONTINUOUS_RTRANSFERS_WAITS" VALUE="0"/>
-        <PARAMETER NAME="C_BRAM_CNT" VALUE="2.5"/>
+        <PARAMETER NAME="C_BRAM_CNT" VALUE="52.5"/>
         <PARAMETER NAME="C_SLOT_0_AXI_AW_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_W_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_B_SEL_DATA" VALUE="1"/>
@@ -9490,7 +9490,7 @@
         <PARAMETER NAME="EN_BRAM_DRC" VALUE="TRUE"/>
         <PARAMETER NAME="ALL_PROBE_SAME_MU" VALUE="TRUE"/>
         <PARAMETER NAME="ALL_PROBE_SAME_MU_CNT" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="9"/>
+        <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="13"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_RUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_AWUSER_WIDTH" VALUE="1"/>
@@ -9526,10 +9526,10 @@
         <PARAMETER NAME="C_SLOT_6_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_7_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_8_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
-        <PARAMETER NAME="C_SLOT_9_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
-        <PARAMETER NAME="C_SLOT_10_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
-        <PARAMETER NAME="C_SLOT_11_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
-        <PARAMETER NAME="C_SLOT_12_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
+        <PARAMETER NAME="C_SLOT_9_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
+        <PARAMETER NAME="C_SLOT_10_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
+        <PARAMETER NAME="C_SLOT_11_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
+        <PARAMETER NAME="C_SLOT_12_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_13_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_14_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_15_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
@@ -9772,6 +9772,22 @@
             <CONNECTION INSTANCE="rst_ps8_0_100M1" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="255" NAME="SLOT_9_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_9_AXIS_tlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_9_AXIS_tvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_9_AXIS_tready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="255" NAME="SLOT_10_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_10_AXIS_tlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_10_AXIS_tvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_10_AXIS_tready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="255" NAME="SLOT_11_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_11_AXIS_tlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_11_AXIS_tvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_11_AXIS_tready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="255" NAME="SLOT_12_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_12_AXIS_tlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_12_AXIS_tvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_12_AXIS_tready" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="axis_data_ps_to_pl_fifo_M_AXIS" NAME="SLOT_0_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
@@ -9961,6 +9977,90 @@
             <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_8_AXIS_tlast"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_8_AXIS_tvalid"/>
             <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_8_AXIS_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="rfsoc_pl_ctrl_verilo_0_m5_axis" NAME="SLOT_9_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="32"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_0_clk_dac0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_9_AXIS_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_9_AXIS_tlast"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_9_AXIS_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_9_AXIS_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="rfsoc_pl_ctrl_verilo_0_m6_axis" NAME="SLOT_10_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="32"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_0_clk_dac0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_10_AXIS_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_10_AXIS_tlast"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_10_AXIS_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_10_AXIS_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="rfsoc_pl_ctrl_verilo_0_m7_axis" NAME="SLOT_11_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="32"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_0_clk_dac0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_11_AXIS_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_11_AXIS_tlast"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_11_AXIS_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_11_AXIS_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="rfsoc_pl_ctrl_verilo_0_m8_axis" NAME="SLOT_12_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="32"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="250000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="top_level_usp_rf_data_converter_0_0_clk_dac0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_12_AXIS_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_12_AXIS_tlast"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_12_AXIS_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_12_AXIS_tready"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>

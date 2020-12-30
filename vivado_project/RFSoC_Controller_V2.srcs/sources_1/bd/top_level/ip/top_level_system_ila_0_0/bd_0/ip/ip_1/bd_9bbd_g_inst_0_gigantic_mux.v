@@ -4424,6 +4424,42 @@ module bd_9bbd_g_inst_0_gigantic_mux # (
      assign m_slot_8_axis_tid = slot_8_axis_tid ;
      assign m_slot_8_axis_tkeep = slot_8_axis_tkeep ;
      assign m_slot_8_axis_tdest = slot_8_axis_tdest ;
+     assign m_slot_9_axis_tvalid = slot_9_axis_tvalid ;
+     assign m_slot_9_axis_tready = slot_9_axis_tready ;
+     assign m_slot_9_axis_tdata = slot_9_axis_tdata ;
+     assign m_slot_9_axis_tstrb = slot_9_axis_tstrb ;
+     assign m_slot_9_axis_tlast = slot_9_axis_tlast ;
+     assign m_slot_9_axis_tuser = slot_9_axis_tuser ;
+     assign m_slot_9_axis_tid = slot_9_axis_tid ;
+     assign m_slot_9_axis_tkeep = slot_9_axis_tkeep ;
+     assign m_slot_9_axis_tdest = slot_9_axis_tdest ;
+     assign m_slot_10_axis_tvalid = slot_10_axis_tvalid ;
+     assign m_slot_10_axis_tready = slot_10_axis_tready ;
+     assign m_slot_10_axis_tdata = slot_10_axis_tdata ;
+     assign m_slot_10_axis_tstrb = slot_10_axis_tstrb ;
+     assign m_slot_10_axis_tlast = slot_10_axis_tlast ;
+     assign m_slot_10_axis_tuser = slot_10_axis_tuser ;
+     assign m_slot_10_axis_tid = slot_10_axis_tid ;
+     assign m_slot_10_axis_tkeep = slot_10_axis_tkeep ;
+     assign m_slot_10_axis_tdest = slot_10_axis_tdest ;
+     assign m_slot_11_axis_tvalid = slot_11_axis_tvalid ;
+     assign m_slot_11_axis_tready = slot_11_axis_tready ;
+     assign m_slot_11_axis_tdata = slot_11_axis_tdata ;
+     assign m_slot_11_axis_tstrb = slot_11_axis_tstrb ;
+     assign m_slot_11_axis_tlast = slot_11_axis_tlast ;
+     assign m_slot_11_axis_tuser = slot_11_axis_tuser ;
+     assign m_slot_11_axis_tid = slot_11_axis_tid ;
+     assign m_slot_11_axis_tkeep = slot_11_axis_tkeep ;
+     assign m_slot_11_axis_tdest = slot_11_axis_tdest ;
+     assign m_slot_12_axis_tvalid = slot_12_axis_tvalid ;
+     assign m_slot_12_axis_tready = slot_12_axis_tready ;
+     assign m_slot_12_axis_tdata = slot_12_axis_tdata ;
+     assign m_slot_12_axis_tstrb = slot_12_axis_tstrb ;
+     assign m_slot_12_axis_tlast = slot_12_axis_tlast ;
+     assign m_slot_12_axis_tuser = slot_12_axis_tuser ;
+     assign m_slot_12_axis_tid = slot_12_axis_tid ;
+     assign m_slot_12_axis_tkeep = slot_12_axis_tkeep ;
+     assign m_slot_12_axis_tdest = slot_12_axis_tdest ;
 
     
     

@@ -9,7 +9,7 @@ def auto_detect(port_list, use_dummy_mode, org_port):
     
     for p in port_list:
         if(p != org_port):
-            board = rbd.rfsoc_board(portname, use_dummy_mode)
+            board = rbd.rfsoc_board(p, use_dummy_mode)
             if(board.is_connected):
                 rbd.save_rfsoc_board(board)
                 print("Success! Auto-detected port was " + p)
@@ -39,8 +39,8 @@ if(len(sys.argv) == 3):
 port_list = rbd.get_port_list()
 if(use_dummy_mode == 0):
     if portname not in port_list:
-        rbd.print_port_list()
-        print("Invalid port name: " + portname)
+        #rbd.print_port_list()
+        print("Invalid port name: " + portname + ", system was unable to locate port")
         skip = 1
         
 if not skip: #If we should at least try the user's port
@@ -62,18 +62,18 @@ else:
 #If we successfully connected to the board
 if(is_c):
 
-    #Done
+    board = rbd.load_rfsoc_board()
     board.board_driver.open_board()
     d0, d1, d2, d3, a0, a1, a2, a3 = board.board_driver.check_clocks(full_stats = 1)
     d = [d0, d1, d2, d3]
     a = [a0, a1, a2, a3]
     board.board_driver.close_board()
-    print("Available Clocks:\n=================\n")
-    for i in range(0, 4):
+    print("\n\nAvailable Clocks:\n=================\n")
+    for i in range(0, 8):
         if(i < 4):
             print("DAC channels " + str((i*4)+1) + "-" + str((i*4)+4) + " : " + ("YES" if not d[i] else "NO"))
         else:
-            print("ADC channels " + str(((i-4)*4)+1) + "-" + str(((i-4)*4)+4) + " : " + ("YES" if not a[i] else "NO"))
+            print("ADC channels " + str(((i-4)*4)+1) + "-" + str(((i-4)*4)+4) + " : " + ("YES" if not a[i-4] else "NO"))
             
      
     if(d[0]):

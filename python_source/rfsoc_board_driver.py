@@ -98,10 +98,17 @@ class rfsoc_board_driver:
             return 0
         
         self.port.write([CMD_PREAMBLE, CMD_PING_BOARD])
-        res = self.wait_ack()
-        if(res == CMD_ACK):
-            return 0
-        return 1
+        
+        try:
+            ret_vals = self.port.read(4)
+            if(ret_vals[0] == 0xAA):
+                if(ret_vals[1] == 0xBB):
+                    if(ret_vals[2] == 0xCC):
+                        if(ret_vals[3] == 0xDD):
+                            return 0
+            return 1
+        except:
+            return 1
     
     #Returns 0 on success
     #Set channel to -1 for buffer flush
@@ -447,6 +454,7 @@ class rfsoc_board:
     
     #list of channel objects used to configure the board
     channel_list = []
+    is_connected = 0
     
     #Port name is the name of the serial port
     def __init__(self, portname, dm = 0):
@@ -460,9 +468,11 @@ class rfsoc_board:
         
         #Try to ping the board
         if(self.board_driver.ping_board()):
-            print("Could not communicate with FPGA board!")
+            print("Could not communicate with FPGA board on port " + portname + "!")
+            self.is_connected = 0
         else:
             print("Connection to FPGA board is up!")
+            self.is_connected = 1
             
         self.board_driver.close_board()
         return
@@ -845,8 +855,12 @@ class rfsoc_channel:
 
     #Rotates the values within a stream by shift number of samples
     def rotate_stream(self, stream, shift):
+        
+        #Adjust the shift if need be
+        shift_int = int(shift%len(stream))
+        
         new_stream = []
-        index = shift*-1
+        index = shift_int*-1
         
         #if we're just shifting back to where we started
         if(index >= len(stream)):
