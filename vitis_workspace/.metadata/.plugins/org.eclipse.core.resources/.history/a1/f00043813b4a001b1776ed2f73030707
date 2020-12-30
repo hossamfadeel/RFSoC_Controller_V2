@@ -76,16 +76,10 @@ void rf_update_clock_status_soft()
 		{
 			xil_printf("Warning, unable to get status of ADC tile %i\r\n", tile_num);
 		}
-		adc_available[tile_num] = bs.DataPathClocksStatus;
-	}
-	for(u32 tile_num = 0; tile_num < 4; tile_num++)
-	{
-		Status = XRFdc_GetBlockStatus(&RFdcInst, 1, tile_num, 0, &bs);
-		if(Status != XRFDC_SUCCESS)
+		if(bs.DataPathClocksStatus)
 		{
-			xil_printf("Warning, unable to get status of DAC tile %i\r\n", tile_num);
+
 		}
-		dac_available[tile_num] = bs.DataPathClocksStatus;
 	}
 }
 

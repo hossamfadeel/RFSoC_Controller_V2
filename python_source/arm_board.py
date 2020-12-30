@@ -50,16 +50,20 @@ if(found == 0):
     board.channel_list.append(c)
 
 #Check the status of the clocks
-# board.board_driver.open_board()
-# dac_status, adc_status = board.board_driver.check_clocks()
-# board.board_driver.close_board()
-# if(dac_status):
-    # raise RuntimeError("Error, the DAC RF clock for the FPGA was not detected, cannot upload waveforms without an RF clock present")
-# if(adc_status and adc_run_cycles != 0):
-    # raise RuntimeError("Error, the ADC RF clock for the FPGA was not detected, cannot use ADC without clock")
-# elif(adc_status):
-    # print("Warning, ADC clock not detected")
-    
+board.board_driver.open_board()
+d0, d1, d2, d3, a0, a1, a2, a3 = board.board_driver.check_clocks(full_stats = 1)
+board.board_driver.close_board()
+ds = [d0, d1, d2, d3]
+if(d0):
+    raise RuntimeError("Error, the DAC RF clock for channels 1-4 was not detected, cannot upload waveforms without an RF clock present")
+if(a0 and adc_run_cycles != 0):
+    raise RuntimeError("Error, the ADC RF clock for the FPGA was not detected, cannot use ADC without clock")
+
+for c in board.channel_list:
+    dac_tile = math.floor(c.channel_num/4)
+    if(ds[dac_tile]):
+        print("Warning, no clock detected for DAC channel " + str(c.channel_num) + " and this channel is in use.")
+
     
 #Configure all channels
 if(board.configure_all_channels(0)):

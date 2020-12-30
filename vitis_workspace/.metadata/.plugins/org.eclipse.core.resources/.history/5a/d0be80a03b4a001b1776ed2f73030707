@@ -415,9 +415,6 @@ u8 cmd_init()
 	//Clear the buffer once
 	uart_clear_buffer();
 
-	//Try the new clock status method
-	rf_update_clock_status_soft();
-
 	print("Available clocks:\r\n");
 	for(int i = 0; i < 8; i++)
 	{

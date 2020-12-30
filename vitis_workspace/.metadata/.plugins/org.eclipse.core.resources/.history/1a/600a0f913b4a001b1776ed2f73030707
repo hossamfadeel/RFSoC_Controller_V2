@@ -37,6 +37,5 @@ u8 rf_get_adc_clock_status(u8 tile_num);
 u8 rf_get_dac_clock_status(u8 tile_num);
 int rf_self_test();
 void rf_update_clock_status();
-void rf_update_clock_status_soft();//Updates clock status without resetting tile
 
 #endif /* SRC_DRIVERS_RF_H_ */

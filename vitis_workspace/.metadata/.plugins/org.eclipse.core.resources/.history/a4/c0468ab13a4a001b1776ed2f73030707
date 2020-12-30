@@ -66,27 +66,7 @@ void rf_update_clock_status()
 //Updates the status of the clocks without resetting the tiles
 void rf_update_clock_status_soft()
 {
-	XRFdc_BlockStatus bs;
-	u32 Status;
-	//ADCs first
-	for(u32 tile_num = 0; tile_num < 4; tile_num++)
-	{
-		Status = XRFdc_GetBlockStatus(&RFdcInst, 0, tile_num, 0, &bs);
-		if(Status != XRFDC_SUCCESS)
-		{
-			xil_printf("Warning, unable to get status of ADC tile %i\r\n", tile_num);
-		}
-		adc_available[tile_num] = bs.DataPathClocksStatus;
-	}
-	for(u32 tile_num = 0; tile_num < 4; tile_num++)
-	{
-		Status = XRFdc_GetBlockStatus(&RFdcInst, 1, tile_num, 0, &bs);
-		if(Status != XRFDC_SUCCESS)
-		{
-			xil_printf("Warning, unable to get status of DAC tile %i\r\n", tile_num);
-		}
-		dac_available[tile_num] = bs.DataPathClocksStatus;
-	}
+
 }
 
 int CompareFabricRate(u32 SetFabricRate, u32 GetFabricRate);

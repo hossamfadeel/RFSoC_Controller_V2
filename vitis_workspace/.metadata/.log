@@ -14154,3 +14154,933 @@ Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-16: Launc
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 00:01:02.449
 !MESSAGE XSCT command with result: [disconnect tcfchan#13], Result: [null, ]. Thread: Thread-1012
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:09:17.320
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/system.mss ], Thread: Worker-111: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:09:27.179
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-111: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:09:27.180
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/system.mss], Thread: Worker-111: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:09:27.182
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "7.3",
+}]. Thread: Worker-111: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-12-29 17:09:27.183
+!MESSAGE Generating MD5 hash for file: D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_platform\export\rfsoc_v2_platform\sw\rfsoc_v2_platform\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:09:27.184
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/system.mss], Thread: Worker-111: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:09:27.185
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-111: Build Project
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.705
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.754
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.800
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.831
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.863
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.878
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.878
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.879
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.879
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.880
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.880
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.881
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.881
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.882
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.882
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.883
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.883
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.884
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.884
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.885
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.885
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.886
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.886
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.eclipse.tcf 4 0 2020-12-29 17:12:44.886
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:45.078
+!MESSAGE XSCT Command: [connect -path [list tcp::1534 tcp:192.168.3.2:3121]], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:45.156
+!MESSAGE XSCT command with result: [connect -path [list tcp::1534 tcp:192.168.3.2:3121]], Result: [null, tcfchan#15]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:45.157
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:46.039
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:46.040
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.540
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.541
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.557
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.559
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.565
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.566
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.581
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.581
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.587
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.587
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.610
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.611
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.622
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.623
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.639
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.675
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.681
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.682
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.698
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.699
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.706
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.706
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.723
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.723
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.729
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.729
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.745
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.746
+!MESSAGE XSCT Command: [version -server], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.777
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.2]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.779
+!MESSAGE XSCT Command: [version], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.781
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.2
+SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.783
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.800
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.800
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.825
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.826
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.843
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.843
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.873
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.874
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.876
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.876
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.934
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:47.935
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:48.933
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:48.934
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:52.121
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:52.122
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:52.239
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:52.239
+!MESSAGE XSCT Command: [reset_apu], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:52.353
+!MESSAGE XSCT command with result: [reset_apu], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:52.354
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"RPU*"}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:52.474
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"RPU*"}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:52.475
+!MESSAGE XSCT Command: [clear_rpu_reset], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:53.580
+!MESSAGE XSCT command with result: [clear_rpu_reset], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:53.600
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:53.645
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:53.646
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:54.084
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:54.085
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:54.175
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:12:54.176
+!MESSAGE XSCT Command: [fpga -file D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:24.395
+!MESSAGE XSCT command with result: [fpga -file D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:24.421
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:24.524
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:24.525
+!MESSAGE XSCT Command: [loadhw -hw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.868
+!MESSAGE XSCT command with result: [loadhw -hw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, top_level_wrapper_5]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.868
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.897
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.898
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.903
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.903
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.920
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.921
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.983
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:25.984
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:26.015
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:26.016
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:26.076
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:26.076
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:26.148
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:26.150
+!MESSAGE XSCT Command: [dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:27.142
+!MESSAGE XSCT command with result: [dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:27.143
+!MESSAGE XSCT Command: [set bp_13_27_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:27.610
+!MESSAGE XSCT command with result: [set bp_13_27_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 6]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:27.611
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:28.757
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:28.759
+!MESSAGE XSCT Command: [bpremove $bp_13_27_fsbl_bp], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:29.204
+!MESSAGE XSCT command with result: [bpremove $bp_13_27_fsbl_bp], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:29.204
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:29.312
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:29.312
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:29.380
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:29.381
+!MESSAGE XSCT Command: [dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:31.067
+!MESSAGE XSCT command with result: [dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:31.067
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:32.017
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:32.308
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:32.388
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:32.389
+!MESSAGE XSCT Command: [con], Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:13:32.481
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-108: Launching SystemDebugger_no_fpga_flash
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:37.681
+!MESSAGE XSCT Command: [disconnect tcfchan#15], Thread: Thread-1242
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:37.743
+!MESSAGE XSCT command with result: [disconnect tcfchan#15], Result: [null, ]. Thread: Thread-1242
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:38.734
+!MESSAGE XSCT Command: [connect -path [list tcp::1534 tcp:192.168.3.2:3121]], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:38.800
+!MESSAGE XSCT command with result: [connect -path [list tcp::1534 tcp:192.168.3.2:3121]], Result: [null, tcfchan#16]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:38.800
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:38.994
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:38.995
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.001
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.001
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.017
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.019
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.025
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.025
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.044
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.045
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.053
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.053
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.069
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.070
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.076
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.076
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.093
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.137
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.144
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.145
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.162
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.163
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.168
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.168
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.185
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.186
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.192
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.193
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.210
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.211
+!MESSAGE XSCT Command: [version -server], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.239
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.2]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.240
+!MESSAGE XSCT Command: [version], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.241
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.2
+SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.241
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.247
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.247
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.263
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.264
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.280
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level == 0}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.281
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.311
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.311
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.313
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2020.2/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.313
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.590
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:39.591
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:40.776
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:40.777
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:43.981
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:43.982
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:44.096
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:44.097
+!MESSAGE XSCT Command: [reset_apu], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:44.218
+!MESSAGE XSCT command with result: [reset_apu], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:44.219
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"RPU*"}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:44.318
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"RPU*"}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:44.318
+!MESSAGE XSCT Command: [clear_rpu_reset], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:45.436
+!MESSAGE XSCT command with result: [clear_rpu_reset], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:45.452
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:45.806
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:45.806
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:45.827
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:45.828
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:45.923
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308A5F038-147e2093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:15:45.923
+!MESSAGE XSCT Command: [fpga -file D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:16.006
+!MESSAGE XSCT command with result: [fpga -file D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:16.038
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:16.154
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:16.154
+!MESSAGE XSCT Command: [loadhw -hw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.287
+!MESSAGE XSCT command with result: [loadhw -hw D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/hw/top_level_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, top_level_wrapper_6]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.288
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.327
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.328
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.335
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-SMT2NC 210308A5F038]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.336
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.354
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A5F038" && level==1}], Result: [null,      2  xczu29dr (idcode 147e2093 irlen 12 fpga)
+     5  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.355
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.431
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.431
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.462
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.463
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.532
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.533
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.610
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:28.610
+!MESSAGE XSCT Command: [dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:29.632
+!MESSAGE XSCT command with result: [dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/sw/rfsoc_v2_platform/boot/fsbl.elf], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:29.632
+!MESSAGE XSCT Command: [set bp_16_29_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:30.118
+!MESSAGE XSCT command with result: [set bp_16_29_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 7]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:30.118
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:31.298
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:31.298
+!MESSAGE XSCT Command: [bpremove $bp_16_29_fsbl_bp], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:31.762
+!MESSAGE XSCT command with result: [bpremove $bp_16_29_fsbl_bp], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:31.763
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:31.844
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:31.845
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:31.920
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:31.921
+!MESSAGE XSCT Command: [dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:33.652
+!MESSAGE XSCT command with result: [dow D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:33.652
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:34.109
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:34.388
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:34.489
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:34.489
+!MESSAGE XSCT Command: [con], Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-12-29 17:16:34.579
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-39: Launching SystemDebugger_no_fpga_flash_Standalone
