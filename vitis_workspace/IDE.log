@@ -4739,3 +4739,21 @@ con
 ----------------End of Script----------------
 
 11:12:44 INFO  : Launch script is exported to file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application_system\_ide\scripts\systemdebugger_no_fpga_flash_standalone.tcl'
+00:00:58 INFO  : Disconnected from the channel tcfchan#27.
+18:33:26 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\repos\RFSoC_Controller_V2\vitis_workspace\temp_xsdb_launch_script.tcl
+18:33:28 INFO  : XSCT server has started successfully.
+18:33:28 INFO  : plnx-install-location is set to ''
+18:33:28 INFO  : Successfully done setting XSCT server connection channel  
+18:33:28 INFO  : Successfully done setting workspace for the tool. 
+18:33:33 INFO  : Platform repository initialization has completed.
+18:33:33 INFO  : Successfully done query RDI_DATADIR 
+18:33:33 INFO  : Registering command handlers for Vitis TCF services
+18:34:22 INFO  : Hardware specification for platform project 'rfsoc_v2_platform' is updated.
+18:35:15 INFO  : Result from executing command 'getProjects': rfsoc_v2_platform
+18:35:15 INFO  : Result from executing command 'getPlatforms': rfsoc_v2_platform|D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm
+18:35:27 INFO  : Checking for BSP changes to sync application flags for project 'rfsoc_v2_application'...
+18:35:37 INFO  : The hardware specfication used by project 'rfsoc_v2_application' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+18:35:37 INFO  : The file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application\_ide\bitstream\top_level_wrapper.bit' stored in project is removed.
+18:35:37 INFO  : The updated bitstream files are copied from platform to folder 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application\_ide\bitstream' in project 'rfsoc_v2_application'.
+18:35:37 INFO  : The file 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application\_ide\psinit\psu_init.tcl' stored in project is removed.
+18:35:38 INFO  : The updated ps init files are copied from platform to folder 'D:\repos\RFSoC_Controller_V2\vitis_workspace\rfsoc_v2_application\_ide\psinit' in project 'rfsoc_v2_application'.

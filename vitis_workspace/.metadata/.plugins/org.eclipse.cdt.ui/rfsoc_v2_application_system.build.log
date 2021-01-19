@@ -1,10 +1,10 @@
-11:10:29 **** Incremental Build of configuration Debug for project rfsoc_v2_application_system ****
+18:35:38 **** Incremental Build of configuration Debug for project rfsoc_v2_application_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 53186 D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm standalone_domain D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application_system/Debug/system.bif
+generate_system_bif.bat 55301 D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm standalone_domain D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application_system/Debug/system.bif
 sdcard_gen --xpfm D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_platform/export/rfsoc_v2_platform/rfsoc_v2_platform.xpfm --sys_config rfsoc_v2_platform --bif D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application_system/Debug/system.bif --bitstream D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit --elf D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/Debug/rfsoc_v2_application.elf,psu_cortexa53_0
 creating BOOT.BIN using D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application/_ide/bitstream/top_level_wrapper.bit
 Running C:/Xilinx/Vitis/2020.2/bin/bootgen -arch zynqmp -image D:/repos/RFSoC_Controller_V2/vitis_workspace/rfsoc_v2_application_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-11:10:37 Build Finished (took 7s.763ms)
+18:35:46 Build Finished (took 7s.821ms)
 

@@ -54,3 +54,6 @@ platform generate -domains
 platform active {rfsoc_v2_platform}
 platform config -updatehw {D:/repos/RFSoC_Controller_V2/vivado_project/top_level_wrapper.xsa}
 platform generate -domains 
+platform active {rfsoc_v2_platform}
+platform config -updatehw {D:/repos/RFSoC_Controller_V2/vivado_project/top_level_wrapper.xsa}
+platform generate -domains 
