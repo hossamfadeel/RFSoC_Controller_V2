@@ -15,7 +15,11 @@ if(len(sys.argv) != 4):
 
 adc_run_cycles = int(int(sys.argv[1]) / 4) #Divide by 4 to go from ns to number of cycles
 display_waveforms = int(sys.argv[2])
-adc_shift = math.log2(int(sys.argv[3]))
+
+adc_avgs = int(sys.argv[3])
+adc_shift = 0
+if(adc_avgs != 0):
+	adc_shift = math.log2(int(sys.argv[3]))
 
 
 #Load the board state
